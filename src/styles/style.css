@@ -52,7 +52,12 @@
   --color-button-primary-background-hover: var(--color-neutral-200);
   --color-button-primary-background-active: var(--color-neutral-950);
 
+
+  --color-chip-primary-background-default: var(--color-neutral-0);
+
   /* Spacing */
+  --spacing-page-margin: var(--spacing-20px);
+
   --spacing-grid-gap-column: var(--spacing-20px);
   --spacing-grid-gap-row: var(--spacing-64px);
 
@@ -102,7 +107,7 @@
   }
 
   .container-wide {
-  margin: 20px;
+  margin: var(--spacing-page-margin);
   
   }
 
@@ -134,7 +139,7 @@
    TEXT STYLES
    ========================== */
 
-   h1, h2, .body-large, .body-medium, p,.body-small, button, .chips, a, summary {
+   h1, h2, .body-large, .body-medium, p,.body-small, button, .chip, a, summary {
     font-family: var(--type-primary);
     font-weight: normal;
     color: var(--color-text-primary);
@@ -166,22 +171,23 @@ h2 {
 }
 
 p {
-  font-size: 16px; 
+  font-size: 1rem; 
 }
 
 .body-small {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 /* LABEL 
   ========================== */
 
 button {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
-.chips {
-  font-size: 16px;
+.chip {
+  font-size: 0.875rem;
+  line-height: 1;
 }
 
 /* LINKS 
@@ -281,37 +287,70 @@ summary {
 
   .chip {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: var(--spacing-20px); 
+    left: var(--spacing-20px);
 
     display: flex;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    
+    min-width: 40px;
+    min-height: 40px;
 
-    background: black;
-    color: white;
+    background: var(--color-chip-primary-background-default);
 
-    padding: 8px 12px;
-    border-radius: 999px;
+    padding: 8px;
+    border-radius: 5rem;
 
-    font-size: 12px;
+    overflow: hidden;
 
     transition: all 0.3s ease;
   }
+
+
+  .chip::after {
+    content: "";
+
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+
+    width: var(--size-icon-medium);
+    height: var(--size-icon-medium);
+
+    background-image: url("../media/icons/arrow-up-right.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
 
   .chip-text {
     max-width: 0;
     opacity: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     white-space: nowrap;
     transition: all 0.3s ease;
   }
 
-  .featured-work a:hover .chip-text {
-    max-width: 100px; /* suficiente para el texto */
-    opacity: 1;
-    margin-left: 6px;
+  .featured-work a:hover .chip {
+    gap: var(--spacing-4px); 
+    padding: 8px 16px 8px 20px;
   }
+
+  .featured-work a:hover .chip-text {
+    max-width: 30ch; 
+    opacity: 1;
+    margin-left: 4px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .featured-work a:hover .chip::after {
+    transform: rotate(45deg);
+  } 
+
+  
 
   /* ==========================
    ARCHIVE
@@ -568,7 +607,7 @@ summary {
     margin-right: 8px;
     color: var(--color-neutral-950);
 
-    background-image: url("../media/arrow-elbow-left-up.svg");
+    background-image: url("../media/icons/arrow-elbow-left-up.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
