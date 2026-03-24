@@ -714,6 +714,10 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"lhpGb":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+// CURSOR PREVIEW
+var _xanaHeroPng = require("../media/images/xana-hero.png");
+var _xanaHeroPngDefault = parcelHelpers.interopDefault(_xanaHeroPng);
 const name = 'world';
 console.log(`Hello ${name}`);
 // DETAILS
@@ -725,7 +729,68 @@ details.forEach((detail)=>{
         else summary.textContent = "Read more";
     });
 });
+const images = {
+    senda: (0, _xanaHeroPngDefault.default),
+    parc: (0, _xanaHeroPngDefault.default),
+    xana: (0, _xanaHeroPngDefault.default)
+};
+const items = document.querySelectorAll(".archive-list-item");
+const preview = document.querySelector(".cursor-preview");
+const previewImg = preview.querySelector("img");
+items.forEach((item)=>{
+    item.addEventListener("mouseenter", ()=>{
+        const key = item.dataset.image;
+        previewImg.src = images[key];
+        preview.style.opacity = "1";
+        preview.style.transform = "scale(1)";
+    });
+    item.addEventListener("mouseleave", ()=>{
+        preview.style.opacity = "0";
+        preview.style.transform = "scale(0.8)";
+    });
+    item.addEventListener("mousemove", (e)=>{
+        const offset = 20;
+        preview.style.left = e.clientX + offset + "px";
+        preview.style.top = e.clientY + offset + "px";
+    });
+});
+// items.forEach((item) => {
+//   item.addEventListener("mouseenter", () => {
+//     console.log("hover:", item.dataset.image);
+//   });
+// });
+console.log("SRC:", previewImg.src);
 
-},{}]},["93v64","lhpGb"], "lhpGb", "parcelRequireefef", {})
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../media/images/xana-hero.png":"cjAEt"}],"jnFvT":[function(require,module,exports,__globalThis) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"cjAEt":[function() {},{}]},["93v64","lhpGb"], "lhpGb", "parcelRequireefef", {})
 
 //# sourceMappingURL=portfolio.b828852a.js.map
