@@ -45,16 +45,13 @@
   box-sizing: border-box;
 }
 
-html, body {
-  background-color: var(--color-background-primary);
-}
-
 .container-wide {
   margin: 20px;
 }
 
 .container {
-  margin: 0 20px;
+  background-color: var(--color-background-primary);
+  padding: 0 20px;
 }
 
 .featured-work {
@@ -116,8 +113,13 @@ summary {
 
 header {
   background-color: var(--color-header-background);
+  z-index: 1000;
   flex-flow: wrap;
+  width: 100%;
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 header nav {
@@ -139,6 +141,7 @@ header ul {
   flex-direction: column;
   gap: 1.5rem;
   display: flex;
+  position: relative;
 }
 
 .featured-work p {
@@ -150,6 +153,54 @@ header ul {
   background-color: #87ceeb;
   width: 100%;
   height: 440px;
+}
+
+.featured-work figure {
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+
+.featured-work img {
+  object-fit: cover;
+  border-radius: var(--radius-card);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  transition: transform .3s;
+}
+
+.featured-work img:hover {
+  transform: scale(1.05);
+}
+
+.chip {
+  color: #fff;
+  background: #000;
+  border-radius: 999px;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  transition: all .3s;
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.chip-text {
+  opacity: 0;
+  white-space: nowrap;
+  max-width: 0;
+  transition: all .3s;
+  overflow: hidden;
+}
+
+.featured-work a:hover .chip-text {
+  opacity: 1;
+  max-width: 100px;
+  margin-left: 6px;
 }
 
 .filters {
@@ -217,9 +268,25 @@ header ul {
 }
 
 .hero-image {
+  z-index: -1;
   background-color: #87ceeb;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.hero-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.project {
+  z-index: 1;
+  position: relative;
 }
 
 .project-info-grid {
