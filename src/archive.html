@@ -10,6 +10,7 @@
 
   <body>
     <include src="src/header.html"></include>
+    
     <main class="container">
       <!-- <h1>Hello, UOC!</h1> -->
 
@@ -27,7 +28,7 @@
 
       <!-- PROJETCS -->
       <section class="archive-list">
-        <a class="archive-list-item">
+        <a class="archive-list-item" data-image="senda" href="./senda.html">
           <!-- <img src="" alt=""> -->
           <div>
             <h2>Senda</h2>
@@ -37,7 +38,7 @@
           <span>2025</span>
         </a>
 
-        <a class="archive-list-item">
+        <a class="archive-list-item" data-image="parc">
           <!-- <img src="" alt=""> -->
           <div>
             <h2>Parc Central</h2>
@@ -47,7 +48,7 @@
           <span>2024</span>
         </a>
 
-        <a class="archive-list-item">
+        <a class="archive-list-item" data-image="xana" href="./xana.html">
           <!-- <img src="" alt=""> -->
           <div>
             <h2>Xana</h2>
@@ -57,15 +58,16 @@
           <span>2025</span>
         </a>
 
-
-
-
-
-
-
     </main>
 
     <include src="src/footer.html"></include>
-     <script type="module" src="./js/main.js"></script>
+
+    <div class="cursor-preview">
+      <img src="./media/images/xana-hero.png" alt="">
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+
+
   </body>
 </html>
