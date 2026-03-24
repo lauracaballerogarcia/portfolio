@@ -716,7 +716,16 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"lhpGb":[function(require,module,exports,__globalThis) {
 const name = 'world';
 console.log(`Hello ${name}`);
+// DETAILS
+const details = document.querySelectorAll("details");
+details.forEach((detail)=>{
+    const summary = detail.querySelector("summary");
+    detail.addEventListener("toggle", ()=>{
+        if (detail.open) summary.textContent = "Read less";
+        else summary.textContent = "Read more";
+    });
+});
 
 },{}]},["93v64","lhpGb"], "lhpGb", "parcelRequireefef", {})
 
-//# sourceMappingURL=website.b828852a.js.map
+//# sourceMappingURL=portfolio.b828852a.js.map

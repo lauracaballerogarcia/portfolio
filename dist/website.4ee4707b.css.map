@@ -1,1 +1,0 @@
-{"mappings":"AAAA;;;;;AAKA","sources":["src/styles/style.css"],"sourcesContent":["h1 {\n  color: hotpink;\n  font-family: cursive;\n}\n\nbody {\n  height: 100vh;\n  color: #1f1f1f;\n  background: linear-gradient(to bottom, #bada55, #c0ffee);\n}"],"names":[],"version":3,"file":"website.4ee4707b.css.map","sourceRoot":"/__parcel_source_root/"}
