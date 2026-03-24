@@ -75,6 +75,8 @@
   --size-icon-small: 16px;
   --size-icon-medium: 24px;
   --size-icon-large: 32px;
+
+  --size-header-height: 64px;
 }
 
 
@@ -104,17 +106,25 @@
 
   html, body {
   /* background-color: var(--color-background-primary);  */
+    scroll-behavior: smooth;
+  }
+
+  main {
+    margin-top: var(--size-header-height);
+  }
+  
+  #top {
+    scroll-margin-top: var(--size-header-height);
   }
 
   .container-wide {
-  margin: var(--spacing-page-margin);
-  
+    margin: var(--spacing-page-margin);
   }
 
   .container {
   /* max-width: 1440px; */
-  padding: 0 20px; 
-  background-color: var(--color-background-primary);
+    padding: 0 20px; 
+    background-color: var(--color-background-primary);
   }
 
 
@@ -129,6 +139,11 @@
 
   .featured-work :first-child {
     grid-column: span 2;
+    /* min-height: 664px; */
+  }
+
+  .featured-work-card {
+    min-height: 664px;
   }
 
 
@@ -223,6 +238,7 @@ summary {
     top: 0;
     left: 0;
     width: 100%;
+    height: var(--size-header-height);
     z-index: 1000;
   }
 
@@ -239,6 +255,7 @@ summary {
     flex-flow: row wrap;
     gap: 1rem;
     list-style: none;
+    line-height: 1;
   }
 
   /* ==========================
@@ -268,6 +285,10 @@ summary {
     overflow: hidden;
     width: 100%;
     height: 440px;
+   }
+
+   .featured-work-card figure {
+    height: 664px;
    }
 
   .featured-work img{
@@ -339,7 +360,7 @@ summary {
   }
 
   .featured-work a:hover .chip-text {
-    max-width: 30ch; 
+    max-width: 10ch; 
     opacity: 1;
     margin-left: 4px;
     display: inline-flex;
@@ -440,11 +461,11 @@ summary {
 
   .hero-image{
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - var(--size-header-height));
     overflow: hidden;
     background-color: skyblue;
     position: sticky;
-    top: 0;
+    top: var(--size-header-height); 
     left: 0;
     z-index: -1; /* se queda detrás */
   }
