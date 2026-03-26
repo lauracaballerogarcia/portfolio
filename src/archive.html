@@ -1,18 +1,40 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Meta Data -->
     <meta charset="utf-8"/>
-    <title>Laura Caballero Garcia | Portfolio | Archive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Laura caballero García">
+    <title>Laura Caballero Garcia | Archive</title>
+    <meta name="description" content="Complete archive of Laura Caballero Garcia's projects: 
+    visual design, branding and art direction with a creative and contemporary approach.">
   
+    <!-- Links -->
+    <link rel="icon" href="./media/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/szr3ped.css">
   </head>
 
   <body>
-    <include src="src/header.html"></include>
+
+    <!-- Accessible Skip Link -->
+    <a href="#top" class="skip">Saltar al contenido principal</a>
     
-    <main class="container">
-      <!-- <h1>Hello, UOC!</h1> -->
+    <!-- HEADER -->
+    <header>
+      <nav class="container-wide">
+          <a class="body-medium" href="./index.html">Laura Caballero</a>
+          
+          <ul>
+              <li><a class="body-medium current-menu-item" href="./archive.html">Archive</a></li>
+              <li><a class="body-medium" href="./links.html">Links</a></li>
+          </ul>
+      </nav>
+    </header>
+    
+    <main class="container" id="top">
+      <h1>Project archive</h1>
 
       <!-- FILTERS -->
       <div class="filters">
@@ -28,7 +50,7 @@
 
       <!-- PROJETCS -->
       <section class="archive-list">
-        <a class="archive-list-item" data-image="senda" href="./senda.html">
+        <a class="archive-list-item" data-image="./media/images/senda-hero.jpg" href="./senda.html">
           <!-- <img src="" alt=""> -->
           <div>
             <h2>Senda</h2>
@@ -38,7 +60,7 @@
           <span>2025</span>
         </a>
 
-        <a class="archive-list-item" data-image="parc">
+        <a class="archive-list-item" data-image="./media/images/senda-hero.jpg" href="./parc-central.html">
           <!-- <img src="" alt=""> -->
           <div>
             <h2>Parc Central</h2>
@@ -48,7 +70,7 @@
           <span>2024</span>
         </a>
 
-        <a class="archive-list-item" data-image="xana" href="./xana.html">
+        <a class="archive-list-item" data-image="./media/images/xana-hero.png" href="./xana.html">
           <!-- <img src="" alt=""> -->
           <div>
             <h2>Xana</h2>
@@ -63,7 +85,7 @@
     <include src="src/footer.html"></include>
 
     <div class="cursor-preview">
-      <img src="./media/images/xana-hero.png" alt="">
+      <img src="./media/images/senda-hero.jpg" alt="">
     </div>
 
     <script type="module" src="./js/main.js"></script>
