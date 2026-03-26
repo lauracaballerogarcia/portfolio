@@ -23,41 +23,40 @@ details.forEach((detail) => {
 
 // CURSOR PREVIEW
 
-import senda from "../media/images/xana-hero.png";
-import parc from "../media/images/xana-hero.png";
-import xana from "../media/images/xana-hero.png";
-
-const images = {
-  senda,
-  parc, 
-  xana
-};
-
 const items = document.querySelectorAll(".archive-list-item");
 const preview = document.querySelector(".cursor-preview");
-const previewImg = preview.querySelector("img");
+const previewImg = preview?.querySelector("img");
 
-items.forEach((item) => {
-  item.addEventListener("mouseenter", () => {
-    const key = item.dataset.image;
-    previewImg.src = images[key];
+if (preview && previewImg) {
+  items.forEach((item) => {
 
-    preview.style.opacity = "1";
-    preview.style.transform = "scale(1)";
+    item.addEventListener("mouseenter", () => {
+      const imgSrc = item.dataset.image;
+
+      if (!imgSrc) return;
+
+      previewImg.src = imgSrc;
+
+      preview.style.opacity = "1";
+      preview.style.transform = "scale(1)";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      preview.style.opacity = "0";
+      preview.style.transform = "scale(0.8)";
+    });
+
+    item.addEventListener("mousemove", (e) => {
+      const offset = 20;
+
+      preview.style.left = e.clientX + offset + "px";
+      preview.style.top = e.clientY + offset + "px";
+    });
+
   });
+}
 
-  item.addEventListener("mouseleave", () => {
-    preview.style.opacity = "0";
-    preview.style.transform = "scale(0.8)";
-  });
-
-  item.addEventListener("mousemove", (e) => {
-    const offset = 20;
-
-    preview.style.left = e.clientX + offset + "px";
-    preview.style.top = e.clientY + offset + "px";
-  });
-});
+console.log("Preview ready");
 
 
 // items.forEach((item) => {
