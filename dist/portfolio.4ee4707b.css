@@ -43,10 +43,10 @@
   --radius-xs: .25rem;
   --radius-card: 1rem;
   --radius-button: .75rem;
-  --size-icon-small: 16px;
-  --size-icon-medium: 24px;
-  --size-icon-large: 32px;
-  --size-header-height: 64px;
+  --size-icon-small: 1rem;
+  --size-icon-medium: 1.5rem;
+  --size-icon-large: 2rem;
+  --size-header-height: 4rem;
 }
 
 * {
@@ -75,6 +75,7 @@
 
 html, body {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 main {
@@ -118,20 +119,20 @@ h1, h2, .body-large, .body-medium, p, .body-small, button, .chip, a, summary {
 
 h1 {
   padding-bottom: var(--spacing-xl);
-  font-size: 56px;
+  font-size: 3.5rem;
   line-height: 1;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .body-large {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .body-medium {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 p {
@@ -207,13 +208,6 @@ header ul {
 
 .featured-work p {
   color: var(--color-text-secondary);
-}
-
-.img {
-  border-radius: var(--radius-card);
-  background-color: #87ceeb;
-  width: 100%;
-  height: 440px;
 }
 
 .featured-work figure {
@@ -327,7 +321,7 @@ header ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 120px;
+  height: 7.5rem;
   display: flex;
 }
 
@@ -381,7 +375,6 @@ header ul {
   height: calc(100vh - var(--size-header-height));
   top: var(--size-header-height);
   z-index: -1;
-  background-color: #87ceeb;
   position: sticky;
   left: 0;
   overflow: hidden;
@@ -467,7 +460,6 @@ details[open] .summary-toggle {
 
 .project-media-item {
   border-radius: var(--radius-card);
-  background-color: #87ceeb;
   min-height: 440px;
 }
 
@@ -534,5 +526,65 @@ footer a.body-large:before {
   align-self: center;
   margin-right: 8px;
   display: inline-block;
+}
+
+.hero-image {
+  height: 50vh;
+  top: var(--size-header-height);
+  overflow: hidden;
+}
+
+.project-info-grid {
+  grid-template-columns: 1fr;
+  grid-template-areas: "project-title"
+                       "project-tags"
+                       "project-info"
+                       "project-description";
+}
+
+.project-media-item {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+}
+
+.project-media-item img, .project-media-item iframe {
+  object-fit: fill;
+  width: 100%;
+  height: auto;
+}
+
+.project-media-item.col-1, .project-media-item.col-2 {
+  grid-column: span 2;
+}
+
+@media (width <= 768px) {
+  html, body {
+    font-size: 12px;
+  }
+
+  .featured-work li {
+    grid-column: span 2;
+  }
+
+  .featured-work-card {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .featured-work figure {
+    height: auto;
+  }
+
+  .featured-work-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer nav {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=portfolio.4ee4707b.css.map */
