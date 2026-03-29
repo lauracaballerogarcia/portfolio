@@ -1,28 +1,3 @@
-// IMPORTS
-
-import { gsap } from "gsap";
-
-
-// DETAILS
-
-const details = document.querySelectorAll("details");
-const content = details.querySelector(".details-content");
-
-
-details.forEach((detail) => {
-  const summary = detail.querySelector("summary");
-
-  detail.addEventListener("toggle", () => {
-    if (detail.open) {
-      summary.textContent = "Read less";
-
-    } else {
-      summary.textContent = "Read more";
-    }
-  });
-});
-
-
 // CURSOR PREVIEW
 
 const items = document.querySelectorAll(".archive-list-item");
@@ -37,13 +12,11 @@ const images = {
   xana: new URL("../media/images/xana-hero.png", import.meta.url).href,
 };
 
-
 if (preview && previewImg) {
   items.forEach((item) => {
 
     item.addEventListener("mouseenter", () => {
-      const key = item.dataset.image; // ahora es una clave, no una ruta
-
+      const key = item.dataset.image;
       const imgSrc = images[key];
       if (!imgSrc) return;
 
@@ -60,24 +33,42 @@ if (preview && previewImg) {
 
     item.addEventListener("mousemove", (e) => {
       const offset = 20;
-
       preview.style.left = e.clientX + offset + "px";
       preview.style.top = e.clientY + offset + "px";
     });
 
   });
 }
-
 console.log("Preview ready");
-
-
-
 
 
 
 // PAGE ANIMATION
 
+import { gsap } from "gsap";
+
 gsap.fromTo(".page", 
   { y: "100%", opacity: 0 }, 
   { y: "0%", opacity: 1, duration: 0.8 }
 );
+
+
+// DETAILS TOGGLE
+document.querySelectorAll("details").forEach((detail) => {
+
+  const summary = detail.querySelector("summary");
+  const content = detail.querySelector(".content");
+
+  detail.addEventListener("toggle", () => {
+
+    if (detail.open) {
+      summary.textContent = "Read less";
+      content.appendChild(summary);   // mover summary debajo del contenido
+    } else {
+      summary.textContent = "Read more";
+      detail.prepend(summary);        // volver a ponerlo arriba
+    }
+
+  });
+
+});

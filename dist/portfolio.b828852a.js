@@ -714,19 +714,9 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"lhpGb":[function(require,module,exports,__globalThis) {
-// IMPORTS
-var _gsap = require("gsap");
-// DETAILS
-const details = document.querySelectorAll("details");
-const content = details.querySelector(".details-content");
-details.forEach((detail)=>{
-    const summary = detail.querySelector("summary");
-    detail.addEventListener("toggle", ()=>{
-        if (detail.open) summary.textContent = "Read less";
-        else summary.textContent = "Read more";
-    });
-});
 // CURSOR PREVIEW
+// PAGE ANIMATION
+var _gsap = require("gsap");
 const items = document.querySelectorAll(".archive-list-item");
 const preview = document.querySelector(".cursor-preview");
 const previewImg = preview?.querySelector("img");
@@ -738,7 +728,7 @@ const images = {
 };
 if (preview && previewImg) items.forEach((item)=>{
     item.addEventListener("mouseenter", ()=>{
-        const key = item.dataset.image; // ahora es una clave, no una ruta
+        const key = item.dataset.image;
         const imgSrc = images[key];
         if (!imgSrc) return;
         previewImg.src = imgSrc;
@@ -756,7 +746,6 @@ if (preview && previewImg) items.forEach((item)=>{
     });
 });
 console.log("Preview ready");
-// PAGE ANIMATION
 (0, _gsap.gsap).fromTo(".page", {
     y: "100%",
     opacity: 0
@@ -764,6 +753,20 @@ console.log("Preview ready");
     y: "0%",
     opacity: 1,
     duration: 0.8
+});
+// DETAILS TOGGLE
+document.querySelectorAll("details").forEach((detail)=>{
+    const summary = detail.querySelector("summary");
+    const content = detail.querySelector(".content");
+    detail.addEventListener("toggle", ()=>{
+        if (detail.open) {
+            summary.textContent = "Read less";
+            content.appendChild(summary); // mover summary debajo del contenido
+        } else {
+            summary.textContent = "Read more";
+            detail.prepend(summary); // volver a ponerlo arriba
+        }
+    });
 });
 
 },{"gsap":"9F7Z6","ea713fd2ca303e44":"aXta0","5ce0da0a9ed286e9":"055qS","c190aa4e541fcd37":"5i8VO"}],"9F7Z6":[function(require,module,exports,__globalThis) {

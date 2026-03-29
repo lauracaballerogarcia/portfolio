@@ -132,18 +132,18 @@
     opacity: 1;
   }
 
-  :focus{
+  /* :focus{
     outline: 2px solid #005fcc;
     outline-offset: 2px;
     border-radius: var(--radius-button);
     border-radius: 2px;
-  }
+  } */
 
-  :focus-visible {
+  /* :focus-visible {
     outline: 3px solid #005fcc;
     outline-offset: 3px;
-    box-shadow: 0 0 0 4px rgba(0, 95, 204, 0.2); /* refuerzo suave */
-  }
+    box-shadow: 0 0 0 4px rgba(0, 95, 204, 0.2); /* refuerzo suave  
+  } */
 
 
 /* ==========================
@@ -200,7 +200,7 @@
    TEXT STYLES
    ========================== */
 
-   h1, h2, h3, .body-large, .body-medium, p,.body-small, button, .chip, a, summary {
+   h1, h2, h3, .body-large, .body-medium, p,.body-small, button, .chip, a, summary, li {
     font-family: var(--type-primary);
     font-weight: normal;
     color: var(--color-text-primary);
@@ -241,6 +241,11 @@ p {
   font-size: 0.875rem;
 }
 
+abbr {
+  text-decoration: none;
+  cursor: help;
+}
+
 /* LABEL 
   ========================== */
 
@@ -251,6 +256,13 @@ button {
 .chip {
   font-size: 0.875rem;
   line-height: 1;
+}
+
+.project-tags li {
+    background-color: var(--color-neutral-100);
+    border: none; 
+    border-radius: var(--radius-button);
+    padding: 0.5rem 0.75rem;
 }
 
 /* LINKS 
@@ -270,10 +282,37 @@ header a, footer a {
 }
 
 header a:hover, footer a:hover {
-  text-decoration: underline 1px solid var(--color-text-primary);
+  /* text-decoration: underline 1px solid var(--color-text-primary); */
   transform: scale(1.16);
 }
 
+.underline-animation {
+  position: relative;           /* necesario para el ::after */
+  display: inline-block;        /* para que el ancho sea solo del texto */
+  cursor: pointer;              /* opcional */
+}
+
+.underline-animation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;                     /* ajusta si quieres debajo del texto */
+  width: 100%;
+  height: 2px;                   /* grosor del subrayado */
+  background-color: var(--color-text-primary);
+  
+  transform: scaleX(0);          /* subrayado escondido */
+  transform-origin: left;        /* empieza desde la izquierda */
+  transition: transform 0.3s ease;
+}
+
+.underline-animation:hover::after {
+  transform: scaleX(1);          /* subrayado completo al hacer hover */
+}
+
+.underline-animation.current-menu-item::after {
+  transform: scaleX(1);
+}
 
 /* DETAILS 
   ========================== */
@@ -284,6 +323,7 @@ summary {
     font-size: 1.25rem;
     list-style: none;
     text-decoration: underline;
+    cursor: pointer;
   }
 
 
@@ -302,7 +342,7 @@ summary {
     left: 0;
     width: 100%;
     height: var(--size-header-height);
-    z-index: 1000;
+    z-index: 10000;
   }
 
   header nav {
@@ -310,19 +350,22 @@ summary {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
   }
 
   header ul {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     gap: 1rem;
     list-style: none;
     line-height: 1;
+    justify-content: flex-end;
   }
 
-  .current-menu-item{
-    text-decoration: underline 1px solid var(--color-text-primary);  }
+  header li:first-child {
+    margin-right: auto;
+  }
+
 
   /* ==========================
    HOME
@@ -509,6 +552,10 @@ summary {
     flex-direction: column;
   }
 
+  .archive-list ul {
+    list-style: none;
+  }
+
   .archive-list-item {
     display: flex;
     flex-direction: row;
@@ -524,10 +571,10 @@ summary {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    gap: var(--spacing-20px);
+    gap: var(--spacing-lg);
   }
 
-  .archive-list-item span {
+  .archive-list-item time {
     margin-left: auto;
   }
 
@@ -617,27 +664,35 @@ summary {
     gap: var(--spacing-grid-gap-column);
     margin-top: var(--spacing-section-gap-medium);
     margin-bottom: var(--spacing-section-gap-large);
+    padding-top: var(--spacing-2xl);
 
-    /* Definir las áreas */
+    /* Grid Areas */
     grid-template-areas: 
-      "project-title project-info"
-      "project-tags project-description";
+      "project-tags project-title"
+      "project-info project-description";
   }
 
   .project-title { 
-    grid-area: project-title; 
+    grid-area: project-title ; 
     display: flex;
     align-items: flex-end;
+    padding-bottom: 0;
   }
   
   .project-info { 
     grid-area: project-info; 
-    display: flex;
-    align-items: flex-end;
+  }
+
+  span.bold{
+    font-weight: bold;
   }
   
   .project-tags { 
     grid-area: project-tags; 
+    align-items: flex-end;
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-sm);
   }
   
   .project-description { 
@@ -925,6 +980,7 @@ summary {
 
     .archive-list-item div{
       flex-wrap: wrap;
+      gap: 0;
     }
 
     .archive-list-item p {
