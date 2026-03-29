@@ -1,1 +1,25 @@
+
+# System and editor files
 **/.DS_Store
+
+# Node.js dependencies
+/node_modules/
+
+# Parcel cache
+/.parcel-cache/
+
+# Production / build folder
+/dist/
+
+# System and editor files
+.DS_Store
+Thumbs.db
+*.log
+
+# Local environment configuration
+.env
+
+# Temporary or backup files
+*.bak
+*.tmp
+*.swp

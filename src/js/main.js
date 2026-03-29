@@ -1,12 +1,13 @@
-const name = 'world';
-console.log(`Hello ${name}`);
+// IMPORTS
 
-
+import { gsap } from "gsap";
 
 
 // DETAILS
 
 const details = document.querySelectorAll("details");
+const content = details.querySelector(".details-content");
+
 
 details.forEach((detail) => {
   const summary = detail.querySelector("summary");
@@ -14,6 +15,7 @@ details.forEach((detail) => {
   detail.addEventListener("toggle", () => {
     if (detail.open) {
       summary.textContent = "Read less";
+
     } else {
       summary.textContent = "Read more";
     }
@@ -27,12 +29,22 @@ const items = document.querySelectorAll(".archive-list-item");
 const preview = document.querySelector(".cursor-preview");
 const previewImg = preview?.querySelector("img");
 
+// Imágenes
+
+const images = {
+  senda: new URL("../media/images/senda-hero.jpg", import.meta.url).href,
+  parc: new URL("../media/images/parc-central-hero.jpg", import.meta.url).href,
+  xana: new URL("../media/images/xana-hero.png", import.meta.url).href,
+};
+
+
 if (preview && previewImg) {
   items.forEach((item) => {
 
     item.addEventListener("mouseenter", () => {
-      const imgSrc = item.dataset.image;
+      const key = item.dataset.image; // ahora es una clave, no una ruta
 
+      const imgSrc = images[key];
       if (!imgSrc) return;
 
       previewImg.src = imgSrc;
@@ -59,10 +71,13 @@ if (preview && previewImg) {
 console.log("Preview ready");
 
 
-// items.forEach((item) => {
-//   item.addEventListener("mouseenter", () => {
-//     console.log("hover:", item.dataset.image);
-//   });
-// });
 
-console.log("SRC:", previewImg.src);
+
+
+
+// PAGE ANIMATION
+
+gsap.fromTo(".page", 
+  { y: "100%", opacity: 0 }, 
+  { y: "0%", opacity: 1, duration: 0.8 }
+);
