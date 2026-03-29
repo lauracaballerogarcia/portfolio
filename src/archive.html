@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="https://use.typekit.net/szr3ped.css">
   </head>
 
-  <body>
+  <body id="top">
 
     <!-- Accessible Skip Link -->
-    <a href="#top" class="skip">Saltar al contenido principal</a>
+    <a href="#main-content" class="skip">Skip to main content</a>
     
     <!-- HEADER -->
     <header>
@@ -33,51 +33,53 @@
       </nav>
     </header>
     
-    <main class="container" id="top">
+
+    <!-- MAIN CONTENT -->
+    <main class="container page" id="main-content">
       <h1>Project archive</h1>
 
       <!-- FILTERS -->
       <div class="filters">
-          <li><button>All</button></li>
-          
+        
           <ul>
-              <li><button>Branding</button></li>
-              <li><button>Visual Identity</button></li>
-              <li><button>Web Design</button></li>
-              <li><button>Others</button></li>
+            <li><button>All</button></li>
+            <li><button>Branding</button></li>
+            <li><button>Visual Identity</button></li>
+            <li><button>Web Design</button></li>
+            <li><button>Others</button></li>
+          </ul>
+
+          <ul class="view-toggle">
+            <li><button class="grid-view current-view"></li>
+            <li><button class="list-view"></li>
           </ul>
       </div>
 
       <!-- PROJETCS -->
       <section class="archive-list">
-        <a class="archive-list-item" data-image="./media/images/senda-hero.jpg" href="./senda.html">
-          <!-- <img src="" alt=""> -->
+        <a class="archive-list-item" data-image="senda" href="./senda.html">
           <div>
             <h2>Senda</h2>
-            <p>Info about Senda</p>
+            <p>Humanizing digital payments for seniors.</p>
+            <span>2025</span>
           </div>
-
-          <span>2025</span>
         </a>
 
-        <a class="archive-list-item" data-image="./media/images/senda-hero.jpg" href="./parc-central.html">
-          <!-- <img src="" alt=""> -->
+        <a class="archive-list-item" data-image="parc" href="./parc-central.html">
           <div>
             <h2>Parc Central</h2>
-            <p>Info about Parc Central</p>
+            <p>Visual identity for Valencia's urban green space.</p>
+            <span>2024</span>
           </div>
 
-          <span>2024</span>
         </a>
 
-        <a class="archive-list-item" data-image="./media/images/xana-hero.png" href="./xana.html">
-          <!-- <img src="" alt=""> -->
+        <a class="archive-list-item" data-image="xana" href="./xana.html">
           <div>
             <h2>Xana</h2>
-            <p>Info about Xana</p>
+            <p>A toast to the first words of love.</p>
+            <span>2025</span>
           </div>
-
-          <span>2025</span>
         </a>
 
     </main>

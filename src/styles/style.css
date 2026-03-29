@@ -132,6 +132,19 @@
     opacity: 1;
   }
 
+  :focus{
+    outline: 2px solid #005fcc;
+    outline-offset: 2px;
+    border-radius: var(--radius-button);
+    border-radius: 2px;
+  }
+
+  :focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(0, 95, 204, 0.2); /* refuerzo suave */
+  }
+
 
 /* ==========================
   LAYOUT CONTAINERS
@@ -158,7 +171,7 @@
 
   .container {
   /* max-width: 1440px; */
-    padding: 0 20px; 
+    padding: 0 1.25rem; 
     background-color: var(--color-background-primary);
   }
 
@@ -187,7 +200,7 @@
    TEXT STYLES
    ========================== */
 
-   h1, h2, .body-large, .body-medium, p,.body-small, button, .chip, a, summary {
+   h1, h2, h3, .body-large, .body-medium, p,.body-small, button, .chip, a, summary {
     font-family: var(--type-primary);
     font-weight: normal;
     color: var(--color-text-primary);
@@ -204,8 +217,9 @@ h1 {
   padding-bottom: var(--spacing-xl);
 }
 
-h2 {
+h2, .links-resorces a {
   font-size: 1.25rem;
+  margin-bottom: var(--spacing-xxs);
 }
 
 /* BODY 
@@ -245,6 +259,21 @@ button {
 a {
   text-decoration: none;
 }
+
+header a {
+  text-transform: uppercase;
+}
+
+header a, footer a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+header a:hover, footer a:hover {
+  text-decoration: underline 1px solid var(--color-text-primary);
+  transform: scale(1.16);
+}
+
 
 /* DETAILS 
   ========================== */
@@ -293,8 +322,7 @@ summary {
   }
 
   .current-menu-item{
-    text-decoration: underline 1px solid var(--color-text-primary);
-  }
+    text-decoration: underline 1px solid var(--color-text-primary);  }
 
   /* ==========================
    HOME
@@ -314,13 +342,6 @@ summary {
    .featured-work p{
     color: var(--color-text-secondary); 
    }
-  
-   /* .img {
-      width: 100%;
-      height: 440px;
-      background-color: skyblue;
-      border-radius: var(--radius-card);
-   }  */
 
    .featured-work figure{
     /* position: relative; */
@@ -362,7 +383,7 @@ summary {
 
     background: var(--color-chip-primary-background-default);
 
-    padding: 8px;
+    padding: var(--spacing-xs);
     border-radius: 5rem;
 
     overflow: hidden;
@@ -422,9 +443,11 @@ summary {
    FILTERS */
 
   .filters{
+    min-width: 100%;
     display: flex;
     flex-flow: row wrap;
     gap: 3rem;
+    justify-content: space-between;
   }
 
   .filters ul {
@@ -437,7 +460,6 @@ summary {
     line-height: 0.75rem;
     list-style: none;
   }
-   
 
    .filters button {
     background-color: var(--color-neutral-100);
@@ -446,6 +468,37 @@ summary {
     padding: 0.5rem 0.75rem;
     cursor: pointer;
    }
+
+  .view-toggle button{
+    background-color: transparent;
+    padding: 0;   
+    opacity: 0.5;
+   }
+
+  .view-toggle button:after {    
+    content: ""; 
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: var(--size-icon-medium);
+    height: var(--size-icon-medium);
+    /* color: var(--color-text-secondary); */
+  }
+
+  .view-toggle button.grid-view:after{
+    background-image: url("../media/icons/grid-four.svg");
+  }
+
+  .view-toggle button.list-view:after{
+    background-image: url("../media/icons/list.svg");
+  }
+
+  .view-toggle button.current-view {
+    opacity: 1;
+  }
+
 
 
   /* ==========================
@@ -459,17 +512,23 @@ summary {
   .archive-list-item {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 7.5rem;
+    min-height: 7.5rem;
     border-bottom: 1px solid var(--color-divider-primary);
   }
 
   .archive-list-item div {
+    min-width:100%;
     display: flex;
     flex-direction: row;
     align-items: baseline;
     gap: var(--spacing-20px);
+  }
+
+  .archive-list-item span {
+    margin-left: auto;
   }
 
   
@@ -484,7 +543,7 @@ summary {
     height: var(--size-icon-small);
     margin-right: var(--spacing-sm);
     background-color: var(--color-button-primary-background-active);
-    border-radius: var(--radius-xs);
+    border-radius: 50%;
     vertical-align: baseline;
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 1;
@@ -658,6 +717,73 @@ summary {
     }
 
 
+/* ==========================
+  LINKS AND RESOURCES
+  ========================== */
+
+  .small-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: var(--spacing-grid-gap-row);
+    column-gap: var(--spacing-grid-gap-column);
+  }
+
+  .small-grid li{
+    border-radius: var(--radius-card);
+  }
+
+  .small-grid iframe{
+    width: 100%; 
+    min-height: 288px;
+    border-radius: var(--radius-card);
+  }
+
+  .links-resorces section {
+    margin-bottom: var(--spacing-section-gap-large);
+  }
+
+  .links-resorces h2 {
+    font-size: xx-large;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .links-resorces a {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    text-decoration: underline 1px; 
+    margin-bottom: var(--spacing-xxs);  
+    height: var(--size-icon-medium);
+  }
+
+
+  .links-resorces a:hover:after {
+    content: "";
+
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+
+    width: var(--size-icon-medium);
+    height: var(--size-icon-medium);
+
+    background-image: url("../media/icons/arrow-up-right.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .links-resorces p {
+    color:var(--color-text-secondary);
+  }
+
+
+
+
+
+
+  
+
 
 /* ==========================
    FOOTER
@@ -711,15 +837,17 @@ summary {
   }
 
 
-  /* ====================================================
-   RESPONSIVE
-   ==================================================== */
+/* ====================================================
+  RESPONSIVE
+  ==================================================== */
 
 
-    /* TABLET
-  ========================== */
+  /* TABLET
+========================== */
 
-  /* Projects */
+@media (max-width: 1024px) {
+  
+  /* PROJECTS */
 
   .hero-image{
       height: 50vh;
@@ -754,6 +882,13 @@ summary {
     grid-column: span 2; /* Ocupa 2 columnas */
   }
 
+    /* LINKS AND RESOURCES */
+    .small-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+  }
+
 
 
 
@@ -765,7 +900,7 @@ summary {
       font-size: 12px;
     }
 
-    /* Home */
+    /* HOME */
 
     .featured-work li {
       grid-column: span 2;
@@ -786,7 +921,23 @@ summary {
       height: auto;
     }
 
-    /* footer */
+    /* ARCHIVE */
+
+    .archive-list-item div{
+      flex-wrap: wrap;
+    }
+
+    .archive-list-item p {
+      order: 1;
+      width: 100%;
+    }
+
+    /* LINKS AND RESOURCES */
+    .small-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* FOOTER */
 
     footer nav {
       width: 100%;
