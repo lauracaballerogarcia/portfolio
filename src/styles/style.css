@@ -93,7 +93,6 @@
 
 
 
-
 /* ==========================
    RESET
    ========================== */
@@ -107,6 +106,8 @@
   *::after {
   box-sizing: border-box;
   }
+
+
 
 
   /* ==========================
@@ -132,18 +133,24 @@
     opacity: 1;
   }
 
-  /* :focus{
+  :focus{
     outline: 2px solid #005fcc;
     outline-offset: 2px;
     border-radius: var(--radius-button);
     border-radius: 2px;
-  } */
+  }
 
-  /* :focus-visible {
-    outline: 3px solid #005fcc;
-    outline-offset: 3px;
-    box-shadow: 0 0 0 4px rgba(0, 95, 204, 0.2); /* refuerzo suave  
-  } */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;  
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 
 
 /* ==========================
@@ -151,14 +158,21 @@
   ========================== */
 
   html, body {
-  /* background-color: var(--color-background-primary);  */
+    display: flex;
+    flex-direction: column;
     scroll-behavior: smooth;
+    align-items: center;
     font-size: 16px;
+    min-height: 100vh;
   }
 
   main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: var(--size-header-height);
     margin-bottom: var(--spacing-4xl);
+    flex: 1;
   }
   
   #top {
@@ -170,7 +184,7 @@
   }
 
   .container {
-  /* max-width: 1440px; */
+    max-width: 1440px;
     padding: 0 1.25rem; 
     background-color: var(--color-background-primary);
   }
@@ -208,123 +222,123 @@
   
 
 
-/* HEADINGS 
-  ========================== */
+  /* HEADINGS 
+    ========================== */
 
-h1 {
-  font-size: 3.5rem; 
-  line-height: 1;
-  padding-bottom: var(--spacing-xl);
-}
+    h1 {
+      font-size: 3.5rem; 
+      line-height: 1;
+      padding-bottom: var(--spacing-xl);
+    }
 
-h2, .links-resorces a {
-  font-size: 1.25rem;
-  margin-bottom: var(--spacing-xxs);
-}
+    h2, h3 {
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-xxs);
+    }
 
-/* BODY 
-  ========================== */
+  /* BODY 
+    ========================== */
 
-.body-large {
-  font-size: 1.5rem;
-}
+    .body-large {
+      font-size: 1.5rem;
+    }
 
-.body-medium {
-  font-size: 1.25rem;
-}
+    .body-medium {
+      font-size: 1.25rem;
+    }
 
-p {
-  font-size: 1rem; 
-}
+    p {
+      font-size: 1rem; 
+    }
 
-.body-small {
-  font-size: 0.875rem;
-}
+    .body-small {
+      font-size: 0.875rem;
+    }
 
-abbr {
-  text-decoration: none;
-  cursor: help;
-}
+    abbr {
+      text-decoration: none;
+      cursor: help;
+    }
 
-/* LABEL 
-  ========================== */
+  /* LABEL 
+    ========================== */
 
-button {
-  font-size: 1rem;
-}
+    button {
+      font-size: 1rem;
+    }
 
-.chip {
-  font-size: 0.875rem;
-  line-height: 1;
-}
+    .chip {
+      font-size: 0.875rem;
+      line-height: 1;
+    }
 
-.project-tags li {
-    background-color: var(--color-neutral-100);
-    border: none; 
-    border-radius: var(--radius-button);
-    padding: 0.5rem 0.75rem;
-}
+    .project-tags li {
+        background-color: var(--color-neutral-100);
+        border: none; 
+        border-radius: var(--radius-button);
+        padding: 0.5rem 0.75rem;
+    }
 
-/* LINKS 
-  ========================== */
+  /* LINKS 
+    ========================== */
 
-a {
-  text-decoration: none;
-}
+    a {
+      text-decoration: none;
+    }
 
-header a {
-  text-transform: uppercase;
-}
+    header a {
+      text-transform: uppercase;
+    }
 
-header a, footer a {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
+    header a, footer a {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
 
-header a:hover, footer a:hover {
-  /* text-decoration: underline 1px solid var(--color-text-primary); */
-  transform: scale(1.16);
-}
+    header a:hover, footer a:hover {
+      transform: scale(1.16);
+    }
 
-.underline-animation {
-  position: relative;           /* necesario para el ::after */
-  display: inline-block;        /* para que el ancho sea solo del texto */
-  cursor: pointer;              /* opcional */
-}
+    .underline-animation {
+      position: relative;           
+      display: inline-block;        
+      cursor: pointer;              
+    }
 
-.underline-animation::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;                     /* ajusta si quieres debajo del texto */
-  width: 100%;
-  height: 2px;                   /* grosor del subrayado */
-  background-color: var(--color-text-primary);
-  
-  transform: scaleX(0);          /* subrayado escondido */
-  transform-origin: left;        /* empieza desde la izquierda */
-  transition: transform 0.3s ease;
-}
+    .underline-animation::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;                     
+      width: 100%;
+      height: 2px;                   
+      background-color: var(--color-text-primary);
+      
+      transform: scaleX(0);          
+      transform-origin: left;        
+      transition: transform 0.3s ease;
+    }
 
-.underline-animation:hover::after {
-  transform: scaleX(1);          /* subrayado completo al hacer hover */
-}
+    .underline-animation:hover::after {
+      transform: scaleX(1);          
+    }
 
-.underline-animation.current-menu-item::after {
-  transform: scaleX(1);
-}
-
-/* DETAILS 
-  ========================== */
+    .underline-animation.current-menu-item::after {
+      transform: scaleX(1);
+    }
 
 
-summary {
-    color: var(--color-text-secondary);
-    font-size: 1.25rem;
-    list-style: none;
-    text-decoration: underline;
-    cursor: pointer;
-  }
+  /* DETAILS 
+    ========================== */
+
+  summary {
+      color: var(--color-text-secondary);
+      font-size: 1.25rem;
+      list-style: none;
+      cursor: pointer;
+      display:inline-block;
+      margin-bottom: var(--spacing-lg);
+    }
 
 
 
@@ -411,7 +425,6 @@ summary {
     transform: scale(1.05); 
   }
 
-
   .chip {
     position: absolute;
     top: var(--spacing-lg); 
@@ -433,7 +446,6 @@ summary {
 
     transition: all 0.3s ease;
   }
-
 
   .chip::after {
     content: "";
@@ -478,74 +490,11 @@ summary {
 
   
 
-  /* ==========================
-   ARCHIVE
-   ========================== */
+  
 
-  /* ==========================
-   FILTERS */
-
-  .filters{
-    min-width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 3rem;
-    justify-content: space-between;
-  }
-
-  .filters ul {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1rem;
-  }
-
-  .filters li{
-    line-height: 0.75rem;
-    list-style: none;
-  }
-
-   .filters button {
-    background-color: var(--color-neutral-100);
-    border: none; 
-    border-radius: var(--radius-button);
-    padding: 0.5rem 0.75rem;
-    cursor: pointer;
-   }
-
-  .view-toggle button{
-    background-color: transparent;
-    padding: 0;   
-    opacity: 0.5;
-   }
-
-  .view-toggle button:after {    
-    content: ""; 
-    display: inline-block;
-    vertical-align: middle;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: var(--size-icon-medium);
-    height: var(--size-icon-medium);
-    /* color: var(--color-text-secondary); */
-  }
-
-  .view-toggle button.grid-view:after{
-    background-image: url("../media/icons/grid-four.svg");
-  }
-
-  .view-toggle button.list-view:after{
-    background-image: url("../media/icons/list.svg");
-  }
-
-  .view-toggle button.current-view {
-    opacity: 1;
-  }
-
-
-
-  /* ==========================
-   LIST */
+/* ==========================
+  ARCHIVE
+  ========================== */
 
   .archive-list {
     display: flex;
@@ -618,8 +567,6 @@ summary {
   }
 
 
-  
-
 
   /* ==========================
   PROJECTS
@@ -644,11 +591,14 @@ summary {
     object-fit: cover;
   }
 
-
   .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-background-primary);
     position: relative;
     z-index: 1;
-    /* margin-top: 100vh; */
   }
 
 
@@ -663,7 +613,6 @@ summary {
     grid-auto-rows: auto;  
     gap: var(--spacing-grid-gap-column);
     margin-top: var(--spacing-section-gap-medium);
-    margin-bottom: var(--spacing-section-gap-large);
     padding-top: var(--spacing-2xl);
 
     /* Grid Areas */
@@ -703,7 +652,6 @@ summary {
   /* DETAILS */
 
   /* Close state */
-
   details{
     display: flex;
     flex-direction: column;
@@ -711,29 +659,28 @@ summary {
     margin-top: 2rem;
   }
 
+  .details-content {
+    order: 1;
+  }
+
   details p{
     margin-bottom: var(--spacing-20px);
   }
 
-  .summary-toggle{
-    order: 1;
+  summary{
+    display: inline-block;
+    width: fit-content; 
+    order: 0;
   }
 
-  .details-content {
-    order: 2;
-    display: none;
-}
+  details .underline-animation::after {
+    background-color: var(--color-text-secondary);
+  }
 
   /* Open state */
-  details[open] .details-content {
-    display: block;
-    order: 1;
-  }
-
-  details[open] .summary-toggle {
+  details[open] summary {
     order: 2;
   }
-
 
   /* PROJECT MEDIA 
     ========================== */
@@ -741,8 +688,8 @@ summary {
     .project-media-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      /* grid-template-columns: 1fr 1fr; */
       grid-auto-rows: auto;  
+      grid-column: span 2;
       gap: var(--spacing-grid-gap-column);
     }
     
@@ -769,12 +716,19 @@ summary {
 
     iframe {
       aspect-ratio: 16/9;
+      border:none;
     }
 
 
 /* ==========================
   LINKS AND RESOURCES
   ========================== */
+
+  .links-resources{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-grid-gap-row);
+  }
 
   .small-grid {
     list-style: none;
@@ -790,7 +744,7 @@ summary {
 
   .small-grid iframe{
     width: 100%; 
-    min-height: 288px;
+    height: 288px;
     border-radius: var(--radius-card);
   }
 
@@ -798,21 +752,19 @@ summary {
     margin-bottom: var(--spacing-section-gap-large);
   }
 
-  .links-resorces h2 {
-    font-size: xx-large;
+  .links-resources h2 {
+    font-size: 2rem;
     margin-bottom: var(--spacing-md);
   }
 
-  .links-resorces a {
+  .links-resources h3 {
     display: inline-block;
     margin-top: var(--spacing-md);
-    text-decoration: underline 1px; 
-    margin-bottom: var(--spacing-xxs);  
+    margin-bottom: var(--spacing-xs);  
     height: var(--size-icon-medium);
   }
 
-
-  .links-resorces a:hover:after {
+  .links-resources h3:hover:after {
     content: "";
 
     display: inline-block;
@@ -828,12 +780,9 @@ summary {
     background-position: center;
   }
 
-  .links-resorces p {
+  .links-resources p {
     color:var(--color-text-secondary);
   }
-
-
-
 
 
 
@@ -845,6 +794,8 @@ summary {
    ========================== */
 
   footer {
+    justify-self: end;
+    align-self: flex-end;
     display: flex; 
     flex-flow: row wrap;
     background-color: var(--color-footer-background);
@@ -943,7 +894,6 @@ summary {
     }
 
   }
-
 
 
 

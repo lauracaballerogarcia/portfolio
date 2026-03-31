@@ -746,30 +746,35 @@ if (preview && previewImg) items.forEach((item)=>{
     });
 });
 console.log("Preview ready");
-(0, _gsap.gsap).fromTo(".page", {
-    y: "100%",
-    opacity: 0
-}, {
-    y: "0%",
-    opacity: 1,
-    duration: 0.8
+window.addEventListener("load", ()=>{
+    (0, _gsap.gsap).fromTo(".page", {
+        y: "10%",
+        opacity: 0
+    }, {
+        y: "0%",
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out"
+    });
 });
 // DETAILS TOGGLE
 document.querySelectorAll("details").forEach((detail)=>{
     const summary = detail.querySelector("summary");
-    const content = detail.querySelector(".content");
     detail.addEventListener("toggle", ()=>{
-        if (detail.open) {
-            summary.textContent = "Read less";
-            content.appendChild(summary); // mover summary debajo del contenido
-        } else {
-            summary.textContent = "Read more";
-            detail.prepend(summary); // volver a ponerlo arriba
-        }
+        summary.textContent = detail.open ? "Read less" : "Read more";
     });
 });
 
-},{"gsap":"9F7Z6","ea713fd2ca303e44":"aXta0","5ce0da0a9ed286e9":"055qS","c190aa4e541fcd37":"5i8VO"}],"9F7Z6":[function(require,module,exports,__globalThis) {
+},{"ea713fd2ca303e44":"aXta0","5ce0da0a9ed286e9":"055qS","c190aa4e541fcd37":"5i8VO","gsap":"9F7Z6"}],"aXta0":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("senda-hero.713f9918.jpg") + "?" + Date.now();
+
+},{}],"055qS":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("parc-central-hero.7a7593ce.jpg") + "?" + Date.now();
+
+},{}],"5i8VO":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("xana-hero.3e19e9c5.png") + "?" + Date.now();
+
+},{}],"9F7Z6":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "gsap", ()=>gsapWithCSS);
@@ -4852,15 +4857,6 @@ var CSSPlugin = {
 });
 (0, _gsapCoreJs.gsap).registerPlugin(CSSPlugin);
 
-},{"./gsap-core.js":"evdHe","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"aXta0":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("senda-hero.713f9918.jpg") + "?" + Date.now();
-
-},{}],"055qS":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("parc-central-hero.7a7593ce.jpg") + "?" + Date.now();
-
-},{}],"5i8VO":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("xana-hero.3e19e9c5.png") + "?" + Date.now();
-
-},{}]},["93v64","lhpGb"], "lhpGb", "parcelRequireefef", {}, "./", "/")
+},{"./gsap-core.js":"evdHe","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["93v64","lhpGb"], "lhpGb", "parcelRequire2041", {}, "./", "/")
 
 //# sourceMappingURL=portfolio.b828852a.js.map

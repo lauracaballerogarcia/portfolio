@@ -47,28 +47,20 @@ console.log("Preview ready");
 
 import { gsap } from "gsap";
 
-gsap.fromTo(".page", 
-  { y: "100%", opacity: 0 }, 
-  { y: "0%", opacity: 1, duration: 0.8 }
-);
+window.addEventListener("load", () => {
+  gsap.fromTo(".page",
+    { y: "10%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 0.8, ease: "power2.out" }
+  );
+});
 
 
 // DETAILS TOGGLE
-document.querySelectorAll("details").forEach((detail) => {
 
+document.querySelectorAll("details").forEach((detail) => {
   const summary = detail.querySelector("summary");
-  const content = detail.querySelector(".content");
 
   detail.addEventListener("toggle", () => {
-
-    if (detail.open) {
-      summary.textContent = "Read less";
-      content.appendChild(summary);   // mover summary debajo del contenido
-    } else {
-      summary.textContent = "Read more";
-      detail.prepend(summary);        // volver a ponerlo arriba
-    }
-
+    summary.textContent = detail.open ? "Read less" : "Read more";
   });
-
 });
