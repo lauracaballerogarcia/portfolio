@@ -1,6 +1,7 @@
-
 # System and editor files
 **/.DS_Store
+Thumbs.db
+*.log
 
 # Node.js dependencies
 /node_modules/
@@ -10,11 +11,6 @@
 
 # Production / build folder
 /dist/
-
-# System and editor files
-.DS_Store
-Thumbs.db
-*.log
 
 # Local environment configuration
 .env

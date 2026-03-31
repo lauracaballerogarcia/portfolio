@@ -1,7 +1,12 @@
 {
-  "name": "website",
+  "name": "portfolio",
   "source": "src/index.html",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "browserslist": [
+    "> 0.2%",
+    "not dead",
+    "ie 11",
+    "last 10 versions"
+  ],
   "version": "1.0.0",
   "description": "",
   "scripts": {
