@@ -742,8 +742,10 @@
     border-radius: var(--radius-card);
   }
 
-  .small-grid iframe{
+  .small-grid iframe, 
+  .small-grid img {
     width: 100%; 
+    object-fit: cover;
     height: 288px;
     border-radius: var(--radius-card);
   }
