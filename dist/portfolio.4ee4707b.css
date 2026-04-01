@@ -578,7 +578,8 @@ iframe {
   border-radius: var(--radius-card);
 }
 
-.small-grid iframe {
+.small-grid iframe, .small-grid img {
+  object-fit: cover;
   border-radius: var(--radius-card);
   width: 100%;
   height: 288px;
