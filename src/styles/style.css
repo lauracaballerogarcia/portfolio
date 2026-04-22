@@ -121,8 +121,6 @@
     left: -9999px; 
     z-index: 999; 
     padding: 1rem;
-    /* color: var(--color-secondary);
-    background-color: var(--color-primary);     */
     opacity: 0; 
   }
 
@@ -616,7 +614,6 @@
     grid-auto-rows: auto;  
     gap: var(--spacing-grid-gap-column);
     margin-top: var(--spacing-section-gap-medium);
-    /* padding-top: var(--spacing-2xl); */
 
     /* Grid Areas */
     grid-template-areas: 
