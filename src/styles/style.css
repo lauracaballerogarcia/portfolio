@@ -707,6 +707,7 @@
     }
 
     .project-media-item img, 
+    .project-media-item video, 
     .project-media-item iframe {
       width: 100%;
       height: 100%;

@@ -29,7 +29,11 @@
     <!-- MAIN CONTENT -->
     <main id="main-content">
       <div class="hero-image">
-        <img src="./media/images/parc-central-hero.jpg" alt="">
+        <picture>
+          <source srcset="./media/images/parc-central-hero.jpg?as=avif" type="./media/images/parc-central-hero.jpg/avif">
+          <source srcset="./media/images/parc-central-hero.jpg?as=webp" type="./media/images/parc-central-hero.jpg/webp">
+          <img src="./media/images/parc-central-hero.jpg" alt="">
+        </picture>
       </div>
 
       <div class="project">
@@ -68,23 +72,39 @@
           <section class="project-media-grid">
             <h2 class="visually-hidden"><span lang="ca">Parc Central</span> audiovisual content</h2>
             <figure class="project-media-item col-2">
-              <img src="./media/images/parc-central-01.gif" width="1440" height="700"
-              alt="Animation showing the Parc Central logo being crafted.">
+              <video width="1440" height="700" autoplay loop muted playsinline
+                aria-label="Animation showing the Parc Central logo being crafted.">
+                <source src="./media/images/parc-central-01.webm" type="video/webm">
+                <source src="./media/images/parc-central-01.mp4" type="video/mp4">
+                Your browser does not support video playback.
+              </video>
             </figure>
 
             <figure class="project-media-item col-2">
-              <img src="./media/images/parc-central-02.jpg" width="1440" height="960"
-              alt="A poster showing the different elements of Parc Central's visual identity, including the logo, color palette, typography, and iconography.">
+              <picture>
+                <source srcset="./media/images/parc-central-02.jpg?as=avif" type="./media/images/parc-central-02.jpg/avif">
+                <source srcset="./media/images/parc-central-02.jpg?as=webp" type="./media/images/parc-central-02.jpg/webp">
+                <img src="./media/images/parc-central-02.jpg" width="1440" height="960"
+                  alt="A poster showing the different elements of Parc Central's visual identity, including the logo, color palette, typography, and iconography.">
+              </picture>
             </figure>
 
             <figure class="project-media-item col-1">
-              <img src="./media/images/parc-central-03.jpg" width="1226" height="1840"
-              alt="A close-up of the Parc Central signage, showing a park area and description.">
+              <picture>
+                <source srcset="./media/images/parc-central-03.jpg?as=avif" type="./media/images/parc-central-03.jpg/avif">
+                <source srcset="./media/images/parc-central-03.jpg?as=webp" type="./media/images/parc-central-03.jpg/webp">
+                <img src="./media/images/parc-central-03.jpg" width="1226" height="1840"
+                  alt="A close-up of the Parc Central signage, showing a park area and description.">
+              </picture>
             </figure>
 
             <figure class="project-media-item col-1">
-              <img src="./media/images/parc-central-04.gif" width="800" height="836"
-              alt="Animation showing a digital ticket, appearing from the bottom to the top of a mobile screen, for a Parc Central event.">
+              <video width="800" height="836" autoplay loop muted playsinline
+                aria-label="Animation showing a digital ticket, appearing from the bottom to the top of a mobile screen, for a Parc Central event.">
+                <source src="./media/images/parc-central-04.webm" type="video/webm">
+                <source src="./media/images/parc-central-04.mp4" type="video/mp4">
+                Your browser does not support video playback.
+              </video>
             </figure>
           </section>
 

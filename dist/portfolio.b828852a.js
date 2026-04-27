@@ -765,11 +765,11 @@ document.querySelectorAll("details").forEach((detail)=>{
     });
 });
 
-},{"ea713fd2ca303e44":"aXta0","5ce0da0a9ed286e9":"055qS","c190aa4e541fcd37":"5i8VO","gsap":"9F7Z6"}],"aXta0":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("senda-hero.713f9918.jpg") + "?" + Date.now();
+},{"ea713fd2ca303e44":"fcC79","5ce0da0a9ed286e9":"eBo42","c190aa4e541fcd37":"5i8VO","gsap":"9F7Z6"}],"fcC79":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("senda-hero.0f7b8ba6.jpeg") + "?" + Date.now();
 
-},{}],"055qS":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("parc-central-hero.7a7593ce.jpg") + "?" + Date.now();
+},{}],"eBo42":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("parc-central-hero.53c3340d.jpeg") + "?" + Date.now();
 
 },{}],"5i8VO":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("xana-hero.3e19e9c5.png") + "?" + Date.now();
