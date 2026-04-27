@@ -739,17 +739,30 @@
     column-gap: var(--spacing-grid-gap-column);
   }
 
-  .small-grid li{
+  .small-grid figure, 
+  .small-grid picture,
+  .small-grid iframe {
     border-radius: var(--radius-card);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 288px;
   }
 
-  .small-grid iframe, 
-  .small-grid img {
-    width: 100%; 
+  .small-grid img, 
+  .small-grid video{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    height: 288px;
-    border-radius: var(--radius-card);
   }
+
+  img.links-logo {
+    height: 100px;
+    width: auto;
+  }
+
 
   .links-resorces section {
     margin-bottom: var(--spacing-section-gap-large);

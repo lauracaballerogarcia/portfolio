@@ -576,15 +576,25 @@ iframe {
   display: grid;
 }
 
-.small-grid li {
+.small-grid figure, .small-grid picture, .small-grid iframe {
   border-radius: var(--radius-card);
-}
-
-.small-grid iframe, .small-grid img {
-  object-fit: cover;
-  border-radius: var(--radius-card);
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 288px;
+  display: flex;
+  overflow: hidden;
+}
+
+.small-grid img, .small-grid video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+img.links-logo {
+  width: auto;
+  height: 100px;
 }
 
 .links-resorces section {
