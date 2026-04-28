@@ -439,7 +439,7 @@ header li:first-child {
 
 .hero-image {
   width: 100vw;
-  height: calc(100vh - var(--size-header-height));
+  height: calc(96vh - var(--size-header-height));
   top: var(--size-header-height);
   z-index: -1;
   position: sticky;
@@ -680,7 +680,7 @@ footer a.body-large:before {
 
 @media (width <= 1024px) {
   .hero-image {
-    height: 50vh;
+    height: 70vh;
     top: var(--size-header-height);
     overflow: hidden;
   }

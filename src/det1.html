@@ -30,9 +30,41 @@
     <main id="main-content">
       <div class="hero-image">
         <picture>
-          <source srcset="./media/images/senda-hero.jpg?as=avif" type="image/avif">
-          <source srcset="./media/images/senda-hero.jpg?as=webp" type="image/webp">
-          <img src="./media/images/senda-hero.jpg" alt="">
+          <!-- Mobile: vertical image -->
+          <source type="image/avif"
+                  media="(max-width: 768px)"
+                  srcset="./media/images/senda-hero-mobile.jpg?as=avif&width=768 768w"
+                  sizes="768px">
+
+          <source type="image/webp"
+                  media="(max-width: 768px)"
+                  srcset="./media/images/senda-hero-mobile.jpg?as=webp&width=768 768w"
+                  sizes="768px">
+
+          <source type="image/jpeg"
+                  media="(max-width: 768px)"
+                  srcset="./media/images/senda-hero-mobile.jpg?width=768 768w"
+                  sizes="768px">
+
+          <!-- Tablet y Desktop: horizontal image --> 
+          <source type="image/avif"
+                  srcset="./media/images/senda-hero.jpg?as=avif&width=1024 1024w,
+                          ./media/images/senda-hero.jpg?as=avif&width=2880 2880w"
+                  sizes= "(max-width: 1024px) 1024px,
+                          100vw">
+
+          <source type="image/webp"
+                  srcset="./media/images/senda-hero.jpg?as=webp&width=1024 1024w,
+                          ./media/images/senda-hero.jpg?as=webp&width=2880 2880w"
+                  sizes= "(max-width: 1024px) 1024px,
+                          100vw">                
+
+          <img src="./media/images/senda-hero.jpg" 
+              srcset="./media/images/senda-hero.jpg?width=1024 1024w,
+                      ./media/images/senda-hero.jpg?width=2880 2880w"
+              sizes="(max-width: 1024px) 1024px,
+                      100vw"
+              width="2880" height="1800" alt="">
         </picture>
       </div>
 
@@ -75,19 +107,57 @@
 
             <figure class="project-media-item col-2">
               <picture>
-                <source srcset="./media/images/senda-01.jpg?as=avif" type="image/avif">
-                <source srcset="./media/images/senda-01.jpg?as=webp" type="image/webp">
-                <img src="./media/images/senda-01.jpg" width="2720" height="1680" 
-                  alt="Set of components of Senda's visual identity, including the logo, color palette, typography, and iconography.">
+                <source type="image/avif"
+                        srcset="./media/images/senda-01.jpg?as=avif&width=768 768w, 
+                                ./media/images/senda-01.jpg?as=avif&width=1024 1024w,
+                                ./media/images/senda-01.jpg?as=avif&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                100vw">
+                <source type="image/webp"
+                        srcset="./media/images/senda-01.jpg?as=webp&width=768 768w, 
+                                ./media/images/senda-01.jpg?as=webp&width=1024 1024w,
+                                ./media/images/senda-01.jpg?as=webp&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                100vw">
+                <img src="./media/images/senda-01.jpg" 
+                    srcset="./media/images/senda-01.jpg?width=768 768w,
+                            ./media/images/senda-01.jpg?width=1024 1024w,
+                            ./media/images/senda-01.jpg?width=2880 2880w"
+                    sizes="(max-width: 768px) 768px,
+                            (max-width: 1024px) 1024px,
+                            100vw"
+                    width="2880" height="1800" 
+                    alt="Set of components of Senda's visual identity, including the logo, color palette, typography, and iconography.">
               </picture>
             </figure>
             
             <figure class="project-media-item col-2">
               <picture>
-                <source srcset="./media/images/senda-02.jpg?as=avif" type="image/avif">
-                <source srcset="./media/images/senda-02.jpg?as=webp" type="image/webp">
-                <img src="./media/images/senda-02.jpg" width="2880" height="1600" 
-                  alt="Image of a phone with Senda's interface, showing the 'Puntos Senda' screen with the user's closest 'Punto Senda'.">
+                <source type="image/avif"
+                        srcset="./media/images/senda-02.jpg?as=avif&width=768 768w, 
+                                ./media/images/senda-02.jpg?as=avif&width=1024 1024w,
+                                ./media/images/senda-02.jpg?as=avif&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                100vw">
+                <source type="image/webp"
+                        srcset="./media/images/senda-02.jpg?as=webp&width=768 768w, 
+                                ./media/images/senda-02.jpg?as=webp&width=1024 1024w,
+                                ./media/images/senda-02.jpg?as=webp&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                100vw">
+                <img src="./media/images/senda-02.jpg" 
+                    srcset="./media/images/senda-02.jpg?width=768 768w,
+                            ./media/images/senda-02.jpg?width=1024 1024w,
+                            ./media/images/senda-02.jpg?width=2880 2880w"
+                    sizes="(max-width: 768px) 768px,
+                            (max-width: 1024px) 1024px,
+                            100vw"
+                    width="2880" height="1800" 
+                    alt="Image of a phone with Senda's interface, showing the 'Puntos Senda' screen with the user's closest 'Punto Senda'.">
               </picture>
             </figure>
 
@@ -101,10 +171,29 @@
 
             <figure class="project-media-item col-1">
               <picture>
-                <source srcset="./media/images/senda-03.jpg?as=avif" type="image/avif">
-                <source srcset="./media/images/senda-03.jpg?as=webp" type="image/webp">
-                <img src="./media/images/senda-03.jpg" width="2880" height="1514" 
-              alt="Close-up of a mobile phone paying with the Senda app through a card reader in a physical store, showing the digital card in a wallet.">
+                <source type="image/avif"
+                        srcset="./media/images/senda-03.jpg?as=avif&width=768 768w, 
+                                ./media/images/senda-03.jpg?as=avif&width=1024 1024w,
+                                ./media/images/senda-03.jpg?as=avif&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                50vw">
+                <source type="image/webp"
+                        srcset="./media/images/senda-03.jpg?as=webp&width=768 768w, 
+                                ./media/images/senda-03.jpg?as=webp&width=1024 1024w,
+                                ./media/images/senda-03.jpg?as=webp&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                50vw">
+                <img src="./media/images/senda-03.jpg" 
+                    srcset="./media/images/senda-03.jpg?width=768 768w,
+                            ./media/images/senda-03.jpg?width=1024 1024w,
+                            ./media/images/senda-03.jpg?width=2880 2880w"
+                    sizes="(max-width: 768px) 768px,
+                            (max-width: 1024px) 1024px,
+                            50vw"
+                    width="2880" height="1800" 
+                    alt="Close-up of a mobile phone paying with the Senda app through a card reader in a physical store, showing the digital card in a wallet.">
               </picture>
             </figure>
           </section>

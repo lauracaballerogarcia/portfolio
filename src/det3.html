@@ -30,9 +30,41 @@
     <main id="main-content">
       <div class="hero-image">
         <picture>
-          <source srcset="./media/images/xana-hero.jpg?as=avif" type="image/avif">
-          <source srcset="./media/images/xana-hero.jpg?as=webp" type="image/webp">
-          <img src="./media/images/xana-hero.jpg" alt="">
+          <!-- Mobile: vertical image -->
+          <source type="image/avif"
+                  media="(max-width: 768px)"
+                  srcset="./media/images/xana-hero-mobile.jpg?as=avif&width=768 768w"
+                  sizes="768px">
+
+          <source type="image/webp"
+                  media="(max-width: 768px)"
+                  srcset="./media/images/xana-hero-mobile.jpg?as=webp&width=768 768w"
+                  sizes="768px">
+
+          <source type="image/jpeg"
+                  media="(max-width: 768px)"
+                  srcset="./media/images/xana-hero-mobile.jpg?width=768 768w"
+                  sizes="768px">
+
+          <!-- Tablet y Desktop: horizontal image --> 
+          <source type="image/avif"
+                  srcset="./media/images/xana-hero.jpg?as=avif&width=1024 1024w,
+                          ./media/images/xana-hero.jpg?as=avif&width=2880 2880w"
+                  sizes= "(max-width: 1024px) 1024px,
+                          100vw">
+
+          <source type="image/webp"
+                  srcset="./media/images/xana-hero.jpg?as=webp&width=1024 1024w,
+                          ./media/images/xana-hero.jpg?as=webp&width=2880 2880w"
+                  sizes= "(max-width: 1024px) 1024px,
+                          100vw">                
+
+          <img src="./media/images/xana-hero.jpg" 
+              srcset="./media/images/xana-hero.jpg?width=1024 1024w,
+                      ./media/images/xana-hero.jpg?width=2880 2880w"
+              sizes="(max-width: 1024px) 1024px,
+                      100vw"
+              width="2880" height="1800" alt="">
         </picture>
       </div>
 
@@ -73,19 +105,57 @@
             <h2 class="visually-hidden"><span lang="ast">Xana</span> audiovisual content</h2>
             <figure class="project-media-item col-1">
               <picture>
-                <source srcset="./media/images/xana-01.jpg?as=avif" type="image/avif">
-                <source srcset="./media/images/xana-01.jpg?as=webp" type="image/webp">
-                <img src="./media/images/xana-01.jpg" width="1380" height="1800"
-                  alt="Person serving herself a slice of toast with jam at a picnic, with a bottle of Xana white wine visible in the background.">
+                <source type="image/avif"
+                        srcset="./media/images/xana-01.jpg?as=avif&width=768 768w, 
+                                ./media/images/xana-01.jpg?as=avif&width=1024 1024w,
+                                ./media/images/xana-01.jpg?as=avif&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                50vw">
+                <source type="image/webp"
+                        srcset="./media/images/xana-01.jpg?as=webp&width=768 768w, 
+                                ./media/images/xana-01.jpg?as=webp&width=1024 1024w,
+                                ./media/images/xana-01.jpg?as=webp&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                50vw">
+                <img src="./media/images/xana-01.jpg" 
+                    srcset="./media/images/xana-01.jpg?width=768 768w,
+                            ./media/images/xana-01.jpg?width=1024 1024w,
+                            ./media/images/xana-01.jpg?width=2880 2880w"
+                    sizes="(max-width: 768px) 768px,
+                            (max-width: 1024px) 1024px,
+                            50vw"
+                    width="2880" height="1800" 
+                    alt="Person serving herself a slice of toast with jam at a picnic, with a bottle of Xana white wine visible in the background.">
               </picture>
             </figure>
 
             <figure class="project-media-item col-1">
               <picture>
-                <source srcset="./media/images/xana-02.jpg?as=avif" type="image/avif">
-                <source srcset="./media/images/xana-02.jpg?as=webp" type="image/webp">
-                <img src="./media/images/xana-02.jpg" width="1380" height="1800"
-                  alt="Close up of a person uncorking a bottle of Xana white wine at a picnic.">
+                <source type="image/avif"
+                        srcset="./media/images/xana-02.jpg?as=avif&width=768 768w, 
+                                ./media/images/xana-02.jpg?as=avif&width=1024 1024w,
+                                ./media/images/xana-02.jpg?as=avif&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                50vw">
+                <source type="image/webp"
+                        srcset="./media/images/xana-02.jpg?as=webp&width=768 768w, 
+                                ./media/images/xana-02.jpg?as=webp&width=1024 1024w,
+                                ./media/images/xana-02.jpg?as=webp&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                50vw">
+                <img src="./media/images/xana-02.jpg" 
+                    srcset="./media/images/xana-02.jpg?width=768 768w,
+                            ./media/images/xana-02.jpg?width=1024 1024w,
+                            ./media/images/xana-02.jpg?width=2880 2880w"
+                    sizes="(max-width: 768px) 768px,
+                            (max-width: 1024px) 1024px,
+                            50vw"
+                    width="2880" height="1800" 
+                    alt="Close up of a person uncorking a bottle of Xana white wine at a picnic.">
               </picture>
             </figure>
 
@@ -96,7 +166,6 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </figure>
-          
           </section>
         
         </article>

@@ -578,7 +578,7 @@
 
   .hero-image{
     width: 100vw;
-    height: calc(100vh - var(--size-header-height));
+    height: calc(96vh - var(--size-header-height));
     overflow: hidden;
     position: sticky;
     top: var(--size-header-height); 
@@ -874,7 +874,7 @@
   /* PROJECTS */
 
   .hero-image{
-      height: 50vh;
+      height: 70vh;
       overflow: hidden;
       top: var(--size-header-height); 
   }
