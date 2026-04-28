@@ -1,26 +1,58 @@
 // CURSOR PREVIEW
 
+// 1. Selección de elementos
+
 const items = document.querySelectorAll(".archive-list-item");
 const preview = document.querySelector(".cursor-preview");
 const previewImg = preview?.querySelector("img");
+const previewSources = preview?.querySelectorAll("source");
 
-// Imágenes
+// 2. Definición de imágenes
 
 const images = {
-  senda: new URL("../media/images/senda-hero.jpg", import.meta.url).href,
-  parc: new URL("../media/images/parc-central-hero.jpg", import.meta.url).href,
-  xana: new URL("../media/images/xana-hero.png", import.meta.url).href,
+  senda: {
+    avif: new URL("../media/images/senda-hero.jpg?as=avif", import.meta.url).href,
+    webp: new URL("../media/images/senda-hero.jpg?as=webp", import.meta.url).href,
+    jpg: new URL("../media/images/senda-hero.jpg", import.meta.url).href,
+  },
+  parc: {
+    avif: new URL("../media/images/parc-central-hero.jpg?as=avif", import.meta.url).href,
+    webp: new URL("../media/images/parc-central-hero.jpg?as=webp", import.meta.url).href,
+    jpg: new URL("../media/images/parc-central-hero.jpg", import.meta.url).href,
+  },
+  xana: {
+    avif: new URL("../media/images/xana-hero.jpg?as=avif", import.meta.url).href,
+    webp: new URL("../media/images/xana-hero.jpg?as=webp", import.meta.url).href,
+    jpg: new URL("../media/images/xana-hero.jpg", import.meta.url).href,
+  },
 };
 
-if (preview && previewImg) {
+//  3. PRECARGA (aquí es donde debe ir)
+Object.values(images).forEach(imgSet => {
+  Object.values(imgSet).forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+});
+
+
+// 4. Eventos
+
+if (preview && previewImg && previewSources.length) {
+
   items.forEach((item) => {
 
     item.addEventListener("mouseenter", () => {
       const key = item.dataset.image;
-      const imgSrc = images[key];
-      if (!imgSrc) return;
+      const img = images[key];
+      if (!img) return;
 
-      previewImg.src = imgSrc;
+      // Actualizar sources (formatos modernos)
+      previewSources[0].srcset = img.avif;
+      previewSources[1].srcset = img.webp;
+
+      // Fallback
+      previewImg.src = img.jpg;
 
       preview.style.opacity = "1";
       preview.style.transform = "scale(1)";
@@ -39,7 +71,52 @@ if (preview && previewImg) {
 
   });
 }
+
 console.log("Preview ready");
+
+
+// // CURSOR PREVIEW
+
+// const items = document.querySelectorAll(".archive-list-item");
+// const preview = document.querySelector(".cursor-preview");
+// const previewImg = preview?.querySelector("img");
+
+// // Imágenes
+
+// const images = {
+//   senda: new URL("../media/images/senda-hero.jpg", import.meta.url).href,
+//   parc: new URL("../media/images/parc-central-hero.jpg", import.meta.url).href,
+//   xana: new URL("../media/images/xana-hero.jpg", import.meta.url).href,
+// };
+
+// if (preview && previewImg) {
+//   items.forEach((item) => {
+
+//     item.addEventListener("mouseenter", () => {
+//       const key = item.dataset.image;
+//       const imgSrc = images[key];
+//       if (!imgSrc) return;
+
+//       previewImg.src = imgSrc;
+
+//       preview.style.opacity = "1";
+//       preview.style.transform = "scale(1)";
+//     });
+
+//     item.addEventListener("mouseleave", () => {
+//       preview.style.opacity = "0";
+//       preview.style.transform = "scale(0.8)";
+//     });
+
+//     item.addEventListener("mousemove", (e) => {
+//       const offset = 20;
+//       preview.style.left = e.clientX + offset + "px";
+//       preview.style.top = e.clientY + offset + "px";
+//     });
+
+//   });
+// }
+// console.log("Preview ready");
 
 
 

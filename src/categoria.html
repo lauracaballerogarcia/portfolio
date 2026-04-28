@@ -85,7 +85,13 @@
     <!-- Cursor preview image element, which will be updated dynamically based on the hovered project in the archive list. 
     The image source will change to show a preview of the corresponding project when the user hovers over each project item. -->
     <div class="cursor-preview">
-      <img src="./media/images/senda-hero.jpg" alt="">
+
+      <picture>
+        <source srcset="./media/images/senda-hero.jpg?as=avif" type="image/avif">
+        <source srcset="./media/images/senda-hero.jpg?as=webp" type="image/webp">
+        <img src="./media/images/senda-hero.jpg" alt="">
+      </picture>
+
     </div>
 
   </body>

@@ -715,23 +715,81 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"lhpGb":[function(require,module,exports,__globalThis) {
 // CURSOR PREVIEW
+// 1. Selección de elementos
+// // CURSOR PREVIEW
+// const items = document.querySelectorAll(".archive-list-item");
+// const preview = document.querySelector(".cursor-preview");
+// const previewImg = preview?.querySelector("img");
+// // Imágenes
+// const images = {
+//   senda: new URL("../media/images/senda-hero.jpg", import.meta.url).href,
+//   parc: new URL("../media/images/parc-central-hero.jpg", import.meta.url).href,
+//   xana: new URL("../media/images/xana-hero.jpg", import.meta.url).href,
+// };
+// if (preview && previewImg) {
+//   items.forEach((item) => {
+//     item.addEventListener("mouseenter", () => {
+//       const key = item.dataset.image;
+//       const imgSrc = images[key];
+//       if (!imgSrc) return;
+//       previewImg.src = imgSrc;
+//       preview.style.opacity = "1";
+//       preview.style.transform = "scale(1)";
+//     });
+//     item.addEventListener("mouseleave", () => {
+//       preview.style.opacity = "0";
+//       preview.style.transform = "scale(0.8)";
+//     });
+//     item.addEventListener("mousemove", (e) => {
+//       const offset = 20;
+//       preview.style.left = e.clientX + offset + "px";
+//       preview.style.top = e.clientY + offset + "px";
+//     });
+//   });
+// }
+// console.log("Preview ready");
 // PAGE ANIMATION
 var _gsap = require("gsap");
 const items = document.querySelectorAll(".archive-list-item");
 const preview = document.querySelector(".cursor-preview");
 const previewImg = preview?.querySelector("img");
-// Imágenes
+const previewSources = preview?.querySelectorAll("source");
+// 2. Definición de imágenes
 const images = {
-    senda: new URL(require("ea713fd2ca303e44")).href,
-    parc: new URL(require("5ce0da0a9ed286e9")).href,
-    xana: new URL(require("c190aa4e541fcd37")).href
+    senda: {
+        avif: new URL(require("c304702f756dbe24")).href,
+        webp: new URL(require("388c6d237296e728")).href,
+        jpg: new URL(require("ea713fd2ca303e44")).href
+    },
+    parc: {
+        avif: new URL(require("5ca6c0e99534e08f")).href,
+        webp: new URL(require("334156d8b0c173a8")).href,
+        jpg: new URL(require("5ce0da0a9ed286e9")).href
+    },
+    xana: {
+        avif: new URL(require("990b365f0789a92b")).href,
+        webp: new URL(require("e00403966a90e377")).href,
+        jpg: new URL(require("dc6d2452a0c40731")).href
+    }
 };
-if (preview && previewImg) items.forEach((item)=>{
+//  3. PRECARGA (aquí es donde debe ir)
+Object.values(images).forEach((imgSet)=>{
+    Object.values(imgSet).forEach((src)=>{
+        const img = new Image();
+        img.src = src;
+    });
+});
+// 4. Eventos
+if (preview && previewImg && previewSources.length) items.forEach((item)=>{
     item.addEventListener("mouseenter", ()=>{
         const key = item.dataset.image;
-        const imgSrc = images[key];
-        if (!imgSrc) return;
-        previewImg.src = imgSrc;
+        const img = images[key];
+        if (!img) return;
+        // Actualizar sources (formatos modernos)
+        previewSources[0].srcset = img.avif;
+        previewSources[1].srcset = img.webp;
+        // Fallback
+        previewImg.src = img.jpg;
         preview.style.opacity = "1";
         preview.style.transform = "scale(1)";
     });
@@ -765,14 +823,32 @@ document.querySelectorAll("details").forEach((detail)=>{
     });
 });
 
-},{"ea713fd2ca303e44":"fcC79","5ce0da0a9ed286e9":"eBo42","c190aa4e541fcd37":"5i8VO","gsap":"9F7Z6"}],"fcC79":[function(require,module,exports,__globalThis) {
+},{"c304702f756dbe24":"fSUEn","388c6d237296e728":"9Wnkx","ea713fd2ca303e44":"fcC79","5ca6c0e99534e08f":"5AQrY","334156d8b0c173a8":"dZpgS","5ce0da0a9ed286e9":"eBo42","990b365f0789a92b":"dWgRS","e00403966a90e377":"kA8El","dc6d2452a0c40731":"enUgp","gsap":"9F7Z6"}],"fSUEn":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("senda-hero.0a2c862e.avif") + "?" + Date.now();
+
+},{}],"9Wnkx":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("senda-hero.101aebc7.webp") + "?" + Date.now();
+
+},{}],"fcC79":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("senda-hero.0f7b8ba6.jpeg") + "?" + Date.now();
+
+},{}],"5AQrY":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("parc-central-hero.57c5bbd3.avif") + "?" + Date.now();
+
+},{}],"dZpgS":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("parc-central-hero.e28b7cc7.webp") + "?" + Date.now();
 
 },{}],"eBo42":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("parc-central-hero.53c3340d.jpeg") + "?" + Date.now();
 
-},{}],"5i8VO":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("xana-hero.3e19e9c5.png") + "?" + Date.now();
+},{}],"dWgRS":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("xana-hero.e50f1cda.avif") + "?" + Date.now();
+
+},{}],"kA8El":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("xana-hero.eebe4ade.webp") + "?" + Date.now();
+
+},{}],"enUgp":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("xana-hero.e36bbd1f.jpeg") + "?" + Date.now();
 
 },{}],"9F7Z6":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

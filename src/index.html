@@ -40,9 +40,28 @@
             <figure>
 
               <picture>
-                <source srcset="./media/images/senda-hero.jpg?as=avif" type="./media/images/senda-hero/avif">
-                <source srcset="./media/images/senda-hero.jpg?as=webp" type="./media/images/senda-hero/webp">
-                <img src="./media/images/senda-hero.jpg" width="2880" height="1800" alt="">
+                <source type="image/avif"
+                        srcset="./media/images/senda-hero.jpg?as=avif&width=768 768w, 
+                                ./media/images/senda-hero.jpg?as=avif&width=1024 1024w,
+                                ./media/images/senda-hero.jpg?as=avif&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                2880px">
+                <source type="image/webp"
+                        srcset="./media/images/senda-hero.jpg?as=webp&width=768 768w, 
+                                ./media/images/senda-hero.jpg?as=webp&width=1024 1024w,
+                                ./media/images/senda-hero.jpg?as=webp&width=2880 2880w"
+                        sizes="(max-width: 768px) 768px,
+                                (max-width: 1024px) 1024px,
+                                2880px">
+                <img src="./media/images/senda-hero.jpg" 
+                    srcset="./media/images/senda-hero.jpg?width=768 768w,
+                            ./media/images/senda-hero.jpg?width=1024 1024w,
+                            ./media/images/senda-hero.jpg?width=2880 2880w"
+                    sizes="(max-width: 768px) 768px,
+                            (max-width: 1024px) 1024px,
+                            2880px"
+                    width="2880" height="1800" alt="">
               </picture>
 
               <div class="chip">
@@ -62,8 +81,10 @@
           <a href="./det2.html" aria-label="View Parc Central project: Visual identity for Valencia's urban green space">
             <figure>
               <picture>
-                <source srcset="./media/images/parc-central-hero.jpg?as=avif" type="./media/images/parc-central-hero/avif">
-                <source srcset="./media/images/parc-central-hero.jpg?as=webp" type="./media/images/parc-central-hero/webp">
+                <source srcset="./media/images/parc-central-hero.jpg?as=avif" 
+                        type="image/avif"
+                        >
+                <source srcset="./media/images/parc-central-hero.jpg?as=webp" type="image/webp">
                 <img src="./media/images/parc-central-hero.jpg" width="6000" height="4000" alt="">
               </picture>
 
@@ -84,9 +105,9 @@
           <a href="./det3.html" aria-label="View Xana project: Art direction for a wine brand inspired by the first words of love">
             <figure>
               <picture>
-                <source srcset="./media/images/xana-hero.png?as=avif" type="./media/images/xana-hero.png/avif">
-                <source srcset="./media/images/xana-hero.png?as=webp" type="./media/images/xana-hero.png/webp">
-                <img src="./media/images/xana-hero.png" width="2800" height="1600"alt="">
+                <source srcset="./media/images/xana-hero.jpg?as=avif" type="image/avif">
+                <source srcset="./media/images/xana-hero.jpg?as=webp" type="image/webp">
+                <img src="./media/images/xana-hero.jpg" width="2800" height="1600"alt="">
               </picture>
               
               <div class="chip">
