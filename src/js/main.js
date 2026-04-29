@@ -1,3 +1,47 @@
+// LOGO ANIMATION
+
+const stage = document.getElementById('stage');
+const hasSeenIntro = sessionStorage.getItem('introSeen');
+
+if (hasSeenIntro) {
+    // Ya ha visto la animación — elimina el stage y muestra el contenido
+    stage.remove();
+    document.body.classList.remove('is-loading');
+} else {
+    // Primera vez o refresh — muestra la animación
+    sessionStorage.setItem('introSeen', 'true');
+
+    stage.addEventListener('animationend', (e) => {
+        if (e.animationName === 'hideIntro') {
+            stage.remove();
+            document.body.classList.remove('is-loading');
+        }
+    });
+}
+
+
+// LOGO SCALE
+
+(function () {
+
+    const fill  = document.getElementById('fill');
+    const stage = document.getElementById('stage');
+
+    /* ── Calcula el scale-end del fill ── */
+    function calcFillScale() {
+        const maxDim = Math.max(stage.offsetWidth, stage.offsetHeight);
+        fill.style.setProperty('--scale-end', Math.ceil((maxDim * 1.5) / 28));
+    }
+
+    calcFillScale();
+    window.addEventListener('resize', calcFillScale);
+
+})();
+
+
+
+
+
 // CURSOR PREVIEW
 
 // 1. Selección de elementos

@@ -16,8 +16,10 @@
   --spacing-80px: 5rem;
   --type-primary: "neue-haas-unica", "Inter", Tahoma, Arial, sans-serif;
   --color-background-primary: var(--color-neutral-0);
+  --color-background-secondary: var(--color-neutral-950);
   --color-text-primary: var(--color-neutral-950);
   --color-text-secondary: var(--color-neutral-600);
+  --color-text-tertiary: var(--color-neutral-0);
   --color-divider-primary: var(--color-neutral-200);
   --color-header-background: var(--color-neutral-0);
   --color-footer-background: var(--color-neutral-0);
@@ -90,6 +92,212 @@
   padding: 0;
   position: absolute;
   overflow: hidden;
+}
+
+body.is-loading {
+  overflow: hidden;
+}
+
+body.is-loading > header, body.is-loading > main, body.is-loading > footer {
+  opacity: 0;
+  animation: .5s 7s forwards showContent;
+}
+
+@keyframes showContent {
+  to {
+    opacity: 1;
+  }
+}
+
+#stage {
+  z-index: 1000;
+  background: var(--color-background-secondary);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  animation: .5s 7s forwards hideIntro;
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+@keyframes hideIntro {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+#fullText, #logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#fullText svg, #logo svg {
+  width: 30rem;
+  height: 6rem;
+  display: block;
+}
+
+#fullText path, #l1 path, #l2 path {
+  fill: var(--color-text-tertiary);
+}
+
+#fullText {
+  animation: .3s 2.4s forwards fadeOutText;
+}
+
+.text-mask-container {
+  animation: 1.8s cubic-bezier(.4, 0, .2, 1) .6s forwards eraseText;
+}
+
+@keyframes eraseText {
+  0% {
+    clip-path: inset(0 0% 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 90% 0 0);
+  }
+}
+
+@keyframes fadeOutText {
+  to {
+    opacity: 0;
+  }
+}
+
+#logo-inner {
+  opacity: 0;
+  transform-origin: 5rem 5.5rem;
+  animation: 10ms ease-out 2.5s forwards showLogo, .5s ease-out 3.8s forwards scaleUp, .6s ease-in-out 4.6s forwards rotateLogo;
+}
+
+@keyframes showLogo {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(4);
+  }
+}
+
+@keyframes rotateLogo {
+  from {
+    transform: scale(4)rotate(0);
+  }
+
+  to {
+    transform: scale(4)rotate(90deg);
+  }
+}
+
+#l1 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: .5s ease-out 2.8s forwards moveL1Apart, .4s ease-in-out 5.4s forwards closeL1;
+}
+
+@keyframes moveL1Apart {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-.5rem);
+  }
+}
+
+@keyframes closeL1 {
+  from {
+    transform: translateX(-.5rem);
+  }
+
+  to {
+    transform: translateX(1.25rem);
+  }
+}
+
+#l2 {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: .5s ease-out 2.8s forwards appearL2, .5s ease-out 3.3s forwards mirrorL2, .4s ease-in-out 5.4s forwards closeL2;
+}
+
+@keyframes appearL2 {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(1.25rem);
+  }
+}
+
+@keyframes mirrorL2 {
+  from {
+    transform: translateX(1.25rem)rotate(0);
+  }
+
+  to {
+    transform: translateX(1.25rem)rotate(180deg);
+  }
+}
+
+@keyframes closeL2 {
+  from {
+    transform: translateX(1.25rem)rotate(180deg);
+  }
+
+  to {
+    transform: translateX(1.25rem)rotate(180deg);
+  }
+}
+
+#fill {
+  background: var(--color-background-primary);
+  transform-origin: center;
+  border-radius: .125rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  animation: .8s cubic-bezier(.6, 0, .4, 1) 6s forwards expandFill;
+  position: absolute;
+  transform: scale(0);
+}
+
+@keyframes expandFill {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(var(--scale-end, 80));
+  }
 }
 
 html, body {
@@ -248,7 +456,7 @@ header {
   background-color: var(--color-header-background);
   width: 100%;
   height: var(--size-header-height);
-  z-index: 10000;
+  z-index: 999;
   flex-flow: wrap;
   display: flex;
   position: fixed;
@@ -296,6 +504,10 @@ header li:first-child {
   width: 100%;
   height: 440px;
   overflow: hidden;
+}
+
+.featured-work figure:hover {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%);
 }
 
 .featured-work-card figure {

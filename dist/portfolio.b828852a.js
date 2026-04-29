@@ -207,11 +207,11 @@
       });
     }
   }
-})({"93v64":[function(require,module,exports,__globalThis) {
+})({"cEzVH":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 59590;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -714,8 +714,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"lhpGb":[function(require,module,exports,__globalThis) {
-// CURSOR PREVIEW
-// 1. Selección de elementos
+// LOGO ANIMATION
 // // CURSOR PREVIEW
 // const items = document.querySelectorAll(".archive-list-item");
 // const preview = document.querySelector(".cursor-preview");
@@ -750,6 +749,35 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 // console.log("Preview ready");
 // PAGE ANIMATION
 var _gsap = require("gsap");
+const stage = document.getElementById('stage');
+const hasSeenIntro = sessionStorage.getItem('introSeen');
+if (hasSeenIntro) {
+    // Ya ha visto la animación — elimina el stage y muestra el contenido
+    stage.remove();
+    document.body.classList.remove('is-loading');
+} else {
+    // Primera vez o refresh — muestra la animación
+    sessionStorage.setItem('introSeen', 'true');
+    stage.addEventListener('animationend', (e)=>{
+        if (e.animationName === 'hideIntro') {
+            stage.remove();
+            document.body.classList.remove('is-loading');
+        }
+    });
+}
+// LOGO SCALE
+(function() {
+    const fill = document.getElementById('fill');
+    const stage = document.getElementById('stage');
+    /* ── Calcula el scale-end del fill ── */ function calcFillScale() {
+        const maxDim = Math.max(stage.offsetWidth, stage.offsetHeight);
+        fill.style.setProperty('--scale-end', Math.ceil(maxDim * 1.5 / 28));
+    }
+    calcFillScale();
+    window.addEventListener('resize', calcFillScale);
+})();
+// CURSOR PREVIEW
+// 1. Selección de elementos
 const items = document.querySelectorAll(".archive-list-item");
 const preview = document.querySelector(".cursor-preview");
 const previewImg = preview?.querySelector("img");
@@ -4933,6 +4961,6 @@ var CSSPlugin = {
 });
 (0, _gsapCoreJs.gsap).registerPlugin(CSSPlugin);
 
-},{"./gsap-core.js":"evdHe","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["93v64","lhpGb"], "lhpGb", "parcelRequire2041", {}, "./", "/")
+},{"./gsap-core.js":"evdHe","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["cEzVH","lhpGb"], "lhpGb", "parcelRequire2041", {}, "./", "/")
 
 //# sourceMappingURL=portfolio.b828852a.js.map

@@ -38,9 +38,11 @@
   
   /* Colors */
   --color-background-primary: var(--color-neutral-0);
+  --color-background-secondary: var(--color-neutral-950);
 
   --color-text-primary: var(--color-neutral-950);
   --color-text-secondary: var(--color-neutral-600);
+  --color-text-tertiary: var(--color-neutral-0);
 
   --color-divider-primary: var(--color-neutral-200);
 
@@ -149,6 +151,214 @@
     white-space: nowrap;
     border: 0;
   }
+
+
+
+
+/* ==========================
+  ANIMATION
+  ========================== */
+
+  /* CONTENT APPEARANCE
+  ========================== */
+
+  body.is-loading {
+    overflow: hidden;
+  }
+
+  body.is-loading > header,
+  body.is-loading > main,
+  body.is-loading > footer {
+      opacity: 0;
+      animation: showContent 0.5s ease forwards;
+      animation-delay: 7s;
+  }
+
+  @keyframes showContent {
+      to { opacity: 1; }
+  }
+
+  /* STAGE
+  ========================== */
+
+  #stage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; 
+  z-index: 1000;       
+  background: var(--color-background-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;     
+  
+  animation: hideIntro 0.5s ease forwards;
+  animation-delay: 7s;
+}
+
+@keyframes hideIntro {
+  0%   { opacity: 1; pointer-events: all; }
+  100% { opacity: 0; pointer-events: none; }
+}
+
+#fullText,
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#fullText svg,
+#logo svg {
+    width: 30rem;
+    height: 6rem;
+    display: block;
+}
+
+#fullText path, #l1 path, #l2 path {
+  fill: var(--color-text-tertiary);
+}
+
+
+/* TEXTO COMPLETO
+  ========================== */
+
+#fullText {
+  animation: fadeOutText 0.3s ease forwards; /* Fade out justo cuando la máscara ha terminado */
+  animation-delay: 2.4s;
+}
+
+.text-mask-container {
+  animation: eraseText 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes eraseText {
+      0%   { clip-path: inset(0 0%   0 0); }
+      100% { clip-path: inset(0 90%  0 0); }
+    }
+ 
+@keyframes fadeOutText {
+  to { opacity: 0; }
+}
+
+/* LOGO
+  ========================== */
+
+#logo-inner {
+  opacity: 0; /* Aparece en el mismo instante en que #text-full desaparece */
+  /* transform-origin: 0px 20px; */
+  transform-origin: 5rem 5.5rem;;
+  animation: 
+    showLogo   0.01s ease-out    forwards,  /* 1. aparece */
+    scaleUp    0.5s  ease-out    forwards,  /* 5. escala */
+    rotateLogo 0.6s  ease-in-out forwards;  /* 6. rota 90° */
+  
+    animation-delay:
+    2.5s,   /* showLogo  */
+    3.8s,   /* scaleUp   */
+    4.6s;   /* rotateLogo */
+}
+
+@keyframes showLogo   { to { opacity: 1; } }
+
+@keyframes scaleUp {
+  from { transform: scale(1); }
+  to   { transform: scale(4); }
+}
+
+@keyframes rotateLogo {
+    from { transform: scale(4) rotate(0deg); }
+    to   { transform: scale(4) rotate(90deg); }
+}
+
+/* L1
+  ========================== */
+
+#l1 {
+  transform-box: fill-box;
+  transform-origin: center center;
+
+  animation:
+    moveL1Apart 0.5s ease-out    forwards,  /* 3. se separa a la izquierda */
+    closeL1     0.4s ease-in-out forwards;  /* 7. se cierra al centro */
+  animation-delay:
+    2.8s,   /* moveL1Apart */
+    5.4s;   /* closeL1 */
+}
+
+@keyframes moveL1Apart {
+  from { transform: translateX(0px); }
+  to   { transform: translateX(-0.5rem); }
+}
+ 
+/* El translateX previo se preserva en cada keyframe */
+@keyframes closeL1 {
+  from { transform: translateX(-0.5rem); }
+  to   { transform: translateX(1.25rem); }
+}
+
+/* L2
+  ========================== */
+
+#l2 {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center center;
+
+  animation:
+    appearL2 0.5s ease-out    forwards,  /* 3. aparece y se mueve a la derecha */
+    mirrorL2 0.5s ease-out    forwards,  /* 4. rota 180° (efecto espejo) */
+    closeL2  0.4s ease-in-out forwards;  /* 7. se cierra al centro */
+  
+  animation-delay:
+    2.8s,   /* appearL2 */
+    3.3s,   /* mirrorL2 */
+    5.4s;   /* closeL2  */
+}
+
+@keyframes appearL2 {
+  0%   { opacity: 0; transform: translateX(0px); }
+  100% { opacity: 1; transform: translateX(1.25rem); }
+}
+
+@keyframes mirrorL2 {
+  from { transform: translateX(1.25rem) rotate(0deg); }
+  to   { transform: translateX(1.25rem) rotate(180deg); }
+}
+
+@keyframes closeL2 {
+  from { transform: translateX(1.25rem) rotate(180deg); }
+  to   { transform: translateX(1.25rem) rotate(180deg); }
+}
+
+/* RECTÁNGULO FINAL
+  ========================== */
+
+  #fill{
+    position: absolute;
+    width: 1.75rem;
+    height: 1.75rem;
+    background: var(--color-background-primary);
+    border-radius: 0.125rem;
+    transform: scale(0);
+    transform-origin: center center;
+
+    animation: expandFill 0.8s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+    animation-delay: 6.0s;
+  }
+
+  @keyframes expandFill {
+    0%   { transform: scale(0);               opacity: 0; }
+    10%  {                                     opacity: 1; }
+    100% { transform: scale(var(--scale-end, 80)); }
+  }
+
+
 
 
 /* ==========================
@@ -356,7 +566,7 @@
     left: 0;
     width: 100%;
     height: var(--size-header-height);
-    z-index: 10000;
+    z-index: 999;
   }
 
   header nav {
@@ -407,9 +617,20 @@
     height: 440px;
    }
 
+   .featured-work figure:hover{
+      clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 85%,
+        85% 100%,
+        0% 100%
+      );
+   }
+
    .featured-work-card figure {
     height: 664px;
    }
+
 
   .featured-work img{
     width: 100%;
@@ -418,12 +639,14 @@
     border-radius: var(--radius-card);
 
     cursor: pointer; /* cambia el cursor */
+
     transition: transform 0.3s ease; /* suaviza el efecto */
   }
 
   .featured-work img:hover {
     transform: scale(1.05); 
   }
+
 
   .chip {
     position: absolute;
