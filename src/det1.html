@@ -11,7 +11,7 @@
     designed to reduce online distrust and promote autonomy.">
   
     <!-- Links -->
-    <link rel="icon" href="./media/images/favicon.png" type="image/png">
+    <link rel="icon" href="./media/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/szr3ped.css">
   </head>
@@ -34,36 +34,33 @@
           <source type="image/avif"
                   media="(max-width: 768px)"
                   srcset="./media/images/senda-hero-mobile.jpg?as=avif&width=768 768w"
-                  sizes="768px">
+                  sizes="100vw">
 
           <source type="image/webp"
                   media="(max-width: 768px)"
                   srcset="./media/images/senda-hero-mobile.jpg?as=webp&width=768 768w"
-                  sizes="768px">
+                  sizes="100vw">
 
           <source type="image/jpeg"
                   media="(max-width: 768px)"
                   srcset="./media/images/senda-hero-mobile.jpg?width=768 768w"
-                  sizes="768px">
+                  sizes="100vw">
 
           <!-- Tablet y Desktop: horizontal image --> 
           <source type="image/avif"
                   srcset="./media/images/senda-hero.jpg?as=avif&width=1024 1024w,
                           ./media/images/senda-hero.jpg?as=avif&width=2880 2880w"
-                  sizes= "(max-width: 1024px) 1024px,
-                          100vw">
+                  sizes= "100vw">
 
           <source type="image/webp"
                   srcset="./media/images/senda-hero.jpg?as=webp&width=1024 1024w,
                           ./media/images/senda-hero.jpg?as=webp&width=2880 2880w"
-                  sizes= "(max-width: 1024px) 1024px,
-                          100vw">                
+                  sizes= "100vw">                
 
           <img src="./media/images/senda-hero.jpg" 
               srcset="./media/images/senda-hero.jpg?width=1024 1024w,
                       ./media/images/senda-hero.jpg?width=2880 2880w"
-              sizes="(max-width: 1024px) 1024px,
-                      100vw"
+              sizes= "100vw"
               width="2880" height="1800" alt="">
         </picture>
       </div>
@@ -111,24 +108,18 @@
                         srcset="./media/images/senda-01.jpg?as=avif&width=768 768w, 
                                 ./media/images/senda-01.jpg?as=avif&width=1024 1024w,
                                 ./media/images/senda-01.jpg?as=avif&width=2880 2880w"
-                        sizes="(max-width: 768px) 768px,
-                                (max-width: 1024px) 1024px,
-                                100vw">
+                        sizes="calc(100vw - 2.5rem)">
                 <source type="image/webp"
                         srcset="./media/images/senda-01.jpg?as=webp&width=768 768w, 
                                 ./media/images/senda-01.jpg?as=webp&width=1024 1024w,
                                 ./media/images/senda-01.jpg?as=webp&width=2880 2880w"
-                        sizes="(max-width: 768px) 768px,
-                                (max-width: 1024px) 1024px,
-                                100vw">
+                        sizes="calc(100vw - 2.5rem)">
                 <img src="./media/images/senda-01.jpg" 
                     srcset="./media/images/senda-01.jpg?width=768 768w,
                             ./media/images/senda-01.jpg?width=1024 1024w,
                             ./media/images/senda-01.jpg?width=2880 2880w"
-                    sizes="(max-width: 768px) 768px,
-                            (max-width: 1024px) 1024px,
-                            100vw"
-                    width="2880" height="1800" 
+                    sizes="calc(100vw - 2.5rem)"
+                    width="2880" height="1800" loading="lazy"
                     alt="Set of components of Senda's visual identity, including the logo, color palette, typography, and iconography.">
               </picture>
             </figure>
@@ -139,24 +130,18 @@
                         srcset="./media/images/senda-02.jpg?as=avif&width=768 768w, 
                                 ./media/images/senda-02.jpg?as=avif&width=1024 1024w,
                                 ./media/images/senda-02.jpg?as=avif&width=2880 2880w"
-                        sizes="(max-width: 768px) 768px,
-                                (max-width: 1024px) 1024px,
-                                100vw">
+                        sizes="calc(100vw - 2.5rem)">
                 <source type="image/webp"
                         srcset="./media/images/senda-02.jpg?as=webp&width=768 768w, 
                                 ./media/images/senda-02.jpg?as=webp&width=1024 1024w,
                                 ./media/images/senda-02.jpg?as=webp&width=2880 2880w"
-                        sizes="(max-width: 768px) 768px,
-                                (max-width: 1024px) 1024px,
-                                100vw">
+                        sizes="calc(100vw - 2.5rem)">
                 <img src="./media/images/senda-02.jpg" 
                     srcset="./media/images/senda-02.jpg?width=768 768w,
                             ./media/images/senda-02.jpg?width=1024 1024w,
                             ./media/images/senda-02.jpg?width=2880 2880w"
-                    sizes="(max-width: 768px) 768px,
-                            (max-width: 1024px) 1024px,
-                            100vw"
-                    width="2880" height="1800" 
+                    sizes="calc(100vw - 2.5rem)"
+                    width="2880" height="1800" loading="lazy"
                     alt="Image of a phone with Senda's interface, showing the 'Puntos Senda' screen with the user's closest 'Punto Senda'.">
               </picture>
             </figure>
@@ -164,6 +149,7 @@
             <figure class="project-media-item col-1">
               <iframe width="560" height="315" 
               src="https://www.youtube.com/embed/2IX9YTckKU8?si=XzkyN2wgPDiaePg5" 
+              loading="lazy"
               title="Relaxing music for seniors and the elderly | Nature sounds to calm the mind" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -174,25 +160,22 @@
                 <source type="image/avif"
                         srcset="./media/images/senda-03.jpg?as=avif&width=768 768w, 
                                 ./media/images/senda-03.jpg?as=avif&width=1024 1024w,
-                                ./media/images/senda-03.jpg?as=avif&width=2880 2880w"
-                        sizes="(max-width: 768px) 768px,
-                                (max-width: 1024px) 1024px,
-                                50vw">
+                                ./media/images/senda-03.jpg?as=avif&width=1440 1440w"
+                        sizes="(max-width: 1024px) calc(100vw - 2.5rem),
+                                calc(50vw - 3rem)">
                 <source type="image/webp"
                         srcset="./media/images/senda-03.jpg?as=webp&width=768 768w, 
                                 ./media/images/senda-03.jpg?as=webp&width=1024 1024w,
-                                ./media/images/senda-03.jpg?as=webp&width=2880 2880w"
-                        sizes="(max-width: 768px) 768px,
-                                (max-width: 1024px) 1024px,
-                                50vw">
+                                ./media/images/senda-03.jpg?as=webp&width=1440 1440w"
+                        sizes="(max-width: 1024px) calc(100vw - 2.5rem),
+                                calc(50vw - 3rem)">
                 <img src="./media/images/senda-03.jpg" 
                     srcset="./media/images/senda-03.jpg?width=768 768w,
                             ./media/images/senda-03.jpg?width=1024 1024w,
-                            ./media/images/senda-03.jpg?width=2880 2880w"
-                    sizes="(max-width: 768px) 768px,
-                            (max-width: 1024px) 1024px,
-                            50vw"
-                    width="2880" height="1800" 
+                            ./media/images/senda-03.jpg?width=1440 1440w"
+                    sizes="(max-width: 1024px) calc(100vw - 2.5rem),
+                                calc(50vw - 3rem)"
+                    width="2880" height="1800" loading="lazy" 
                     alt="Close-up of a mobile phone paying with the Senda app through a card reader in a physical store, showing the digital card in a wallet.">
               </picture>
             </figure>

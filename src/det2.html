@@ -11,7 +11,7 @@
     combining visual identity and conceptual thinking to create social value.">
   
     <!-- Links -->
-    <link rel="icon" href="./media/images/favicon.png" type="image/png">
+    <link rel="icon" href="./media/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/szr3ped.css">
   </head>
@@ -34,36 +34,33 @@
           <source type="image/avif"
                   media="(max-width: 768px)"
                   srcset="./media/images/parc-central-hero-mobile.jpg?as=avif&width=768 768w"
-                  sizes="768px">
+                  sizes="100vw">
 
           <source type="image/webp"
                   media="(max-width: 768px)"
                   srcset="./media/images/parc-central-hero-mobile.jpg?as=webp&width=768 768w"
-                  sizes="768px">
+                  sizes="100vw">
 
           <source type="image/jpeg"
                   media="(max-width: 768px)"
                   srcset="./media/images/parc-central-hero-mobile.jpg?width=768 768w"
-                  sizes="768px">
+                  sizes="100vw">
 
           <!-- Tablet y Desktop: horizontal image --> 
           <source type="image/avif"
                   srcset="./media/images/parc-central-hero.jpg?as=avif&width=1024 1024w,
                           ./media/images/parc-central-hero.jpg?as=avif&width=2880 2880w"
-                  sizes= "(max-width: 1024px) 1024px,
-                          100vw">
+                  sizes= "100vw">
 
           <source type="image/webp"
                   srcset="./media/images/parc-central-hero.jpg?as=webp&width=1024 1024w,
                           ./media/images/parc-central-hero.jpg?as=webp&width=2880 2880w"
-                  sizes= "(max-width: 1024px) 1024px,
-                          100vw">                
+                  sizes= "100vw">                
 
           <img src="./media/images/parc-central-hero.jpg" 
               srcset="./media/images/parc-central-hero.jpg?width=1024 1024w,
                       ./media/images/parc-central-hero.jpg?width=2880 2880w"
-              sizes="(max-width: 1024px) 1024px,
-                      100vw"
+              sizes= "100vw"
               width="2880" height="1800" alt="">
         </picture>
       </div>
@@ -104,7 +101,7 @@
           <section class="project-media-grid">
             <h2 class="visually-hidden"><span lang="ca">Parc Central</span> audiovisual content</h2>
             <figure class="project-media-item col-2">
-              <video width="1440" height="700" autoplay loop muted playsinline
+              <video preload="none" width="1440" height="700" autoplay loop muted playsinline
                 aria-label="Animation showing the Parc Central logo being crafted.">
                 <source src="./media/videos/parc-central-01.webm" type="video/webm">
                 <source src="./media/videos/parc-central-01.mp4" type="video/mp4">
@@ -118,24 +115,18 @@
                         srcset="./media/images/parc-central-02.jpg?as=avif&width=768 768w, 
                                 ./media/images/parc-central-02.jpg?as=avif&width=1024 1024w,
                                 ./media/images/parc-central-02.jpg?as=avif&width=2880 2880w"
-                        sizes="(max-width: 768px) 768px,
-                                (max-width: 1024px) 1024px,
-                                50vw">
+                        sizes="calc(100vw - 2.5rem)">
                 <source type="image/webp"
                         srcset="./media/images/parc-central-02.jpg?as=webp&width=768 768w, 
                                 ./media/images/parc-central-02.jpg?as=webp&width=1024 1024w,
                                 ./media/images/parc-central-02.jpg?as=webp&width=2880 2880w"
-                        sizes="(max-width: 768px) 768px,
-                                (max-width: 1024px) 1024px,
-                                50vw">
+                        sizes="calc(100vw - 2.5rem)">
                 <img src="./media/images/parc-central-02.jpg" 
                     srcset="./media/images/parc-central-02.jpg?width=768 768w,
                             ./media/images/parc-central-02.jpg?width=1024 1024w,
                             ./media/images/parc-central-02.jpg?width=2880 2880w"
-                    sizes="(max-width: 768px) 768px,
-                            (max-width: 1024px) 1024px,
-                            50vw"
-                    width="2880" height="1800" 
+                    sizes="calc(100vw - 2.5rem)"
+                    width="2880" height="1800" loading="lazy"
                     alt="A poster showing the different elements of Parc Central's visual identity, including the logo, color palette, typography, and iconography.">
               </picture>
             </figure>
@@ -145,31 +136,28 @@
                 <source type="image/avif"
                         srcset="./media/images/parc-central-03.jpg?as=avif&width=768 768w, 
                                 ./media/images/parc-central-03.jpg?as=avif&width=1024 1024w,
-                                ./media/images/parc-central-03.jpg?as=avif&width=2880 2880w"
-                        sizes="(max-width: 768px) 768px,
-                                (max-width: 1024px) 1024px,
-                                50vw">
+                                ./media/images/parc-central-03.jpg?as=avif&width=1440 1440w"
+                        sizes="(max-width: 1024px) calc(100vw - 2.5rem),
+                                calc(50vw - 3rem)">
                 <source type="image/webp"
                         srcset="./media/images/parc-central-03.jpg?as=webp&width=768 768w, 
                                 ./media/images/parc-central-03.jpg?as=webp&width=1024 1024w,
-                                ./media/images/parc-central-03.jpg?as=webp&width=2880 2880w"
-                        sizes="(max-width: 768px) 768px,
-                                (max-width: 1024px) 1024px,
-                                50vw">
+                                ./media/images/parc-central-03.jpg?as=webp&width=1440 1440w"
+                        sizes="(max-width: 1024px) calc(100vw - 2.5rem),
+                                calc(50vw - 3rem)">
                 <img src="./media/images/parc-central-03.jpg" 
                     srcset="./media/images/parc-central-03.jpg?width=768 768w,
                             ./media/images/parc-central-03.jpg?width=1024 1024w,
-                            ./media/images/parc-central-03.jpg?width=2880 2880w"
-                    sizes="(max-width: 768px) 768px,
-                            (max-width: 1024px) 1024px,
-                            50vw"
-                    width="2880" height="1800" 
+                            ./media/images/parc-central-03.jpg?width=1440 1440w"
+                    sizes="(max-width: 1024px) calc(100vw - 2.5rem),
+                            calc(50vw - 3rem)"
+                    width="2880" height="1800" loading="lazy"
                     alt="A close-up of the Parc Central signage, showing a park area and description.">
               </picture>
             </figure>
 
             <figure class="project-media-item col-1">
-              <video width="800" height="836" autoplay loop muted playsinline
+              <video preload="none" width="800" height="836" autoplay loop muted playsinline 
                 aria-label="Animation showing a digital ticket, appearing from the bottom to the top of a mobile screen, for a Parc Central event.">
                 <source src="./media/videos/parc-central-04.webm" type="video/webm">
                 <source src="./media/videos/parc-central-04.mp4" type="video/mp4">

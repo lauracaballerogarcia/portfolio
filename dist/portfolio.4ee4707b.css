@@ -61,15 +61,18 @@
 }
 
 .skip {
-  z-index: 999;
+  z-index: 9999;
+  background: var(--color-background-secondary);
+  color: var(--color-text-tertiary);
+  border-radius: var(--radius-button);
   opacity: 0;
-  padding: 1rem;
+  padding: .75rem 1.5rem;
   position: absolute;
+  top: 1rem;
   left: -9999px;
 }
 
 .skip:focus {
-  color: var(--light-color);
   opacity: 1;
   left: 50%;
   transform: translateX(-50%);
@@ -118,7 +121,7 @@ body.is-loading > header, body.is-loading > main, body.is-loading > footer {
   height: 100vh;
   animation: .5s 7s forwards hideIntro;
   display: flex;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -264,16 +267,6 @@ body.is-loading > header, body.is-loading > main, body.is-loading > footer {
   }
 }
 
-@keyframes closeL2 {
-  from {
-    transform: translateX(1.25rem)rotate(180deg);
-  }
-
-  to {
-    transform: translateX(1.25rem)rotate(180deg);
-  }
-}
-
 #fill {
   background: var(--color-background-primary);
   transform-origin: center;
@@ -297,6 +290,22 @@ body.is-loading > header, body.is-loading > main, body.is-loading > footer {
 
   100% {
     transform: scale(var(--scale-end, 80));
+  }
+}
+
+.page-enter {
+  animation: .8s ease-out forwards pageEnter;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 
@@ -501,8 +510,11 @@ header li:first-child {
 }
 
 .featured-work figure {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
   width: 100%;
-  height: 440px;
+  height: 27.5rem;
+  transition: clip-path .4s;
+  position: relative;
   overflow: hidden;
 }
 
@@ -511,7 +523,7 @@ header li:first-child {
 }
 
 .featured-work-card figure {
-  height: 664px;
+  height: 41.5rem;
 }
 
 .featured-work img {
@@ -793,7 +805,7 @@ iframe {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 288px;
+  height: 18rem;
   display: flex;
   overflow: hidden;
 }
@@ -809,7 +821,7 @@ img.links-logo {
   height: 100px;
 }
 
-.links-resorces section {
+.links-resources section {
   margin-bottom: var(--spacing-section-gap-large);
 }
 
@@ -912,7 +924,6 @@ footer a.body-large:before {
   }
 
   .project-media-item img, .project-media-item iframe {
-    object-fit: fill;
     width: 100%;
     height: auto;
   }
@@ -942,12 +953,16 @@ footer a.body-large:before {
   }
 
   .featured-work figure {
-    height: auto;
+    height: 30vh;
+  }
+
+  .featured-work-card figure {
+    height: 60vh;
   }
 
   .featured-work-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .archive-list-item article {

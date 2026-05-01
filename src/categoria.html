@@ -11,7 +11,7 @@
     visual design, branding and art direction with a creative and contemporary approach.">
   
     <!-- Links -->
-    <link rel="icon" href="./media/images/favicon.png" type="image/png">
+    <link rel="icon" href="./media/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/szr3ped.css">
   </head>
@@ -79,20 +79,28 @@
     <!-- FOOTER -->
     <include src="src/footer.html"></include>
 
-    <!-- SCRIPT -->
-    <script type="module" src="./js/main.js"></script>
-
     <!-- Cursor preview image element, which will be updated dynamically based on the hovered project in the archive list. 
     The image source will change to show a preview of the corresponding project when the user hovers over each project item. -->
+
     <div class="cursor-preview">
-
       <picture>
-        <source srcset="./media/images/senda-hero.jpg?as=avif" type="image/avif">
-        <source srcset="./media/images/senda-hero.jpg?as=webp" type="image/webp">
-        <img src="./media/images/senda-hero.jpg" alt="">
+        <source type="image/avif"
+                srcset="./media/images/senda-hero.jpg?as=avif&width=452 1x,
+                        ./media/images/senda-hero.jpg?as=avif&width=904 2x">
+        <source type="image/webp"
+                srcset="./media/images/senda-hero.jpg?as=webp&width=452 1x,
+                        ./media/images/senda-hero.jpg?as=webp&width=904 2x">
+        <img src="./media/images/senda-hero.jpg"
+            srcset="./media/images/senda-hero.jpg?width=452 1x,
+                    ./media/images/senda-hero.jpg?width=904 2x"
+            width="452"
+            height="288"
+            alt="">
       </picture>
-
     </div>
+
+    <!-- SCRIPT -->
+    <script type="module" src="./js/main.js"></script>
 
   </body>
 </html>
