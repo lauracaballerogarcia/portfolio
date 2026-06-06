@@ -13,7 +13,7 @@
     "start": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build",
     "parcel:dev": "parcel",
-    "parcel:build": "parcel build src/index.html --no-cache --log-level verbose",
+    "parcel:build": "parcel build",
     "clean": "rimraf dist .parcel-cache"
   },
   "keywords": [],
