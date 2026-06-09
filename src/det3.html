@@ -120,7 +120,7 @@
                             ./media/images/xana-01.jpg?width=1440 1440w"
                     sizes="(max-width: 1024px) calc(100vw - 2.5rem),
                             calc(50vw - 3rem)"
-                    width="2880" height="1800"
+                    width="2880" height="1800" loading="lazy"
                     alt="Person serving herself a slice of toast with jam at a picnic, with a bottle of Xana white wine visible in the background.">
               </picture>
             </figure>
@@ -145,15 +145,15 @@
                             ./media/images/xana-02.jpg?width=1440 1440w"
                     sizes="(max-width: 1024px) calc(100vw - 2.5rem),
                             calc(50vw - 3rem)"
-                    width="2880" height="1800"
+                    width="2880" height="1800" loading="lazy"
                     alt="Close up of a person uncorking a bottle of Xana white wine at a picnic.">
               </picture>
             </figure>
 
             <figure class="project-media-item col-2">
-              <iframe width="560" height="315" 
+              <iframe width="560" height="315"
               src="https://www.youtube.com/embed/-jjoxJ2qMS8?si=SYuNnjZauVA7Mx54" 
-              
+              loading="lazy"
               title="Relaxing Nature Ambience Meditation | Healing Spring Sounds in a Magical Forest on a Sunny Morning" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -169,6 +169,6 @@
     <include src="src/footer.html"></include>
 
     <!-- SCRIPT -->
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" defer src="./js/main.js"></script>
   </body>
 </html>
