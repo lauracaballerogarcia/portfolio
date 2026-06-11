@@ -165,7 +165,7 @@
   /* CONTENT APPEARANCE
   ========================== */
 
-  body.is-loading {
+  /* body.is-loading {
     overflow: hidden;
   }
 
@@ -179,7 +179,7 @@
 
   @keyframes showContent {
       to { opacity: 1; }
-  }
+  } */
 
   /* STAGE
   ========================== */
