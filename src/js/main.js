@@ -1,8 +1,3 @@
-// IMPORTS
-
-import '@fontsource/inter';
-
-
 // LOGO ANIMATION
 
 const stage = document.getElementById('stage');
