@@ -1,6 +1,6 @@
 {
   "jpeg": {
-    "quality": 70,
+    "quality": 75,
     "progressive": true,
     "mozjpeg": true, 
     "chromaSubsampling": "4:4:4"
@@ -12,7 +12,7 @@
     "nearLossless": true
   },
   "avif": {
-    "quality": 70,
+    "quality": 60,
     "effort": 6
   },
   "png": {
