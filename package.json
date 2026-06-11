@@ -28,6 +28,7 @@
     "sharp": "^0.33.5"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
     "gsap": "^3.14.2"
   }
 }

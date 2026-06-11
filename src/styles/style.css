@@ -29,7 +29,9 @@
   /* Radius */
 
   /* Typography */
-  --type-primary: "neue-haas-unica", "Inter", Tahoma, Arial, sans-serif;
+  /* --type-primary: "neue-haas-unica", "Inter", Tahoma, Arial, sans-serif; */
+  --type-primary: "Inter", Tahoma, Arial, sans-serif;
+
 
 
 
