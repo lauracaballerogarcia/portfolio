@@ -12,10 +12,31 @@
   
     <!-- Links -->
     <link rel="icon" href="./media/images/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="./styles/style.css" as="style">
+
+    <!-- Preload imagen hero móvil -->
+  <link rel="preload"
+        as="image"
+        href="./media/images/xana-hero-mobile.jpg?as=avif&width=400"
+        imagesrcset="./media/images/xana-hero-mobile.jpg?as=avif&width=400 400w,
+                     ./media/images/xana-hero-mobile.jpg?as=avif&width=768 768w"
+        imagesizes="100vw"
+        media="(max-width: 768px)"
+        type="image/avif">
+
+  <!-- Preload imagen hero desktop -->
+  <link rel="preload"
+        as="image"
+        href="./media/images/xana-hero.jpg?as=avif&width=1024"
+        imagesrcset="./media/images/xana-hero.jpg?as=avif&width=1024 1024w,
+                     ./media/images/xana-hero.jpg?as=avif&width=1440 1440w,
+                     ./media/images/xana-hero.jpg?as=avif&width=2880 2880w"
+        imagesizes="100vw"
+        type="image/avif">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./styles/style.css">
-    <!-- <link rel="preconnect" href="https://use.typekit.net">
-    <link rel="preconnect" href="https://p.typekit.net">
-    <link rel="stylesheet" href="https://use.typekit.net/szr3ped.css"> -->
+
   </head>
 
   <body id="top">
