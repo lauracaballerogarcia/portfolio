@@ -13,6 +13,8 @@
     <!-- Links -->
     <link rel="icon" href="./media/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preconnect" href="https://p.typekit.net">
     <link rel="stylesheet" href="https://use.typekit.net/szr3ped.css">
   </head>
 
@@ -33,35 +35,43 @@
           <!-- Mobile: vertical image -->
           <source type="image/avif"
                   media="(max-width: 768px)"
-                  srcset="./media/images/parc-central-hero-mobile.jpg?as=avif&width=768 768w"
+                  srcset="./media/images/parc-central-hero-mobile.jpg?as=avif&width=400 400w,
+                          ./media/images/parc-central-hero-mobile.jpg?as=avif&width=768 768w"
                   sizes="100vw">
 
           <source type="image/webp"
                   media="(max-width: 768px)"
-                  srcset="./media/images/parc-central-hero-mobile.jpg?as=webp&width=768 768w"
+                  srcset="./media/images/parc-central-hero-mobile.jpg?as=webp&width=400 400w,
+                          ./media/images/parc-central-hero-mobile.jpg?as=webp&width=768 768w"
                   sizes="100vw">
 
           <source type="image/jpeg"
                   media="(max-width: 768px)"
-                  srcset="./media/images/parc-central-hero-mobile.jpg?width=768 768w"
+                  srcset="./media/images/parc-central-hero-mobile.jpg?width=400 400w,
+                          ./media/images/parc-central-hero-mobile.jpg?width=768 768w"
                   sizes="100vw">
 
           <!-- Tablet y Desktop: horizontal image --> 
           <source type="image/avif"
                   srcset="./media/images/parc-central-hero.jpg?as=avif&width=1024 1024w,
+                          ./media/images/parc-central-hero.jpg?as=avif&width=1440 1440w,
                           ./media/images/parc-central-hero.jpg?as=avif&width=2880 2880w"
                   sizes= "100vw">
 
           <source type="image/webp"
                   srcset="./media/images/parc-central-hero.jpg?as=webp&width=1024 1024w,
+                          ./media/images/parc-central-hero.jpg?as=webp&width=1440 1440w,
                           ./media/images/parc-central-hero.jpg?as=webp&width=2880 2880w"
                   sizes= "100vw">                
 
           <img src="./media/images/parc-central-hero.jpg" 
               srcset="./media/images/parc-central-hero.jpg?width=1024 1024w,
+                      ./media/images/parc-central-hero.jpg?width=1440 1440w,
                       ./media/images/parc-central-hero.jpg?width=2880 2880w"
               sizes= "100vw"
-              width="2880" height="1800" alt="">
+              width="2880" height="1800" 
+              fetchpriority="high"
+              alt="">
         </picture>
       </div>
 
@@ -112,18 +122,24 @@
             <figure class="project-media-item col-2">
               <picture>
                 <source type="image/avif"
-                        srcset="./media/images/parc-central-02.jpg?as=avif&width=768 768w, 
+                        srcset="./media/images/parc-central-02.jpg?as=avif&width=400 400w,
+                                ./media/images/parc-central-02.jpg?as=avif&width=768 768w, 
                                 ./media/images/parc-central-02.jpg?as=avif&width=1024 1024w,
+                                ./media/images/parc-central-02.jpg?as=avif&width=1440 1440w,
                                 ./media/images/parc-central-02.jpg?as=avif&width=2880 2880w"
                         sizes="calc(100vw - 2.5rem)">
                 <source type="image/webp"
-                        srcset="./media/images/parc-central-02.jpg?as=webp&width=768 768w, 
+                        srcset="./media/images/parc-central-02.jpg?as=webp&width=400 400w,
+                                ./media/images/parc-central-02.jpg?as=webp&width=768 768w, 
                                 ./media/images/parc-central-02.jpg?as=webp&width=1024 1024w,
+                                ./media/images/parc-central-02.jpg?as=webp&width=1440 1440w,
                                 ./media/images/parc-central-02.jpg?as=webp&width=2880 2880w"
                         sizes="calc(100vw - 2.5rem)">
                 <img src="./media/images/parc-central-02.jpg" 
-                    srcset="./media/images/parc-central-02.jpg?width=768 768w,
+                    srcset="./media/images/parc-central-02.jpg?width=400 400w,
+                            ./media/images/parc-central-02.jpg?width=768 768w,
                             ./media/images/parc-central-02.jpg?width=1024 1024w,
+                            ./media/images/parc-central-02.jpg?width=1440 1440w,
                             ./media/images/parc-central-02.jpg?width=2880 2880w"
                     sizes="calc(100vw - 2.5rem)"
                     width="2880" height="1800" loading="lazy"
@@ -134,19 +150,22 @@
             <figure class="project-media-item col-1">
               <picture>
                 <source type="image/avif"
-                        srcset="./media/images/parc-central-03.jpg?as=avif&width=768 768w, 
+                        srcset="./media/images/parc-central-03.jpg?as=avif&width=400 400w,
+                                ./media/images/parc-central-03.jpg?as=avif&width=768 768w, 
                                 ./media/images/parc-central-03.jpg?as=avif&width=1024 1024w,
                                 ./media/images/parc-central-03.jpg?as=avif&width=1440 1440w"
                         sizes="(max-width: 1024px) calc(100vw - 2.5rem),
                                 calc(50vw - 3rem)">
                 <source type="image/webp"
-                        srcset="./media/images/parc-central-03.jpg?as=webp&width=768 768w, 
+                        srcset="./media/images/parc-central-03.jpg?as=webp&width=400 400w,
+                                ./media/images/parc-central-03.jpg?as=webp&width=768 768w, 
                                 ./media/images/parc-central-03.jpg?as=webp&width=1024 1024w,
                                 ./media/images/parc-central-03.jpg?as=webp&width=1440 1440w"
                         sizes="(max-width: 1024px) calc(100vw - 2.5rem),
                                 calc(50vw - 3rem)">
                 <img src="./media/images/parc-central-03.jpg" 
-                    srcset="./media/images/parc-central-03.jpg?width=768 768w,
+                    srcset="./media/images/parc-central-03.jpg?width=400 400w,
+                            ./media/images/parc-central-03.jpg?width=768 768w,
                             ./media/images/parc-central-03.jpg?width=1024 1024w,
                             ./media/images/parc-central-03.jpg?width=1440 1440w"
                     sizes="(max-width: 1024px) calc(100vw - 2.5rem),
