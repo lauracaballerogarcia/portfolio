@@ -840,7 +840,7 @@
     position: sticky;
     top: var(--size-header-height); 
     left: 0;
-    z-index: -1; /* se queda detrás */
+    z-index: 0; /* se queda detrás */
   }
 
   .hero-image img {
