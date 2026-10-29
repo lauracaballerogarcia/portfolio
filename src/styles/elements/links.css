@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  #LINKS
+\*------------------------------------*/
+
+/**
+ * Base links and visible keyboard focus.
+ *
+ * 1. Links inside running text are underlined so they stand out from
+ *    the text. Links with a class are components and style themselves.
+ * 2. Global focus ring for keyboard users.
+ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+}
+
+main p a:not([class]) {
+  text-decoration-line: underline; /* [1] */
+  text-underline-offset: 0.2em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-text-primary); /* [2] */
+  outline-offset: 3px;
+}

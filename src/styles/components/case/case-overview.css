@@ -1,0 +1,24 @@
+/*------------------------------------*\
+  #CASE-OVERVIEW
+\*------------------------------------*/
+
+/**
+ * Opening section of the case study: summary and project metadata.
+ * Its heading is visually hidden, so the summary opens the content
+ * while the heading outline stays complete. It is the first entry of
+ * the index.
+ *
+ * 1. Target of the index links: leaves room for the fixed header.
+ * 2. Comfortable line length for a longer, larger paragraph.
+ */
+
+.case-overview {
+  scroll-margin-top: calc(var(--size-header-height) + var(--spacing-4)); /* [1] */
+}
+
+.case-overview__summary {
+  font-size: var(--font-size-xl);
+  line-height: 1.4;
+  max-width: 60ch; /* [2] */
+  margin-bottom: var(--spacing-12);
+}

@@ -87,7 +87,7 @@ project-card {
   letter-spacing: 0.02em;
 }
 
-/* Texto */
+/* Text */
 .project-card__title {
   font-family: var(--font-family-serif);
   font-size: var(--font-size-xl);

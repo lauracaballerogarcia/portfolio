@@ -1,0 +1,42 @@
+/*------------------------------------*\
+  #ICON-BUTTON
+\*------------------------------------*/
+
+/**
+ * Round button with an icon and no visible text.
+ *
+ * The accessible name goes in `aria-label` or in a `.visually-hidden`
+ * text. Each use adds its own BEM class (a mix) for the position and
+ * the icon (`mask-image` on `::before`).
+ *
+ * 1. Outlined variant, for buttons on a light background.
+ * 2. The icon takes the text color (`currentColor`).
+ */
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-button-icon);
+  height: var(--size-button-icon);
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.icon-button--outlined {
+  border: 1px solid var(--color-outline-primary); /* [1] */
+}
+
+.icon-button::before {
+  content: '';
+  display: block;
+  width: var(--size-icon-s);
+  height: var(--size-icon-s);
+  background-color: currentColor; /* [2] */
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}

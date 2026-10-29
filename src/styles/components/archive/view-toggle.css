@@ -1,0 +1,52 @@
+/*------------------------------------*\
+  #VIEW-TOGGLE
+\*------------------------------------*/
+
+/**
+ * List and grid view buttons of the archive. `aria-pressed` carries
+ * the active view.
+ *
+ * 1. Icon as a mask, so it takes the text color (`currentColor`).
+ */
+
+.view-toggle {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: var(--radius-2);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition:
+    color var(--duration-base) ease,
+    background-color var(--duration-base) ease;
+}
+
+.view-toggle:is(:hover, :focus-visible) {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-primary);
+}
+
+.view-toggle[aria-pressed="true"] {
+  color: var(--color-text-primary);
+}
+
+.view-toggle::before {
+  content: "";
+  width: var(--size-icon-m);
+  height: var(--size-icon-m);
+  background-color: currentColor; /* [1] */
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.view-toggle--grid::before {
+  mask-image: url("../../../assets/icons/grid-four.svg");
+}
+
+.view-toggle--list::before {
+  mask-image: url("../../../assets/icons/list.svg");
+}

@@ -1,4 +1,4 @@
-<p class="eyebrow">Context</p>
+<p class="case-section__eyebrow">Context</p>
 
 ## Older adults are losing access to the leisure activities that keep them active and connected.
 
@@ -16,7 +16,7 @@ Help older adults participate more independently in leisure activities while cre
 
 
 
-<p class="eyebrow">Research</p>
+<p class="case-section__eyebrow">Research</p>
 
 ## We assumed the problem was finding activities. Interviews with older adults proved us wrong 
 
@@ -102,7 +102,7 @@ The findings revealed several key insights, including fear of scams, reliance on
 Together, these observations pointed towards a broader need: making complex digital processes feel simpler, safer, and more manageable.
 
 
-<p class="eyebrow">Problem</p>
+<p class="case-section__eyebrow">Problem</p>
 
 ## It was never about finding activities — it was about feeling safe enough to pay for them
 The insights showed that the real challenge wasn't finding or signing up for leisure activities, but feeling secure while paying online for them. Users knew where to look for activities that interested them, but the digital payment step was a major setback. 
@@ -117,7 +117,7 @@ From this reframed problem, we devised guided solutions, simplified steps, and a
 
 
 
-<p class="eyebrow">Solution</p>
+<p class="case-section__eyebrow">Solution</p>
 
 ## A digital wallet that keeps their main bank account out of the equation
 
@@ -149,7 +149,7 @@ The next step was mapping the happy path for senior users making a payment. We s
 
 
 
-<p class="eyebrow">Testing</p>
+<p class="case-section__eyebrow">Testing</p>
 
 ## The core flow worked, but physical top-ups created friction
 
@@ -162,9 +162,9 @@ The next step was mapping the happy path for senior users making a payment. We s
 ### User Testing with maze
 Testing was conducted remotely via Maze. The study involved two participant groups*: 11 users (people over 70 with difficulties making online payments) and 14 admins (caregivers who assist elderly users with digital tasks).
 
-<div class="cs-note" role="note">
-  <p class="cs-note__label">Note:</p>
-  <p>*While the 25-person sample served as a solid exploratory foundation, a statistically representative sample would require 385 participants (5% margin of error, 95% confidence level) to draw conclusive findings at scale.</p>
+<div class="case-note" role="note">
+  <p class="case-note__text case-note__label">Note:</p>
+  <p class="case-note__text">*While the 25-person sample served as a solid exploratory foundation, a statistically representative sample would require 385 participants (5% margin of error, 95% confidence level) to draw conclusive findings at scale.</p>
 </div>
 
 ![Maze heatmaps on four prototype screens (wallet, request balance, request summary and physical top-up) showing where participants tapped.](/media/senda/senda-testing-maze.svg "full 785x420")
@@ -173,18 +173,18 @@ Heatmaps revealed where users tapped during usability testing, helping us assess
 
 ### Evaluation
 
-<div class="eval-grid">
-  <div class="eval-card eval-card--win">
-    <p>Users are able to request balance without complications.</p>
+<div class="case-evaluation">
+  <div class="case-evaluation__card case-evaluation__card--positive">
+    <p class="case-evaluation__text">Users are able to request balance without complications.</p>
   </div>
-  <div class="eval-card eval-card--pain">
-    <p>Users have difficulties when topping up at physical locations.</p>
+  <div class="case-evaluation__card case-evaluation__card--negative">
+    <p class="case-evaluation__text">Users have difficulties when topping up at physical locations.</p>
   </div>
-  <div class="eval-card eval-card--pain">
-    <p>Users had difficulties finding nearby physical locations.</p>
+  <div class="case-evaluation__card case-evaluation__card--negative">
+    <p class="case-evaluation__text">Users had difficulties finding nearby physical locations.</p>
   </div>
-  <div class="eval-card eval-card--pain">
-    <p>Administrators have experienced difficulties when approving a top-up request.</p>
+  <div class="case-evaluation__card case-evaluation__card--negative">
+    <p class="case-evaluation__text">Administrators have experienced difficulties when approving a top-up request.</p>
   </div>
 </div>
 
@@ -203,7 +203,7 @@ Based on these insights, we identified several improvements before moving into t
 ![Final MVP flow for requesting balance through the app: from the home screen, the user picks an amount, adds an optional message, confirms the request and sees that it has been sent. A branch shows cancelling, with a dialog to confirm or go back.](/media/senda/senda-testing-final-flow-1.svg "full 1981x1470")
 
 
-<p class="eyebrow">Outcome</p>
+<p class="case-section__eyebrow">Outcome</p>
 
 ## A simpler payment experience built around trust
 
@@ -235,7 +235,7 @@ Based on these insights, we identified several improvements before moving into t
 
 
 
-<p class="eyebrow">Reflection</p>
+<p class="case-section__eyebrow">Reflection</p>
 
 ## Designing for confidence means designing beyond the interface
 
@@ -245,9 +245,9 @@ Based on these insights, we identified several improvements before moving into t
 2. Increasing initiative in online processes: By removing confusion and simplifying steps, users become less afraid of making mistakes and are more willing to engage with technology.
 3. Promoting well-being and inclusion: We enable access to a wide range of activities and experiences for a key user group.
 
-<div class="cs-note" role="note">
-  <p class="cs-note__label">Note:</p>
-  <p>As part of an academic project, the solution was not validated after launch. In a real-world scenario, success would be measured through metrics such as task completion rate, time on task, user confidence and satisfaction, and increased adoption of digital payments among older adults.</p>
+<div class="case-note" role="note">
+  <p class="case-note__text case-note__label">Note:</p>
+  <p class="case-note__text">As part of an academic project, the solution was not validated after launch. In a real-world scenario, success would be measured through metrics such as task completion rate, time on task, user confidence and satisfaction, and increased adoption of digital payments among older adults.</p>
 </div>
 
 

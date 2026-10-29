@@ -1,30 +1,30 @@
 /**
- * main.js — Router principal
+ * main.js — Main router
  *
- * Detecta la URL actual y carga el módulo correspondiente.
- * Punto de entrada único para toda la aplicación.
+ * Detects the current URL and loads the matching module.
+ * Single entry point for the whole application.
  */
 
-// Todos los estilos entran por un único archivo, en orden ITCSS
+// Every style comes in through one file, in ITCSS order
 import '../styles/main.css';
 
 import '../components/site-nav/site-nav.js';
 import '../components/site-footer/site-footer.js';
 
 import { initHome }    from './index.js';
-import { initProject } from './project/project.js';
+import { initCase }    from './case/case.js';
 import { initAbout }   from './about/about.js';
 
 import { initArchive } from './archive/archive.js';
 import archiveHTML     from 'bundle-text:./archive/archive.html';
 
-import projectHTML from 'bundle-text:./project/project.html';
+import caseHTML    from 'bundle-text:./case/case.html';
 import aboutHTML   from 'bundle-text:./about/about.html';
 
 const path = window.location.pathname;
 const main = document.querySelector('main');
 
-// ─── Carga el HTML de la página y ejecuta su módulo ──────────
+// ─── Loads the page HTML and runs its module ──────────────────
 
 function loadPage(html, initFn) {
   const parser = new DOMParser();
@@ -36,9 +36,9 @@ function loadPage(html, initFn) {
 // ─── Router ───────────────────────────────────────────────────
 
 if (path.startsWith('/project/')) {
-  // La página de proyecto gestiona su propio ancho internamente
+  // The case study page (URL /project/<slug>/) manages its own width
   main.classList.remove('container');
-  loadPage(projectHTML, initProject);
+  loadPage(caseHTML, initCase);
 
 } else if (path.startsWith('/archive')) {
   document.title = 'Archive — Laura Caballero García';
@@ -51,7 +51,7 @@ if (path.startsWith('/project/')) {
   loadPage(aboutHTML, initAbout);
 
 } else {
-  // Página de inicio
+  // Home page
   main.classList.add('container');
   initHome();
 }

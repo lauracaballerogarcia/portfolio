@@ -1,9 +1,9 @@
 /**
  * project-card.js — Web Component
  *
- * API de atributos análoga a las props de React/Vue.
- * La lógica de renderizado está completamente separada
- * de la lógica de datos (que vive en /data/projects.js).
+ * Attribute API similar to React/Vue props.
+ * The rendering logic is fully separate from the data
+ * logic (which lives in /data/projects.js).
  */
 
 class ProjectCard extends HTMLElement {

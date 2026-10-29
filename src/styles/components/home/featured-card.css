@@ -1,0 +1,98 @@
+/*------------------------------------*\
+  #FEATURED-CARD
+\*------------------------------------*/
+
+/**
+ * Featured project card on the home page. Mobile first: one column.
+ *
+ * 1. Block, so the focus ring surrounds the whole card.
+ * 2. The fixed ratio reserves the space before the image loads.
+ * 3. Only cards with a link (with a case study) react, to the mouse or
+ *    the keyboard.
+ */
+
+.featured-card {
+  grid-column: 1 / -1;
+}
+
+.featured-card__link,
+.featured-card__inner {
+  display: block; /* [1] */
+}
+
+.featured-card__figure {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 10; /* [2] */
+  background-color: var(--color-background-placeholder);
+}
+
+.featured-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) ease;
+}
+
+.featured-card__link:is(:hover, :focus-visible) .featured-card__figure {
+  border-radius: var(--radius-card-s); /* [3] */
+}
+
+.featured-card__link:is(:hover, :focus-visible) .featured-card__image {
+  transform: scale(1.02);
+}
+
+.featured-card__info {
+  padding-top: var(--spacing-3);
+  padding-bottom: var(--spacing-8);
+}
+
+.featured-card__title {
+  margin-top: var(--spacing-2);
+}
+
+.featured-card__claim {
+  color: var(--color-text-tertiary);
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+/**
+ * 1. Tablet: equal pairs (6 + 6). The first card takes the whole row
+ *    and is taller.
+ * 2. Desktop: after the first card, pairs that alternate 7 + 5 and
+ *    5 + 7. The cycle repeats every 4 cards (7, 5, 5, 7): the 7s are
+ *    positions 4n+2 and 4n+5, the rest take 5. As 7 + 5 = 12,
+ *    auto-placement builds the pairs without fixed lines, and the
+ *    visual order is still the DOM order.
+ */
+
+@media (min-width: 769px) {
+  .featured-card {
+    grid-column: span 6; /* [1] */
+  }
+
+  .featured-card--lead {
+    grid-column: 1 / -1;
+  }
+
+  .featured-card--lead .featured-card__figure {
+    aspect-ratio: auto;
+    height: 41.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .featured-card:nth-child(n+2) {
+    grid-column: span 5; /* [2] */
+  }
+
+  .featured-card:nth-child(4n+2),
+  .featured-card:nth-child(4n+5) {
+    grid-column: span 7;
+  }
+}

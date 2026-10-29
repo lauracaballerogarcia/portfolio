@@ -1,0 +1,128 @@
+/*------------------------------------*\
+  #CASE-SECTION
+\*------------------------------------*/
+
+/**
+ * Each section of the case study: eyebrow, title, body text, lists and
+ * media. case.js wraps each `h2` (and its eyebrow) with its content in
+ * a `<section class="case-section">`; the Markdown renderer
+ * (projects.js) gives every element its class.
+ *
+ * Vertical rhythm, as in the case study of Blink in the PEC1:
+ * 96px between sections · 8px eyebrow → title · 24px title → text ·
+ * 20px between paragraphs · 32px around a media group.
+ *
+ * 1. Target of the index links: leaves room for the fixed header.
+ * 2. Sections are grids, and margins do not collapse in a grid: the
+ *    last element does not add its margin to the gap between sections
+ *    (`.case__content`), so that space stays at 96px. In the PEC1 the
+ *    margins collapse instead.
+ * 3. `h4` (`__subheading`) keeps the base heading styles and takes one
+ *    column of the section grid.
+ */
+
+.case-section {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  scroll-margin-top: calc(var(--size-header-height) + var(--spacing-4)); /* [1] */
+}
+
+.case-section > :last-child {
+  margin-bottom: 0; /* [2] */
+}
+
+.case-section__eyebrow {
+  grid-column: 1 / -1;
+  max-width: none;
+  font-size: var(--font-size-xs);
+  font-family: var(--font-family-mono);
+  line-height: 1.6;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-2); /* 8px to the title */
+}
+
+.case-section__title {
+  grid-column: 1 / -1;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-6); /* 24px to the text */
+}
+
+.case-section__subtitle {
+  grid-column: 1 / -1;
+  font-size: var(--font-size-l);
+  margin-top: var(--spacing-10);
+  margin-bottom: var(--spacing-paragraph);
+}
+
+.case-section__text {
+  grid-column: 1 / -1;
+  margin-bottom: var(--spacing-paragraph);
+  font-size: var(--font-size-m);
+  color: var(--color-text-tertiary);
+  line-height: 1.6;
+  max-width: 68ch;
+}
+
+.case-section__list {
+  grid-column: 1 / -1;
+  margin-bottom: var(--spacing-paragraph);
+  padding-left: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  list-style: disc;
+}
+
+.case-section__list--ordered {
+  list-style: decimal;
+}
+
+.case-section__item {
+  font-size: var(--font-size-m);
+  color: var(--color-text-tertiary);
+}
+
+.case-section__strong {
+  font-weight: var(--font-weight-medium);
+}
+
+
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+/**
+ * Group of consecutive figures from the Markdown (projects.js), as
+ * `.case-section__media` in the PEC1. Each figure is a `.case-figure`.
+ *
+ * 1. Two columns: full figures take the row and half figures share it.
+ *    Below 768px they stack (see case-figure).
+ * 2. One value between figures, vertically and between the two of a
+ *    pair.
+ * 3. In half pairs with different proportions, the shorter figure does
+ *    not stretch, so its "enlarge" button stays on its own image.
+ * 4. The text before the group already leaves `--spacing-paragraph`
+ *    (20px): only the difference is added, for 32px in total.
+ * 5. After a title (24px), only the difference up to 32px.
+ * 6. A group that opens the section has no text before it.
+ */
+
+.case-section__media {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* [1] */
+  gap: var(--spacing-figure-gap); /* [2] */
+  align-items: start; /* [3] */
+  margin-top: calc(var(--spacing-media-block) - var(--spacing-paragraph)); /* [4] */
+  margin-bottom: var(--spacing-media-block);
+}
+
+.case-section__title + .case-section__media {
+  margin-top: calc(var(--spacing-media-block) - var(--spacing-6)); /* [5] */
+}
+
+.case-section__media:first-child {
+  margin-top: 0; /* [6] */
+}

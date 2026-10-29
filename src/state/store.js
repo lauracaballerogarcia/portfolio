@@ -1,28 +1,28 @@
 /**
- * store.js — Estado centralizado de la aplicación
+ * store.js — Centralised application state
  *
- * Patrón observable mínimo. Conceptualmente equivalente a
- * useState + useEffect (React) o reactive() (Vue).
- * Se puede sustituir por cualquier store de framework
- * sin tocar la capa de datos ni los componentes.
+ * Minimal observable pattern. Conceptually equivalent to
+ * useState + useEffect (React) or reactive() (Vue).
+ * Any framework store can replace it without touching the
+ * data layer or the components.
  */
 
 const store = {
   _state: {
-    projects:   [],   // array de objetos proyecto
+    projects:   [],   // array of project objects
     loading:    false,
     error:      null,
   },
 
   _listeners: new Set(),
 
-  /** Devuelve una copia del estado (inmutable externamente) */
+  /** Returns a copy of the state (immutable from outside) */
   getState() {
     return { ...this._state };
   },
 
   /**
-   * Actualiza el estado y notifica a todos los suscriptores.
+   * Updates the state and notifies every subscriber.
    * @param {Partial<typeof this._state>} patch
    */
   setState(patch) {
@@ -31,7 +31,7 @@ const store = {
   },
 
   /**
-   * Suscribe una función al estado. Devuelve un unsubscribe.
+   * Subscribes a function to the state. Returns an unsubscribe.
    * @param {(state: object) => void} fn
    * @returns {() => void}
    */

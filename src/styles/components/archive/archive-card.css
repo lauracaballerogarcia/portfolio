@@ -1,0 +1,53 @@
+/*------------------------------------*\
+  #ARCHIVE-CARD
+\*------------------------------------*/
+
+/**
+ * Project card of the archive grid view. A link when the project has a
+ * case study.
+ *
+ * 1. The fixed ratio reserves the space before the image loads.
+ * 2. `:any-link` limits the hover to cards that are links.
+ */
+
+.archive-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.archive-card__figure {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 11 / 7; /* [1] */
+  overflow: hidden;
+  border-radius: 0;
+  background-color: var(--color-background-placeholder);
+  transition: border-radius var(--duration-base) var(--easing-out);
+}
+
+.archive-card:any-link:is(:hover, :focus-visible) .archive-card__figure {
+  border-radius: var(--radius-card-s); /* [2] */
+}
+
+.archive-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) ease;
+}
+
+.archive-card:any-link:is(:hover, :focus-visible) .archive-card__image {
+  transform: scale(1.02);
+}
+
+.archive-card__title {
+  margin: var(--spacing-4) 0 var(--spacing-1);
+  font-weight: var(--font-weight-regular);
+}
+
+.archive-card__tags {
+  margin: 0;
+  font-size: var(--font-size-m);
+  color: var(--color-text-secondary);
+}

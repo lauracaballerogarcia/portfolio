@@ -1,0 +1,20 @@
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+/**
+ * Shared heading styles. Single-direction margins: each heading only
+ * pushes the content below it.
+ */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-family-sans);
+  line-height: 1.2;
+  font-weight: var(--font-weight-regular);
+  margin-bottom: var(--spacing-2);
+}
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-l); }
+h3 { font-size: var(--font-size-m); }
+h4 { font-size: var(--font-size-m); }

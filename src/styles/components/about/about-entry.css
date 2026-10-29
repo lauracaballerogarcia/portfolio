@@ -1,0 +1,34 @@
+/*------------------------------------*\
+  #ABOUT-ENTRY
+\*------------------------------------*/
+
+/**
+ * Entry of the list sections (tools and skills) and languages: name,
+ * optional level and optional note.
+ */
+
+.about-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: var(--spacing-4);
+  row-gap: var(--spacing-1);
+  padding-block: var(--spacing-4);
+}
+
+.about-entry__name {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.about-entry__level {
+  color: var(--color-text-secondary);
+}
+
+.about-entry__note {
+  flex-basis: 100%;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-s);
+  line-height: 1.4;
+  visibility: collapse;
+}

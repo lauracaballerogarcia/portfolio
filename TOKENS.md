@@ -1,6 +1,6 @@
 # Design tokens
 
-All tokens live in a single `:root` block in `src/styles/tokens.css`. Every page and component stylesheet uses them through `var()`. JavaScript never reads or writes a design token. The only custom properties set from JS are `--x` and `--y` in `archive.js`, which hold cursor coordinates for the hover preview. Those are runtime state, not tokens.
+All tokens live in a single `:root` block in `src/styles/settings/tokens.css`. Every page and component stylesheet uses them through `var()`. JavaScript never reads or writes a design token. The only custom properties set from JS are `--x` and `--y` in `archive.js`, which hold cursor coordinates for the hover preview. Those are runtime state, not tokens.
 
 ## Two levels
 
@@ -13,7 +13,7 @@ Rules:
 
 1. A semantic token always references a primitive. It never holds a raw value, and it never references another semantic token.
 2. Components use a semantic token when one exists for that role.
-3. Components may use a primitive directly when a semantic alias would add nothing. Examples: the eval-card hues and the 8px radius on case-study blocks.
+3. Components may use a primitive directly when a semantic alias would add nothing. Examples: the case-evaluation hues and the 8px radius on case-study blocks.
 4. Add a token only when a value is reused or carries a design decision. One-off values stay hardcoded.
 5. Token names never encode page content, copy or HTML structure. For example, it's `--spacing-paragraph`, not `--spacing-paragraph-case-study`.
 
@@ -48,7 +48,7 @@ Vocabulary:
 - **Properties:** `background`, `text`, `outline`.
 - **Roles:** `primary`, `secondary`, `tertiary`, `inverse`, `placeholder`.
 - **States:** `default`, `hover`, `active`. Use `active` for selected or pressed, not `selected`.
-- **Components:** `button`, `tag`, `card`, `chip`. In token names, `chip` means the round arrow badge on project cards (`.chip`), and `tag` means a static label (`.project-tag`).
+- **Components:** `button`, `tag`, `card`, `chip`. In token names, `chip` means the round arrow badge on project cards (`.chip`), and `tag` means a static label (`.case-header__tag`).
 
 ### Breakpoints
 
@@ -67,9 +67,9 @@ Custom properties don't work inside `@media`, so breakpoints stay literal: **480
 | `--color-neutral-600` | #737373 | text-tertiary |
 | `--color-neutral-700` | #535353 | text-secondary |
 | `--color-neutral-950` | #121212 | text-primary, background-inverse, button active / text |
-| `--color-green-100` | #DDFEA6 | `.eval-card--win` (direct) |
-| `--color-blue-50` | #E7F8FF | `.cs-note` (direct) |
-| `--color-blue-100` | #D1F1FE | `.eval-card--pain` (direct) |
+| `--color-green-100` | #DDFEA6 | `.case-evaluation__card--positive` (direct) |
+| `--color-blue-50` | #E7F8FF | `.case-note` (direct) |
+| `--color-blue-100` | #D1F1FE | `.case-evaluation__card--negative` (direct) |
 | `--spacing-1 … -24` | 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 96px | everywhere |
 | `--radius-1` | 4px | archive row marker |
 | `--radius-2` | 8px | figures, case-study blocks, nav links, tags, lightbox |
@@ -82,7 +82,7 @@ Custom properties don't work inside `@media`, so breakpoints stay literal: **480
 | `--size-icon-s / m / l` | 20 / 24 / 32px | icons in round buttons / chip & view toggle / footer "Up" |
 | `--size-button-icon` | 36px | round icon-only buttons (expand, play, close, carousel) |
 | `--size-header-height` | 64px | header, sticky offsets, mobile menu |
-| `--size-content-max` | 1440px | content width of `.container` and the case-study grid (`.project-layout`); gutters added on top |
+| `--size-content-max` | 1440px | content width of `.container` and the case-study grid (`.case__layout`); gutters added on top |
 | `--duration-base` | 220ms | UI state transitions (hover colour, small reveals) |
 | `--duration-medium` | 300ms | elements that expand or appear over media: card chip, Archive cursor preview |
 | `--duration-slow` | 400ms | media hover (image zoom, card radius) |
@@ -101,10 +101,12 @@ Custom properties don't work inside `@media`, so breakpoints stay literal: **480
 | `--color-text-inverse` | neutral-0 | text on inverse backgrounds |
 | `--color-button-primary-background-{default,hover,active}` | neutral-100 / 200 / 950 | `.button-primary` |
 | `--color-button-primary-text-{default,active}` | neutral-950 / 0 | `.button-primary` |
-| `--color-tag-background` | neutral-100 | `.project-tag` |
+| `--color-tag-background` | neutral-100 | `.case-header__tag` |
 | `--spacing-container-inline / block` | spacing-10 / 6 | page gutters |
 | `--spacing-grid-column / row` | spacing-4 / 6 | grid gaps |
 | `--spacing-paragraph` | spacing-5 | space after text blocks in case studies |
+| `--spacing-figure-gap` | spacing-5 | gap between figures in a case-study media group (`.case-section__media`) |
+| `--spacing-media-block` | spacing-8 | space before and after a case-study media group |
 | `--radius-card-l` | radius-8 (32px) | large cards: half the grid or wider (home featured) |
 | `--radius-card-s` | radius-4 (16px) | small cards: a third of the grid or narrower (archive grid, related work, cursor preview) |
 | `--radius-chip` | radius-full | `.chip` |

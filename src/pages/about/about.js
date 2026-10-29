@@ -1,20 +1,20 @@
 /**
- * about.js — Página About
+ * about.js — About page
  *
- * Todo el contenido vive en src/data/about.json: un objeto con un perfil
- * por clave (professional, personal…). Un perfil a null todavía no existe
- * y no se muestra. Si hay más de un perfil, se pinta el selector; al
- * cambiar de perfil se vuelven a pintar foto, intro, secciones e índice.
+ * All the content lives in src/data/about.json: an object with one profile
+ * per key (professional, personal…). A null profile does not exist yet and
+ * is not shown. With more than one profile the selector is rendered;
+ * switching profile renders the photo, intro, sections and index again.
  */
 
 import aboutData from '../../data/about.json';
 import { marked } from 'marked';
 
-// "2025-05" → "May 2025". Las mayúsculas las pone el CSS.
+// "2025-05" → "May 2025". The CSS sets the capitals.
 const dateFormat = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 
-// El contenido es nuestro, pero se escapa igualmente: un "<" o un "&"
-// en el JSON no debe romper el marcado
+// The content is ours, but it is escaped anyway: a "<" or an "&" in the
+// JSON must not break the markup
 function escapeHTML(text = '') {
   return String(text)
     .replace(/&/g, '&amp;')
@@ -29,19 +29,19 @@ function formatDate(value) {
   return `<time datetime="${value}">${dateFormat.format(Date.UTC(year, month - 1))}</time>`;
 }
 
-// ─── Secciones: una función por tipo ───────────────
+// ─── Sections: one function per type ──────────────
 
 function renderTimelineItem(item) {
   const { name, url } = item.organization ?? {};
   const organization = url
-    ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(name)}</a>`
+    ? `<a class="about-item__link" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(name)}</a>`
     : escapeHTML(name);
   const location = item.location ? ` · ${escapeHTML(item.location)}` : '';
 
   return `
-    <li>
+    <li class="about-section__item">
       <details class="about-item">
-        <summary>
+        <summary class="about-item__summary">
           <span class="about-item__role">${escapeHTML(item.role)}</span>
           <span class="about-item__dates">${formatDate(item.start)} – ${formatDate(item.end)}</span>
           <span class="about-item__icon" aria-hidden="true"></span>
@@ -54,12 +54,12 @@ function renderTimelineItem(item) {
 }
 
 function renderListItem(item) {
-  return `<li class="about-entry"><span class="about-entry__name">${escapeHTML(item)}</span></li>`;
+  return `<li class="about-section__item about-entry"><span class="about-entry__name">${escapeHTML(item)}</span></li>`;
 }
 
 function renderLanguageItem(item) {
   return `
-    <li class="about-entry">
+    <li class="about-section__item about-entry">
       <span class="about-entry__name">${escapeHTML(item.language)}</span>
       <span class="about-entry__level">${escapeHTML(item.level)}</span>
       ${item.note ? `<span class="about-entry__note">${escapeHTML(item.note)}</span>` : ''}
@@ -77,7 +77,7 @@ function renderSection(section) {
   const renderItem = itemRenderers[section.type];
   if (!renderItem || !section.items?.length) return '';
 
-  // role="list": Safari deja de anunciar como lista un ul sin viñetas
+  // role="list": Safari stops announcing a ul without bullets as a list
   return `
     <section class="about-section" id="${escapeHTML(section.id)}" aria-labelledby="${escapeHTML(section.id)}-title">
       <h2 class="about-section__title" id="${escapeHTML(section.id)}-title">${escapeHTML(section.title)}</h2>
@@ -88,12 +88,12 @@ function renderSection(section) {
   `;
 }
 
-// ─── Índice lateral ────────────────────────────────
+// ─── Side index ────────────────────────────────────
 
-// Marca el enlace de la sección visible. Mismo criterio que el índice
-// del case study: la sección activa es la última cuyo título ha pasado
-// una línea al ~35% del alto de la ventana. Lee el DOM en cada llamada,
-// así sirve para cualquier perfil sin volver a registrar el listener.
+// Marks the link of the visible section. Same rule as the case study
+// index: the active section is the last one whose title has passed a line
+// at ~35% of the window height. It reads the DOM on every call, so it
+// works for any profile without registering the listener again.
 function updateActiveLink() {
   const links   = document.querySelectorAll('#about-index .section-index__link');
   const headers = document.querySelectorAll('.about-section__title');
@@ -107,8 +107,8 @@ function updateActiveLink() {
     if (h.getBoundingClientRect().top <= triggerLine) current = h.closest('section').id;
   });
 
-  // Al final de la página la última sección (corta) nunca llega a la
-  // línea: si ya no se puede bajar más, es la activa
+  // At the end of the page the last (short) section never reaches the
+  // line: if the page cannot scroll further, it is the active one
   const atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1;
   if (atEnd && headers.length) current = headers[headers.length - 1].closest('section').id;
 
@@ -122,7 +122,7 @@ function renderIndex(sections) {
   const indexNav = document.getElementById('about-index');
   if (!indexNav) return;
 
-  // Mismas secciones que se pintan: sin items no hay sección ni enlace
+  // The same sections that are rendered: no items, no section and no link
   const visible = sections.filter(s => itemRenderers[s.type] && s.items?.length);
 
   indexNav.innerHTML = `
@@ -137,20 +137,20 @@ function renderIndex(sections) {
   updateActiveLink();
 }
 
-// ─── Perfil ────────────────────────────────────────
+// ─── Profile ───────────────────────────────────────
 
 function renderProfile(profile) {
   const image = document.getElementById('about-image');
   if (image) {
     image.innerHTML = profile.image?.src
-      ? `<img src="${escapeHTML(profile.image.src)}" alt="${escapeHTML(profile.image.alt)}" decoding="async">`
+      ? `<img class="about__image" src="${escapeHTML(profile.image.src)}" alt="${escapeHTML(profile.image.alt)}" decoding="async">`
       : '';
   }
 
   const intro = document.getElementById('about-intro');
   if (intro) {
-    // parseInline: solo negritas, cursivas y enlaces; sin <p> extra
-    intro.innerHTML = (profile.intro ?? []).map(p => `<p>${marked.parseInline(p)}</p>`).join('');
+    // parseInline: bold, italics and links only; no extra <p>
+    intro.innerHTML = (profile.intro ?? []).map(p => `<p class="about__text">${marked.parseInline(p)}</p>`).join('');
   }
 
   const sections = profile.sections ?? [];
@@ -160,7 +160,7 @@ function renderProfile(profile) {
   renderIndex(sections);
 }
 
-// ─── Selector de perfil ────────────────────────────
+// ─── Profile selector ──────────────────────────────
 
 function renderSelector(profiles) {
   const group = document.getElementById('about-profiles');
@@ -173,8 +173,8 @@ function renderSelector(profiles) {
   `).join('');
   group.hidden = false;
 
-  // Los botones no se vuelven a pintar al cambiar de perfil: el foco se
-  // queda en el botón pulsado y aria-pressed comunica cuál está activo
+  // The buttons are not rendered again when the profile changes: focus
+  // stays on the pressed button and aria-pressed tells which one is active
   group.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-profile]');
     if (!btn || btn.getAttribute('aria-pressed') === 'true') return;
@@ -186,7 +186,7 @@ function renderSelector(profiles) {
   });
 }
 
-/** Exporta la función de inicialización para el router */
+/** Exports the init function for the router */
 export function initAbout() {
   const profiles = Object.entries(aboutData).filter(([, profile]) => profile);
   if (!profiles.length) return;

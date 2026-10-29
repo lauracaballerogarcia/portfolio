@@ -1,0 +1,93 @@
+/*------------------------------------*\
+  #CHIP
+\*------------------------------------*/
+
+/**
+ * Label floating over the image of a card (home featured cards and the
+ * archive grid).
+ *
+ * 1. Expanded when the link that contains it has hover or keyboard
+ *    focus. The chip lives inside other blocks' links, so the parent
+ *    state is the only hook.
+ * 2. Coming soon: no arrow, and the text is always visible.
+ */
+
+.chip {
+  position: absolute;
+  bottom: var(--spacing-4);
+  left: var(--spacing-4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+
+  background-color: var(--color-background-primary);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-chip);
+  font-size: var(--font-size-xs);
+  line-height: 1;
+
+  overflow: hidden;
+  transition: all var(--duration-medium) ease;
+}
+
+.chip::after {
+  content: "";
+
+  display: inline-block;
+  vertical-align: middle;
+  transition: all var(--duration-medium) ease;
+
+  width: var(--size-icon-m);
+  height: var(--size-icon-m);
+
+  background-image: url("../../assets/icons/arrow-up-right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.chip__label {
+  max-width: 0;
+  opacity: 0;
+  white-space: nowrap;
+  transition: all var(--duration-medium) ease;
+}
+
+
+/*------------------------------------*\
+  #STATES
+\*------------------------------------*/
+
+a:is(:hover, :focus-visible) .chip {
+  gap: var(--spacing-1); /* [1] */
+  padding: var(--spacing-2) var(--spacing-4) var(--spacing-2) var(--spacing-5);
+}
+
+a:is(:hover, :focus-visible) .chip::after {
+  transform: rotate(45deg);
+}
+
+a:is(:hover, :focus-visible) .chip__label {
+  max-width: 20ch;
+  opacity: 1;
+  margin-left: var(--spacing-1);
+}
+
+.chip--coming-soon {
+  padding: var(--spacing-2) var(--spacing-4) var(--spacing-2) var(--spacing-5); /* [2] */
+}
+
+.chip--coming-soon::after {
+  display: none;
+}
+
+.chip--coming-soon .chip__label {
+  max-width: 20ch;
+  opacity: 1;
+  margin-left: var(--spacing-1);
+  margin-right: var(--spacing-2);
+}

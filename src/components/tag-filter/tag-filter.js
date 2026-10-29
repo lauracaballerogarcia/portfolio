@@ -1,6 +1,6 @@
 /**
- * tag-filter.js — Filtro de proyectos por categoría
- * Actualiza el store; no renderiza proyectos directamente.
+ * tag-filter.js — Project filter by category
+ * Updates the store; it does not render projects itself.
  */
 
 import store from '../../state/store.js';

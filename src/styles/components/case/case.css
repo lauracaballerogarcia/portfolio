@@ -1,0 +1,105 @@
+/*------------------------------------*\
+  #CASE
+\*------------------------------------*/
+
+/**
+ * Case study page layout: sticky hero, sidebar and content grid.
+ *
+ * 1. The hero stays fixed behind the content while scrolling, just
+ *    below the fixed header.
+ * 2. `<picture>` (and its desktop or mobile source) fills the hero.
+ * 3. Full-width background that covers the sticky hero. The grid is
+ *    limited to `--size-content-max` and centred on wide screens.
+ * 4. Sidebar: columns 1 to 3. Its inner wrapper is sticky, so the
+ *    sidebar can keep stretching to the height of the row.
+ * 5. Main content: columns 5 to 11 (4 and 12 stay empty).
+ * 6. Sections of the case study (built by case.js) in one grid; this
+ *    gap is the space between sections, as in the PEC1.
+ * 7. A media group that opens the case study (before the first
+ *    section) leaves the space to the gap.
+ */
+
+.case__hero {
+  width: 100vw;
+  /* aspect-ratio: 16 / 9; */
+  height: calc(80vh - var(--size-header-height));
+  overflow: hidden;
+  position: sticky; /* [1] */
+  top: var(--size-header-height);
+  left: 0;
+  z-index: 0;
+}
+
+.case__hero-picture {
+  display: block; /* [2] */
+  height: 100%;
+}
+
+.case__hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case__layout {
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-background-primary); /* [3] */
+  padding-inline: max(
+    var(--spacing-container-inline),
+    (100% - var(--size-content-max)) / 2
+  );
+  padding-block: var(--spacing-16);
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--spacing-grid-column);
+}
+
+.case__sidebar {
+  grid-column: 1 / span 3; /* [4] */
+}
+
+.case__sidebar-inner {
+  position: sticky;
+  top: calc(var(--size-header-height) + var(--spacing-8));
+  display: flex;
+  flex-direction: column;
+}
+
+.case__main {
+  grid-column: 5 / span 7; /* [5] */
+}
+
+.case__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--spacing-grid-column);
+  row-gap: var(--spacing-24); /* [6] */
+}
+
+.case__content > .case-section__media {
+  margin-bottom: 0; /* [7] */
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+/* Sidebar (title, tags and index) above the content */
+@media (max-width: 1024px) {
+  .case__sidebar,
+  .case__main {
+    grid-column: 1 / -1;
+    padding-inline: var(--spacing-container-inline);
+  }
+
+  .case__sidebar {
+    margin-bottom: var(--spacing-12);
+  }
+
+  .case__sidebar-inner {
+    position: static;
+  }
+}

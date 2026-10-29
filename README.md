@@ -32,37 +32,41 @@ El resultado queda en `/dist`. Despliega esa carpeta en Cloudflare Pages.
 
 ```
 src/
-  components/
-    site-nav/         # Navegación principal (Web Component + CSS)
-    site-footer/      # Pie de página (Web Component + CSS)
-    skip-link/        # Enlace de salto al contenido
-    button/           # .button-primary (filtros)
-    icon-button/      # Botón circular con icono
-    chip/             # Etiqueta flotante de las tarjetas
+  components/         # Lógica de los componentes compartidos (JS)
+    site-nav/         # Navegación principal (Web Component)
+    site-footer/      # Pie de página (Web Component)
+    tag-filter/ project-card/   # Sin uso: no se importan en ninguna parte
   data/
     projects.json     # Fuente de datos de proyectos
-    projects.js       # Capa de datos — funciones puras, sin DOM
+    projects.js       # Capa de datos y renderer Markdown del case study
     content/*.md      # Case studies
   state/
     store.js          # Estado observable mínimo (Home)
-  styles/
-    main.css          # Único punto de entrada de estilos (orden ITCSS)
-    tokens.css        # Design tokens (ver TOKENS.md)
-    generic.css       # @font-face, reset, movimiento reducido
-    elements.css      # Estilos base de etiquetas HTML
-    objects.css       # .container, .container-full
-    utilities.css     # .visually-hidden
+  styles/             # Todo el CSS, por capas ITCSS (ver main.css)
+    main.css          # Único punto de entrada: solo @import e índice CONTENTS
+    settings/         # tokens.css (ver TOKENS.md)
+    tools/            # Vacía: sin preprocesador
+    generic/          # font-face.css, reset.css
+    elements/         # page, media, links, lists, headings, paragraphs, buttons
+    objects/          # container.css
+    components/       # Un archivo por bloque BEM
+      *.css           # Compartidos (los sincroniza /design-sync)
+      home/ archive/ about/ case/   # Bloques de cada página
+    utilities/        # visually-hidden.css
   pages/
     index.html        # Documento único (SPA)
     main.js           # Router — importa main.css
-    index.js/.css     # Home
-    archive/ about/ project/   # Plantilla, lógica y estilos de cada página
+    index.js          # Home
+    archive/ about/   # Plantilla y lógica de cada página
+    case/             # Case study (la URL sigue siendo /project/<slug>/)
 ```
 
 ## Estilos
 
 - Todo el CSS entra por `src/styles/main.css`. El orden de los `@import` es el orden de la cascada (ITCSS): settings → generic → elements → objects → components → utilities. Para añadir una hoja nueva, impórtala ahí, en su capa; no la importes desde JS.
-- Clases con BEM (`bloque__elemento--modificador`). Los selectores de etiqueta solo se usan en la base (`elements.css`) y dentro del contenido Markdown de los case studies (`.project-body`, `.cs-grid`), que no lleva clases.
+- Un archivo por bloque BEM (`bloque__elemento--modificador`), cada uno con una cabecera `#NOMBRE` para encontrarlo rápido; las notas numeradas (`/* [1] */`) explican cada decisión. Comentarios en inglés.
+- Los selectores de etiqueta solo se usan en la capa elements. El contenido Markdown de los case studies también lleva clases: las pone el renderer de `projects.js` (`case-section__title`, `__text`, `__list`…), y el HTML escrito en los `.md` usa las suyas (`case-section__eyebrow`, `case-note`, `case-evaluation`, `insights`).
+- Mobile first solo donde ahorra código (`featured-card`, `case-figure`); el resto mantiene `max-width`.
 - JavaScript localiza el marcado escrito a mano (plantillas HTML, Markdown) por `id` o atributos `data-*`; en los componentes que él mismo genera usa sus clases BEM. Los estados se comunican con atributos (`aria-pressed`, `aria-current`, `data-visible`, `data-state`) que el CSS lee.
 
 ## Imágenes y vídeos
@@ -106,7 +110,7 @@ La arquitectura está diseñada para facilitar una futura migración:
 
 - `/data/projects.js` — se reutiliza sin cambios en React, Vue o cualquier otro
 - `/state/store.js`   — se adapta a useState/useReducer o Pinia directamente
-- `/styles/tokens.css`— los custom properties son universales
+- `/styles/settings/tokens.css` — los custom properties son universales
 - Los Web Components — se reescriben como componentes del framework elegido,
   manteniendo la misma interfaz de props/atributos
 ```

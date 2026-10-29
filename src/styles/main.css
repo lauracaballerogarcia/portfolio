@@ -1,44 +1,190 @@
-/* ============================================================
-   MAIN.CSS — único punto de entrada de estilos (ITCSS)
+/**
+ * MAIN
+ *
+ * The only entry point for styles. Use this file to import stylesheets
+ * only: no rules here. Files are imported in ITCSS order, from generic
+ * and low-specificity to explicit and high-specificity, so the order of
+ * the @imports is the order of the cascade.
+ *
+ * Plain CSS, no preprocessor. Class names follow BEM:
+ * `.block`, `.block__element`, `.block--modifier`. States that
+ * JavaScript toggles use `is-*` classes or ARIA/data attributes.
+ *
+ * Search for `#NAME` to jump to the header of any file.
+ *
+ * CONTENTS
+ *
+ * SETTINGS
+ * Tokens...............Design tokens as custom properties (see /TOKENS.md).
+ *
+ * TOOLS
+ * (none)...............No preprocessor: no mixins or functions.
+ *
+ * GENERIC
+ * Font-face............Self-hosted Geist, Geist Mono and Sentient variable fonts.
+ * Reset................Box-sizing, margins, text size adjustment, reduced motion.
+ *
+ * ELEMENTS
+ * Page.................Base font, colors and layout for html, body and main.
+ * Media................Images and videos.
+ * Links................Base links and visible keyboard focus.
+ * Lists................Lists without markers.
+ * Headings.............h1 to h4 sizes, weight and spacing.
+ * Paragraphs...........Paragraph weight.
+ * Buttons..............Base button size.
+ *
+ * OBJECTS
+ * Container............Page wrappers: full width and limited width.
+ *
+ * COMPONENTS — SHARED (synced with the Design System)
+ * Skip-link............Keyboard shortcut to the main content.
+ * Site-nav.............Fixed header, links and small-screen menu.
+ * Site-footer..........Copyright, contact, hosting and social links.
+ * Button...............Filter and selection button.
+ * Icon-button..........Round button with an icon only.
+ * Chip.................Label over the image of a card.
+ * Section-index........Side index of the sections of a page.
+ *
+ * COMPONENTS — HOME
+ * Featured-grid........Grid of featured projects.
+ * Featured-card........Featured project card.
+ *
+ * COMPONENTS — ARCHIVE
+ * Archive..............Toolbar and list of projects.
+ * View-toggle..........List and grid view buttons.
+ * Archive-row..........Project row of the list view.
+ * Archive-card.........Project card of the grid view.
+ * Cursor-preview.......Image that follows the cursor over the list.
+ *
+ * COMPONENTS — ABOUT
+ * About................Page layout: profiles, photo, intro, index, sections.
+ * About-section........Section with its title and items.
+ * About-item...........Timeline entry that opens (details).
+ * About-entry..........Entry of the list and language sections.
+ *
+ * COMPONENTS — CASE STUDY
+ * Case.................Sticky hero, sidebar and content grid.
+ * Case-header..........Title, client and tags.
+ * Case-overview........Opening summary.
+ * Case-meta............Project metadata grid.
+ * Case-section.........Eyebrow, titles, text, lists and media of each section.
+ * Case-figure..........Images and looping videos, with their buttons.
+ * Case-lightbox........Enlarged view of a figure.
+ * Case-evaluation......Usability test results.
+ * Insights.............Carousel of research insights.
+ * Insight-card.........One research insight.
+ * Case-quote...........Quote.
+ * Case-note............Side note.
+ * Related-work.........Other case studies at the end of the page.
+ * Back-to-top..........Sticky button back to the top of the page.
+ *
+ * UTILITIES
+ * Visually-hidden......Hides content visually, keeps it for screen readers.
+ */
 
-   El orden de los @import es el orden de la cascada: de lo más
-   genérico y de menor especificidad a lo más concreto.
 
-   1. Settings   tokens.css (custom properties; ver /TOKENS.md)
-   2. Tools      — (no se necesitan: sin preprocesador)
-   3. Generic    @font-face, reset, preferencias globales
-   4. Elements   estilos base de etiquetas HTML
-   5. Objects    patrones de layout sin aspecto visual
-   6. Components componentes compartidos y de cada página
-   7. Utilities  ayudas de un solo propósito
-   ============================================================ */
 
-/* 1. Settings */
-@import './tokens.css';
 
-/* 3. Generic */
-@import './generic.css';
 
-/* 4. Elements */
-@import './elements.css';
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
 
-/* 5. Objects */
-@import './objects.css';
+@import './settings/tokens.css';
 
-/* 6. Components — compartidos */
-@import '../components/skip-link/skip-link.css';
-@import '../components/site-nav/site-nav.css';
-@import '../components/site-footer/site-footer.css';
-@import '../components/button/button.css';
-@import '../components/icon-button/icon-button.css';
-@import '../components/chip/chip.css';
-@import '../components/section-index/section-index.css';
 
-/* 6. Components — de cada página */
-@import '../pages/index.css';
-@import '../pages/archive/archive.css';
-@import '../pages/about/about.css';
-@import '../pages/project/project.css';
 
-/* 7. Utilities */
-@import './utilities.css';
+
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+@import './generic/font-face.css';
+@import './generic/reset.css';
+
+
+
+
+
+/*------------------------------------*\
+  #ELEMENTS
+\*------------------------------------*/
+
+@import './elements/page.css';
+@import './elements/media.css';
+@import './elements/links.css';
+@import './elements/lists.css';
+@import './elements/headings.css';
+@import './elements/paragraphs.css';
+@import './elements/buttons.css';
+
+
+
+
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+
+@import './objects/container.css';
+
+
+
+
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+/* Shared */
+@import './components/skip-link.css';
+@import './components/site-nav.css';
+@import './components/site-footer.css';
+@import './components/button.css';
+@import './components/icon-button.css';
+@import './components/chip.css';
+@import './components/section-index.css';
+
+/* Home */
+@import './components/home/featured-grid.css';
+@import './components/home/featured-card.css';
+
+/* Archive */
+@import './components/archive/archive.css';
+@import './components/archive/view-toggle.css';
+@import './components/archive/archive-row.css';
+@import './components/archive/archive-card.css';
+@import './components/archive/cursor-preview.css';
+
+/* About */
+@import './components/about/about.css';
+@import './components/about/about-section.css';
+@import './components/about/about-item.css';
+@import './components/about/about-entry.css';
+
+/* Case study */
+@import './components/case/case.css';
+@import './components/case/case-header.css';
+@import './components/case/case-overview.css';
+@import './components/case/case-meta.css';
+@import './components/case/case-section.css';
+@import './components/case/case-figure.css';
+@import './components/case/case-lightbox.css';
+@import './components/case/case-evaluation.css';
+@import './components/case/insights.css';
+@import './components/case/insight-card.css';
+@import './components/case/case-quote.css';
+@import './components/case/case-note.css';
+@import './components/case/related-work.css';
+@import './components/case/back-to-top.css';
+
+
+
+
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+
+@import './utilities/visually-hidden.css';

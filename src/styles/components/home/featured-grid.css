@@ -1,0 +1,24 @@
+/*------------------------------------*\
+  #FEATURED-GRID
+\*------------------------------------*/
+
+/**
+ * Home grid of featured projects.
+ *
+ * 1. 12 columns, like the case study and about. Each card is as tall as
+ *    its image asks: they align to the top and heights are not matched.
+ * 2. Loading and error messages take the whole row.
+ */
+
+.featured-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* [1] */
+  align-items: start;
+  column-gap: var(--spacing-grid-column);
+  row-gap: var(--spacing-grid-row);
+}
+
+.featured-grid__status {
+  grid-column: 1 / -1; /* [2] */
+}

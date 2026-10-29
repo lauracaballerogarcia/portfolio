@@ -1,18 +1,18 @@
 /**
- * index.js — Punto de entrada principal
+ * index.js — Home page
  *
- * Orquesta la carga de datos, el estado y el renderizado.
- * Esta es la única capa que conecta datos con DOM.
+ * Orchestrates data loading, state and rendering.
+ * This is the only layer that connects data with the DOM.
  */
 
 import store from '../state/store.js';
 import { fetchProjects, hasCaseStudy, getThumbnail, HERO_MOBILE_MEDIA } from '../data/projects.js';
 
-// Componentes
+// Components
 import '../components/site-nav/site-nav.js';
 import '../components/site-footer/site-footer.js';
 
-/** Renderiza la cuadrícula de proyectos según el estado actual */
+/** Renders the project grid from the current state */
 function renderProjects(state) {
   const list = document.querySelector('#featured-projects');
   if (!list) return;
@@ -43,8 +43,8 @@ function renderProjects(state) {
     const chipText  = !available ? 'Coming soon!'
                     : isFeatured ? 'See case study'
                     : 'See work';
-    // Sin case study: tarjeta sin enlace; el chip "Coming soon!" se
-    // anuncia porque es la única pista del estado del proyecto
+    // No case study: a card without a link; the "Coming soon!" chip is
+    // announced because it is the only hint of the project's status
     const wrapperStart = available
       ? `<a class="featured-card__link" href="/project/${project.slug}/">`
       : '<div class="featured-card__inner">';
@@ -97,7 +97,7 @@ async function init() {
   }
 }
 
-/** Exporta la función de inicialización para el router */
+/** Exports the init function for the router */
 export function initHome() {
   init();
 }

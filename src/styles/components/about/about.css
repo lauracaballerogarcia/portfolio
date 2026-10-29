@@ -1,0 +1,117 @@
+/*------------------------------------*\
+  #ABOUT
+\*------------------------------------*/
+
+/**
+ * About page layout. The content (profiles, photo, intro and sections)
+ * lives in src/data/about.json and about.js renders it.
+ *
+ * 1. Profile buttons are `.button-primary` (components/button). Same
+ *    top margin as the archive toolbar.
+ * 2. `display: flex` would override the `hidden` attribute (only one
+ *    profile).
+ * 3. Same grid as the case study, in two rows: photo | intro and
+ *    index | sections. Row 2 starts at the same height in both columns,
+ *    whatever the height of the photo or the intro. Columns 1 to 3 and
+ *    5 to 11 (4 and 12 stay empty).
+ * 4. Profile without a photo: no empty cell and no extra gap on small
+ *    screens.
+ * 5. Baseline (not stretch): the index does not fill its cell, so it
+ *    can be sticky, and its first link shares the baseline of the
+ *    title of the first section. The index is also a `.section-index`.
+ */
+
+.about__profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-16); /* [1] */
+}
+
+.about__profiles[hidden] {
+  display: none; /* [2] */
+}
+
+.about__layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "photo photo photo . intro    intro    intro    intro    intro    intro    intro    ."
+    "index index index . sections sections sections sections sections sections sections ."; /* [3] */
+  column-gap: var(--spacing-grid-column);
+  row-gap: var(--spacing-16);
+  margin-block: var(--spacing-12) var(--spacing-24);
+}
+
+.about__media {
+  grid-area: photo;
+}
+
+.about__media:empty {
+  display: none; /* [4] */
+}
+
+.about__image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-card-s);
+  background-color: var(--color-background-placeholder);
+}
+
+.about__index {
+  grid-area: index;
+  align-self: baseline; /* [5] */
+  position: sticky;
+  top: calc(var(--size-header-height) + var(--spacing-8));
+}
+
+.about__intro {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-paragraph);
+}
+
+.about__text {
+  font-size: var(--font-size-xl);
+  line-height: 1.6;
+}
+
+.about__sections {
+  grid-area: sections;
+  align-self: baseline;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+/**
+ * One column in DOM order: photo, intro, index, sections. In a column
+ * the photo is half as wide, so it does not fill the screen.
+ */
+
+@media (max-width: 1024px) {
+  .about__layout {
+    grid-template-areas:
+      "photo"
+      "intro"
+      "index"
+      "sections";
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: var(--spacing-12);
+  }
+
+  .about__index {
+    position: static;
+  }
+
+  .about__image {
+    max-width: 50%;
+  }
+}

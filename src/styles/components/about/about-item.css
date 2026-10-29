@@ -1,0 +1,135 @@
+/*------------------------------------*\
+  #ABOUT-ITEM
+\*------------------------------------*/
+
+/**
+ * Timeline entry (experience, education, merits): a `<details>` that
+ * opens to show the organization and the description.
+ *
+ * 1. Role | dates | icon. On small screens the dates move below the
+ *    role (see #RESPONSIVE).
+ * 2. Safari does not apply `list-style: none` to the summary marker.
+ * 3. The 2.5rem box does not change the row: the "+" aligns with the
+ *    text and the border.
+ * 4. Two centred bars: horizontal (`::before`) and vertical (`::after`).
+ * 5. Hover and focus, like `.view-toggle`.
+ * 6. Open: the same as `aria-pressed="true"` on `.view-toggle`. The
+ *    vertical bar lies down and makes a "−".
+ * 7. Leaves room for the icon so the text does not cross it.
+ */
+
+.about-item__summary {
+  display: grid;
+  grid-template-columns: 1fr auto auto; /* [1] */
+  align-items: baseline;
+  column-gap: var(--spacing-4);
+  row-gap: var(--spacing-1);
+  padding-block: var(--spacing-4);
+  cursor: pointer;
+  list-style: none;
+}
+
+.about-item__summary::-webkit-details-marker {
+  display: none; /* [2] */
+}
+
+.about-item__dates {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.about-item__icon {
+  position: relative;
+  flex-shrink: 0;
+  align-self: center;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  margin-inline-start: var(--spacing-6);
+  margin-inline-end: calc((var(--size-icon-m) - 2.5rem) / 2); /* [3] */
+  margin-block: calc((var(--size-icon-m) - 2.5rem) / 2);
+  border-radius: var(--radius-2);
+  color: var(--color-text-secondary);
+  transition:
+    color var(--duration-base) ease,
+    background-color var(--duration-base) ease;
+}
+
+.about-item__icon::before,
+.about-item__icon::after {
+  content: ""; /* [4] */
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  inline-size: calc(var(--size-icon-s) * 0.75);
+  block-size: 1.5px;
+  border-radius: var(--radius-full);
+  background-color: currentColor;
+  translate: -50% -50%;
+}
+
+.about-item__summary:is(:hover, :focus-visible) .about-item__icon {
+  background-color: var(--color-background-secondary); /* [5] */
+  color: var(--color-text-primary);
+}
+
+.about-item[open] .about-item__icon {
+  color: var(--color-text-primary); /* [6] */
+}
+
+.about-item__icon::after {
+  rotate: 90deg;
+  transition: rotate var(--duration-base) var(--easing-out);
+}
+
+.about-item[open] .about-item__icon::after {
+  rotate: 0deg; /* [6] */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-item__icon::after {
+    transition: none;
+  }
+}
+
+.about-item__organization,
+.about-item__description {
+  color: var(--color-text-tertiary);
+  line-height: 1.4;
+  padding-right: calc(var(--size-icon-s) + var(--spacing-4)); /* [7] */
+}
+
+.about-item__link {
+  text-decoration-line: underline;
+  text-underline-offset: 0.2em;
+}
+
+.about-item__description {
+  margin-top: var(--spacing-2);
+}
+
+.about-item > :last-child {
+  padding-bottom: var(--spacing-4);
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+@media (max-width: 640px) {
+  .about-item__summary {
+    grid-template-columns: 1fr auto;
+  }
+
+  .about-item__dates {
+    grid-row: 2;
+  }
+
+  .about-item__icon {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}

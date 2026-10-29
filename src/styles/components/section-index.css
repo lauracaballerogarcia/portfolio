@@ -1,0 +1,53 @@
+/*------------------------------------*\
+  #SECTION-INDEX
+\*------------------------------------*/
+
+/**
+ * Side index of the sections of a page (case study and about). Each
+ * page builds the list from its JS and marks the active link with
+ * `aria-current="true"`.
+ *
+ * 1. Baseline: the item's baseline is the link's (not the dot's), so
+ *    about can align the index with the title of its first section.
+ * 2. Dot that marks the active section.
+ */
+
+.section-index__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.section-index__item {
+  display: flex;
+  align-items: baseline; /* [1] */
+  gap: var(--spacing-2);
+}
+
+.section-index__item::before {
+  content: ''; /* [2] */
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color var(--duration-base) var(--easing-out);
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.section-index__item:has([aria-current="true"])::before {
+  background-color: var(--color-text-primary);
+}
+
+.section-index__link {
+  font-size: var(--font-size-s);
+  color: var(--color-text-tertiary);
+  text-decoration: none;
+  transition: color var(--duration-base) var(--easing-out);
+}
+
+.section-index__link:hover,
+.section-index__link[aria-current="true"] {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}

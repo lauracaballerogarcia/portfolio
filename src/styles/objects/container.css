@@ -1,0 +1,21 @@
+/*------------------------------------*\
+  #CONTAINER
+\*------------------------------------*/
+
+/**
+ * Layout wrappers with no visual identity.
+ *
+ * 1. Full width with the site's side margin (header, footer).
+ * 2. Content limited to `--size-content-max` and centred on wide
+ *    screens; it starts below the fixed header.
+ */
+
+.container-full {
+  padding-inline: var(--spacing-container-inline); /* [1] */
+}
+
+.container {
+  max-width: calc(var(--size-content-max) + 2 * var(--spacing-container-inline)); /* [2] */
+  padding: 0 var(--spacing-container-inline);
+  margin-top: var(--size-header-height);
+}

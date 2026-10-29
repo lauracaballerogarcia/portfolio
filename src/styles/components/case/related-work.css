@@ -1,0 +1,189 @@
+/*------------------------------------*\
+  #RELATED-WORK
+\*------------------------------------*/
+
+/**
+ * Up to three other case studies at the end of the page, built by
+ * case.js (most shared tags first).
+ *
+ * 1. Full-width background above the sticky hero.
+ * 2. `display: grid` would override the `hidden` attribute.
+ * 3. Title and claim of the hovered project, desktop only.
+ * 4. Mobile, tablet and touch screens: horizontal carousel. The
+ *    next card peeks in.
+ * 5. Bleeds to the edge, but the first card aligns with the margin.
+ * 6. Desktop with a pointer: text in the left column and cards in
+ *    columns 5 to 12, aligned with the start of the content.
+ * 7. Visually hidden, but it still gives the link its accessible name.
+ */
+
+.related-work {
+  position: relative;
+  z-index: 1; /* [1] */
+  background-color: var(--color-background-primary);
+  padding-inline: var(--spacing-container-inline);
+  padding-block: var(--spacing-16);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+.related-work[hidden] {
+  display: none; /* [2] */
+}
+
+.related-work__aside {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.related-work__label {
+  margin: 0;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.related-work__info {
+  display: none; /* [3] */
+}
+
+.related-work__title {
+  margin: 0;
+  font-size: var(--font-size-l);
+}
+
+.related-work__claim {
+  margin: var(--spacing-2) 0 0;
+  max-width: 24ch;
+  font-size: var(--font-size-m);
+  color: var(--color-text-tertiary);
+}
+
+.related-work__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-grid-column);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related-work__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.related-work__figure {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0;
+  background-color: var(--color-background-placeholder);
+  transition: border-radius var(--duration-slow) ease;
+}
+
+.related-work__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) ease;
+}
+
+.related-work__link:is(:hover, :focus-visible) .related-work__figure {
+  border-radius: var(--radius-card-s);
+}
+
+.related-work__link:is(:hover, :focus-visible) .related-work__image {
+  transform: scale(1.02);
+}
+
+.related-work__caption {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--spacing-3);
+}
+
+.related-work__caption-claim {
+  font-size: var(--font-size-s);
+  color: var(--color-text-tertiary);
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+@media (max-width: 1023px), (hover: none) {
+  .related-work__list {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(75%, 20rem); /* [4] */
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+
+    margin-inline: calc(-1 * var(--spacing-container-inline)); /* [5] */
+    padding-inline: var(--spacing-container-inline);
+    scroll-padding-inline: var(--spacing-container-inline);
+  }
+
+  .related-work__list::-webkit-scrollbar {
+    display: none; /* Chrome and Safari */
+  }
+
+  .related-work__item {
+    scroll-snap-align: start;
+  }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+  .related-work {
+    grid-template-columns: repeat(12, 1fr); /* [6] */
+    column-gap: var(--spacing-grid-column);
+  }
+
+  .related-work__aside {
+    grid-column: 1 / span 3;
+  }
+
+  .related-work__info {
+    display: block;
+  }
+
+  .related-work__list {
+    grid-column: 5 / -1;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .related-work__caption {
+    position: absolute; /* [7] */
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .related-work__image {
+      transition: none;
+    }
+
+    .related-work__link:is(:hover, :focus-visible) .related-work__image {
+      transform: none;
+    }
+
+    .related-work__figure {
+      transition: none;
+    }
+  }
+}

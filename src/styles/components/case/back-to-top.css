@@ -1,0 +1,75 @@
+/*------------------------------------*\
+  #BACK-TO-TOP
+\*------------------------------------*/
+
+/**
+ * Square button back to the top of the page, bottom right (PEC1
+ * pattern). initBackToTop() in case.js decides when it shows.
+ *
+ * 1. Sticks to the bottom of the viewport while the content scrolls
+ *    and, at the end, rests in place inside the case study.
+ * 2. Above `.case__layout` and `.related-work` (z-index: 1).
+ * 3. Hidden (and out of the tab order) until JavaScript shows it.
+ * 4. As wide as its content (24px icon + 8px padding = 40px), so the
+ *    auto margin can push it to the right.
+ * 5. Sticky, it takes room in the flow even when hidden. This negative
+ *    margin (button height + bottom margin) cancels it, so there is no
+ *    gap between related work and the footer. At the end of the page
+ *    the button is already hidden, so it covers nothing.
+ * 6. Same expression as the side padding of `.case__layout`: it aligns
+ *    with the end of the grid on wide screens.
+ * 7. Same mask properties as `.icon-button::before`; the icon takes the
+ *    text color (`currentColor`).
+ * 8. Last, so it also wins over the transition of the visible state.
+ */
+
+.back-to-top {
+  position: sticky; /* [1] */
+  bottom: var(--spacing-6);
+  z-index: 10; /* [2] */
+  display: flex;
+  visibility: hidden; /* [3] */
+  width: fit-content; /* [4] */
+  padding: var(--spacing-2);
+  margin-top: calc(-1 * (var(--size-icon-m) + 2 * var(--spacing-2) + var(--spacing-6))); /* [5] */
+  margin-right: max(
+    var(--spacing-container-inline),
+    (100% - var(--size-content-max)) / 2
+  ); /* [6] */
+  margin-bottom: var(--spacing-6);
+  margin-left: auto;
+  color: var(--color-button-primary-text-default);
+  background-color: var(--color-button-primary-background-default);
+  border-radius: var(--radius-button-primary);
+  opacity: 0; /* [3] */
+  transition: opacity var(--duration-base) var(--easing-out), visibility 0s var(--duration-base);
+}
+
+.back-to-top::before {
+  content: '';
+  display: block;
+  width: var(--size-icon-m);
+  height: var(--size-icon-m);
+  background-color: currentColor; /* [7] */
+  mask-image: url('../../../assets/icons/arrow-elbow-right-up.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-button-primary-background-hover);
+}
+
+.back-to-top[data-visible="true"] {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity var(--duration-base) var(--easing-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top,
+  .back-to-top[data-visible="true"] {
+    transition: none; /* [8] */
+  }
+}

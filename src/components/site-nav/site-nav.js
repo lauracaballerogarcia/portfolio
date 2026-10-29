@@ -1,6 +1,6 @@
 /**
- * site-nav.js — Navegación principal
- * Gestiona el menú móvil con accesibilidad completa (ARIA, foco).
+ * site-nav.js — Main navigation
+ * Handles the mobile menu with full accessibility (ARIA, focus).
  */
 
 class SiteNav extends HTMLElement {
@@ -51,12 +51,12 @@ class SiteNav extends HTMLElement {
 
     toggle?.addEventListener('click', () => setOpen(!isOpen()));
 
-    // Cierra el menú al hacer clic fuera
+    // Closes the menu on a click outside
     document.addEventListener('click', e => {
       if (!this.contains(e.target)) setOpen(false);
     });
 
-    // Cierra con Escape y devuelve el foco al botón
+    // Closes with Escape and returns focus to the button
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && isOpen()) {
         setOpen(false);
@@ -64,7 +64,7 @@ class SiteNav extends HTMLElement {
       }
     });
 
-    // Marca el enlace activo
+    // Marks the active link
     const currentPath = window.location.pathname;
     this.querySelectorAll('.site-nav__link').forEach(link => {
       if (link.getAttribute('href') === currentPath) {

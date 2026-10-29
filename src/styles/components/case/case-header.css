@@ -1,0 +1,25 @@
+/*------------------------------------*\
+  #CASE-HEADER
+\*------------------------------------*/
+
+/**
+ * Introduction of the case study in the sidebar: title, client and
+ * tags. The title keeps the base `h1` styles.
+ */
+
+.case-header__client {
+  color: var(--color-text-tertiary);
+}
+
+.case-header__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-block: var(--spacing-6) var(--spacing-12);
+}
+
+.case-header__tag {
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-2);
+  background-color: var(--color-tag-background);
+}

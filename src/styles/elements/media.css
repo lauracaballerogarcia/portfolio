@@ -1,0 +1,14 @@
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+/**
+ * Images and videos never overflow their container and keep their
+ * proportions.
+ */
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

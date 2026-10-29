@@ -1,4 +1,4 @@
-<p class="eyebrow">Concept & Art direction</p>
+<p class="case-section__eyebrow">Concept & Art direction</p>
 
 ## A visual language in constant motion.
 The street is the starting point. It is where movement happens without a script: people cross paths, encounters are spontaneous, and nothing stays still for long.
@@ -8,7 +8,7 @@ Blink's graphic language borrows that behaviour. Elements overlap instead of sit
 
 
 
-<p class="eyebrow">Website Experience</p>
+<p class="case-section__eyebrow">Website Experience</p>
 
 ## Everything you need to find your way in.
 The website brings together the information attendees need to discover the festival and plan their experience. From the programme and speaker profiles to ticket options and event locations, the interface provides a central point of access to the festival's key information.
@@ -18,7 +18,7 @@ The speaker section introduces the invited artists and their work, while individ
 The experience also extends the visual identity into the site's structure. An experimental footer brings together logos, partners and contact information, closing the page with the same graphic expressiveness that defines the festival.
 
 
-<p class="eyebrow">App Experience</p>
+<p class="case-section__eyebrow">App Experience</p>
 
 ## The whole festival, at one glance.
 Designed to accompany attendees throughout the event, the mobile app brings the festival programme, live talks and professional networking together in one place.
@@ -31,7 +31,7 @@ Together, these features make the app both a practical festival companion and a 
 
 
 
-<p class="eyebrow">Interactive Experience</p>
+<p class="case-section__eyebrow">Interactive Experience</p>
 
 ## A shared canvas for collective movement.
 Blink's digital experience extends beyond personal screens through an interactive installation designed for a large horizontal display within the festival venue.
@@ -40,13 +40,13 @@ Conceived as an opportunity for playful and experimental participation, the inst
 
 
 
-<p class="eyebrow">Merchandising</p>
+<p class="case-section__eyebrow">Merchandising</p>
 
 ## A moving identity, beyond the screen.
 Merchandising takes Blink off the screen and back into the physical world where the concept began. The same overlapping compositions, textures, flashes of light and colour carry over into physical applications, so the festival remains recognisable whether it appears on a phone, in a browser or out on the street.
 
 
-<p class="eyebrow">Closing</p>
+<p class="case-section__eyebrow">Closing</p>
 
 ## Every touchpoint answers to the street.
 From the first digital encounter to the connections made in person, Blink brings its central idea of movement to every part of the festival experience. Visual identity, digital interfaces and physical applications work together to express a world that never stands still — one that keeps unfolding, moment after moment, in the blink of an eye.

@@ -1,28 +1,31 @@
 <!--
-  Plantilla de about.html: solo se usa el contenido del elemento main.
-  main.js la importa con bundle-text: y copia ese contenido en el main
-  de index.html, que es el único documento real. El título de la página
-  lo pone el JS de la página; los metadatos comunes están en index.html.
+  about.html template: only the content of the main element is used.
+  main.js imports it with bundle-text: and copies that content into the
+  main of index.html, the only real document. The page title is set by
+  the page JS; the shared metadata lives in index.html.
 
-  Esta plantilla solo tiene la estructura. El contenido (perfiles, foto,
-  intro y secciones) vive en src/data/about.json y lo pinta about.js.
+  This template only holds the structure. The content (profiles, photo,
+  intro and sections) lives in src/data/about.json and about.js renders it.
 -->
 <main>
+  <div class="about">
 
     <h1 class="visually-hidden">About</h1>
 
-    <!-- Selector de perfil: about.js lo rellena y lo muestra solo si
-         hay más de un perfil con contenido -->
-    <div class="about-profiles" id="about-profiles" role="group" aria-label="View profile" hidden></div>
+    <!-- Profile selector: about.js fills it and shows it only when
+         there is more than one profile with content -->
+    <div class="about__profiles" id="about-profiles" role="group" aria-label="View profile" hidden></div>
 
-    <!-- Rejilla de dos filas: foto e intro arriba; índice y secciones
-         abajo, así el índice y la primera sección empiezan a la misma
-         altura. El orden del DOM es el de lectura y el de móvil -->
-    <div class="about-layout">
-      <div class="about-media" id="about-image"></div>
-      <div class="about-intro" id="about-intro"></div>
-      <nav class="section-index about-index" id="about-index" aria-label="About sections"></nav>
-      <div class="about-sections" id="about-sections"></div>
+    <!-- Two-row grid: photo and intro on top; index and sections below,
+         so the index and the first section start at the same height.
+         The DOM order is the reading order and the mobile order -->
+    <div class="about__layout">
+      <div class="about__media" id="about-image"></div>
+      <div class="about__intro" id="about-intro"></div>
+      <nav class="section-index about__index" id="about-index" aria-label="About sections"></nav>
+      <div class="about__sections" id="about-sections"></div>
     </div>
+
+  </div>
 
   </main>

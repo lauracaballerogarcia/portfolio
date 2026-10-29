@@ -1,0 +1,93 @@
+/*------------------------------------*\
+  #CASE-FIGURE
+\*------------------------------------*/
+
+/**
+ * Image or looping video of the case study, placed in the
+ * `.case-section__media` grid. The markup comes from the Markdown
+ * renderer (projects.js); case.js and case-lightbox.js add the buttons.
+ * Mobile first: every figure takes the whole row.
+ *
+ * 1. Clips the image to the rounded corners.
+ * 2. Crops the image instead of distorting it.
+ * 3. "Enlarge" button (`.icon-button`), always visible, bottom right.
+ *    It opens `.case-lightbox`.
+ * 4. Looping video with no playback bar. The background shows while
+ *    the video and its poster are not loaded.
+ * 5. Play/pause button (`.icon-button`), bottom left. The icon shows
+ *    the available action: pause while playing.
+ * 6. From 769px, half, duo and portrait figures take one column, so
+ *    two of them share a row.
+ */
+
+.case-figure {
+  grid-column: 1 / -1;
+  margin: 0;
+  position: relative;
+}
+
+.case-figure__frame {
+  display: block;
+  overflow: hidden; /* [1] */
+  border-radius: var(--radius-card-s);
+}
+
+.case-figure__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* [2] */
+}
+
+.case-figure--portrait .case-figure__frame {
+  aspect-ratio: 3 / 4;
+}
+
+.case-figure__expand {
+  position: absolute; /* [3] */
+  bottom: var(--spacing-4);
+  right: var(--spacing-4);
+}
+
+.case-figure__expand::before {
+  mask-image: url('../../../assets/icons/arrows-out-simple.svg');
+}
+
+.case-figure__video {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-2);
+  background-color: var(--color-background-placeholder); /* [4] */
+}
+
+.case-figure__player {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-figure__toggle {
+  position: absolute; /* [5] */
+  bottom: var(--spacing-4);
+  left: var(--spacing-4);
+}
+
+.case-figure__toggle[data-state="playing"]::before {
+  mask-image: url('../../../assets/icons/pause-fill.svg');
+}
+
+.case-figure__toggle[data-state="paused"]::before {
+  mask-image: url('../../../assets/icons/play-fill.svg');
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+@media (min-width: 769px) {
+  .case-figure--half,
+  .case-figure--duo,
+  .case-figure--portrait {
+    grid-column: span 1; /* [6] */
+  }
+}

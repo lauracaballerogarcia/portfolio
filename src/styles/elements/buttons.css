@@ -1,0 +1,12 @@
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+/**
+ * Base size for every button. Components set the rest.
+ */
+
+button {
+  font-size: var(--font-size-xs);
+  line-height: 1;
+}

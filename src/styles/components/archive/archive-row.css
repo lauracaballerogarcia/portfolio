@@ -1,0 +1,86 @@
+/*------------------------------------*\
+  #ARCHIVE-ROW
+\*------------------------------------*/
+
+/**
+ * Project row of the archive list view. A link when the project has a
+ * case study; a plain element (`--coming-soon`) when it does not.
+ *
+ * 1. Square marker that grows on hover.
+ * 2. `:any-link` limits the hover to rows that are links.
+ * 3. Without a link there is no hover or focus to reveal the claim,
+ *    so it is always visible. The same on touch screens.
+ */
+
+.archive-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-5);
+  padding-block: var(--spacing-10);
+  border-bottom: 1px solid var(--color-outline-primary);
+  color: inherit;
+  text-decoration: none;
+}
+
+.archive-row__title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: var(--font-weight-regular);
+}
+
+.archive-row__title::before {
+  content: ""; /* [1] */
+  width: 0;
+  height: 1rem;
+  margin-right: 0;
+  background-color: var(--color-text-primary);
+  border-radius: var(--radius-1);
+  transition: width var(--duration-base) ease, margin-right var(--duration-base) ease;
+}
+
+.archive-row__claim {
+  margin: 0;
+  font-size: var(--font-size-l);
+  color: var(--color-text-secondary);
+  opacity: 0;
+  transition: opacity var(--duration-base) ease;
+}
+
+.archive-row__year {
+  margin-left: auto;
+}
+
+.archive-row:any-link:is(:hover, :focus-visible) .archive-row__title::before {
+  width: 1rem; /* [2] */
+  margin-right: var(--spacing-3);
+}
+
+.archive-row--coming-soon .archive-row__claim,
+.archive-row:is(:hover, :focus-visible) .archive-row__claim {
+  opacity: 1; /* [3] */
+}
+
+@media (hover: none) {
+  .archive-row__claim {
+    opacity: 1; /* [3] */
+  }
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+/* Small screens: the claim moves to its own line below the title */
+@media (max-width: 768px) {
+  .archive-row {
+    flex-wrap: wrap;
+    row-gap: var(--spacing-2);
+  }
+
+  .archive-row__claim {
+    order: 1;
+    width: 100%;
+  }
+}

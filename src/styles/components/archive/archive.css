@@ -1,0 +1,77 @@
+/*------------------------------------*\
+  #ARCHIVE
+\*------------------------------------*/
+
+/**
+ * Archive page: toolbar (tag filters and view mode) and the list of
+ * projects in list or grid view.
+ *
+ * 1. Filter buttons are `.button-primary` (components/button); this
+ *    block only sets their spacing.
+ * 2. Separates "All" from the other tags.
+ * 3. The view lives in `data-view`, set by archive.js.
+ */
+
+.archive__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  margin-block: var(--spacing-16) var(--spacing-12);
+}
+
+.archive__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2); /* [1] */
+}
+
+.archive__filter--all {
+  margin-right: var(--spacing-6); /* [2] */
+}
+
+.archive__views {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.archive__empty {
+  padding-block: var(--spacing-16);
+  color: var(--color-text-secondary);
+}
+
+.archive__projects[data-view="list"] {
+  display: flex; /* [3] */
+  flex-direction: column;
+}
+
+.archive__projects[data-view="grid"] {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--spacing-grid-column);
+  row-gap: var(--spacing-16);
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+@media (max-width: 1024px) {
+  .archive__projects[data-view="grid"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .archive__projects[data-view="grid"] {
+    grid-template-columns: 1fr;
+  }
+
+  .archive__filter--all {
+    margin-right: 0;
+  }
+}

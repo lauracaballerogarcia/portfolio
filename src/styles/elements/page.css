@@ -1,0 +1,43 @@
+/*------------------------------------*\
+  #PAGE
+\*------------------------------------*/
+
+/**
+ * Base font, colors and layout for the page.
+ *
+ * 1. The footer stays at the bottom when the content is short.
+ * 2. Target of the "Up" and back-to-top links: leaves room for the
+ *    fixed header.
+ * 3. Smaller base size on small screens: every rem-based token
+ *    scales with it (87.5% = 14px with the default 16px).
+ */
+
+html, body {
+  display: flex; /* [1] */
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  font-family: var(--font-family-sans);
+  color: var(--color-text-primary);
+  background-color: var(--color-background-primary);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+#top {
+  scroll-margin-top: var(--size-header-height); /* [2] */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  flex: 1; /* [1] */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%; /* [3] */
+  }
+}

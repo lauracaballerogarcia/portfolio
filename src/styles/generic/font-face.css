@@ -1,0 +1,57 @@
+/*------------------------------------*\
+  #FONT-FACE
+\*------------------------------------*/
+
+/**
+ * Self-hosted variable fonts: Geist and Geist Mono for the interface,
+ * Sentient for quotes and notes. `font-display: swap` shows the
+ * fallback while each file loads.
+ */
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../../assets/fonts/geist/Geist-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../../assets/fonts/geist/Geist-Italic-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('../../assets/fonts/geist-mono/GeistMono-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('../../assets/fonts/geist-mono/GeistMono-Italic-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sentient';
+  src: url('../../assets/fonts/sentient/Sentient-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sentient';
+  src: url('../../assets/fonts/sentient/Sentient-VariableItalic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}

@@ -1,0 +1,86 @@
+<!--
+  case.html template: only the content of the main element is used.
+  main.js imports it with bundle-text: and copies that content into the
+  main of index.html, the only real document. The page title is set by
+  the page JS; the shared metadata lives in index.html.
+  The URL stays /project/<slug>/.
+-->
+<main>
+
+    <!-- Loading -->
+    <div id="case-loading" aria-live="polite" aria-busy="true">
+      <div class="container">
+        <p>Loading...</p>
+      </div>
+    </div>
+
+    <!-- Error -->
+    <div id="case-error" hidden>
+      <div class="container">
+        <p role="alert">Project not found. <a href="/">Back to home</a></p>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div id="case-content" class="case" hidden>
+
+      <!-- Hero: case.js adds the <picture> (desktop and mobile versions) -->
+      <div class="case__hero"></div>
+
+      <!-- 12-column layout -->
+      <div class="case__layout">
+
+        <!-- Sidebar: title, client, tags and index -->
+        <div class="case__sidebar">
+          <div class="case__sidebar-inner">
+            <header class="case-header">
+              <h1 id="case-title" class="case-header__title"></h1>
+              <p id="case-client" class="case-header__client"></p>
+              <div id="case-tags" class="case-header__tags"></div>
+            </header>
+            <nav class="section-index" aria-label="Project index"></nav>
+          </div>
+        </div>
+
+        <!-- Main content: overview and case study -->
+        <div class="case__main">
+
+          <!-- Overview: summary and metadata (first entry of the index) -->
+          <section id="overview" class="case-overview">
+            <h2 class="visually-hidden">Overview</h2>
+
+            <p id="case-summary" class="case-overview__summary"></p>
+
+            <dl class="case-meta">
+              <div class="case-meta__item">
+                <dt class="case-meta__label">Timeline</dt>
+                <dd id="case-timeline" class="case-meta__value"></dd>
+              </div>
+              <div class="case-meta__item">
+                <dt class="case-meta__label">Roles</dt>
+                <dd class="case-meta__value"><ul class="case-meta__list" id="case-role"></ul></dd>
+              </div>
+              <div class="case-meta__item">
+                <dt class="case-meta__label">Team</dt>
+                <dd class="case-meta__value"><ul class="case-meta__list" id="case-team"></ul></dd>
+              </div>
+              <div class="case-meta__item">
+                <dt class="case-meta__label">Tools</dt>
+                <dd class="case-meta__value"><ul class="case-meta__list" id="case-tools"></ul></dd>
+              </div>
+            </dl>
+          </section>
+
+          <!-- Case study: Markdown rendered by projects.js, sections built by case.js -->
+          <article id="case-body" class="case__content"></article>
+        </div>
+
+      </div>
+
+      <aside class="related-work" aria-labelledby="related-work-title" hidden></aside>
+
+      <!-- Back to top: sticky in the bottom right corner; visibility in initBackToTop (case.js) -->
+      <a href="#top" class="back-to-top"><span class="visually-hidden">Back to top</span></a>
+    </div>
+
+  </main>

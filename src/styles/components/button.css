@@ -1,0 +1,28 @@
+/*------------------------------------*\
+  #BUTTON
+\*------------------------------------*/
+
+/**
+ * Filter and selection button (archive filters, about profiles).
+ * `aria-pressed` carries the active state.
+ */
+
+.button-primary {
+  font: inherit;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: none;
+  border-radius: var(--radius-button-primary);
+  background-color: var(--color-button-primary-background-default);
+  color: var(--color-button-primary-text-default);
+  cursor: pointer;
+  transition: background-color var(--duration-base) ease, color var(--duration-base) ease;
+}
+
+.button-primary:hover {
+  background-color: var(--color-button-primary-background-hover);
+}
+
+.button-primary[aria-pressed="true"] {
+  background-color: var(--color-button-primary-background-active);
+  color: var(--color-button-primary-text-active);
+}

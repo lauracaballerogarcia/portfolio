@@ -1,0 +1,55 @@
+/*------------------------------------*\
+  #CASE-LIGHTBOX
+\*------------------------------------*/
+
+/**
+ * Enlarged view of a figure, in a native `<dialog>` (focus trap and
+ * Escape for free). One dialog, created by case-lightbox.js, serves
+ * every figure of the page.
+ *
+ * 1. Neutral 950 at 80%: one-off value.
+ * 2. Needed: the `display: block` above would override the `hidden`
+ *    attribute.
+ */
+
+.case-lightbox {
+  position: fixed;
+  inset: 0;
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: auto;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-2);
+  background: transparent;
+}
+
+.case-lightbox::backdrop {
+  background-color: rgba(18, 18, 18, 0.8); /* [1] */
+}
+
+.case-lightbox__image,
+.case-lightbox__video {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-2);
+}
+
+.case-lightbox__image[hidden],
+.case-lightbox__video[hidden] {
+  display: none; /* [2] */
+}
+
+.case-lightbox__close {
+  position: absolute;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+}
+
+.case-lightbox__close::before {
+  mask-image: url('../../../assets/icons/x.svg');
+}

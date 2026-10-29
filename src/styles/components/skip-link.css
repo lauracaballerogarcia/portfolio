@@ -1,0 +1,26 @@
+/*------------------------------------*\
+  #SKIP-LINK
+\*------------------------------------*/
+
+/**
+ * Keyboard shortcut to the main content.
+ *
+ * 1. Above the fixed header.
+ * 2. Off screen until it receives focus.
+ */
+
+.skip-link {
+  position: fixed;
+  top: var(--spacing-2);
+  left: var(--spacing-container-inline);
+  z-index: 1000; /* [1] */
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-2);
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  transform: translateY(-200%); /* [2] */
+}
+
+.skip-link:focus {
+  transform: none;
+}

@@ -1,8 +1,8 @@
 /**
- * archive.js — Página de archivo
+ * archive.js — Archive page
  *
- * Filtros por tag (selección múltiple), vista lista/cuadrícula
- * y preview de la hero image siguiendo al cursor en la vista lista.
+ * Tag filters (multiple selection), list/grid view, and a preview of
+ * the hero image that follows the cursor in the list view.
  */
 
 import { fetchProjects, getUniqueTags, hasCaseStudy, getThumbnail } from '../../data/projects.js';
@@ -11,13 +11,13 @@ const DEFAULT_VIEW = 'list';
 
 const state = {
   projects: [],
-  activeTags: new Set(), // vacío = All
+  activeTags: new Set(), // empty = All
   view: DEFAULT_VIEW,
 };
 
 const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
 
-// ─── Filtrado ─────────────────────────────────────
+// ─── Filtering ────────────────────────────────────
 
 function getVisibleProjects() {
   if (state.activeTags.size === 0) return state.projects;
@@ -26,16 +26,16 @@ function getVisibleProjects() {
   );
 }
 
-// ─── Filtros ──────────────────────────────────────
+// ─── Filters ──────────────────────────────────────
 
 function renderFilters(tags) {
   const container = document.getElementById('archive-filters');
   if (!container) return;
 
   container.innerHTML = [
-    `<button type="button" class="button-primary archive-filters__all" data-tag="all" aria-pressed="true">All</button>`,
+    `<button type="button" class="button-primary archive__filter archive__filter--all" data-tag="all" aria-pressed="true">All</button>`,
     ...tags.map(tag =>
-      `<button type="button" class="button-primary" data-tag="${tag}" aria-pressed="false">${tag}</button>`
+      `<button type="button" class="button-primary archive__filter" data-tag="${tag}" aria-pressed="false">${tag}</button>`
     ),
   ].join('');
 
@@ -64,7 +64,7 @@ function syncFilterButtons() {
   });
 }
 
-// ─── Cambio de vista ──────────────────────────────
+// ─── View switch ──────────────────────────────────
 
 function initViewToggle() {
   const buttons = document.querySelectorAll('button[data-view]');
@@ -84,7 +84,7 @@ function initViewToggle() {
 
 // ─── Render ───────────────────────────────────────
 
-// Proyectos sin case study: misma fila/tarjeta pero sin enlace
+// Projects without a case study: same row/card, but without a link
 function listItem(p) {
   const available = hasCaseStudy(p.slug);
   const tag = available ? 'a' : 'div';
@@ -134,16 +134,16 @@ function renderProjects() {
   list.dataset.view = state.view;
   list.innerHTML = visible.length
     ? visible.map(template).join('')
-    : `<li class="archive-empty">No projects match these filters.</li>`;
+    : `<li class="archive__empty">No projects match these filters.</li>`;
 
   if (status) {
     status.textContent = `${visible.length} ${visible.length === 1 ? 'project' : 'projects'}`;
   }
 }
 
-// ─── Preview en cursor (vista lista) ──────────────
-// Las coordenadas van en custom properties (--x, --y): es el único estilo
-// que se escribe desde JS, porque depende de la posición del puntero.
+// ─── Cursor preview (list view) ───────────────────
+// The coordinates go in custom properties (--x, --y): it is the only style
+// written from JS, because it depends on the pointer position.
 
 let previewEl = null;
 let previewImg = null;
@@ -154,7 +154,7 @@ function hidePreview() {
 
 function initCursorPreview() {
   previewEl = document.querySelector('.cursor-preview');
-  previewImg = previewEl?.querySelector('img');
+  previewImg = previewEl?.querySelector('.cursor-preview__image');
   const list = document.getElementById('archive-projects');
   if (!previewEl || !previewImg || !list) return;
 
@@ -162,7 +162,7 @@ function initCursorPreview() {
   let y = 0;
   let frame = null;
 
-  /** Posiciona el preview junto al cursor (la posición la lee archive.css) */
+  /** Places the preview next to the cursor (cursor-preview.css reads the position) */
   function positionPreview() {
     previewEl.style.setProperty('--x', `${x}px`);
     previewEl.style.setProperty('--y', `${y}px`);
@@ -173,7 +173,7 @@ function initCursorPreview() {
     const row = e.target.closest('[data-thumbnail]');
     if (!row) return;
 
-    // Posiciona antes de mostrar, para que no aparezca en el cuadrante anterior
+    // Positions it before showing it, so it does not appear in the previous spot
     x = e.clientX;
     y = e.clientY;
     positionPreview();
@@ -213,6 +213,6 @@ export async function initArchive() {
   } catch (err) {
     console.error(err);
     const list = document.getElementById('archive-projects');
-    if (list) list.innerHTML = `<li class="archive-empty" role="alert">Projects could not be loaded.</li>`;
+    if (list) list.innerHTML = `<li class="archive__empty" role="alert">Projects could not be loaded.</li>`;
   }
 }

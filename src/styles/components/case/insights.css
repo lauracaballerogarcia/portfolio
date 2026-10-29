@@ -1,0 +1,60 @@
+/*------------------------------------*\
+  #INSIGHTS
+\*------------------------------------*/
+
+/**
+ * Horizontal carousel of research insights, with arrow buttons
+ * (case.js). Written as HTML in the Markdown; each card is an
+ * `.insight-card`.
+ *
+ * 1. Spans the section grid and keeps the same two columns.
+ * 2. Values this list used to inherit from the case study text lists:
+ *    24px left padding, 12px between cards and 20px below.
+ * 3. Arrows are `.icon-button .icon-button--outlined`.
+ */
+
+.insights {
+  grid-column: 1 / -1; /* [1] */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.insights__track {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-3); /* [2] */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0 0 var(--spacing-paragraph); /* [2] */
+  padding: 0 0 0 var(--spacing-6); /* [2] */
+  scrollbar-width: none;
+}
+
+.insights__track::-webkit-scrollbar {
+  display: none;
+}
+
+.insights__controls {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+}
+
+.insights__arrow:disabled {
+  opacity: 0.4; /* [3] */
+  cursor: default;
+}
+
+.insights__arrow[data-scroll="prev"]::before {
+  mask-image: url('../../../assets/icons/caret-left.svg');
+}
+
+.insights__arrow[data-scroll="next"]::before {
+  mask-image: url('../../../assets/icons/caret-right.svg');
+}
