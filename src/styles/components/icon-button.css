@@ -3,14 +3,21 @@
 \*------------------------------------*/
 
 /**
- * Round button with an icon and no visible text.
+ * Round button with an icon and no visible text. Same colors as the
+ * design system buttons (`.button-primary`, `.back-to-top`) in every
+ * state.
  *
  * The accessible name goes in `aria-label` or in a `.visually-hidden`
  * text. Each use adds its own BEM class (a mix) for the position and
  * the icon (`mask-image` on `::before`).
  *
- * 1. Outlined variant, for buttons on a light background.
+ * 1. A disabled button (carousel arrows at either end) keeps its color
+ *    on hover.
  * 2. The icon takes the text color (`currentColor`).
+ * 3. Translucent variant, for buttons over images and videos: the same
+ *    colors at 80% with the media blurred behind. Over the darkest
+ *    backdrop the icon still keeps 9.9:1 (8.8:1 on hover). Without
+ *    backdrop-filter support it stays at 80%, without the blur.
  */
 
 .icon-button {
@@ -21,13 +28,14 @@
   height: var(--size-button-icon);
   border: none;
   border-radius: 50%;
-  background-color: var(--color-background-primary);
-  color: var(--color-text-primary);
+  background-color: var(--color-button-primary-background-default);
+  color: var(--color-button-primary-text-default);
   cursor: pointer;
+  transition: background-color var(--duration-base) ease;
 }
 
-.icon-button--outlined {
-  border: 1px solid var(--color-outline-primary); /* [1] */
+.icon-button:hover:not(:disabled) { /* [1] */
+  background-color: var(--color-button-primary-background-hover);
 }
 
 .icon-button::before {
@@ -39,4 +47,14 @@
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
+}
+
+.icon-button--translucent { /* [3] */
+  background-color: color-mix(in srgb, var(--color-button-primary-background-default) 80%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.icon-button--translucent:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--color-button-primary-background-hover) 80%, transparent);
 }

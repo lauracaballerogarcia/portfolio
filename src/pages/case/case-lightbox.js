@@ -103,7 +103,7 @@ export function initCaseLightbox(root = document) {
 
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'icon-button case-figure__expand';
+    button.className = 'icon-button icon-button--translucent case-figure__expand';
     button.setAttribute('aria-label', video ? 'Enlarge video' : 'Enlarge image');
 
     if (video) {

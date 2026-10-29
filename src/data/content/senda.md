@@ -90,10 +90,10 @@ The findings revealed several key insights, including fear of scams, reliance on
   </ul>
 
   <div class="insights__controls">
-    <button class="icon-button icon-button--outlined insights__arrow" data-scroll="prev" aria-label="Show previous insight">
+    <button class="icon-button insights__arrow" data-scroll="prev" aria-label="Show previous insight">
       <!-- SVG flecha izquierda aquí, con aria-hidden="true" -->
     </button>
-    <button class="icon-button icon-button--outlined insights__arrow" data-scroll="next" aria-label="Show next insight">
+    <button class="icon-button insights__arrow" data-scroll="next" aria-label="Show next insight">
       <!-- SVG flecha derecha aquí, con aria-hidden="true" -->
     </button>
   </div>

@@ -302,7 +302,7 @@ function initLoopVideos(root = document) {
 
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'icon-button case-figure__toggle';
+    button.className = 'icon-button icon-button--translucent case-figure__toggle';
 
     const sync = () => {
       const paused = video.paused;
