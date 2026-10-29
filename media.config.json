@@ -3,12 +3,28 @@
   "outputDir": "public/media",
   "publicPrefix": "/media",
   "manifest": "media-manifest.json",
+  "runtimeMap": "src/data/media-variants.json",
   "minSaving": 0.15,
   "webp": {
     "quality": 78,
-    "qualityByProject": { "xana": 80 },
+    "qualityByProject": {
+      "xana": 80
+    },
+    "fallbackQuality": 90,
     "effort": 6,
-    "maxWidth": { "content": 1600, "hero": 2560, "heroMobile": null, "thumbnail": 1280 },
+    "maxWidth": {
+      "content": 2880,
+      "hero": 2880,
+      "heroMobile": 2880,
+      "thumbnail": 2880
+    },
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920
+    ],
     "maxMeanError": 4
   },
   "svg": {
@@ -17,5 +33,8 @@
     "maxDifferentPixels": 0.001,
     "maxMeanError": 0.5
   },
-  "content": ["src/data/projects.json", "src/data/content"]
+  "content": [
+    "src/data/projects.json",
+    "src/data/content"
+  ]
 }

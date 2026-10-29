@@ -1,0 +1,137 @@
+{
+  "/media/about/profile.webp": {
+    "height": 2880,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/bloq/bloq-00-thumbnail.webp": {
+    "height": 641,
+    "width": 1024,
+    "widths": [
+      480,
+      800,
+      1024
+    ]
+  },
+  "/media/parc-central/parc-central-00-thumbnail.webp": {
+    "height": 641,
+    "width": 1024,
+    "widths": [
+      480,
+      800,
+      1024
+    ]
+  },
+  "/media/parc-central/parc-central-01-hero.webp": {
+    "height": 1251,
+    "width": 2000,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2000
+    ]
+  },
+  "/media/xana/xana-00-thumbnail.webp": {
+    "height": 641,
+    "width": 1024,
+    "widths": [
+      480,
+      800,
+      1024
+    ]
+  },
+  "/media/xana/xana-01-hero.webp": {
+    "height": 1251,
+    "width": 2000,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2000
+    ]
+  },
+  "/media/xana/xana-02.webp": {
+    "height": 1251,
+    "width": 2000,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2000
+    ]
+  },
+  "/media/xana/xana-03.webp": {
+    "height": 1251,
+    "width": 1000,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "/media/xana/xana-04.webp": {
+    "height": 1251,
+    "width": 1000,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "/media/xana/xana-05.webp": {
+    "height": 1251,
+    "width": 1000,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "/media/xana/xana-06.webp": {
+    "height": 1251,
+    "width": 1000,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "/media/xana/xana-07.webp": {
+    "height": 1200,
+    "width": 2000,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2000
+    ]
+  },
+  "/media/xana/xana-08.webp": {
+    "height": 1235,
+    "width": 2000,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2000
+    ]
+  }
+}

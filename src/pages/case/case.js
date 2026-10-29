@@ -140,9 +140,11 @@ function initInsightsCarousel(root = document) {
     return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
   };
 
+  // 1px of tolerance at both ends: some browsers (Firefox) leave scrollLeft
+  // at a fraction of a pixel instead of an exact 0 or end value.
   const updateArrowState = () => {
     const { scrollLeft, scrollWidth, clientWidth } = track;
-    prevButton.disabled = scrollLeft <= 0;
+    prevButton.disabled = scrollLeft <= 1;
     nextButton.disabled = scrollLeft + clientWidth >= scrollWidth - 1;
   };
 
@@ -156,6 +158,11 @@ function initInsightsCarousel(root = document) {
 
   track.addEventListener('scroll', updateArrowState, { passive: true });
   updateArrowState();
+
+  // The carousel starts while the case study is still hidden (zero width),
+  // so the arrows are measured again when the track gets its size: when the
+  // page is shown and on every resize.
+  if ('ResizeObserver' in window) new ResizeObserver(updateArrowState).observe(track);
 }
 
 // ── Related work ──────────────────────────────────────────────

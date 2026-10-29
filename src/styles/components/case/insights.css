@@ -8,8 +8,7 @@
  * `.insight-card`.
  *
  * 1. Spans the section grid and keeps the same two columns.
- * 2. Values this list used to inherit from the case study text lists:
- *    24px left padding, 12px between cards and 20px below.
+ * 2. No list indent, so the first card aligns with the text.
  * 3. Arrows are `.icon-button .icon-button--outlined`.
  */
 
@@ -24,13 +23,13 @@
   grid-column: 1 / -1;
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-3); /* [2] */
+  gap: var(--spacing-4);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   list-style: none;
-  margin: 0 0 var(--spacing-paragraph); /* [2] */
-  padding: 0 0 0 var(--spacing-6); /* [2] */
+  margin: 0;
+  padding: 0; /* [2] */
   scrollbar-width: none;
 }
 
