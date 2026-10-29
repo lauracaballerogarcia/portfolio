@@ -50,11 +50,11 @@
 }
 
 .icon-button--translucent { /* [3] */
-  background-color: color-mix(in srgb, var(--color-button-primary-background-default) 80%, transparent);
+  background-color: color-mix(in srgb, var(--color-button-primary-background-default) 90%, transparent);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
 
 .icon-button--translucent:hover:not(:disabled) {
-  background-color: color-mix(in srgb, var(--color-button-primary-background-hover) 80%, transparent);
+  background-color: color-mix(in srgb, var(--color-button-primary-background-hover) 90%, transparent);
 }
