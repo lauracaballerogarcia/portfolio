@@ -39,7 +39,12 @@ export function initCaseLightbox(root = document) {
     lastFocused = triggerButton;
     dialogVideo.hidden = true;
     dialogImg.hidden = false;
-    dialogImg.src = img.currentSrc || img.src;
+    // The enlarged view picks its own width: srcset with the size of the
+    // dialog (90vw), not the smaller one the page figure is using. Images
+    // without variants have an empty srcset and use src (the full file).
+    dialogImg.sizes = '90vw';
+    dialogImg.srcset = img.srcset;
+    dialogImg.src = img.src;
     dialogImg.alt = img.alt;
     dialog.setAttribute('aria-label', 'Enlarged image');
     dialog.showModal();
@@ -77,6 +82,7 @@ export function initCaseLightbox(root = document) {
   // resources, resume the original video if it was playing and return
   // focus to the button that opened the lightbox.
   dialog.addEventListener('close', () => {
+    dialogImg.removeAttribute('srcset');
     dialogImg.src = '';
     dialogVideo.pause();
     dialogVideo.removeAttribute('src');
