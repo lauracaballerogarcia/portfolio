@@ -13,7 +13,10 @@
  *            name-<w>w.webp    one per width in `widths` smaller than the base
  *          The source is never enlarged. EXIF orientation is applied. Every
  *          output is compared with the source at the same size; if the mean
- *          error is above maxMeanError, it is encoded again at fallbackQuality.
+ *          error is above maxMeanError, it is encoded again at fallbackQuality,
+ *          unless that makes a variant weigh more than maxFallbackRatio of the
+ *          next larger width (then the variant keeps the regular quality).
+ *
  *          A WebP source that would not shrink by minSaving (and needs no resize)
  *          is copied byte for byte as the base.
  *   .svg   optimised with SVGO (conservative settings) unless it embeds raster
@@ -131,6 +134,7 @@ function settingsFor(srcRel) {
       maxWidth: w.maxWidth[role] ?? null,
       widths: w.widths,
       maxMeanError: w.maxMeanError,
+      maxFallbackRatio: w.maxFallbackRatio ?? 1,
       metric: 'premultiplied-rgba',
       minSaving: config.minSaving,
       tools: { sharp: TOOLS.sharp, libwebp: TOOLS.libwebp },
@@ -207,17 +211,22 @@ async function meanError(srcBuf, out) {
   return { mean: diff(a.data, b.data).mean, width: m.width, height: m.height };
 }
 
-// One WebP at one width; falls back to fallbackQuality above maxMeanError
-async function encodeChecked(srcBuf, width, s) {
-  let quality = s.quality;
-  let buffer = await encodeWebp(srcBuf, width, quality, s.effort);
-  let check = await meanError(srcBuf, buffer);
-  if (check.mean > s.maxMeanError && s.fallbackQuality > quality) {
-    quality = s.fallbackQuality;
-    buffer = await encodeWebp(srcBuf, width, quality, s.effort);
-    check = await meanError(srcBuf, buffer);
+// One WebP at one width; falls back to fallbackQuality above maxMeanError.
+// `ceiling` is the size of the next larger version: the fallback is kept only
+// if it weighs at most maxFallbackRatio of it. Otherwise a smaller width
+// would cost almost as much as a larger one (noisy textures at q90), and the
+// browser would gain nothing by picking it, so the regular quality stays.
+async function encodeChecked(srcBuf, width, s, ceiling = Infinity) {
+  const first = await encodeWebp(srcBuf, width, s.quality, s.effort);
+  const firstCheck = await meanError(srcBuf, first);
+  if (firstCheck.mean <= s.maxMeanError || s.fallbackQuality <= s.quality) {
+    return { buffer: first, quality: s.quality, ...firstCheck };
   }
-  return { buffer, quality, ...check };
+  const buffer = await encodeWebp(srcBuf, width, s.fallbackQuality, s.effort);
+  if (buffer.length > ceiling * s.maxFallbackRatio) {
+    return { buffer: first, quality: s.quality, fallbackRejected: true, ...firstCheck };
+  }
+  return { buffer, quality: s.fallbackQuality, ...(await meanError(srcBuf, buffer)) };
 }
 
 // Returns { outputs: [{ width, height, buffer, quality }], action, reason }
@@ -238,14 +247,25 @@ async function processRaster(srcBuf, s) {
   }
   outputs.push(base);
 
-  for (const width of plan.variants) outputs.push(await encodeChecked(srcBuf, width, s));
+  // Variants from the largest down, so each one knows the size of the next
+  // larger version (its ceiling for the fallback)
+  const variants = [];
+  let ceiling = base.buffer.length;
+  for (const width of [...plan.variants].reverse()) {
+    const v = await encodeChecked(srcBuf, width, s, ceiling);
+    variants.unshift(v);
+    ceiling = v.buffer.length;
+  }
+  outputs.push(...variants);
 
   const fallback = outputs.filter((o) => o.quality && o.quality !== s.quality).length;
+  const rejected = outputs.filter((o) => o.fallbackRejected).length;
   const reason = [
     action === 'copied' ? `base copied (saving ${(saving * 100).toFixed(1)}% < ${s.minSaving * 100}%)` : `base ${base.width}px q${base.quality}${resized ? ` (resized from ${plan.sourceWidth}px)` : ''}`,
     `${plan.variants.length} variant${plan.variants.length === 1 ? '' : 's'}${plan.variants.length ? ` (${plan.variants.join(', ')})` : ''}`,
     `max mean error ${Math.max(...outputs.map((o) => o.mean)).toFixed(2)}`,
     fallback ? `${fallback} at q${s.fallbackQuality}` : null,
+    rejected ? `${rejected} kept at q${s.quality} (q${s.fallbackQuality} too close to the next larger width)` : null,
   ].filter(Boolean).join(', ');
   return { outputs, action, reason };
 }

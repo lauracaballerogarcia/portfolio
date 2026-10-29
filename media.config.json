@@ -25,7 +25,8 @@
       1440,
       1920
     ],
-    "maxMeanError": 4
+    "maxMeanError": 4,
+    "maxFallbackRatio": 0.8
   },
   "svg": {
     "renderWidth": 1200,
