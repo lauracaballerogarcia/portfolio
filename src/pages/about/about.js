@@ -9,6 +9,7 @@
 
 import aboutData from '../../data/about.json';
 import { marked } from 'marked';
+import { responsiveAttrs } from '../../data/projects.js';
 
 // "2025-05" → "May 2025". The CSS sets the capitals.
 const dateFormat = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric', timeZone: 'UTC' });
@@ -139,11 +140,16 @@ function renderIndex(sections) {
 
 // ─── Profile ───────────────────────────────────────
 
+// sizes of the photo: columns 1 to 3 of the grid from 1025px (368px at most
+// inside .container); below that, one column with the photo at half width
+// (about.css). Approximate on purpose: the browser rounds up.
+const PHOTO_SIZES = '(min-width: 1568px) 368px, (min-width: 1025px) calc(25vw - 24px), calc(50vw - 24px)';
+
 function renderProfile(profile) {
   const image = document.getElementById('about-image');
   if (image) {
     image.innerHTML = profile.image?.src
-      ? `<img class="about__image" src="${escapeHTML(profile.image.src)}" alt="${escapeHTML(profile.image.alt)}" decoding="async">`
+      ? `<img class="about__image" ${responsiveAttrs(escapeHTML(profile.image.src), PHOTO_SIZES)} alt="${escapeHTML(profile.image.alt)}" decoding="async">`
       : '';
   }
 

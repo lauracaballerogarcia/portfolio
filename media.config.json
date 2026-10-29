@@ -35,6 +35,7 @@
   },
   "content": [
     "src/data/projects.json",
+    "src/data/about.json",
     "src/data/content"
   ]
 }

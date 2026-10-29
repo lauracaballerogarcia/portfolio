@@ -226,6 +226,25 @@ export function srcsetFor(src) {
   return { srcset, width: entry.width, height: entry.height };
 }
 
+/**
+ * Attributes for an <img> (or <source>) that should pick its width:
+ * src, plus srcset, sizes, width and height when the pipeline generated
+ * variants. `sizes` says how wide the layout shows the image; each page
+ * declares its own next to its layout.
+ */
+export function responsiveAttrs(src, sizes) {
+  const r = srcsetFor(src);
+  if (!r) return `src="${src}"`;
+  return `src="${src}" srcset="${r.srcset}" sizes="${sizes}" width="${r.width}" height="${r.height}"`;
+}
+
+/** The same for a <picture> <source>, which takes srcset instead of src. */
+export function responsiveSourceAttrs(src, sizes) {
+  const r = srcsetFor(src);
+  if (!r) return `srcset="${src}"`;
+  return `srcset="${r.srcset}" sizes="${sizes}" width="${r.width}" height="${r.height}"`;
+}
+
 export async function fetchProjects() {
   return projectsData;
 }

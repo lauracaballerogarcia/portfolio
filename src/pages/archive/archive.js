@@ -5,7 +5,7 @@
  * the hero image that follows the cursor in the list view.
  */
 
-import { fetchProjects, getUniqueTags, hasCaseStudy, getThumbnail } from '../../data/projects.js';
+import { fetchProjects, getUniqueTags, hasCaseStudy, getThumbnail, responsiveAttrs, srcsetFor } from '../../data/projects.js';
 
 const DEFAULT_VIEW = 'list';
 
@@ -84,6 +84,12 @@ function initViewToggle() {
 
 // ─── Render ───────────────────────────────────────
 
+// sizes of the grid cards: 3 columns from 1025px (496px at most inside
+// .container), 2 from 769px and 1 below (archive.css). The cursor preview
+// is 28.25rem wide (cursor-preview.css). Approximate on purpose.
+const CARD_SIZES = '(min-width: 1568px) 496px, (min-width: 1025px) calc(33.33vw - 27px), (min-width: 769px) calc(50vw - 32px), calc(100vw - 48px)';
+const PREVIEW_SIZES = '28.25rem';
+
 // Projects without a case study: same row/card, but without a link
 function listItem(p) {
   const available = hasCaseStudy(p.slug);
@@ -91,7 +97,7 @@ function listItem(p) {
   const href = available ? ` href="/project/${p.slug}/"` : '';
   return `
     <li>
-      <${tag} class="archive-row${available ? '' : ' archive-row--coming-soon'}"${href} data-thumbnail="${getThumbnail(p)}">
+      <${tag} class="archive-row${available ? '' : ' archive-row--coming-soon'}"${href} data-thumbnail="${getThumbnail(p)}" data-srcset="${srcsetFor(getThumbnail(p))?.srcset ?? ''}">
         <h2 class="archive-row__title">${p.title}</h2>
         <p class="archive-row__claim">${p.claim ?? p.summary}${available ? '' : '<span class="visually-hidden"> (case study coming soon)</span>'}</p>
         <time class="archive-row__year" datetime="${p.year}">${p.year}</time>
@@ -111,7 +117,7 @@ function gridItem(p) {
     <li>
       <${tag} class="archive-card${available ? '' : ' archive-card--coming-soon'}"${href}>
         <figure class="archive-card__figure">
-          <img class="archive-card__image" src="${getThumbnail(p)}" alt="" loading="lazy" decoding="async">
+          <img class="archive-card__image" ${responsiveAttrs(getThumbnail(p), CARD_SIZES)} alt="" loading="lazy" decoding="async">
           <span class="chip${available ? '' : ' chip--coming-soon'}"${available ? ' aria-hidden="true"' : ''}>
             <span class="chip__label">${chipText}</span>
           </span>
@@ -178,7 +184,10 @@ function initCursorPreview() {
     y = e.clientY;
     positionPreview();
 
+    // srcset first, so the browser picks the preview width before loading
     if (previewImg.getAttribute('src') !== row.dataset.thumbnail) {
+      previewImg.sizes = PREVIEW_SIZES;
+      previewImg.srcset = row.dataset.srcset;
       previewImg.src = row.dataset.thumbnail;
     }
     previewEl.classList.add('is-visible');

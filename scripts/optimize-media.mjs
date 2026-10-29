@@ -320,12 +320,18 @@ async function collectRefs() {
       const text = await fs.readFile(file, 'utf8');
       const where = rel(file);
       if (file.endsWith('.json')) {
-        const data = JSON.parse(text);
-        for (const p of Array.isArray(data) ? data : Object.values(data)) {
-          for (const key of ['hero', 'heroMobile', 'thumbnail']) {
-            if (typeof p?.[key] === 'string' && p[key]) refs.push({ ref: p[key], where: `${where} (${p.slug ?? '?'}.${key})` });
+        // Every string under the public prefix, at any depth (projects.json:
+        // hero, heroMobile, thumbnail; about.json: image.src…)
+        const prefix = config.publicPrefix.replace(/\/$/, '') + '/';
+        const visit = (value, key) => {
+          if (typeof value === 'string') { if (value.startsWith(prefix)) refs.push({ ref: value, where: `${where} (${key})` }); }
+          else if (Array.isArray(value)) value.forEach((v, i) => visit(v, `${key}[${i}]`));
+          else if (value && typeof value === 'object') {
+            const label = value.slug ?? key;
+            for (const [k, v] of Object.entries(value)) visit(v, label ? `${label}.${k}` : k);
           }
-        }
+        };
+        visit(JSON.parse(text), '');
       } else if (file.endsWith('.md')) {
         for (const m of text.matchAll(/!\[[^\]]*\]\(\s*(\S+)(?:\s+"([^"]*)")?\s*\)/g)) {
           refs.push({ ref: m[1], where });

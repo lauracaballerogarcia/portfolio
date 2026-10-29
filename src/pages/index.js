@@ -6,11 +6,29 @@
  */
 
 import store from '../state/store.js';
-import { fetchProjects, hasCaseStudy, getThumbnail, HERO_MOBILE_MEDIA } from '../data/projects.js';
+import { fetchProjects, hasCaseStudy, getThumbnail, HERO_MOBILE_MEDIA, responsiveAttrs, responsiveSourceAttrs } from '../data/projects.js';
 
 // Components
 import '../components/site-nav/site-nav.js';
 import '../components/site-footer/site-footer.js';
+
+// sizes of the featured cards: how wide each one is shown, so the browser
+// picks the right width from srcset. Derived from the 12-column grid
+// (featured-card.css) inside .container (1520px at most): the lead card
+// takes the whole row; from 1025px the others alternate 7 and 5 columns
+// (positions 4n+2 and 4n+5 take 7); from 769px they take 6; below that,
+// the whole row. Approximate on purpose: the browser rounds up.
+const CARD_SIZES = {
+  lead:  '(min-width: 1568px) 1520px, calc(100vw - 48px)',
+  seven: '(min-width: 1568px) 880px, (min-width: 1025px) calc(58.33vw - 35px), (min-width: 769px) calc(50vw - 32px), calc(100vw - 48px)',
+  five:  '(min-width: 1568px) 624px, (min-width: 1025px) calc(41.67vw - 30px), (min-width: 769px) calc(50vw - 32px), calc(100vw - 48px)',
+};
+
+function cardSizes(i) {
+  if (i === 0) return CARD_SIZES.lead;
+  const n = i + 1; // nth-child position, as in the CSS
+  return n % 4 === 2 || n % 4 === 1 ? CARD_SIZES.seven : CARD_SIZES.five;
+}
 
 /** Renders the project grid from the current state */
 function renderProjects(state) {
@@ -55,12 +73,10 @@ function renderProjects(state) {
         ${wrapperStart}
           <figure class="featured-card__figure">
             <picture>${isFeatured && project.heroMobile ? `
-              <source media="${HERO_MOBILE_MEDIA}" srcset="${project.heroMobile}">` : ''}
+              <source media="${HERO_MOBILE_MEDIA}" ${responsiveSourceAttrs(project.heroMobile, CARD_SIZES.lead)}>` : ''}
               <img
                 class="featured-card__image"
-                src="${thumb}"
-                width="2880"
-                height="1800"
+                ${responsiveAttrs(thumb, cardSizes(i))}
                 ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'}
                 decoding="async"
                 alt="">

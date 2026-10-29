@@ -5,7 +5,7 @@
  * study Markdown, and fills the DOM.
  */
 
-import { fetchProjects, fetchProjectContent, hasCaseStudy, getThumbnail, HERO_MOBILE_MEDIA } from '../../data/projects.js';
+import { fetchProjects, fetchProjectContent, hasCaseStudy, getThumbnail, HERO_MOBILE_MEDIA, srcsetFor, responsiveAttrs } from '../../data/projects.js';
 import { initCaseLightbox } from './case-lightbox.js';
 
 
@@ -169,6 +169,11 @@ function initInsightsCarousel(root = document) {
 
 const RELATED_LIMIT = 3;
 
+// sizes of the related work images: on desktop with a pointer, three cards
+// in columns 5 to 12 of the full-width grid; otherwise a carousel of cards
+// at 75% of the width, 320px at most (related-work.css). Approximate.
+const RELATED_SIZES = '(min-width: 1024px) and (hover: hover) calc(22.22vw - 23px), (min-width: 475px) 320px, calc(75vw - 36px)';
+
 function getRelatedProjects(current, projects, limit = RELATED_LIMIT) {
   const currentTags = new Set(current.tags ?? []);
 
@@ -209,7 +214,7 @@ function renderRelatedWork(current, projects) {
         <li class="related-work__item">
           <a class="related-work__link" href="/project/${p.slug}/" data-index="${i}">
             <figure class="related-work__figure">
-              <img class="related-work__image" src="${getThumbnail(p)}" alt="" loading="lazy" decoding="async">
+              <img class="related-work__image" ${responsiveAttrs(getThumbnail(p), RELATED_SIZES)} alt="" loading="lazy" decoding="async">
             </figure>
             <span class="related-work__caption">
               <span class="related-work__caption-title">${p.title}</span>
@@ -394,7 +399,7 @@ async function renderCase(project, allProjects) {
 
   // Hero. If the project declares heroMobile (vertical crop), <picture>
   // serves it on portrait phones (HERO_MOBILE_MEDIA); otherwise every screen
-  // uses the hero.
+  // uses the hero. Both offer every width (srcset) at the full viewport width.
   const hero = document.querySelector('.case__hero');
   if (hero && project.hero) {
     const picture = document.createElement('picture');
@@ -402,10 +407,18 @@ async function renderCase(project, allProjects) {
     if (project.heroMobile) {
       const source = document.createElement('source');
       source.media  = HERO_MOBILE_MEDIA;
-      source.srcset = project.heroMobile;
+      source.srcset = srcsetFor(project.heroMobile)?.srcset ?? project.heroMobile;
+      source.sizes  = '100vw';
       picture.appendChild(source);
     }
     const img = document.createElement('img');
+    const heroVariants = srcsetFor(project.hero);
+    if (heroVariants) {
+      img.sizes  = '100vw';
+      img.srcset = heroVariants.srcset;
+      img.width  = heroVariants.width;
+      img.height = heroVariants.height;
+    }
     img.src      = project.hero;
     img.alt      = '';
     img.loading  = 'eager';
