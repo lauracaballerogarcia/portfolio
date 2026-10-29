@@ -18,7 +18,12 @@
  *    colors at 80% with the media blurred behind. Over the darkest
  *    backdrop the icon still keeps 9.9:1 (8.8:1 on hover). Without
  *    backdrop-filter support it stays at 80%, without the blur.
+ * 4. Two-tone focus ring for the translucent variant: the dark outline
+ *    sits between two light rings (the shadow fills the gap and goes
+ *    past it), so one of the two tones always contrasts with the image,
+ *    whether it is light or dark.
  */
+
 
 .icon-button {
   display: inline-flex;
@@ -57,4 +62,11 @@
 
 .icon-button--translucent:hover:not(:disabled) {
   background-color: color-mix(in srgb, var(--color-button-primary-background-hover) 90%, transparent);
+}
+
+
+.icon-button--translucent:focus-visible { /* [4] */
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--color-background-primary);
 }
