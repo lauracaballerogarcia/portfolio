@@ -103,7 +103,7 @@
     "heroMobile": "/media/xana/xana-01-hero-mobile.webp",
     "thumbnail": "/media/xana/xana-00-thumbnail.webp",
     "favicon": "/media/xana/xana-favicon.svg",
-    "featured": false,
+    "featured": true,
     "type": "work",
     "timeline": "Sep 2024 – Jan 2025",
     "roles": ["Art direction", "Graphic Design"],
