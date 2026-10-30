@@ -46,7 +46,7 @@
 .case-section__title {
   grid-column: 1 / -1;
   font-size: var(--font-size-2xl);
-  margin-bottom: var(--spacing-6); /* 24px to the text */
+  margin-bottom: var(--spacing-10); /* 32px to the text */
 }
 
 .case-section__subtitle {
@@ -54,6 +54,12 @@
   font-size: var(--font-size-l);
   margin-top: var(--spacing-10);
   margin-bottom: var(--spacing-paragraph);
+}
+
+/* Right after the section title, the title's margin already separates
+   them: without this the two margins add up (grid items do not collapse). */
+.case-section__title + .case-section__subtitle {
+  margin-top: 0;
 }
 
 .case-section__text {

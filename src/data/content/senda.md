@@ -138,8 +138,8 @@ Before designing the user flows, we identified three key features that would sha
 #### User Roles
 We defined two user roles: the Senior, who uses the app to make payments, and the Administrator, a trusted family member or caregiver responsible for managing and topping up the senior's balance. For the <abbr title="Minimum Viable Product">MVP</abbr>, we prioritized the Senior experience, as it represented the app's primary user journey.
 
-![Main user, the senior: low digital confidence, fear of scams, needs reassurance and clarity.](/media/senda/senda-05-solution-user-role-primary.webp "half 383x296")
-![Secondary user, the administrator: higher digital literacy, needs control and oversight, wants security and transparency.](/media/senda/senda-05-solution-user-role-secondary.webp "half 383x296")
+![Main user, the senior: low digital confidence, fear of scams, needs reassurance and clarity.](/media/senda/senda-05-solution-user-role-primary.webp "half 383x296 noexpand")
+![Secondary user, the administrator: higher digital literacy, needs control and oversight, wants security and transparency.](/media/senda/senda-05-solution-user-role-secondary.webp "half 383x296 noexpand")
 
 
 #### Initial mapping

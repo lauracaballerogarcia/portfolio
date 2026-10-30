@@ -61,6 +61,9 @@
   --spacing-12: 3rem;      /* 48px */
   --spacing-16: 4rem;      /* 64px */
   --spacing-24: 6rem;      /* 96px */
+  --spacing-32: 8rem;      /* 128px */
+  --spacing-40: 10rem;     /* 160px */
+
 
   /* Radius — n × 4px */
   --radius-1:    0.25rem;  /* 4px */

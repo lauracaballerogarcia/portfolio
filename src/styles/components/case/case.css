@@ -75,7 +75,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: var(--spacing-grid-column);
-  row-gap: var(--spacing-24); /* [6] */
+  row-gap: var(--spacing-40); /* [6] */
 }
 
 .case__content > .case-section__media {

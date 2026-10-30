@@ -18,6 +18,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-grid-column);
+  margin-bottom: var(--spacing-media-block);
 }
 
 .case-evaluation__card {
