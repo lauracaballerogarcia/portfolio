@@ -385,6 +385,24 @@ function initBackToTop() {
   };
 }
 
+// ─── Favicon ───────────────────────────────────────
+// A project can declare its own favicon in projects.json ("favicon":
+// "/media/<project>/<project>-favicon.svg"); without one, the page keeps
+// the portfolio favicon from index.html. The <link> is replaced, not
+// edited: Safari does not always repaint the tab icon when only the href
+// of the existing <link> changes.
+
+function setFavicon(href) {
+  if (!href) return;
+  const current = document.querySelector('link[rel="icon"]');
+  const link = document.createElement('link');
+  link.rel = 'icon';
+  link.href = href;
+  if (href.endsWith('.svg')) link.type = 'image/svg+xml';
+  if (current) current.replaceWith(link);
+  else document.head.appendChild(link);
+}
+
 // ─── Rendering ─────────────────────────────────────
 
 async function renderCase(project, allProjects) {
@@ -396,6 +414,7 @@ async function renderCase(project, allProjects) {
     ?.setAttribute('content', project.title);
   document.querySelector('meta[property="og:description"]')
     ?.setAttribute('content', project.summary ?? '');
+  setFavicon(project.favicon);
 
   // Hero. If the project declares heroMobile (vertical crop), <picture>
   // serves it on portrait phones (HERO_MOBILE_MEDIA); otherwise every screen
