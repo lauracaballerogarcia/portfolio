@@ -4,12 +4,12 @@
  * Creates one <dialog> that every figure (.case-figure) of the page
  * reuses. Each figure gets an "enlarge" button that opens its image or
  * video full screen. The button icons are painted by CSS (mask-image),
- * so no SVG is injected here. Figures marked `noexpand` in the Markdown
- * (data-expand="false", decorative media) get no button.
+ * so no SVG is injected here. Only figures marked `expand` in the
+ * Markdown (data-expand="true", media with text to read) get a button.
  */
 
 export function initCaseLightbox(root = document) {
-  const figures = root.querySelectorAll('.case-figure:not([data-expand="false"])');
+  const figures = root.querySelectorAll('.case-figure[data-expand="true"]');
   if (!figures.length) return;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');

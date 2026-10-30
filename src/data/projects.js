@@ -62,21 +62,16 @@ renderer.strong = function ({ tokens }) {
   return `<strong class="case-section__strong">${this.parser.parseInline(tokens)}</strong>`;
 };
 
-// The image title in Markdown carries the layout and the intrinsic size
-// of the file: ![alt](path "full 1440x960"). With width and height the
-// browser reserves the space before the file loads, so the text does not
-// jump while scrolling. Videos can add
-// poster=/media/<project>/<video>-poster.webp: ![alt](path "full 1440x900 poster=…").
-// `noexpand` leaves the figure without the enlarge button (lightbox), for
-// decorative media with no text that needs to be read: ![alt](path "half noexpand").
+// Figures have no enlarge button (lightbox) by default. `expand` adds it,
+// for media with text that needs to be read: ![alt](path "full expand").
 function parseImageTitle(title) {
-  const parts    = (title ?? '').trim().split(/\s+/).filter(Boolean);
-  const size     = parts.find(p => /^\d+x\d+$/.test(p));
-  const poster   = parts.find(p => p.startsWith('poster='))?.slice('poster='.length);
-  const noExpand = parts.includes('noexpand');
-  const mod      = parts.find(p => p !== size && p !== 'noexpand' && !p.startsWith('poster=')) ?? 'default';
+  const parts  = (title ?? '').trim().split(/\s+/).filter(Boolean);
+  const size   = parts.find(p => /^\d+x\d+$/.test(p));
+  const poster = parts.find(p => p.startsWith('poster='))?.slice('poster='.length);
+  const expand = parts.includes('expand');
+  const mod    = parts.find(p => p !== size && p !== 'expand' && !p.startsWith('poster=')) ?? 'default';
   const [width, height] = size ? size.split('x') : [];
-  return { mod, poster, expand: noExpand ? ' data-expand="false"' : '', dims: size ? ` width="${width}" height="${height}"` : '' };
+  return { mod, poster, expand: expand ? ' data-expand="true"' : '', dims: size ? ` width="${width}" height="${height}"` : '' };
 }
 
 // sizes of the case study figures: how wide each layout shows them, so the

@@ -3,7 +3,7 @@
 ## Older adults are losing access to the leisure activities that keep them active and connected.
 
 <!-- **Scope of work** -->
-![Project timeline from September to January: UX research (initial hypothesis, desk research, proto-persona, benchmark, interviews), definition (validated hypothesis, problem statement, personas, user journey, concept, strategy), ideation (epics, user stories, flows, sitemap, wireframes, prototyping, usability testing) and UI design (branding, high-fidelity UI, design system, moderated testing).](/media/senda/senda-02-context-scope-of-work.webp "full 1024x480")
+![Project timeline from September to January: UX research (initial hypothesis, desk research, proto-persona, benchmark, interviews), definition (validated hypothesis, problem statement, personas, user journey, concept, strategy), ideation (epics, user stories, flows, sitemap, wireframes, prototyping, usability testing) and UI design (branding, high-fidelity UI, design system, moderated testing).](/media/senda/senda-02-context-scope-of-work.webp "full 1024x480 expand")
 
 **The brief**
 
@@ -32,7 +32,7 @@ However, before moving into solution design, we needed to validate this assumpti
 ### Understanding where digital processes break down
 
 To address this, we needed a deep understanding of older adults' fears, the barriers they face with technology, and how they experience the digital divide. This involved collecting qualitative data through **in-person interviews** with older adults, which allowed us to gather first-hand insights into their behaviours, motivations, and pain points.
-![Three quotes from interviews with older adults. Mari Carmen, 74: “I prefer to call to make a reservation. If I have to do it online, I call my daughter because I’m not sure how.” Araceli, 73: “I always buy at the ticket office, I don’t know about mobile… I’d like to know how to manage it better and not have to move around so much.” Miguel, 72: “With so many people scamming you these days, I’m scared and I prefer not to take the risk.”](/media/senda/senda-03-research-quotes.webp "full 1024x496")
+![Three quotes from interviews with older adults. Mari Carmen, 74: “I prefer to call to make a reservation. If I have to do it online, I call my daughter because I’m not sure how.” Araceli, 73: “I always buy at the ticket office, I don’t know about mobile… I’d like to know how to manage it better and not have to move around so much.” Miguel, 72: “With so many people scamming you these days, I’m scared and I prefer not to take the risk.”](/media/senda/senda-03-research-quotes.webp "full 1024x496 expand")
 
 ### Insights
 The findings revealed several key insights, including fear of scams, reliance on family members, digital exclusion, and the loss of opportunities and well-being.
@@ -106,7 +106,7 @@ Together, these observations pointed towards a broader need: making complex digi
 
 ## It was never about finding activities — it was about feeling safe enough to pay for them
 The insights showed that the real challenge wasn't finding or signing up for leisure activities, but feeling secure while paying online for them. Users knew where to look for activities that interested them, but the digital payment step was a major setback. 
-![Before and after diagram. Before, the MVP covered three opportunities: access to training activities, simpler complex processes and personalised support. After, it narrows to one: simplifying online payments, because if seniors don’t feel confident paying, that has to be solved first.](/media/senda/senda-04-problem-strategic-shift.webp "full 1024x497")
+![Before and after diagram. Before, the MVP covered three opportunities: access to training activities, simpler complex processes and personalised support. After, it narrows to one: simplifying online payments, because if seniors don’t feel confident paying, that has to be solved first.](/media/senda/senda-04-problem-strategic-shift.webp "full 1024x497 expand")
 
 This led us to reframe the original hypothesis into the real problem to solve:
 
@@ -133,7 +133,7 @@ Based on our research insights, we defined three core design principles that gui
 #### Key features
 Before designing the user flows, we identified three key features that would shape the user experience: secure payments, hybrid top-ups, and trusted support. These served as the foundation for the app's overall functionality.
 
-![Three key features: safe payments with a limited balance that keeps bank and card details protected; hybrid top-ups, either requested digitally or made in person at trusted locations; and trusted support, receiving funds from approved family members with full transparency.](/media/senda/senda-05-solution-key-features.webp "full 785x424")
+![Three key features: safe payments with a limited balance that keeps bank and card details protected; hybrid top-ups, either requested digitally or made in person at trusted locations; and trusted support, receiving funds from approved family members with full transparency.](/media/senda/senda-05-solution-key-features.webp "full 785x424 expand")
 
 #### User Roles
 We defined two user roles: the Senior, who uses the app to make payments, and the Administrator, a trusted family member or caregiver responsible for managing and topping up the senior's balance. For the <abbr title="Minimum Viable Product">MVP</abbr>, we prioritized the Senior experience, as it represented the app's primary user journey.
@@ -145,7 +145,7 @@ We defined two user roles: the Senior, who uses the app to make payments, and th
 #### Initial mapping
 The next step was mapping the happy path for senior users making a payment. We started with the wallet top-up, as it represented users' first interaction with the payment experience and the stage where friction or uncertainty was most likely to occur. It was essential that this initial flow clearly communicated security and built users' confidence from the outset.
 
-![Happy-path flow for topping up the wallet. A user with no balance chooses how to top up: at a physical location, with an introduction, a top-up animation and an updated balance; or by requesting money from an admin, choosing an amount, optionally adding a message, confirming and waiting for approval, followed by a notification.](/media/senda/senda-05-solution-sitemap.webp "full 1600x800")
+![Happy-path flow for topping up the wallet. A user with no balance chooses how to top up: at a physical location, with an introduction, a top-up animation and an updated balance; or by requesting money from an admin, choosing an amount, optionally adding a message, confirming and waiting for approval, followed by a notification.](/media/senda/senda-05-solution-sitemap.webp "full 1600x800 expand")
 
 
 
@@ -167,7 +167,7 @@ Testing was conducted remotely via Maze. The study involved two participant grou
   <p class="case-note__text">*While the 25-person sample served as a solid exploratory foundation, a statistically representative sample would require 385 participants (5% margin of error, 95% confidence level) to draw conclusive findings at scale.</p>
 </div>
 
-![Maze heatmaps on four prototype screens (wallet, request balance, request summary and physical top-up) showing where participants tapped.](/media/senda/senda-06-testing-maze.webp "full 785x420")
+![Maze heatmaps on four prototype screens (wallet, request balance, request summary and physical top-up) showing where participants tapped.](/media/senda/senda-06-testing-maze.webp "full 785x420 expand")
 
 Heatmaps revealed where users tapped during usability testing, helping us assess whether they could easily identify the intended path. They also exposed interaction patterns and areas of confusion, such as misclicks and instances where users selected the wrong element.
 
@@ -200,7 +200,7 @@ Based on these insights, we identified several improvements before moving into t
 
 #### Final MVP User Flow
 
-![Final MVP flow for requesting balance through the app: from the home screen, the user picks an amount, adds an optional message, confirms the request and sees that it has been sent. A branch shows cancelling, with a dialog to confirm or go back.](/media/senda/senda-06-testing-final-flow-1.webp "full 1981x1470")
+![Final MVP flow for requesting balance through the app: from the home screen, the user picks an amount, adds an optional message, confirms the request and sees that it has been sent. A branch shows cancelling, with a dialog to confirm or go back.](/media/senda/senda-06-testing-final-flow-1.webp "full 1981x1470 expand")
 
 
 <p class="case-section__eyebrow">Outcome</p>
