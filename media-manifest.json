@@ -65,66 +65,442 @@
     },
     "parc-central/parc-central-00-thumbnail.webp": {
       "action": "optimized",
-      "bytesIn": 363930,
-      "bytesOut": 481188,
-      "height": 641,
-      "outputHash": "ca84109caed212e57a90c0498ca7f480f405fb7bb28c25477d7442602f2786df",
-      "reason": "base 1024px q78, 2 variants (480, 800), max mean error 4.07, 1 at q90, 1 kept at q78 (q90 too close to the next larger width)",
-      "settingsHash": "b5b54d8424d12a84a6dea222f0b9590e2a13a15604b8537f92cfdbb1a8861217",
-      "source": "media-src/parc-central/parc-central-00-thumbnail.webp",
-      "sourceHash": "8eade49afed74e57bc986d04c3e888450fd3af9ccb8c107dd7084bada6e55b18",
+      "bytesIn": 9579478,
+      "bytesOut": 1761788,
+      "height": 1800,
+      "outputHash": "2c4649557005381ceab7c7f85d05a4a2722ba0d50d9be6b15c2a60a2aef9eb55",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 4.05, 1 at q90, 1 kept at q78 (q90 too close to the next larger width)",
+      "settingsHash": "73afc416355ed3dd141a31f68f24895d64f5c59f272d7aab8ae3c8e54b2b0f56",
+      "source": "media-src/parc-central/parc-central-00-thumbnail.png",
+      "sourceHash": "fa45f6422615ca5fc382e11e1406e0494767223cec33c35b372ff2cceffa0047",
       "variants": {
         "480": {
-          "bytes": 91326,
+          "bytes": 77570,
           "file": "parc-central/parc-central-00-thumbnail-480w.webp",
-          "hash": "f734842cc058cf21b4f1b8f280f475e50ce49983ab2ff455dfca3a63a21a28df"
+          "hash": "a6f072accd6eb87a9b3ef211c9bf631ce23fd73c67ed87c65ca1a34f8ffcce93"
         },
         "800": {
-          "bytes": 151558,
+          "bytes": 118006,
           "file": "parc-central/parc-central-00-thumbnail-800w.webp",
-          "hash": "2ac4660adf6e90d66b921146163990532da589ab583937b49a43d41256ab51a6"
+          "hash": "a80ec9bfa86e49a148a750457bf87b1e3c0229d85a218e786d7157b0605ece99"
+        },
+        "1024": {
+          "bytes": 161440,
+          "file": "parc-central/parc-central-00-thumbnail-1024w.webp",
+          "hash": "9d7ee8b6e51cdf55c8f6c35a82882ac26be9593cb539950193423c6c311ec85f"
+        },
+        "1440": {
+          "bytes": 252580,
+          "file": "parc-central/parc-central-00-thumbnail-1440w.webp",
+          "hash": "2073617c36222fbe3ccae11f6aec3e288adb90b3aabfcd8c00a1cb6c0aab5f19"
+        },
+        "1920": {
+          "bytes": 382944,
+          "file": "parc-central/parc-central-00-thumbnail-1920w.webp",
+          "hash": "132faf714bd935cbf2a3f99ba56b927e757a38f05e986cb340c53a04a57f0f71"
         }
       },
-      "width": 1024
+      "width": 2880
+    },
+    "parc-central/parc-central-01-hero-mobile.webp": {
+      "action": "optimized",
+      "bytesIn": 11954526,
+      "bytesOut": 3051834,
+      "height": 2880,
+      "outputHash": "9028ae34f76c725002a60cc476622f136c83e3c21b887a8b4c84450e3207ccaa",
+      "reason": "base 2160px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 4.05, 1 at q90, 1 kept at q78 (q90 too close to the next larger width)",
+      "settingsHash": "1f707a34af3426ccfa654a812190e0b1866f8d2b88256acd8ad7193487ff289f",
+      "source": "media-src/parc-central/parc-central-01-hero-mobile.png",
+      "sourceHash": "f2a418a81018a79e9d1396c1e61a1d3ca488fb04772e601870b624706afe71ac",
+      "variants": {
+        "480": {
+          "bytes": 156712,
+          "file": "parc-central/parc-central-01-hero-mobile-480w.webp",
+          "hash": "69f8ded771223ba1b07c52471dd9b676072a53fcc0dbf0492ee2446ff269fec0"
+        },
+        "800": {
+          "bytes": 221246,
+          "file": "parc-central/parc-central-01-hero-mobile-800w.webp",
+          "hash": "9e9e9726243a8dc15048e583774ad2a47f31c9f3ee4847bca621adfad61efe1c"
+        },
+        "1024": {
+          "bytes": 304758,
+          "file": "parc-central/parc-central-01-hero-mobile-1024w.webp",
+          "hash": "45016b6e4206683d8cccb9221dfeaa03a5ce9b2957eae101a6fcef072f217a6f"
+        },
+        "1440": {
+          "bytes": 506078,
+          "file": "parc-central/parc-central-01-hero-mobile-1440w.webp",
+          "hash": "ea3c2bc84befbaaee2e707f47687526e8dfaf3d821110ea822c6966d90cff192"
+        },
+        "1920": {
+          "bytes": 827250,
+          "file": "parc-central/parc-central-01-hero-mobile-1920w.webp",
+          "hash": "44a202bba43a60635048dee710b2a0939dff9741d44deaf06ef7b252ecb8548a"
+        }
+      },
+      "width": 2160
     },
     "parc-central/parc-central-01-hero.webp": {
       "action": "optimized",
-      "bytesIn": 1315048,
-      "bytesOut": 2663838,
-      "height": 1251,
-      "outputHash": "87c34b22e980e93c5439a38a2e889198ea1c04a1a1ed533e457e2e1987a1acc9",
-      "reason": "base 2000px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 5.58, 1 at q90, 3 kept at q78 (q90 too close to the next larger width)",
-      "settingsHash": "40800e4e98d037867391b4533b98fc66a21dccf83b55c37b1ae3616144af2d17",
-      "source": "media-src/parc-central/parc-central-01-hero.webp",
-      "sourceHash": "c086be81b986e86b30cfa110e1521c5ad948dff2ae8c70bcc3aa64dc9f56485f",
+      "bytesIn": 9579478,
+      "bytesOut": 1761788,
+      "height": 1800,
+      "outputHash": "2c4649557005381ceab7c7f85d05a4a2722ba0d50d9be6b15c2a60a2aef9eb55",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 4.05, 1 at q90, 1 kept at q78 (q90 too close to the next larger width)",
+      "settingsHash": "03a04bf62f872a9283b417416cd7a36ccaf25ab84bc9e631b5595396e8ca5657",
+      "source": "media-src/parc-central/parc-central-01-hero.png",
+      "sourceHash": "fa45f6422615ca5fc382e11e1406e0494767223cec33c35b372ff2cceffa0047",
       "variants": {
         "480": {
-          "bytes": 94298,
+          "bytes": 77570,
           "file": "parc-central/parc-central-01-hero-480w.webp",
-          "hash": "248becbed5660385018812c8c570ec24105d28deac48817690412f3de47678bc"
+          "hash": "a6f072accd6eb87a9b3ef211c9bf631ce23fd73c67ed87c65ca1a34f8ffcce93"
         },
         "800": {
-          "bytes": 189904,
+          "bytes": 118006,
           "file": "parc-central/parc-central-01-hero-800w.webp",
-          "hash": "1739fe056ca9b8e4edd2b0a3963ad811dbf70fa570e31c11d78933efa8868cef"
+          "hash": "a80ec9bfa86e49a148a750457bf87b1e3c0229d85a218e786d7157b0605ece99"
         },
         "1024": {
-          "bytes": 296712,
+          "bytes": 161440,
           "file": "parc-central/parc-central-01-hero-1024w.webp",
-          "hash": "9985ebff35b0fa01e632b7acc9ec00a34a34246fe0c8eaff4e54669832c6fd45"
+          "hash": "9d7ee8b6e51cdf55c8f6c35a82882ac26be9593cb539950193423c6c311ec85f"
         },
         "1440": {
-          "bytes": 511262,
+          "bytes": 252580,
           "file": "parc-central/parc-central-01-hero-1440w.webp",
-          "hash": "e659795b25c53cda980a7fbe40f4c9bb0c00c3c39d0d49a43837045528f3de75"
+          "hash": "2073617c36222fbe3ccae11f6aec3e288adb90b3aabfcd8c00a1cb6c0aab5f19"
         },
         "1920": {
-          "bytes": 729716,
+          "bytes": 382944,
           "file": "parc-central/parc-central-01-hero-1920w.webp",
-          "hash": "d4066c79059c8df713d72c7cc7b68171cb2a2b4d59691118cb6b4092e132280c"
+          "hash": "132faf714bd935cbf2a3f99ba56b927e757a38f05e986cb340c53a04a57f0f71"
         }
       },
-      "width": 2000
+      "width": 2880
+    },
+    "parc-central/parc-central-04-posters-identity-mockup-1.webp": {
+      "action": "optimized",
+      "bytesIn": 8756379,
+      "bytesOut": 936510,
+      "height": 1800,
+      "outputHash": "31140448dd2fd7283d9486d312cec7b0eb339ab479810c8333d41dbdbbe50c06",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 3.43",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-04-posters-identity-mockup-1.png",
+      "sourceHash": "729e6f3d6837e543a78e279e4affcbce70d530b7df1b9fca83296e3ba0057e37",
+      "variants": {
+        "480": {
+          "bytes": 32892,
+          "file": "parc-central/parc-central-04-posters-identity-mockup-1-480w.webp",
+          "hash": "692f7fc29337705ef766d9b6cef37e1da224535ac1b927f589eb2c67afe9e489"
+        },
+        "800": {
+          "bytes": 69186,
+          "file": "parc-central/parc-central-04-posters-identity-mockup-1-800w.webp",
+          "hash": "3043c8a860e7aa4f9057e572f4b68d0a2de07f53d1a7607d5a7218313c705729"
+        },
+        "1024": {
+          "bytes": 96644,
+          "file": "parc-central/parc-central-04-posters-identity-mockup-1-1024w.webp",
+          "hash": "62cd841590c11eb59aaaffafc1e883d5d59f7b01105db79db2181fb48b603ed0"
+        },
+        "1440": {
+          "bytes": 150164,
+          "file": "parc-central/parc-central-04-posters-identity-mockup-1-1440w.webp",
+          "hash": "9fdf34bd8ea5d4989377f4bdfcda5c13c24899613e30deaacb23063782cc3667"
+        },
+        "1920": {
+          "bytes": 219366,
+          "file": "parc-central/parc-central-04-posters-identity-mockup-1-1920w.webp",
+          "hash": "f2f75bd3ed51ad96b16f6ec2b04312f5b05db03fd93bbe4eb99a490f0dac4d3a"
+        }
+      },
+      "width": 2880
+    },
+    "parc-central/parc-central-07-packaging.webp": {
+      "action": "optimized",
+      "bytesIn": 4401034,
+      "bytesOut": 496026,
+      "height": 2880,
+      "outputHash": "504aa9e76c42d6dc13d73ce267d2028234125668576d05a62244d0eb6700a1b3",
+      "reason": "base 2160px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.70",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-07-packaging.png",
+      "sourceHash": "49e70eea620e965591df56625f1e62e5ff4edd6be74f006f27620ae182d13fc1",
+      "variants": {
+        "480": {
+          "bytes": 24872,
+          "file": "parc-central/parc-central-07-packaging-480w.webp",
+          "hash": "1c2e790fb2c579bf35a91585dee86b5a2c38b02b1cc174eaf191191e6e656074"
+        },
+        "800": {
+          "bytes": 45246,
+          "file": "parc-central/parc-central-07-packaging-800w.webp",
+          "hash": "100e4c69747a987c39952b33c5324604c4a66c1267bdcda9506fdb38b4cc0169"
+        },
+        "1024": {
+          "bytes": 60198,
+          "file": "parc-central/parc-central-07-packaging-1024w.webp",
+          "hash": "44c5b872999fc74fe85ff585ce5fd21898bd37406db56391380612c0121f1bd1"
+        },
+        "1440": {
+          "bytes": 87146,
+          "file": "parc-central/parc-central-07-packaging-1440w.webp",
+          "hash": "40c3b84f7c68d20fbbac0b751501b0545a1fd191a044e48ce98fce9eba1309ce"
+        },
+        "1920": {
+          "bytes": 126780,
+          "file": "parc-central/parc-central-07-packaging-1920w.webp",
+          "hash": "3a2e7dde5e6505ecfc416b2aa827f3dd52c9b39b94f04bf82c53337ae3445f1e"
+        }
+      },
+      "width": 2160
+    },
+    "parc-central/parc-central-10-signage-1.webp": {
+      "action": "optimized",
+      "bytesIn": 8828042,
+      "bytesOut": 1039172,
+      "height": 1800,
+      "outputHash": "0c8794ad02ba6dfd74cfcffe69fd754136e8588d1324d705433c29f446d99159",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 3.54, 1 at q90",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-10-signage-1.png",
+      "sourceHash": "bf920c549db6e1e94585a05d7db30246804408fe811916e285cf7b4ae22a0cc8",
+      "variants": {
+        "480": {
+          "bytes": 59864,
+          "file": "parc-central/parc-central-10-signage-1-480w.webp",
+          "hash": "c24195117979673cedf19ec28a07f42845e9abb1fe6ff5f0b77aa7b53ff6665c"
+        },
+        "800": {
+          "bytes": 78456,
+          "file": "parc-central/parc-central-10-signage-1-800w.webp",
+          "hash": "cbace1460d2b47ade430d62df9d02f86dfd8f9ed6b8b9af3845c488e535ac0c0"
+        },
+        "1024": {
+          "bytes": 107854,
+          "file": "parc-central/parc-central-10-signage-1-1024w.webp",
+          "hash": "8f926e2bf5e6fd5944f2ee9f5205bc34e23570424a8556d361123ed3637fa70f"
+        },
+        "1440": {
+          "bytes": 164372,
+          "file": "parc-central/parc-central-10-signage-1-1440w.webp",
+          "hash": "11b4f26bbca122a6521239b670ee5f1bd9a81068de6f7e0323eb01c0d8d1e351"
+        },
+        "1920": {
+          "bytes": 237402,
+          "file": "parc-central/parc-central-10-signage-1-1920w.webp",
+          "hash": "e934d75cc7b6e7a5c37e327fc7cb0724290e277f67b427d0fb929a5bab84abbf"
+        }
+      },
+      "width": 2880
+    },
+    "parc-central/parc-central-11-signage-2.webp": {
+      "action": "optimized",
+      "bytesIn": 12725943,
+      "bytesOut": 2731350,
+      "height": 2880,
+      "outputHash": "98b6d52b18c4738e54b2980905f04e08cdaa0db3575c382193942e19b866a85c",
+      "reason": "base 2160px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 3.09",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-11-signage-2.png",
+      "sourceHash": "bc52ec5f0fcad304713a41faf6406b6717040285d42872dbf3e030f7490eac90",
+      "variants": {
+        "480": {
+          "bytes": 46922,
+          "file": "parc-central/parc-central-11-signage-2-480w.webp",
+          "hash": "1e151416053ab6d8a66c162588580073e846b47d1820afa69a624f88a09263c9"
+        },
+        "800": {
+          "bytes": 145812,
+          "file": "parc-central/parc-central-11-signage-2-800w.webp",
+          "hash": "85ba253b82481d88b99cb4f24442eaa4e72c120c88d968cbe442a43625b81369"
+        },
+        "1024": {
+          "bytes": 247740,
+          "file": "parc-central/parc-central-11-signage-2-1024w.webp",
+          "hash": "59a64a1363c2cd3ac0cc2d8c7ab8af512109a6fdcc042d83482d4582bf4b215e"
+        },
+        "1440": {
+          "bytes": 484738,
+          "file": "parc-central/parc-central-11-signage-2-1440w.webp",
+          "hash": "536e46af9dd0cf51c6ff7c49772bb503d2557df308db2ead93b57721bd7dbfa0"
+        },
+        "1920": {
+          "bytes": 803296,
+          "file": "parc-central/parc-central-11-signage-2-1920w.webp",
+          "hash": "7c5a8ba447d73bf9c7f0592a34e1e708c7702f7c75f8a8ed2574b325c2abcf5e"
+        }
+      },
+      "width": 2160
+    },
+    "parc-central/parc-central-13-fabric-banners.webp": {
+      "action": "optimized",
+      "bytesIn": 9025602,
+      "bytesOut": 1128490,
+      "height": 1800,
+      "outputHash": "8ab0a2a166b432fd1d5ce14a106937d01e78692f3acfd4c1fca8a7f3b089ade5",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.75",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-13-fabric-banners.png",
+      "sourceHash": "27c143c951fae5b62dbe198c352b1caed5f8aa3f249ae4ec9cb5b314756378f8",
+      "variants": {
+        "480": {
+          "bytes": 23276,
+          "file": "parc-central/parc-central-13-fabric-banners-480w.webp",
+          "hash": "0605154887d7ae8d4c667ecfb24f0835248342d316894f601b0ddf1e5c4c3a3d"
+        },
+        "800": {
+          "bytes": 60136,
+          "file": "parc-central/parc-central-13-fabric-banners-800w.webp",
+          "hash": "ebb0d6aa7442ed266852e943fdb49b50d1426966e1eacb4aa5080ab4511b6392"
+        },
+        "1024": {
+          "bytes": 91382,
+          "file": "parc-central/parc-central-13-fabric-banners-1024w.webp",
+          "hash": "27b36bfd9b1d6f2a16fb190572dd5d9b6b9e0df31c9ba772fa270ff781fb838b"
+        },
+        "1440": {
+          "bytes": 169302,
+          "file": "parc-central/parc-central-13-fabric-banners-1440w.webp",
+          "hash": "d1be5943a870d98c883c269abb3e6d1bd7662a6fa687734753750058c9478742"
+        },
+        "1920": {
+          "bytes": 270730,
+          "file": "parc-central/parc-central-13-fabric-banners-1920w.webp",
+          "hash": "1f298ddb5abe4c986e812484edc76647c13cfb0b928ed03a43b65f99a336ec4d"
+        }
+      },
+      "width": 2880
+    },
+    "parc-central/parc-central-15-posters-identity-mockup-2.webp": {
+      "action": "optimized",
+      "bytesIn": 9408264,
+      "bytesOut": 924952,
+      "height": 2880,
+      "outputHash": "7c18edff0f60d47fd74f5a943cbd180f41c83198d88d9d3b0323f05fceefe0d8",
+      "reason": "base 2160px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 3.03",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-15-posters-identity-mockup-2.png",
+      "sourceHash": "d693df3a3134ccaeebba6b86b8f1fb4d807ef471d627a52fe4996570b5103f8e",
+      "variants": {
+        "480": {
+          "bytes": 41228,
+          "file": "parc-central/parc-central-15-posters-identity-mockup-2-480w.webp",
+          "hash": "94059b7a7ff2e0ff917e29ef8af0154c8b60d4e18afe0a90edce3a9b34bad837"
+        },
+        "800": {
+          "bytes": 80568,
+          "file": "parc-central/parc-central-15-posters-identity-mockup-2-800w.webp",
+          "hash": "b68444689f8201115e82b9644de68b2483940b1854f06d41ec24ae84d1785901"
+        },
+        "1024": {
+          "bytes": 109880,
+          "file": "parc-central/parc-central-15-posters-identity-mockup-2-1024w.webp",
+          "hash": "fd8100dc0fbe42ce5a978a991835cdb03de7c4d0d2a092852632559a3d6d8f14"
+        },
+        "1440": {
+          "bytes": 170040,
+          "file": "parc-central/parc-central-15-posters-identity-mockup-2-1440w.webp",
+          "hash": "e5dbcd44cedb52f571b50007e0f6a38bc50227b8a11e7b48aa60df48d4d7a2e5"
+        },
+        "1920": {
+          "bytes": 242718,
+          "file": "parc-central/parc-central-15-posters-identity-mockup-2-1920w.webp",
+          "hash": "a7f779926e25a73c349d3289f66e5bd1e35a8444f7236fcefabe21d4b2482875"
+        }
+      },
+      "width": 2160
+    },
+    "parc-central/parc-central-17-postcards.webp": {
+      "action": "optimized",
+      "bytesIn": 562601,
+      "bytesOut": 176790,
+      "height": 1080,
+      "outputHash": "000a0cb9e3ab98038e5ed46ea2ef018c6fc14ff1388c33321cb941e6a2ca07ab",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.69",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-17-postcards.png",
+      "sourceHash": "dbdf22707df2c91c923a2a4a90b1bdaa37bbb554de8ec44bae53939a20f072eb",
+      "variants": {
+        "480": {
+          "bytes": 5764,
+          "file": "parc-central/parc-central-17-postcards-480w.webp",
+          "hash": "ee72a801879ff699a4d3081c7e1e01d9e793f7fb7de95ca461e295cffe1cdad4"
+        },
+        "800": {
+          "bytes": 12474,
+          "file": "parc-central/parc-central-17-postcards-800w.webp",
+          "hash": "7aef8a5bf1f40534f2e12945efeebaa9a3fdf23d3b24ac6e0ff212761bf49e6e"
+        },
+        "1024": {
+          "bytes": 17916,
+          "file": "parc-central/parc-central-17-postcards-1024w.webp",
+          "hash": "1fb4a962315a25bf423b894b54b0d097afa1227e6d0088a428586d7a47a44ab4"
+        },
+        "1440": {
+          "bytes": 29332,
+          "file": "parc-central/parc-central-17-postcards-1440w.webp",
+          "hash": "532fe81cabe3af1b44a4c3d44979fbfcd8e3f2d5cfe48743618455ea18b06d05"
+        },
+        "1920": {
+          "bytes": 42288,
+          "file": "parc-central/parc-central-17-postcards-1920w.webp",
+          "hash": "19a1f8b8895ae2bb726d24240146ca3b8e662eb49b524436b72164dfaa4652f3"
+        }
+      },
+      "width": 2880
+    },
+    "parc-central/parc-central-18-thanks.webp": {
+      "action": "optimized",
+      "bytesIn": 302894,
+      "bytesOut": 41828,
+      "height": 592,
+      "outputHash": "c2f09a696d07e9d7632b002effc5039e968b402f60a85a7b029c6c9993321694",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.75",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-18-thanks.png",
+      "sourceHash": "918938ca4939234e008743ffaa5a356d96d150080e3b9add4058d5570abd5fe8",
+      "variants": {
+        "480": {
+          "bytes": 1992,
+          "file": "parc-central/parc-central-18-thanks-480w.webp",
+          "hash": "18ac8ec501c0899ce49620b8bb2f353aa84e0331ee17156f44791900a6e7fc6f"
+        },
+        "800": {
+          "bytes": 3676,
+          "file": "parc-central/parc-central-18-thanks-800w.webp",
+          "hash": "4c228d39579e5c30307504042ece12a1206792205ed02277204279abff23c1fc"
+        },
+        "1024": {
+          "bytes": 4830,
+          "file": "parc-central/parc-central-18-thanks-1024w.webp",
+          "hash": "57dc69d8c14559ef1b0c43e3737daab52796b0d06d4794a327fca650ddc3edb6"
+        },
+        "1440": {
+          "bytes": 7008,
+          "file": "parc-central/parc-central-18-thanks-1440w.webp",
+          "hash": "d5e701a7dfc9b6acf48ce8357a62b2a410632fd5aebe7cb7616d7c5bf3036280"
+        },
+        "1920": {
+          "bytes": 9160,
+          "file": "parc-central/parc-central-18-thanks-1920w.webp",
+          "hash": "25567489d985d023baafda60855a348f9407ac66985901b3de3bb626f94b5ff1"
+        }
+      },
+      "width": 2880
+    },
+    "parc-central/parc-central-favicon.svg": {
+      "action": "copied",
+      "bytesIn": 37185,
+      "bytesOut": 37185,
+      "outputHash": "96e08f219a68aa9f40133558512d09e10c6f8174de887ea69b852d3266ac503f",
+      "reason": "embeds raster image (data:image/), excluded from SVGO",
+      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
+      "source": "media-src/parc-central/parc-central-favicon.svg",
+      "sourceHash": "96e08f219a68aa9f40133558512d09e10c6f8174de887ea69b852d3266ac503f"
     },
     "senda/senda-00-thumbnail.webp": {
       "action": "optimized",
@@ -245,39 +621,39 @@
     },
     "senda/senda-02-context-scope-of-work.webp": {
       "action": "optimized",
-      "bytesIn": 98418,
-      "bytesOut": 130616,
+      "bytesIn": 95966,
+      "bytesOut": 132130,
       "height": 1440,
-      "outputHash": "f90e37b6c1878f6fe8f7e78ab126ac686d5ed979ffc78e3b41458d54cbfe3fcc",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.53",
+      "outputHash": "ffd66c504fb90f8ed77113e117495b5e2b2759e1a37ca67e695a813cd6c017c1",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.42",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/senda/senda-02-context-scope-of-work.png",
-      "sourceHash": "84b08f7347c512d5050f944d4839e41bfa962a86afa21aa90eeb8cbce08375d2",
+      "sourceHash": "edcae94c55c82cfaf31d355b0f4b1324f04dad652a894836ce5db4a9043b3a48",
       "variants": {
         "480": {
-          "bytes": 3898,
+          "bytes": 3950,
           "file": "senda/senda-02-context-scope-of-work-480w.webp",
-          "hash": "ae410060c3e3237559bf227e62b9b63b20cb790ec032dc0f6a7c59b01474e302"
+          "hash": "6c81c0d9c7368b2fe3d4f6ae7d4cd057083a8a7600383362b05a529683c0cc98"
         },
         "800": {
-          "bytes": 10060,
+          "bytes": 10068,
           "file": "senda/senda-02-context-scope-of-work-800w.webp",
-          "hash": "48ea8769a6ed3a01ea37b7de6cfc881e9d9a013f2643e6664c2447f4408935e6"
+          "hash": "31cf95851d62291e36da2f18121bb861952634437cd95795f33dd162f313fa74"
         },
         "1024": {
-          "bytes": 14128,
+          "bytes": 14270,
           "file": "senda/senda-02-context-scope-of-work-1024w.webp",
-          "hash": "8de55a797c208049bf50db7d5490ec0ae44a4b198085da8d989c2e10dba1812d"
+          "hash": "0bcacba586070245e8e2a25fac288c8dfb836bca8a308eb2a90bfe3b702cb555"
         },
         "1440": {
-          "bytes": 22514,
+          "bytes": 22664,
           "file": "senda/senda-02-context-scope-of-work-1440w.webp",
-          "hash": "2146c794a28485f74b533706d44bd19c283fd5f86d83b0035b319cae5ef6fcff"
+          "hash": "ad266d5b87997380e71d9f72420cbf3ad5c21d2c20bead1afe7cab384da2bfab"
         },
         "1920": {
-          "bytes": 30830,
+          "bytes": 31218,
           "file": "senda/senda-02-context-scope-of-work-1920w.webp",
-          "hash": "42f07b31c89152af7931f5d395c0594d65cd468501486575dd9c26e3738615f4"
+          "hash": "8c6d63255f86a0353ce8282a0d14ddc46eba8a5ea8593019b1383680090ce8ff"
         }
       },
       "width": 2880
@@ -363,117 +739,117 @@
     },
     "senda/senda-04-problem-strategic-shift.webp": {
       "action": "optimized",
-      "bytesIn": 130591,
-      "bytesOut": 174606,
+      "bytesIn": 129202,
+      "bytesOut": 175976,
       "height": 1620,
-      "outputHash": "1d7f02609072bb52110f4803b9514e78bc18f48caed1daeac1dc675e63e49c6c",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.57",
+      "outputHash": "9a12419c0eea90b9e3fb60e73986a2a63029875bc08ad3d0b5b74a2df3dc8510",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.46",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/senda/senda-04-problem-strategic-shift.png",
-      "sourceHash": "ded6b5421d053aafb83c997adf20e71198ee218d530ed690e1fbb328194cbce4",
+      "sourceHash": "70a17a09d23be56f646ad2ab8effcf3d870a8d4031f7bb89406bc7bf35621f74",
       "variants": {
         "480": {
-          "bytes": 5952,
+          "bytes": 5976,
           "file": "senda/senda-04-problem-strategic-shift-480w.webp",
-          "hash": "9655fcae64f2ed9cbb4e1dcc06517f909a1f52741b9709783afc0a9b0fe7e278"
+          "hash": "42c4491adc224df987a2af46eeb95f3501f499eca1893550aff654eb11a91cb1"
         },
         "800": {
-          "bytes": 13528,
+          "bytes": 13486,
           "file": "senda/senda-04-problem-strategic-shift-800w.webp",
-          "hash": "b26bef1fa9a6a15d87692204d0d056026dedecb3ea2ad8fb6a4938b2ff843d2d"
+          "hash": "51b55b2dd16c192f4d759f01767585072f34492237ad8b9dc6133a0016dd34b2"
         },
         "1024": {
-          "bytes": 19344,
+          "bytes": 19372,
           "file": "senda/senda-04-problem-strategic-shift-1024w.webp",
-          "hash": "a08bd0c4abde9d8df68191e4db33679a656c82b3b2384d6c5ffd0de5164764bb"
+          "hash": "031b69cd32fca7da33b70fcda6bc132d9e200d840e0dca23c0cf90aa95fca3d4"
         },
         "1440": {
-          "bytes": 29424,
+          "bytes": 29478,
           "file": "senda/senda-04-problem-strategic-shift-1440w.webp",
-          "hash": "89d2ab770b93459d097e115a2e9819ab4cedff2adbf84a349cbcaf3191b6f7c6"
+          "hash": "9adaf22daf8a12ff5ca9fa5bc018414332ec48436b89f52531d85f79c7b766c8"
         },
         "1920": {
-          "bytes": 40972,
+          "bytes": 41190,
           "file": "senda/senda-04-problem-strategic-shift-1920w.webp",
-          "hash": "ee4c81c99cdcb525e378341ade4f08f652ba1c637d256f7cdc41c61cca237eb8"
+          "hash": "46767fd107ec66f4b05a480ab95ee7f8763e7657b67e998876ac2dbd833c2aeb"
         }
       },
       "width": 2880
     },
     "senda/senda-05-solution-key-features.webp": {
       "action": "optimized",
-      "bytesIn": 480310,
-      "bytesOut": 242522,
+      "bytesIn": 484899,
+      "bytesOut": 241622,
       "height": 1620,
-      "outputHash": "8660996fe0c5038d065b3ecccbab489d1b6b408acc4a415ae8262a93768ec4aa",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.93",
+      "outputHash": "fac3bcfaede40f3716d76931cd9cc4641323330f36bef8f575268b537a0ac485",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.91",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/senda/senda-05-solution-key-features.png",
-      "sourceHash": "377d01001bdbc0e258b6483cc0c6a87d293c338fd9f0ca6919ef749ce89f3a16",
+      "sourceHash": "a1ce329dff48d49a3fdce7b7ef470bde70cb1af878ca5de869fc84c2b1153cc4",
       "variants": {
         "480": {
-          "bytes": 8576,
+          "bytes": 8654,
           "file": "senda/senda-05-solution-key-features-480w.webp",
-          "hash": "32f1268c716a85392e02f8a577b974212c091878294bd3e47746575b1a3afd81"
+          "hash": "1f1eedb732eb1ef4aaa4eb57beb452e29cd3fb59fe548d7027d148915b6f990a"
         },
         "800": {
-          "bytes": 18168,
+          "bytes": 17986,
           "file": "senda/senda-05-solution-key-features-800w.webp",
-          "hash": "c69d58ba1b6ef94feca7e8f838c19e6114766ac7d14d698bb0196767d463953a"
+          "hash": "24c36ca0fd4553f25b54676c3a87f5df17e73e31d0e2c27ea6f60675c27a050e"
         },
         "1024": {
-          "bytes": 25282,
+          "bytes": 25202,
           "file": "senda/senda-05-solution-key-features-1024w.webp",
-          "hash": "605a3ee9ab85d0c3d13746ba7602ae429d16f9360da17c6772ed47b52264947c"
+          "hash": "5641356477a5e0064fd00d21a9e0e52419130fbcbb6f5c09596b06e282437075"
         },
         "1440": {
-          "bytes": 40418,
+          "bytes": 40164,
           "file": "senda/senda-05-solution-key-features-1440w.webp",
-          "hash": "95f5b45a4bed13299b01e64bdd87b7f3058df6326e91335af6e585605c6ec1b4"
+          "hash": "f84057d357264dbb25f4a325bda425500bde8be4f8391572b0e0d5a321b9c3d5"
         },
         "1920": {
-          "bytes": 56578,
+          "bytes": 56344,
           "file": "senda/senda-05-solution-key-features-1920w.webp",
-          "hash": "48e98b16782a13544419f20be47f3a25c137792924331045fc80b3e7ecdad92f"
+          "hash": "dab966481d07485dbc39441d62ed97de4736317e546f872c48c694ba5ed14070"
         }
       },
       "width": 2880
     },
     "senda/senda-05-solution-sitemap.webp": {
       "action": "optimized",
-      "bytesIn": 113326,
-      "bytesOut": 123080,
+      "bytesIn": 114415,
+      "bytesOut": 124186,
       "height": 1620,
-      "outputHash": "ab36f54dff1c25ca932526a077b205c6caa84e6c62871d7ef8e6556b87b53d84",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.56",
+      "outputHash": "fa445b7a7422cd6ea306e9a9ba02385609bb7e1abe186db6f80bf1a0b4826167",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.48",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/senda/senda-05-solution-sitemap.png",
-      "sourceHash": "7f86829bb2f744663bde4ea442f5e617679f06202256ab2993411b2985899d08",
+      "sourceHash": "04eacc98d44a761de68317fb3a0659f1d1840ead6a20cda8dd02be7545649190",
       "variants": {
         "480": {
-          "bytes": 4094,
+          "bytes": 4132,
           "file": "senda/senda-05-solution-sitemap-480w.webp",
-          "hash": "051aeb2403131796ee44a4bd53b09436412d0767eb6e0d0f9ae036a8b8dc3fe1"
+          "hash": "02834257e80197aff724d1323811b7ddb975ca2f1cdc856ebcf7c3f3ce710623"
         },
         "800": {
-          "bytes": 8414,
+          "bytes": 8498,
           "file": "senda/senda-05-solution-sitemap-800w.webp",
-          "hash": "8092d61a5d2360bbf12c6b28f18b7433596bacf7e40ea3dac73448b766fba7fb"
+          "hash": "9309f08dc88b45d9f33b38fa6d61115b8afb425384907928001fd38762973ec6"
         },
         "1024": {
-          "bytes": 12210,
+          "bytes": 12298,
           "file": "senda/senda-05-solution-sitemap-1024w.webp",
-          "hash": "dae4dd3e04f4c75687cbec85c6867ee2af5ac23bc6d8378ff2b7c72515485d07"
+          "hash": "2b1822ddd5162f21498c26644629cc661bab9f8916b5eb8883fe7eec6a98fdf1"
         },
         "1440": {
-          "bytes": 19666,
+          "bytes": 19732,
           "file": "senda/senda-05-solution-sitemap-1440w.webp",
-          "hash": "dcacf8b16d52509c2f4848b2ac37c59d128eb315de18d3d20c574b3f16a84d7c"
+          "hash": "a1c1a0f08a6526ec12df0f37932a93f96a1a6e18fe4d689b62db7817691e55d5"
         },
         "1920": {
-          "bytes": 29414,
+          "bytes": 29538,
           "file": "senda/senda-05-solution-sitemap-1920w.webp",
-          "hash": "5bd7df89ec4ea3234ca38b4c7f2d50777d1de4199b36bf9ec8ac7d0aa90c2396"
+          "hash": "17075ef5337fdfa814f1afd315cf01179a3f49df56b91281ba1a430656e96822"
         }
       },
       "width": 2880
@@ -538,78 +914,78 @@
     },
     "senda/senda-06-testing-final-flow-1.webp": {
       "action": "optimized",
-      "bytesIn": 276245,
-      "bytesOut": 202698,
+      "bytesIn": 275875,
+      "bytesOut": 203040,
       "height": 2160,
-      "outputHash": "3ee700a91761fe72026ed2c4cfe213985c9ba1b2a6d31a97251279b8423eb4d1",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.80",
+      "outputHash": "277af2c2827dbeceff339239f8edcf9202c8d3eaf31c8517e770151562c3ffc9",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.71",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/senda/senda-06-testing-final-flow-1.png",
-      "sourceHash": "47662c805d330866bbc1cafcadaa8d8f574079ce4a31948dc20e4c970222e93d",
+      "sourceHash": "fd3f2f5390d9094429441e5bd48a9a45a8d7c6c1d6c80be2dbfdd9cd54b64aa2",
       "variants": {
         "480": {
-          "bytes": 6110,
+          "bytes": 6050,
           "file": "senda/senda-06-testing-final-flow-1-480w.webp",
-          "hash": "93aac0b3ebffc4f814f683cf40b289f1016de229e5d0f3d590fb95c9fb2de27c"
+          "hash": "4d6a05505f4e5a793f450f1490a909ebd50af8e97ab3c43a9d8c7b2aa26c418d"
         },
         "800": {
-          "bytes": 12722,
+          "bytes": 12652,
           "file": "senda/senda-06-testing-final-flow-1-800w.webp",
-          "hash": "2883a3e92984ca1d954eee8c37adf7f3809109ebdba0c6c5c9dfe6b6363c17c3"
+          "hash": "79b8f7de022463869fe2849c3a1edc9c44315867e2687f82a94ee6b21d37cf60"
         },
         "1024": {
-          "bytes": 18756,
+          "bytes": 18666,
           "file": "senda/senda-06-testing-final-flow-1-1024w.webp",
-          "hash": "3c2767f236e7f65b426973752f60880e0df2bf45c034c241a5e6c60f967b68b4"
+          "hash": "736d8298961eb4e25b19e81836eecc9cfe1cc9bd76a6283f62eb50ef7f8ebee8"
         },
         "1440": {
-          "bytes": 30672,
+          "bytes": 31000,
           "file": "senda/senda-06-testing-final-flow-1-1440w.webp",
-          "hash": "540a2fffee8121a3b1d16a35e2a36211e431924bb833aec38bc69841d9bb15f7"
+          "hash": "2e8d8b103e4da4ff97096a3bce4c1796e21b0467ab7799e019a9ad45e55f5da3"
         },
         "1920": {
-          "bytes": 47452,
+          "bytes": 47528,
           "file": "senda/senda-06-testing-final-flow-1-1920w.webp",
-          "hash": "7498cab466ebdfc36e50e18870e9f63a2a0373134ab35c9188f1be321932ecf8"
+          "hash": "f26539782bcd508decd17b64ca9e00aa95137ceb523f5d88796f1f58bce5c292"
         }
       },
       "width": 2880
     },
     "senda/senda-06-testing-maze.webp": {
       "action": "optimized",
-      "bytesIn": 1018766,
-      "bytesOut": 258718,
+      "bytesIn": 1016962,
+      "bytesOut": 255686,
       "height": 1620,
-      "outputHash": "476bbcb224ecc3b6840cc95cc0cfe8e1b08c82291474bc8ab6fb29e032897648",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.20",
+      "outputHash": "e6fc3f02255d9197ff78226253aacfdd46238a64b84783e14175a0e629608f70",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.99",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/senda/senda-06-testing-maze.png",
-      "sourceHash": "7675e73993a9da535196bcfdea5425642c10b57733e5dec813a6378dc1b5b635",
+      "sourceHash": "4d4cc834ec96817a255ecf6db987b0c5422856e659dc1755fd103986ec721983",
       "variants": {
         "480": {
-          "bytes": 9070,
+          "bytes": 8894,
           "file": "senda/senda-06-testing-maze-480w.webp",
-          "hash": "de8b2fbe331d3eebb57f2ef2c3faea93b34ad910fb0fb4e2205bb98767404e2d"
+          "hash": "dcebb10a6976a076f81f387e9e85b1b9a987c9c324c412ff9cf259295444cfad"
         },
         "800": {
-          "bytes": 19206,
+          "bytes": 18892,
           "file": "senda/senda-06-testing-maze-800w.webp",
-          "hash": "cd04b76881c95b0fd86bb434b9449c894c47b78ce322521cb525b97a2b369185"
+          "hash": "69bc2b625239174b896313aca9af6363a155873e3e396c1355a29387e5f9d3ad"
         },
         "1024": {
-          "bytes": 27114,
+          "bytes": 26766,
           "file": "senda/senda-06-testing-maze-1024w.webp",
-          "hash": "35ad6234fa445d6cbad2a961f35c02d713232aa658b1b3da2e683f118a898895"
+          "hash": "73d6e79d6a1736f85d52a30edb216f4c64f3f6fb72cb28da7ba049ca65839741"
         },
         "1440": {
-          "bytes": 42264,
+          "bytes": 41802,
           "file": "senda/senda-06-testing-maze-1440w.webp",
-          "hash": "dfe8c08261919819b4050bf5f0bd1e588c8f0370b61b8d1d9c4f8c0775d2b541"
+          "hash": "85cf998d737a8e70690f03494319cafc8c364b364b5bc3fb9991336e23558966"
         },
         "1920": {
-          "bytes": 61440,
+          "bytes": 60744,
           "file": "senda/senda-06-testing-maze-1920w.webp",
-          "hash": "5b349fa5e84d65f26220fc9bc9c2c75aba86f927d6ee7d9ac6e1e03a3b7f7d9a"
+          "hash": "4d5c60359f90fe14c076199c0dabf9fcea3cff269940671572c8cbf59514fa42"
         }
       },
       "width": 2880

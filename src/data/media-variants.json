@@ -21,24 +21,135 @@
     ]
   },
   "/media/parc-central/parc-central-00-thumbnail.webp": {
-    "height": 641,
-    "width": 1024,
-    "widths": [
-      480,
-      800,
-      1024
-    ]
-  },
-  "/media/parc-central/parc-central-01-hero.webp": {
-    "height": 1251,
-    "width": 2000,
+    "height": 1800,
+    "width": 2880,
     "widths": [
       480,
       800,
       1024,
       1440,
       1920,
-      2000
+      2880
+    ]
+  },
+  "/media/parc-central/parc-central-01-hero-mobile.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/parc-central/parc-central-01-hero.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/parc-central/parc-central-04-posters-identity-mockup-1.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/parc-central/parc-central-07-packaging.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/parc-central/parc-central-10-signage-1.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/parc-central/parc-central-11-signage-2.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/parc-central/parc-central-13-fabric-banners.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/parc-central/parc-central-15-posters-identity-mockup-2.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/parc-central/parc-central-17-postcards.webp": {
+    "height": 1080,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/parc-central/parc-central-18-thanks.webp": {
+    "height": 592,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
     ]
   },
   "/media/senda/senda-00-thumbnail.webp": {
