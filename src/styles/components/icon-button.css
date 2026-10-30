@@ -3,9 +3,12 @@
 \*------------------------------------*/
 
 /**
- * Round button with an icon and no visible text. Same colors as the
- * design system buttons (`.button-primary`, `.back-to-top`) in every
- * state.
+ * Round button with an icon and no visible text, in two variants:
+ *
+ *   .icon-button               primary: on the page background (carousel
+ *                              arrows). Same colors as `.button-primary`.
+ *   .icon-button--secondary    over images and videos (expand, play/pause).
+ *                              Opaque white, like the card chip.
  *
  * The accessible name goes in `aria-label` or in a `.visually-hidden`
  * text. Each use adds its own BEM class (a mix) for the position and
@@ -14,16 +17,11 @@
  * 1. A disabled button (carousel arrows at either end) keeps its color
  *    on hover.
  * 2. The icon takes the text color (`currentColor`).
- * 3. Translucent variant, for buttons over images and videos: the same
- *    colors at 80% with the media blurred behind. Over the darkest
- *    backdrop the icon still keeps 9.9:1 (8.8:1 on hover). Without
- *    backdrop-filter support it stays at 80%, without the blur.
- * 4. Two-tone focus ring for the translucent variant: the dark outline
- *    sits between two light rings (the shadow fills the gap and goes
- *    past it), so one of the two tones always contrasts with the image,
- *    whether it is light or dark.
+ * 3. The icon keeps 18.7:1 (15.7:1 on hover) whatever the image behind.
+ * 4. Two-tone focus ring: the dark outline sits between two light rings
+ *    (the shadow fills the gap and goes past it), so one of the two
+ *    tones always contrasts with the image, whether it is light or dark.
  */
-
 
 .icon-button {
   display: inline-flex;
@@ -33,14 +31,14 @@
   height: var(--size-button-icon);
   border: none;
   border-radius: 50%;
-  background-color: var(--color-button-primary-background-default);
-  color: var(--color-button-primary-text-default);
+  background-color: var(--color-icon-button-primary-background-default);
+  color: var(--color-icon-button-primary-text-default);
   cursor: pointer;
   transition: background-color var(--duration-base) ease;
 }
 
 .icon-button:hover:not(:disabled) { /* [1] */
-  background-color: var(--color-button-primary-background-hover);
+  background-color: var(--color-icon-button-primary-background-hover);
 }
 
 .icon-button::before {
@@ -54,18 +52,21 @@
   mask-size: contain;
 }
 
-.icon-button--translucent { /* [3] */
-  background-color: color-mix(in srgb, var(--color-button-primary-background-default) 90%, transparent);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+
+/*------------------------------------*\
+  #SECONDARY
+\*------------------------------------*/
+
+.icon-button--secondary { /* [3] */
+  background-color: var(--color-icon-button-secondary-background-default);
+  color: var(--color-icon-button-secondary-text-default);
 }
 
-.icon-button--translucent:hover:not(:disabled) {
-  background-color: color-mix(in srgb, var(--color-button-primary-background-hover) 90%, transparent);
+.icon-button--secondary:hover:not(:disabled) {
+  background-color: var(--color-icon-button-secondary-background-hover);
 }
 
-
-.icon-button--translucent:focus-visible { /* [4] */
+.icon-button--secondary:focus-visible { /* [4] */
   outline: 2px solid var(--color-text-primary);
   outline-offset: 2px;
   box-shadow: 0 0 0 6px var(--color-background-primary);

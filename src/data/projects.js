@@ -67,13 +67,16 @@ renderer.strong = function ({ tokens }) {
 // browser reserves the space before the file loads, so the text does not
 // jump while scrolling. Videos can add
 // poster=/media/<project>/<video>-poster.webp: ![alt](path "full 1440x900 poster=…").
+// `noexpand` leaves the figure without the enlarge button (lightbox), for
+// decorative media with no text that needs to be read: ![alt](path "half noexpand").
 function parseImageTitle(title) {
-  const parts  = (title ?? '').trim().split(/\s+/).filter(Boolean);
-  const size   = parts.find(p => /^\d+x\d+$/.test(p));
-  const poster = parts.find(p => p.startsWith('poster='))?.slice('poster='.length);
-  const mod    = parts.find(p => p !== size && !p.startsWith('poster=')) ?? 'default';
+  const parts    = (title ?? '').trim().split(/\s+/).filter(Boolean);
+  const size     = parts.find(p => /^\d+x\d+$/.test(p));
+  const poster   = parts.find(p => p.startsWith('poster='))?.slice('poster='.length);
+  const noExpand = parts.includes('noexpand');
+  const mod      = parts.find(p => p !== size && p !== 'noexpand' && !p.startsWith('poster=')) ?? 'default';
   const [width, height] = size ? size.split('x') : [];
-  return { mod, poster, dims: size ? ` width="${width}" height="${height}"` : '' };
+  return { mod, poster, expand: noExpand ? ' data-expand="false"' : '', dims: size ? ` width="${width}" height="${height}"` : '' };
 }
 
 // sizes of the case study figures: how wide each layout shows them, so the
@@ -88,7 +91,7 @@ const FIGURE_SIZES = {
 const sizesFor = mod => (['half', 'duo', 'portrait'].includes(mod) ? FIGURE_SIZES.half : FIGURE_SIZES.full);
 
 renderer.image = ({ href, title, text }) => {
-  const { mod, dims, poster } = parseImageTitle(title);
+  const { mod, dims, poster, expand } = parseImageTitle(title);
 
   // Looping video with no playback bar. Nothing downloads, not even the
   // poster (it goes in data-poster), until initLoopVideos() (case.js) brings
@@ -97,7 +100,7 @@ renderer.image = ({ href, title, text }) => {
   if (/\.(mp4|webm)$/i.test(href)) {
     const type = href.toLowerCase().endsWith('.webm') ? 'video/webm' : 'video/mp4';
     return `
-      <figure class="case-figure case-figure--${mod} case-figure--video">
+       <figure class="case-figure case-figure--${mod} case-figure--video"${expand}>
         <div class="case-figure__video">
           <video class="case-figure__player" muted loop playsinline preload="none"${dims}${poster ? ` data-poster="${poster}"` : ''} aria-label="${text}">
             <source src="${href}#t=0.001" type="${type}">
@@ -116,7 +119,7 @@ renderer.image = ({ href, title, text }) => {
           sizes="${sizesFor(mod)}"` : '';
 
   return `
-    <figure class="case-figure case-figure--${mod}">
+    <figure class="case-figure case-figure--${mod}"${expand}>
       <picture class="case-figure__frame">
         <img
           class="case-figure__image"

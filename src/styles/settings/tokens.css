@@ -128,6 +128,15 @@
   --color-button-primary-text-default:       var(--color-neutral-950);
   --color-button-primary-text-active:        var(--color-neutral-0);
 
+  --color-icon-button-primary-background-default:   var(--color-button-primary-background-default);
+  --color-icon-button-primary-background-hover:     var(--color-button-primary-background-hover);
+  --color-icon-button-primary-text-default:         var(--color-button-primary-text-default);
+  --color-icon-button-secondary-background-default: var(--color-neutral-0);
+  --color-icon-button-secondary-background-hover:   var(--color-neutral-100);
+  --color-icon-button-secondary-text-default:       var(--color-neutral-950);
+
+
+
   --color-tag-background: var(--color-neutral-100);
 
   /* Spacing — layout */

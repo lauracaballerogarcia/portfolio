@@ -63,7 +63,7 @@ Link `styles.css` once. It pulls in fonts and `_ds_bundle.css`. Nothing else is 
 - **Utility:** `.visually-hidden` hides text visually but keeps it for screen readers.
 - **`.skip-link`:** stays off-screen until it receives focus.
 - **`.button-primary`:** filter/selection button. The selected state is `aria-pressed="true"`.
-- **`.icon-button` and `.icon-button--outlined`:** round, icon-only button.
+- **`.icon-button`:** round icon-only button (36px, 20px icon). Primary (default) on the page background, same colors as `.button-primary`; `.icon-button--secondary` over images and videos, opaque white like the chip, with a two-tone focus ring.
   - It needs an accessible name (`aria-label` or a `.visually-hidden` span).
   - The glyph is set per use through `mask-image` on `::before`. No icon assets ship here, so don't invent icons.
 - **`.chip`, `.chip__label` and `.chip--coming-soon`:** floating label on a card image.
