@@ -1,0 +1,81 @@
+/*------------------------------------*\
+  #CASE-CAROUSEL
+\*------------------------------------*/
+
+/**
+ * Horizontal carousel of case study images. The Markdown renderer
+ * (projects.js) builds it from consecutive images marked `carousel`,
+ * each figure in its own slide; case.js wires up the arrows, as for
+ * `.insights`.
+ *
+ * 1. Spans both columns of the media group.
+ * 2. No list indent, so the first image aligns with the text.
+ * 3. Narrower than the track, so a quarter of the next image always
+ *    shows and invites to scroll: one image and a quarter on mobile,
+ *    two and a quarter from 769px.
+ * 4. Every slide has the same proportion; the image is cropped to fill
+ *    it (`object-fit: cover` in case-figure.css). Change the ratio here
+ *    for every carousel, or per carousel with a wrapper rule.
+ * 5. Arrows are `.icon-button`, like the insights ones.
+ */
+
+.case-carousel {
+  grid-column: 1 / -1; /* [1] */
+  --case-carousel-ratio: 4 / 5; /* [4] */
+}
+
+.case-carousel__track {
+  display: flex;
+  gap: var(--spacing-figure-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  padding: 0; /* [2] */
+  scrollbar-width: none;
+}
+
+.case-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.case-carousel__item {
+  flex: 0 0 calc((100% - var(--spacing-figure-gap)) / 1.25); /* [3] */
+  scroll-snap-align: start;
+}
+
+.case-carousel__item .case-figure__frame {
+  aspect-ratio: var(--case-carousel-ratio); /* [4] */
+}
+
+.case-carousel__controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+}
+
+.case-carousel__arrow:disabled { /* [5] */
+  opacity: 0.4;
+  cursor: default;
+}
+
+.case-carousel__arrow[data-scroll="prev"]::before {
+  mask-image: url('../../../assets/icons/caret-left.svg');
+}
+
+.case-carousel__arrow[data-scroll="next"]::before {
+  mask-image: url('../../../assets/icons/caret-right.svg');
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+@media (min-width: 769px) {
+  .case-carousel__item {
+    flex-basis: calc((100% - 2 * var(--spacing-figure-gap)) / 2.25); /* [3] */
+  }
+}

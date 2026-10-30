@@ -125,19 +125,22 @@ function renderIndex() {
 }
 
 
-// ─── Insights carousel ─────────────────────────────
+// ─── Carousels ─────────────────────────────────────
+// The research insights (`.insights`, HTML in the Markdown) and the image
+// carousels (`.case-carousel`, figures marked `carousel`) share the same
+// behaviour: a scrolling track and two arrows that move one item at a time.
 
-function initInsightsCarousel(root = document) {
-  const track = root.querySelector('.insights__track');
-  const prevButton = root.querySelector('[data-scroll="prev"]');
-  const nextButton = root.querySelector('[data-scroll="next"]');
+function initCarousel(container) {
+  const track = container.querySelector('.insights__track, .case-carousel__track');
+  const prevButton = container.querySelector('[data-scroll="prev"]');
+  const nextButton = container.querySelector('[data-scroll="next"]');
 
   if (!track || !prevButton || !nextButton) return;
 
   const getStep = () => {
-    const card = track.querySelector('.insight-card');
+    const item = track.firstElementChild;
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+    return item ? item.getBoundingClientRect().width + gap : track.clientWidth;
   };
 
   // 1px of tolerance at both ends: some browsers (Firefox) leave scrollLeft
@@ -163,6 +166,10 @@ function initInsightsCarousel(root = document) {
   // so the arrows are measured again when the track gets its size: when the
   // page is shown and on every resize.
   if ('ResizeObserver' in window) new ResizeObserver(updateArrowState).observe(track);
+}
+
+function initCarousels(root = document) {
+  root.querySelectorAll('.insights, .case-carousel').forEach(initCarousel);
 }
 
 // ── Related work ──────────────────────────────────────────────
@@ -499,7 +506,7 @@ async function renderCase(project, allProjects) {
       const html = await fetchProjectContent(project.slug);
       body.innerHTML = html;
 
-      initInsightsCarousel(body);
+      initCarousels(body);
       initCaseLightbox(body);
       initLoopVideos(body);
 

@@ -64,14 +64,19 @@ renderer.strong = function ({ tokens }) {
 
 // Figures have no enlarge button (lightbox) by default. `expand` adds it,
 // for media with text that needs to be read: ![alt](path "full expand").
+// `carousel` puts the figure in a horizontal carousel together with the
+// images around it that also carry it: ![alt](path "carousel").
+const FLAGS = ['expand', 'carousel'];
+
 function parseImageTitle(title) {
-  const parts  = (title ?? '').trim().split(/\s+/).filter(Boolean);
-  const size   = parts.find(p => /^\d+x\d+$/.test(p));
-  const poster = parts.find(p => p.startsWith('poster='))?.slice('poster='.length);
-  const expand = parts.includes('expand');
-  const mod    = parts.find(p => p !== size && p !== 'expand' && !p.startsWith('poster=')) ?? 'default';
+  const parts    = (title ?? '').trim().split(/\s+/).filter(Boolean);
+  const size     = parts.find(p => /^\d+x\d+$/.test(p));
+  const poster   = parts.find(p => p.startsWith('poster='))?.slice('poster='.length);
+  const expand   = parts.includes('expand');
+  const carousel = parts.includes('carousel');
+  const mod      = parts.find(p => p !== size && !FLAGS.includes(p) && !p.startsWith('poster=')) ?? 'default';
   const [width, height] = size ? size.split('x') : [];
-  return { mod, poster, expand: expand ? ' data-expand="true"' : '', dims: size ? ` width="${width}" height="${height}"` : '' };
+  return { mod, poster, carousel, expand: expand ? ' data-expand="true"' : '', dims: size ? ` width="${width}" height="${height}"` : '' };
 }
 
 // sizes of the case study figures: how wide each layout shows them, so the
@@ -82,11 +87,15 @@ function parseImageTitle(title) {
 const FIGURE_SIZES = {
   full: '(min-width: 1568px) 880px, (min-width: 1025px) calc(58.33vw - 35px), calc(100vw - 96px)',
   half: '(min-width: 1568px) 430px, (min-width: 1025px) calc(29.17vw - 28px), (min-width: 769px) calc(50vw - 58px), calc(100vw - 96px)',
+  // Carousel items: two and a quarter per row from 769px, one and a
+  // quarter below (case-carousel.css)
+  carousel: '(min-width: 1568px) 380px, (min-width: 1025px) calc(25.9vw - 20px), (min-width: 769px) calc(44vw - 40px), calc(80vw - 32px)',
 };
-const sizesFor = mod => (['half', 'duo', 'portrait'].includes(mod) ? FIGURE_SIZES.half : FIGURE_SIZES.full);
+const sizesFor = (mod, carousel) => (carousel ? FIGURE_SIZES.carousel
+  : ['half', 'duo', 'portrait'].includes(mod) ? FIGURE_SIZES.half : FIGURE_SIZES.full);
 
 renderer.image = ({ href, title, text }) => {
-  const { mod, dims, poster, expand } = parseImageTitle(title);
+  const { mod, dims, poster, expand, carousel } = parseImageTitle(title);
 
   // Looping video with no playback bar. Nothing downloads, not even the
   // poster (it goes in data-poster), until initLoopVideos() (case.js) brings
@@ -111,7 +120,7 @@ renderer.image = ({ href, title, text }) => {
   const size = dims || (responsive ? ` width="${responsive.width}" height="${responsive.height}"` : '');
   const srcset = responsive ? `
           srcset="${responsive.srcset}"
-          sizes="${sizesFor(mod)}"` : '';
+          sizes="${sizesFor(mod, carousel)}"` : '';
 
   return `
     <figure class="case-figure case-figure--${mod}"${expand}>
@@ -177,9 +186,33 @@ function splitMixedParagraph(token) {
 caseMarked.use({
   extensions: [{
     name: 'caseMedia',
-    renderer({ paragraphs }) {
-      const figures = paragraphs.map(p => this.parser.parseInline(p.tokens)).join('');
-      return `<div class="case-section__media">${figures}</div>\n`;
+        renderer({ paragraphs }) {
+      // Images marked `carousel` that follow one another become a carousel:
+      // each figure in its own slide, plus the arrows that case.js wires up.
+      // The rest of the group renders as usual, before or after it.
+      const images = paragraphs.flatMap(p => p.tokens.filter(t => t.type === 'image'));
+      const runs = [];
+      for (const t of images) {
+        const carousel = parseImageTitle(t.title).carousel;
+        const last = runs[runs.length - 1];
+        if (last && last.carousel === carousel) last.tokens.push(t);
+        else runs.push({ carousel, tokens: [t] });
+      }
+      const html = runs.map(({ carousel, tokens }) => {
+        if (!carousel) return this.parser.parseInline(tokens);
+        const slides = tokens
+          .map(t => `<li class="case-carousel__item">${this.parser.parseInline([t])}</li>`)
+          .join('');
+        return `
+          <div class="case-carousel" role="region" aria-roledescription="carousel" aria-label="Image carousel">
+            <ul class="case-carousel__track" role="list" tabindex="0">${slides}</ul>
+            <div class="case-carousel__controls">
+              <button type="button" class="icon-button case-carousel__arrow" data-scroll="prev" aria-label="Show previous image"></button>
+              <button type="button" class="icon-button case-carousel__arrow" data-scroll="next" aria-label="Show next image"></button>
+            </div>
+          </div>`;
+      }).join('');
+      return `<div class="case-section__media">${html}</div>\n`;
     }
   }],
   hooks: {

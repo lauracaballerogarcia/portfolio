@@ -73,6 +73,7 @@
  * Case-evaluation......Usability test results.
  * Insights.............Carousel of research insights.
  * Insight-card.........One research insight.
+ * Case-carousel........Carousel of case study images.
  * Case-quote...........Quote.
  * Case-note............Side note.
  * Related-work.........Other case studies at the end of the page.
@@ -174,6 +175,7 @@
 @import './components/case/case-evaluation.css';
 @import './components/case/insights.css';
 @import './components/case/insight-card.css';
+@import './components/case/case-carousel.css';
 @import './components/case/case-quote.css';
 @import './components/case/case-note.css';
 @import './components/case/related-work.css';
