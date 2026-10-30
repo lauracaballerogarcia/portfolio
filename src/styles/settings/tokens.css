@@ -107,7 +107,7 @@
   \*------------------------------------*/
 
   /* Color — background */
-  --color-background-primary:     var(--color-neutral-10);
+  --color-background-primary:     var(--color-neutral-0);
   --color-background-secondary:   var(--color-neutral-50);
   --color-background-placeholder: var(--color-neutral-100);  /* media while loading */
   --color-background-inverse:     var(--color-neutral-950);

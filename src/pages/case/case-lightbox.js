@@ -21,7 +21,7 @@ export function initCaseLightbox(root = document) {
     dialog.id = 'case-lightbox';
     dialog.className = 'case-lightbox';
     dialog.innerHTML = `
-      <button type="button" class="icon-button case-lightbox__close" aria-label="Close enlarged view"></button>
+      <button type="button" class="icon-button icon-button--secondary case-lightbox__close" aria-label="Close enlarged view"></button>
       <img class="case-lightbox__image" src="" alt="" hidden>
       <video class="case-lightbox__video" controls loop muted playsinline hidden></video>
     `;

@@ -126,155 +126,571 @@
       },
       "width": 2000
     },
-    "senda/senda-02-research-quotes.svg": {
-      "action": "copied",
-      "bytesIn": 3531078,
-      "bytesOut": 3531078,
-      "outputHash": "088ebe3afd4ba9f8b61373d97bd18320597ed50da87a8b81e90182d2ad8a9f4d",
-      "reason": "embeds raster image (data:image/), excluded from SVGO",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-02-research-quotes.svg",
-      "sourceHash": "088ebe3afd4ba9f8b61373d97bd18320597ed50da87a8b81e90182d2ad8a9f4d"
-    },
-    "senda/senda-03-strategic-shift.svg": {
+    "senda/senda-00-thumbnail.webp": {
       "action": "optimized",
-      "bytesIn": 149557,
-      "bytesOut": 93770,
-      "outputHash": "05b6638b9d6ee9e0c9d989d86910da3ae6136c3ffc20675e1d9ca31c41a2c480",
-      "reason": "SVGO 4.1.0, saving 37.3%, render mean 0.000, differing 0.000%",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-03-strategic-shift.svg",
-      "sourceHash": "4941018b6b6c69966b733ceb07cfdeabf8be4291e03048bb21f7a1c803ef7001"
+      "bytesIn": 4343415,
+      "bytesOut": 485300,
+      "height": 1800,
+      "outputHash": "e086d4501b2206da0162452c61e14d65e7cbefcf21204103fc87660494afbe3c",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.24",
+      "settingsHash": "ec95feccbfa3c25f1d8c3ca31b8d548a5d408b24d1ef585929deac8f6a5c15b9",
+      "source": "media-src/senda/senda-00-thumbnail.jpg",
+      "sourceHash": "00a40c2a1972fee037f03522699cc8d3d25021cd577025bfbe21602b02df69f8",
+      "variants": {
+        "480": {
+          "bytes": 14272,
+          "file": "senda/senda-00-thumbnail-480w.webp",
+          "hash": "e8989800d469fdc8cd7994b82f826966f259fa0a3904594ad9de40d0516dda31"
+        },
+        "800": {
+          "bytes": 31032,
+          "file": "senda/senda-00-thumbnail-800w.webp",
+          "hash": "87023f3c2a7975b82d096fce9ea0fa61cd3eb747f8bb89b389ed60d9fdac6760"
+        },
+        "1024": {
+          "bytes": 44696,
+          "file": "senda/senda-00-thumbnail-1024w.webp",
+          "hash": "c02f841cdf5c2bf491b0e1e8ac9f70d47f5a2b74687cd73a2a81e9c598ef6501"
+        },
+        "1440": {
+          "bytes": 76216,
+          "file": "senda/senda-00-thumbnail-1440w.webp",
+          "hash": "d3cf074271719baa7d761b25d107395bf03d2ebabe81f4926f87acc8ba3cd7a0"
+        },
+        "1920": {
+          "bytes": 114442,
+          "file": "senda/senda-00-thumbnail-1920w.webp",
+          "hash": "7770f1c4bef6864a95f9d054597ecda149f9d6cfff5e62a4c8bab633f5f77974"
+        }
+      },
+      "width": 2880
     },
-    "senda/senda-outcome-final-ui-physical-top-up.svg": {
-      "action": "copied",
-      "bytesIn": 7332977,
-      "bytesOut": 7332977,
-      "outputHash": "9b85c7865961341f37423afdd21764704cb461974dda859353fa7ab204ba4153",
-      "reason": "embeds raster image (data:image/), excluded from SVGO",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-outcome-final-ui-physical-top-up.svg",
-      "sourceHash": "9b85c7865961341f37423afdd21764704cb461974dda859353fa7ab204ba4153"
-    },
-    "senda/senda-outcome-prototype-flow-request-top-up.svg": {
+    "senda/senda-01-hero-mobile.webp": {
       "action": "optimized",
-      "bytesIn": 30240,
-      "bytesOut": 13387,
-      "outputHash": "9b12f230c2cd85fba9f653221bf7f236c87d512a66d27ec0959ced7438c62f25",
-      "reason": "SVGO 4.1.0, saving 55.7%, render mean 0.000, differing 0.000%",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-outcome-prototype-flow-request-top-up.svg",
-      "sourceHash": "611556ea2841eee6dfd5973f7375397755416122da95537577028f3b07db2d8c"
+      "bytesIn": 4784444,
+      "bytesOut": 746774,
+      "height": 2880,
+      "outputHash": "5b51ea4848319040b3dd98461efd214451cd36cc51e35ee17494c803704abfac",
+      "reason": "base 2160px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.09",
+      "settingsHash": "826395398f2cff96a34da45d63f68f7627ddb4f9e0ce99e7f0ad46398089e11b",
+      "source": "media-src/senda/senda-01-hero-mobile.jpg",
+      "sourceHash": "97a0b13e99a4f8f3949383044003251b6a1ce19010657b2682409af11ec8ebc0",
+      "variants": {
+        "480": {
+          "bytes": 28242,
+          "file": "senda/senda-01-hero-mobile-480w.webp",
+          "hash": "a152f16c965097621b00ea17963d5165ca70e3e207fc4159c1c5e16841ae0b9c"
+        },
+        "800": {
+          "bytes": 58136,
+          "file": "senda/senda-01-hero-mobile-800w.webp",
+          "hash": "0da1bb1c75141174b45a8bd5995ddd2a015885ece50db67a3c6f57cbf84108c7"
+        },
+        "1024": {
+          "bytes": 81980,
+          "file": "senda/senda-01-hero-mobile-1024w.webp",
+          "hash": "b8674036048af887f2ae2bc8b7aff08739a234cb0155e1be88e2ec8f4321e366"
+        },
+        "1440": {
+          "bytes": 132474,
+          "file": "senda/senda-01-hero-mobile-1440w.webp",
+          "hash": "0a260b7d6a8db261e38a9cccc3e6630b44c7341436f46e936a9ee9c625f1b486"
+        },
+        "1920": {
+          "bytes": 199924,
+          "file": "senda/senda-01-hero-mobile-1920w.webp",
+          "hash": "c2b9e7ebc5dad20ddbe2afa953f894f2328ecee4a7a5f4cef4932dc857807a36"
+        }
+      },
+      "width": 2160
     },
-    "senda/senda-overview-timeline.svg": {
+    "senda/senda-01-hero.webp": {
       "action": "optimized",
-      "bytesIn": 254467,
-      "bytesOut": 107567,
-      "outputHash": "bbe8c70c1ad128ae1f046fe1f222db825f61959f43f2b36720bbad53532d6193",
-      "reason": "SVGO 4.1.0, saving 57.7%, render mean 0.000, differing 0.000%",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-overview-timeline.svg",
-      "sourceHash": "c3f6a29afeb6e907271895a15f7feb1b63598aa01fe10dea33250289428e4774"
+      "bytesIn": 4343415,
+      "bytesOut": 485300,
+      "height": 1800,
+      "outputHash": "e086d4501b2206da0162452c61e14d65e7cbefcf21204103fc87660494afbe3c",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.24",
+      "settingsHash": "5a223f6fb8a2af0c510ccc7452da4a289d54d3f2a7454d5e93effa0230de9a40",
+      "source": "media-src/senda/senda-01-hero.jpg",
+      "sourceHash": "00a40c2a1972fee037f03522699cc8d3d25021cd577025bfbe21602b02df69f8",
+      "variants": {
+        "480": {
+          "bytes": 14272,
+          "file": "senda/senda-01-hero-480w.webp",
+          "hash": "e8989800d469fdc8cd7994b82f826966f259fa0a3904594ad9de40d0516dda31"
+        },
+        "800": {
+          "bytes": 31032,
+          "file": "senda/senda-01-hero-800w.webp",
+          "hash": "87023f3c2a7975b82d096fce9ea0fa61cd3eb747f8bb89b389ed60d9fdac6760"
+        },
+        "1024": {
+          "bytes": 44696,
+          "file": "senda/senda-01-hero-1024w.webp",
+          "hash": "c02f841cdf5c2bf491b0e1e8ac9f70d47f5a2b74687cd73a2a81e9c598ef6501"
+        },
+        "1440": {
+          "bytes": 76216,
+          "file": "senda/senda-01-hero-1440w.webp",
+          "hash": "d3cf074271719baa7d761b25d107395bf03d2ebabe81f4926f87acc8ba3cd7a0"
+        },
+        "1920": {
+          "bytes": 114442,
+          "file": "senda/senda-01-hero-1920w.webp",
+          "hash": "7770f1c4bef6864a95f9d054597ecda149f9d6cfff5e62a4c8bab633f5f77974"
+        }
+      },
+      "width": 2880
     },
-    "senda/senda-research-percentage-76.svg": {
+    "senda/senda-02-context-scope-of-work.webp": {
+      "action": "optimized",
+      "bytesIn": 98418,
+      "bytesOut": 130616,
+      "height": 1440,
+      "outputHash": "f90e37b6c1878f6fe8f7e78ab126ac686d5ed979ffc78e3b41458d54cbfe3fcc",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.53",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-02-context-scope-of-work.png",
+      "sourceHash": "84b08f7347c512d5050f944d4839e41bfa962a86afa21aa90eeb8cbce08375d2",
+      "variants": {
+        "480": {
+          "bytes": 3898,
+          "file": "senda/senda-02-context-scope-of-work-480w.webp",
+          "hash": "ae410060c3e3237559bf227e62b9b63b20cb790ec032dc0f6a7c59b01474e302"
+        },
+        "800": {
+          "bytes": 10060,
+          "file": "senda/senda-02-context-scope-of-work-800w.webp",
+          "hash": "48ea8769a6ed3a01ea37b7de6cfc881e9d9a013f2643e6664c2447f4408935e6"
+        },
+        "1024": {
+          "bytes": 14128,
+          "file": "senda/senda-02-context-scope-of-work-1024w.webp",
+          "hash": "8de55a797c208049bf50db7d5490ec0ae44a4b198085da8d989c2e10dba1812d"
+        },
+        "1440": {
+          "bytes": 22514,
+          "file": "senda/senda-02-context-scope-of-work-1440w.webp",
+          "hash": "2146c794a28485f74b533706d44bd19c283fd5f86d83b0035b319cae5ef6fcff"
+        },
+        "1920": {
+          "bytes": 30830,
+          "file": "senda/senda-02-context-scope-of-work-1920w.webp",
+          "hash": "42f07b31c89152af7931f5d395c0594d65cd468501486575dd9c26e3738615f4"
+        }
+      },
+      "width": 2880
+    },
+    "senda/senda-03-research-percentage-76.svg": {
       "action": "copied",
       "bytesIn": 695,
       "bytesOut": 695,
       "outputHash": "ff2fdccf517daafcfb27b15f90e95670edb93592a50fd4737295e57647d7695e",
       "reason": "saving 7.6% < 15%",
       "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-research-percentage-76.svg",
+      "source": "media-src/senda/senda-03-research-percentage-76.svg",
       "sourceHash": "ff2fdccf517daafcfb27b15f90e95670edb93592a50fd4737295e57647d7695e"
     },
-    "senda/senda-research-percentage-78.svg": {
+    "senda/senda-03-research-percentage-78.svg": {
       "action": "copied",
       "bytesIn": 284,
       "bytesOut": 284,
-      "outputHash": "dfabbfd1292b4db31d3e0f8d54ce2123464ea67f46663e8e82c3c6d7a974c9ed",
+      "outputHash": "c33b68f1eecb6e49e7efe5eeda559d68703e6962bfc0b5b9032c256ca1a22620",
       "reason": "saving 3.2% < 15%",
       "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-research-percentage-78.svg",
-      "sourceHash": "dfabbfd1292b4db31d3e0f8d54ce2123464ea67f46663e8e82c3c6d7a974c9ed"
+      "source": "media-src/senda/senda-03-research-percentage-78.svg",
+      "sourceHash": "c33b68f1eecb6e49e7efe5eeda559d68703e6962bfc0b5b9032c256ca1a22620"
     },
-    "senda/senda-research-percentage-82.svg": {
+    "senda/senda-03-research-percentage-82.svg": {
       "action": "copied",
       "bytesIn": 289,
       "bytesOut": 289,
       "outputHash": "611b07842955fe66c18a4fe720c1e2a42cc828d31116547229a5c939e184c018",
       "reason": "saving 1.4% < 15%",
       "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-research-percentage-82.svg",
+      "source": "media-src/senda/senda-03-research-percentage-82.svg",
       "sourceHash": "611b07842955fe66c18a4fe720c1e2a42cc828d31116547229a5c939e184c018"
     },
-    "senda/senda-research-percentage-90.svg": {
+    "senda/senda-03-research-percentage-90.svg": {
       "action": "copied",
-      "bytesIn": 1361,
-      "bytesOut": 1361,
-      "outputHash": "8b6243801d98379182091b034369417f0f9b13b8b79311133bcb4ab74c2dc570",
+      "bytesIn": 1365,
+      "bytesOut": 1365,
+      "outputHash": "5c171d38c6932000903e64e1019191d2c86a30ecb7ea0a2f48192f803a2f9319",
       "reason": "saving 1.6% < 15%",
       "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-research-percentage-90.svg",
-      "sourceHash": "8b6243801d98379182091b034369417f0f9b13b8b79311133bcb4ab74c2dc570"
+      "source": "media-src/senda/senda-03-research-percentage-90.svg",
+      "sourceHash": "5c171d38c6932000903e64e1019191d2c86a30ecb7ea0a2f48192f803a2f9319"
     },
-    "senda/senda-solution-key-features.svg": {
+    "senda/senda-03-research-quotes.webp": {
       "action": "optimized",
-      "bytesIn": 501488,
-      "bytesOut": 274821,
-      "outputHash": "f34ba3f8ddb1e5cc62c5c01297dcac0da6a02aac7bdd120c6fd8a6d0f1988d3f",
-      "reason": "SVGO 4.1.0, saving 45.2%, render mean 0.000, differing 0.000%",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-solution-key-features.svg",
-      "sourceHash": "1d1cadd96858a937a427c293c885ae235227553fa75ab5bed58c4fbe3b9e5195"
+      "bytesIn": 2248242,
+      "bytesOut": 544512,
+      "height": 1440,
+      "outputHash": "0d4a18f2b7d4e74a8057148dcd93729e9a8cbc2576e6a38a3b021789bb85db3f",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.12",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-03-research-quotes.png",
+      "sourceHash": "ab21b7685ae24b57fbfc6fbe1041854bb0b0f3a7ca510fba2d670401f1eafbf7",
+      "variants": {
+        "480": {
+          "bytes": 11716,
+          "file": "senda/senda-03-research-quotes-480w.webp",
+          "hash": "c423f59ea51b31af1a2cd9e90736fc488631487d0eca78acfc557f7793aa7142"
+        },
+        "800": {
+          "bytes": 28680,
+          "file": "senda/senda-03-research-quotes-800w.webp",
+          "hash": "917e67440c1327ad062bd75bcd76d62d50a4af925d9976bc1c2f3580a15f9a9b"
+        },
+        "1024": {
+          "bytes": 45214,
+          "file": "senda/senda-03-research-quotes-1024w.webp",
+          "hash": "85f4fda6109dda704384b3e6e8a954018161e76d834752b741a7537aa78a8f0f"
+        },
+        "1440": {
+          "bytes": 85014,
+          "file": "senda/senda-03-research-quotes-1440w.webp",
+          "hash": "beb47e015f2c970ba3826e9a87aa9a4212f1d4dbe0e3903fe1cb3c6bc0c0e7b3"
+        },
+        "1920": {
+          "bytes": 136110,
+          "file": "senda/senda-03-research-quotes-1920w.webp",
+          "hash": "95fdf9bb3214044879a56cca166f530a0bcd2c5c005be0eb2f057fc1f96ff29c"
+        }
+      },
+      "width": 2880
     },
-    "senda/senda-solution-sitemap.svg": {
+    "senda/senda-04-problem-strategic-shift.webp": {
       "action": "optimized",
-      "bytesIn": 286252,
-      "bytesOut": 121620,
-      "outputHash": "0a268f47619d68614b5225ef3dd2e8ea21baba2d2e2f95ddcf95118e71a6ca1e",
-      "reason": "SVGO 4.1.0, saving 57.5%, render mean 0.000, differing 0.000%",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-solution-sitemap.svg",
-      "sourceHash": "2d7f4b76ecbec29fc326135ca8f29c44f34911a4c2a8d46c104fe9a6fda740bf"
+      "bytesIn": 130591,
+      "bytesOut": 174606,
+      "height": 1620,
+      "outputHash": "1d7f02609072bb52110f4803b9514e78bc18f48caed1daeac1dc675e63e49c6c",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.57",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-04-problem-strategic-shift.png",
+      "sourceHash": "ded6b5421d053aafb83c997adf20e71198ee218d530ed690e1fbb328194cbce4",
+      "variants": {
+        "480": {
+          "bytes": 5952,
+          "file": "senda/senda-04-problem-strategic-shift-480w.webp",
+          "hash": "9655fcae64f2ed9cbb4e1dcc06517f909a1f52741b9709783afc0a9b0fe7e278"
+        },
+        "800": {
+          "bytes": 13528,
+          "file": "senda/senda-04-problem-strategic-shift-800w.webp",
+          "hash": "b26bef1fa9a6a15d87692204d0d056026dedecb3ea2ad8fb6a4938b2ff843d2d"
+        },
+        "1024": {
+          "bytes": 19344,
+          "file": "senda/senda-04-problem-strategic-shift-1024w.webp",
+          "hash": "a08bd0c4abde9d8df68191e4db33679a656c82b3b2384d6c5ffd0de5164764bb"
+        },
+        "1440": {
+          "bytes": 29424,
+          "file": "senda/senda-04-problem-strategic-shift-1440w.webp",
+          "hash": "89d2ab770b93459d097e115a2e9819ab4cedff2adbf84a349cbcaf3191b6f7c6"
+        },
+        "1920": {
+          "bytes": 40972,
+          "file": "senda/senda-04-problem-strategic-shift-1920w.webp",
+          "hash": "ee4c81c99cdcb525e378341ade4f08f652ba1c637d256f7cdc41c61cca237eb8"
+        }
+      },
+      "width": 2880
     },
-    "senda/senda-solution-user-role-primary.svg": {
+    "senda/senda-05-solution-key-features.webp": {
       "action": "optimized",
-      "bytesIn": 68284,
-      "bytesOut": 39323,
-      "outputHash": "43bb92fd5b4c1a47baf2146cfc7e9ef4e1bb249be2d833e6f907760515e6afd7",
-      "reason": "SVGO 4.1.0, saving 42.4%, render mean 0.000, differing 0.000%",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-solution-user-role-primary.svg",
-      "sourceHash": "4dcba98e8671ba0d7552794b0977ba3b186e5369ca4556fbda9d31abf99feb16"
+      "bytesIn": 480310,
+      "bytesOut": 242522,
+      "height": 1620,
+      "outputHash": "8660996fe0c5038d065b3ecccbab489d1b6b408acc4a415ae8262a93768ec4aa",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.93",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-05-solution-key-features.png",
+      "sourceHash": "377d01001bdbc0e258b6483cc0c6a87d293c338fd9f0ca6919ef749ce89f3a16",
+      "variants": {
+        "480": {
+          "bytes": 8576,
+          "file": "senda/senda-05-solution-key-features-480w.webp",
+          "hash": "32f1268c716a85392e02f8a577b974212c091878294bd3e47746575b1a3afd81"
+        },
+        "800": {
+          "bytes": 18168,
+          "file": "senda/senda-05-solution-key-features-800w.webp",
+          "hash": "c69d58ba1b6ef94feca7e8f838c19e6114766ac7d14d698bb0196767d463953a"
+        },
+        "1024": {
+          "bytes": 25282,
+          "file": "senda/senda-05-solution-key-features-1024w.webp",
+          "hash": "605a3ee9ab85d0c3d13746ba7602ae429d16f9360da17c6772ed47b52264947c"
+        },
+        "1440": {
+          "bytes": 40418,
+          "file": "senda/senda-05-solution-key-features-1440w.webp",
+          "hash": "95f5b45a4bed13299b01e64bdd87b7f3058df6326e91335af6e585605c6ec1b4"
+        },
+        "1920": {
+          "bytes": 56578,
+          "file": "senda/senda-05-solution-key-features-1920w.webp",
+          "hash": "48e98b16782a13544419f20be47f3a25c137792924331045fc80b3e7ecdad92f"
+        }
+      },
+      "width": 2880
     },
-    "senda/senda-solution-user-role-secondary.svg": {
+    "senda/senda-05-solution-sitemap.webp": {
       "action": "optimized",
-      "bytesIn": 91286,
-      "bytesOut": 52707,
-      "outputHash": "e1cdd14209a5f9a263980bc88b0c6c9e1e84e7b055d94e3b79018cb425be24da",
-      "reason": "SVGO 4.1.0, saving 42.3%, render mean 0.000, differing 0.000%",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-solution-user-role-secondary.svg",
-      "sourceHash": "d2064e356d1daf750d039a9b30595d1e7ba86ca2cc830ef8f5806823e09da960"
+      "bytesIn": 113326,
+      "bytesOut": 123080,
+      "height": 1620,
+      "outputHash": "ab36f54dff1c25ca932526a077b205c6caa84e6c62871d7ef8e6556b87b53d84",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.56",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-05-solution-sitemap.png",
+      "sourceHash": "7f86829bb2f744663bde4ea442f5e617679f06202256ab2993411b2985899d08",
+      "variants": {
+        "480": {
+          "bytes": 4094,
+          "file": "senda/senda-05-solution-sitemap-480w.webp",
+          "hash": "051aeb2403131796ee44a4bd53b09436412d0767eb6e0d0f9ae036a8b8dc3fe1"
+        },
+        "800": {
+          "bytes": 8414,
+          "file": "senda/senda-05-solution-sitemap-800w.webp",
+          "hash": "8092d61a5d2360bbf12c6b28f18b7433596bacf7e40ea3dac73448b766fba7fb"
+        },
+        "1024": {
+          "bytes": 12210,
+          "file": "senda/senda-05-solution-sitemap-1024w.webp",
+          "hash": "dae4dd3e04f4c75687cbec85c6867ee2af5ac23bc6d8378ff2b7c72515485d07"
+        },
+        "1440": {
+          "bytes": 19666,
+          "file": "senda/senda-05-solution-sitemap-1440w.webp",
+          "hash": "dcacf8b16d52509c2f4848b2ac37c59d128eb315de18d3d20c574b3f16a84d7c"
+        },
+        "1920": {
+          "bytes": 29414,
+          "file": "senda/senda-05-solution-sitemap-1920w.webp",
+          "hash": "5bd7df89ec4ea3234ca38b4c7f2d50777d1de4199b36bf9ec8ac7d0aa90c2396"
+        }
+      },
+      "width": 2880
     },
-    "senda/senda-testing-final-flow-1.svg": {
-      "action": "copied",
-      "bytesIn": 2021961,
-      "bytesOut": 2021961,
-      "outputHash": "688b782b24bf136947283268df3b7ca8aaa30ea2dc3dcc3f3b49773f46b8ad6d",
-      "reason": "embeds raster image (data:image/), excluded from SVGO",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-testing-final-flow-1.svg",
-      "sourceHash": "688b782b24bf136947283268df3b7ca8aaa30ea2dc3dcc3f3b49773f46b8ad6d"
+    "senda/senda-05-solution-user-role-primary.webp": {
+      "action": "optimized",
+      "bytesIn": 39328,
+      "bytesOut": 50506,
+      "height": 1086,
+      "outputHash": "2455b5af67dc2f607af46cfc45a1f4675917577655870a15f639f6b284054a9e",
+      "reason": "base 1404px q78, 3 variants (480, 800, 1024), max mean error 0.68",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-05-solution-user-role-primary.png",
+      "sourceHash": "6b9a7b1c5304a7df50453ba04d064866b1dfdb39a8c5986275451736895c063e",
+      "variants": {
+        "480": {
+          "bytes": 6052,
+          "file": "senda/senda-05-solution-user-role-primary-480w.webp",
+          "hash": "505252b7bddeae72c975f92332cc13c561a57e5f9e1decda2a38b4317ad4777e"
+        },
+        "800": {
+          "bytes": 10888,
+          "file": "senda/senda-05-solution-user-role-primary-800w.webp",
+          "hash": "7dce4b470d7d02e7338dfa7c5f12757c7adb523c80af75e84974579d83eab351"
+        },
+        "1024": {
+          "bytes": 14158,
+          "file": "senda/senda-05-solution-user-role-primary-1024w.webp",
+          "hash": "13c0241f5fcf3d1b760c911672e5aa3bb0f845f5b263ae78e5f28903f96c4f6f"
+        }
+      },
+      "width": 1404
     },
-    "senda/senda-testing-maze.svg": {
-      "action": "copied",
-      "bytesIn": 644712,
-      "bytesOut": 644712,
-      "outputHash": "367364ef53ee66eba858c875e71c033a573c36ba18d03f90e1c4c5c2e77c59d0",
-      "reason": "embeds raster image (data:image/), excluded from SVGO",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/senda/senda-testing-maze.svg",
-      "sourceHash": "367364ef53ee66eba858c875e71c033a573c36ba18d03f90e1c4c5c2e77c59d0"
+    "senda/senda-05-solution-user-role-secondary.webp": {
+      "action": "optimized",
+      "bytesIn": 52236,
+      "bytesOut": 74688,
+      "height": 1086,
+      "outputHash": "4a2e18b3621c785dc78159a26353c041114a13b31391a8022c4d4c8291d78b8f",
+      "reason": "base 1404px q78, 3 variants (480, 800, 1024), max mean error 0.90",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-05-solution-user-role-secondary.png",
+      "sourceHash": "8e9cc13813f6f5ea0045d7693f2b9259b404a02d99f8f32835adb39388815f8f",
+      "variants": {
+        "480": {
+          "bytes": 9112,
+          "file": "senda/senda-05-solution-user-role-secondary-480w.webp",
+          "hash": "455e4c47315c1bbafda6d82832122b62fbace8511d87034dcb7afc67f6f61d47"
+        },
+        "800": {
+          "bytes": 16082,
+          "file": "senda/senda-05-solution-user-role-secondary-800w.webp",
+          "hash": "4b270ae38ebdf58f3fecc90045a35c546f7c0c32b99b967d801dad42d2086ad5"
+        },
+        "1024": {
+          "bytes": 20984,
+          "file": "senda/senda-05-solution-user-role-secondary-1024w.webp",
+          "hash": "caa427fa3cf0835493703ecdfbf7cfb62db873784e20234be3c517e065de99a8"
+        }
+      },
+      "width": 1404
+    },
+    "senda/senda-06-testing-final-flow-1.webp": {
+      "action": "optimized",
+      "bytesIn": 276245,
+      "bytesOut": 202698,
+      "height": 2160,
+      "outputHash": "3ee700a91761fe72026ed2c4cfe213985c9ba1b2a6d31a97251279b8423eb4d1",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.80",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-06-testing-final-flow-1.png",
+      "sourceHash": "47662c805d330866bbc1cafcadaa8d8f574079ce4a31948dc20e4c970222e93d",
+      "variants": {
+        "480": {
+          "bytes": 6110,
+          "file": "senda/senda-06-testing-final-flow-1-480w.webp",
+          "hash": "93aac0b3ebffc4f814f683cf40b289f1016de229e5d0f3d590fb95c9fb2de27c"
+        },
+        "800": {
+          "bytes": 12722,
+          "file": "senda/senda-06-testing-final-flow-1-800w.webp",
+          "hash": "2883a3e92984ca1d954eee8c37adf7f3809109ebdba0c6c5c9dfe6b6363c17c3"
+        },
+        "1024": {
+          "bytes": 18756,
+          "file": "senda/senda-06-testing-final-flow-1-1024w.webp",
+          "hash": "3c2767f236e7f65b426973752f60880e0df2bf45c034c241a5e6c60f967b68b4"
+        },
+        "1440": {
+          "bytes": 30672,
+          "file": "senda/senda-06-testing-final-flow-1-1440w.webp",
+          "hash": "540a2fffee8121a3b1d16a35e2a36211e431924bb833aec38bc69841d9bb15f7"
+        },
+        "1920": {
+          "bytes": 47452,
+          "file": "senda/senda-06-testing-final-flow-1-1920w.webp",
+          "hash": "7498cab466ebdfc36e50e18870e9f63a2a0373134ab35c9188f1be321932ecf8"
+        }
+      },
+      "width": 2880
+    },
+    "senda/senda-06-testing-maze.webp": {
+      "action": "optimized",
+      "bytesIn": 1018766,
+      "bytesOut": 258718,
+      "height": 1620,
+      "outputHash": "476bbcb224ecc3b6840cc95cc0cfe8e1b08c82291474bc8ab6fb29e032897648",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.20",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-06-testing-maze.png",
+      "sourceHash": "7675e73993a9da535196bcfdea5425642c10b57733e5dec813a6378dc1b5b635",
+      "variants": {
+        "480": {
+          "bytes": 9070,
+          "file": "senda/senda-06-testing-maze-480w.webp",
+          "hash": "de8b2fbe331d3eebb57f2ef2c3faea93b34ad910fb0fb4e2205bb98767404e2d"
+        },
+        "800": {
+          "bytes": 19206,
+          "file": "senda/senda-06-testing-maze-800w.webp",
+          "hash": "cd04b76881c95b0fd86bb434b9449c894c47b78ce322521cb525b97a2b369185"
+        },
+        "1024": {
+          "bytes": 27114,
+          "file": "senda/senda-06-testing-maze-1024w.webp",
+          "hash": "35ad6234fa445d6cbad2a961f35c02d713232aa658b1b3da2e683f118a898895"
+        },
+        "1440": {
+          "bytes": 42264,
+          "file": "senda/senda-06-testing-maze-1440w.webp",
+          "hash": "dfe8c08261919819b4050bf5f0bd1e588c8f0370b61b8d1d9c4f8c0775d2b541"
+        },
+        "1920": {
+          "bytes": 61440,
+          "file": "senda/senda-06-testing-maze-1920w.webp",
+          "hash": "5b349fa5e84d65f26220fc9bc9c2c75aba86f927d6ee7d9ac6e1e03a3b7f7d9a"
+        }
+      },
+      "width": 2880
+    },
+    "senda/senda-07-outcome-final-ui-physical-top-up.webp": {
+      "action": "optimized",
+      "bytesIn": 4020940,
+      "bytesOut": 515324,
+      "height": 1620,
+      "outputHash": "cce55a84217add8b11da26d114078fe3ba26e27fce2695b3126646e196330b3d",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.21",
+      "settingsHash": "bbbe6934d4abc7e5fc39a185ec27852d9f55a3842ddb78210aedbc707a349418",
+      "source": "media-src/senda/senda-07-outcome-final-ui-physical-top-up.jpg",
+      "sourceHash": "0a91201d241c1402622fa3e6afc0aa65c9051d27e649ff2f004e06d2a7a5f735",
+      "variants": {
+        "480": {
+          "bytes": 8676,
+          "file": "senda/senda-07-outcome-final-ui-physical-top-up-480w.webp",
+          "hash": "e8d36cd60b05573060b73adf9d8f80a595ebc733bd59c554523efd4b5b3edf1f"
+        },
+        "800": {
+          "bytes": 20208,
+          "file": "senda/senda-07-outcome-final-ui-physical-top-up-800w.webp",
+          "hash": "bbe18288f3617c250fbb37d843f4265fc86035b2dd7efdeab25d2b359195898f"
+        },
+        "1024": {
+          "bytes": 29534,
+          "file": "senda/senda-07-outcome-final-ui-physical-top-up-1024w.webp",
+          "hash": "60705fe453d68473251c9baeafdc9c6c7eacf2c463fb737f24dfdac44570122b"
+        },
+        "1440": {
+          "bytes": 52022,
+          "file": "senda/senda-07-outcome-final-ui-physical-top-up-1440w.webp",
+          "hash": "f632023c421ad79393550990476586596453e92c4522a616f78d26915d580dd6"
+        },
+        "1920": {
+          "bytes": 94146,
+          "file": "senda/senda-07-outcome-final-ui-physical-top-up-1920w.webp",
+          "hash": "349865277a823f474c9ba07850f3bdc196963cbf03d99995dfde98550b8d2764"
+        }
+      },
+      "width": 2880
+    },
+    "senda/senda-07-outcome-final-ui-visual-identity.webp": {
+      "action": "optimized",
+      "bytesIn": 2820578,
+      "bytesOut": 358482,
+      "height": 1780,
+      "outputHash": "327dc6f3a86ff46a59ede45d19a82280676410d9abd7616ccb4f58c3f7840adf",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.69",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-07-outcome-final-ui-visual-identity.png",
+      "sourceHash": "6149fe22a54a38b3aff584729e19a7ea07f3ed1a264b7e1be4d5c8ac69439e3b",
+      "variants": {
+        "480": {
+          "bytes": 15068,
+          "file": "senda/senda-07-outcome-final-ui-visual-identity-480w.webp",
+          "hash": "a9d50424f96ed7139f3f728fbe245be83d182a0d1c1ce42265284b4c43740d64"
+        },
+        "800": {
+          "bytes": 27048,
+          "file": "senda/senda-07-outcome-final-ui-visual-identity-800w.webp",
+          "hash": "6a2a784d2fff57038d05b6102ddabcc45f5836bfe9f71a2f7f24570c96476b3e"
+        },
+        "1024": {
+          "bytes": 36064,
+          "file": "senda/senda-07-outcome-final-ui-visual-identity-1024w.webp",
+          "hash": "02680a5fdc42ad4dc9a3dcf2208720458610ddd777c441f165fcaadf33531847"
+        },
+        "1440": {
+          "bytes": 55722,
+          "file": "senda/senda-07-outcome-final-ui-visual-identity-1440w.webp",
+          "hash": "bed3294aa3ec35a47f481e4034bcf14236326df4b0f02330b37d7e588e1e7e7f"
+        },
+        "1920": {
+          "bytes": 85450,
+          "file": "senda/senda-07-outcome-final-ui-visual-identity-1920w.webp",
+          "hash": "dc1def5a7e0b3deba86630b331e44a70b9482d85538fe132436a25ab98828d98"
+        }
+      },
+      "width": 2880
     },
     "xana/xana-00-thumbnail.webp": {
       "action": "optimized",

@@ -41,6 +41,170 @@
       2000
     ]
   },
+  "/media/senda/senda-00-thumbnail.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-01-hero-mobile.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/senda/senda-01-hero.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-02-context-scope-of-work.webp": {
+    "height": 1440,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-03-research-quotes.webp": {
+    "height": 1440,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-04-problem-strategic-shift.webp": {
+    "height": 1620,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-05-solution-key-features.webp": {
+    "height": 1620,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-05-solution-sitemap.webp": {
+    "height": 1620,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-05-solution-user-role-primary.webp": {
+    "height": 1086,
+    "width": 1404,
+    "widths": [
+      480,
+      800,
+      1024,
+      1404
+    ]
+  },
+  "/media/senda/senda-05-solution-user-role-secondary.webp": {
+    "height": 1086,
+    "width": 1404,
+    "widths": [
+      480,
+      800,
+      1024,
+      1404
+    ]
+  },
+  "/media/senda/senda-06-testing-final-flow-1.webp": {
+    "height": 2160,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-06-testing-maze.webp": {
+    "height": 1620,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-07-outcome-final-ui-physical-top-up.webp": {
+    "height": 1620,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-07-outcome-final-ui-visual-identity.webp": {
+    "height": 1780,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
   "/media/xana/xana-00-thumbnail.webp": {
     "height": 641,
     "width": 1024,
