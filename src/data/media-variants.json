@@ -11,6 +11,210 @@
       2880
     ]
   },
+  "/media/blink/blink-00-thumbnail.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-01-hero-mobile.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/blink/blink-01-hero.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-02-concept-divider.webp": {
+    "height": 592,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-02-concept-posters.webp": {
+    "height": 1620,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-02-concept-slogan.webp": {
+    "height": 592,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-02-concept.webp": {
+    "height": 1080,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-03-web-01.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-03-web-02.webp": {
+    "height": 2000,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-03-web-03.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-04-app.webp": {
+    "height": 2160,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-05-interactive-app.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/blink/blink-05-interactive-screen.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/blink/blink-05-interactive.webp": {
+    "height": 1620,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-06-merch-mix.webp": {
+    "height": 1620,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-06-merch-wristbands.webp": {
+    "height": 1080,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-07-closing-thanks.webp": {
+    "height": 1080,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
   "/media/bloq/bloq-00-thumbnail.webp": {
     "height": 641,
     "width": 1024,
@@ -94,14 +298,13 @@
   },
   "/media/parc-central/parc-central-11-signage-2.webp": {
     "height": 2880,
-    "width": 2160,
+    "width": 1920,
     "widths": [
       480,
       800,
       1024,
       1440,
-      1920,
-      2160
+      1920
     ]
   },
   "/media/parc-central/parc-central-13-fabric-banners.webp": {
@@ -118,14 +321,13 @@
   },
   "/media/parc-central/parc-central-15-posters-identity-mockup-2.webp": {
     "height": 2880,
-    "width": 2160,
+    "width": 1920,
     "widths": [
       480,
       800,
       1024,
       1440,
-      1920,
-      2160
+      1920
     ]
   },
   "/media/parc-central/parc-central-17-postcards.webp": {
@@ -316,97 +518,184 @@
       2880
     ]
   },
-  "/media/xana/xana-00-thumbnail.webp": {
-    "height": 641,
-    "width": 1024,
+  "/media/xana/xana-00-thumbnail-1.webp": {
+    "height": 1800,
+    "width": 2880,
     "widths": [
       480,
       800,
-      1024
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/xana/xana-00-thumbnail.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/xana/xana-01-hero-mobile.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
     ]
   },
   "/media/xana/xana-01-hero.webp": {
-    "height": 1251,
-    "width": 2000,
+    "height": 1800,
+    "width": 2880,
     "widths": [
       480,
       800,
       1024,
       1440,
       1920,
-      2000
+      2880
     ]
   },
-  "/media/xana/xana-02.webp": {
-    "height": 1251,
-    "width": 2000,
+  "/media/xana/xana-03-concept-1.webp": {
+    "height": 2880,
+    "width": 2160,
     "widths": [
       480,
       800,
       1024,
       1440,
       1920,
-      2000
+      2160
     ]
   },
-  "/media/xana/xana-03.webp": {
-    "height": 1251,
-    "width": 1000,
-    "widths": [
-      480,
-      800,
-      1000
-    ]
-  },
-  "/media/xana/xana-04.webp": {
-    "height": 1251,
-    "width": 1000,
-    "widths": [
-      480,
-      800,
-      1000
-    ]
-  },
-  "/media/xana/xana-05.webp": {
-    "height": 1251,
-    "width": 1000,
-    "widths": [
-      480,
-      800,
-      1000
-    ]
-  },
-  "/media/xana/xana-06.webp": {
-    "height": 1251,
-    "width": 1000,
-    "widths": [
-      480,
-      800,
-      1000
-    ]
-  },
-  "/media/xana/xana-07.webp": {
-    "height": 1200,
-    "width": 2000,
+  "/media/xana/xana-03-concept-2.webp": {
+    "height": 2880,
+    "width": 2160,
     "widths": [
       480,
       800,
       1024,
       1440,
       1920,
-      2000
+      2160
     ]
   },
-  "/media/xana/xana-08.webp": {
-    "height": 1235,
-    "width": 2000,
+  "/media/xana/xana-03-concept-3.webp": {
+    "height": 2880,
+    "width": 2160,
     "widths": [
       480,
       800,
       1024,
       1440,
       1920,
-      2000
+      2160
+    ]
+  },
+  "/media/xana/xana-03-concept-4.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/xana/xana-03-concept-5.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/xana/xana-04-outcome-1.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/xana/xana-04-outcome-2.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/xana/xana-04-outcome-3.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/xana/xana-04-outcome-4.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/xana/xana-04-outcome-5.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
+    ]
+  },
+  "/media/xana/xana-04-outcome-6.webp": {
+    "height": 2880,
+    "width": 2160,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2160
     ]
   }
 }
