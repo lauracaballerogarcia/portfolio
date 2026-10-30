@@ -17,6 +17,9 @@
  *    gap is the space between sections, as in the PEC1.
  * 7. A media group that opens the case study (before the first
  *    section) leaves the space to the gap.
+ * 8. Below 1024px, sidebar and content take the whole row. The page
+ *    margin already comes from the padding of `.case__layout`, so they
+ *    add none of their own.
  */
 
 .case__hero {
@@ -91,8 +94,7 @@
 @media (max-width: 1024px) {
   .case__sidebar,
   .case__main {
-    grid-column: 1 / -1;
-    padding-inline: var(--spacing-container-inline);
+    grid-column: 1 / -1; /* [8] */
   }
 
   .case__sidebar {
