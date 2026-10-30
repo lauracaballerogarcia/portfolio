@@ -37,7 +37,7 @@
   max-width: none;
   font-size: var(--font-size-xs);
   font-family: var(--font-family-mono);
-  line-height: 1.6;
+  line-height: 1.2;
   color: var(--color-text-tertiary);
   text-transform: uppercase;
   margin-bottom: var(--spacing-2); /* 8px to the title */
@@ -60,6 +60,11 @@
    them: without this the two margins add up (grid items do not collapse). */
 .case-section__title + .case-section__subtitle {
   margin-top: 0;
+}
+
+.case-section__subheading {
+  font-size: var(--font-size-m);
+  margin-top: var(--spacing-5);
 }
 
 .case-section__text {

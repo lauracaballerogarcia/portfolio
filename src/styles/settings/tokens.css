@@ -40,6 +40,7 @@
   --color-neutral-50:  #F7F7F7;
   --color-neutral-100: #EBEBEB;
   --color-neutral-200: #DEDEDE;
+  --color-neutral-300: #D1D1D1;
   --color-neutral-600: #737373;
   --color-neutral-700: #535353;
   --color-neutral-950: #121212;
@@ -110,9 +111,9 @@
   \*------------------------------------*/
 
   /* Color — background */
-  --color-background-primary:     var(--color-neutral-0);
-  --color-background-secondary:   var(--color-neutral-50);
-  --color-background-placeholder: var(--color-neutral-100);  /* media while loading */
+  --color-background-primary:     var(--color-neutral-50);
+  --color-background-secondary:   var(--color-neutral-100);
+  --color-background-placeholder: var(--color-neutral-200);  /* media while loading */
   --color-background-inverse:     var(--color-neutral-950);
 
   /* Color — outline */
@@ -125,22 +126,23 @@
   --color-text-inverse:   var(--color-neutral-0);
 
   /* Color — components */
-  --color-button-primary-background-default: var(--color-neutral-100);
-  --color-button-primary-background-hover:   var(--color-neutral-200);
+  --color-button-primary-background-default: var(--color-neutral-200);
+  --color-button-primary-background-hover:   var(--color-neutral-300);
   --color-button-primary-background-active:  var(--color-neutral-950);
   --color-button-primary-text-default:       var(--color-neutral-950);
   --color-button-primary-text-active:        var(--color-neutral-0);
 
-  --color-icon-button-primary-background-default:   var(--color-button-primary-background-default);
-  --color-icon-button-primary-background-hover:     var(--color-button-primary-background-hover);
-  --color-icon-button-primary-text-default:         var(--color-button-primary-text-default);
+  --color-icon-button-primary-background-default:   var(--color-neutral-200);
+  --color-icon-button-primary-background-hover:     var(--color-neutral-300);
+  --color-icon-button-primary-text-default:         var(--color-neutral-950);
+
   --color-icon-button-secondary-background-default: var(--color-neutral-0);
   --color-icon-button-secondary-background-hover:   var(--color-neutral-100);
   --color-icon-button-secondary-text-default:       var(--color-neutral-950);
 
 
 
-  --color-tag-background: var(--color-neutral-100);
+  --color-tag-background: var(--color-neutral-200);
 
   /* Spacing — layout */
   --spacing-container-inline: var(--spacing-6);
