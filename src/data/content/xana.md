@@ -26,10 +26,10 @@ The label depicts the waves created by water when it hears words of love, becomi
 
 ![Bottle of Xana white wine on a pale pink background, with a green label of blurred concentric ripples and a lilac seal on the neck.](/media/xana/xana-04-outcome-1.webp "full")
 
-![Close-up of the bottle neck, with a lilac seal reading XANA 2023 over the cork.](/media/xana/xana-04-outcome-2.webp "half")
 ![Close-up of the mint back label with the line “En el murmullo del agua, el eco de las palabras danza”.](/media/xana/xana-04-outcome-3.webp "half")
+![Hands topping a slice of bread with jam, goat cheese and a raspberry, next to a jar of jam, brie and an open bottle of Xana.](/media/xana/xana-04-outcome-5.webp "half")
+
+![Someone uncorking a bottle of Xana on a picnic blanket, next to an empty wine glass, a strawberry cake and raspberries.](/media/xana/xana-04-outcome-6.webp "half")
+![Close-up of the bottle neck, with a lilac seal reading XANA 2023 over the cork.](/media/xana/xana-04-outcome-2.webp "half")
 
 ![Flat label design: the green ripple artwork on the front and a mint back panel with the tagline, a short description, 750 ml, 12% vol., the barcode and recycling symbols.](/media/xana/xana-04-outcome-4.webp "full expand")
-
-![Hands topping a slice of bread with jam, goat cheese and a raspberry, next to a jar of jam, brie and an open bottle of Xana.](/media/xana/xana-04-outcome-5.webp "half")
-![Someone uncorking a bottle of Xana on a picnic blanket, next to an empty wine glass, a strawberry cake and raspberries.](/media/xana/xana-04-outcome-6.webp "half")

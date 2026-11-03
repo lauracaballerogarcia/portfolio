@@ -11,8 +11,10 @@
 
 **Goal**
 
-Help older adults participate more independently in leisure activities while creating value for institutions and the wider community.
-
+<div class="case-callout case-callout--goal">
+  <span class="case-callout__icon" aria-hidden="true"></span>
+  <p class="case-callout__text">Help older adults participate more independently in leisure activities while creating value for institutions and the wider community.</p>
+</div>
 
 
 
@@ -80,7 +82,7 @@ The findings revealed several key insights, including fear of scams, reliance on
       <div class="insight-card__content">
         <div class="insight-card__stat">
           <p class="insight-card__percentage">78%</p>
-          <img class="insight-card__icon" src="/media/senda/senda-research-percentage-78.svg" alt="" width="161" height="97">
+          <img class="insight-card__icon" src="/media/senda/senda-03-research-percentage-78.svg" alt="" width="161" height="97">
         </div>
         <p class="insight-card__description">
           Lose out on social well-being opportunities by being unable to afford certain online procedures.
@@ -138,8 +140,8 @@ Before designing the user flows, we identified three key features that would sha
 #### User Roles
 We defined two user roles: the Senior, who uses the app to make payments, and the Administrator, a trusted family member or caregiver responsible for managing and topping up the senior's balance. For the <abbr title="Minimum Viable Product">MVP</abbr>, we prioritized the Senior experience, as it represented the app's primary user journey.
 
-![Main user, the senior: low digital confidence, fear of scams, needs reassurance and clarity.](/media/senda/senda-05-solution-user-role-primary.webp "half 383x296 noexpand")
-![Secondary user, the administrator: higher digital literacy, needs control and oversight, wants security and transparency.](/media/senda/senda-05-solution-user-role-secondary.webp "half 383x296 noexpand")
+![Main user, the senior: low digital confidence, fear of scams, needs reassurance and clarity.](/media/senda/senda-05-solution-user-role-primary.webp "half 383x296")
+![Secondary user, the administrator: higher digital literacy, needs control and oversight, wants security and transparency.](/media/senda/senda-05-solution-user-role-secondary.webp "half 383x296")
 
 
 #### Initial mapping
@@ -173,20 +175,10 @@ Heatmaps revealed where users tapped during usability testing, helping us assess
 
 ### Evaluation
 
-<div class="case-evaluation">
-  <div class="case-evaluation__card case-evaluation__card--positive">
-    <p class="case-evaluation__text">Users are able to request balance without complications.</p>
-  </div>
-  <div class="case-evaluation__card case-evaluation__card--negative">
-    <p class="case-evaluation__text">Users have difficulties when topping up at physical locations.</p>
-  </div>
-  <div class="case-evaluation__card case-evaluation__card--negative">
-    <p class="case-evaluation__text">Users had difficulties finding nearby physical locations.</p>
-  </div>
-  <div class="case-evaluation__card case-evaluation__card--negative">
-    <p class="case-evaluation__text">Administrators have experienced difficulties when approving a top-up request.</p>
-  </div>
-</div>
+- Users are able to request balance without complications.
+- Users have difficulties when topping up at physical locations.
+- Users had difficulties finding nearby physical locations.
+- Administrators experienced difficulties when approving a top-up request.
 
 
 ### Iteration & refinement
@@ -200,7 +192,7 @@ Based on these insights, we identified several improvements before moving into t
 
 #### Final MVP User Flow
 
-![Final MVP flow for requesting balance through the app: from the home screen, the user picks an amount, adds an optional message, confirms the request and sees that it has been sent. A branch shows cancelling, with a dialog to confirm or go back.](/media/senda/senda-06-testing-final-flow-1.webp "full 1981x1470 expand")
+![Final MVP flow for requesting balance through the app: from the home screen, the user picks an amount, adds an optional message, confirms the request and sees that it has been sent. A branch shows cancelling, with a dialog to confirm or go back.](/media/senda/senda-06-testing-final-flow-1.webp "full 1981x1470 expand | Final MVP flow for requesting balance through the app: from the home screen, the user picks an amount, adds an optional message, confirms the request and sees that it has been sent. A branch shows cancelling, with a dialog to confirm or go back")
 
 
 <p class="case-section__eyebrow">Outcome</p>
@@ -219,13 +211,13 @@ Based on these insights, we identified several improvements before moving into t
 ### Final prototype
 
 #### Request top-up with cash flow
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.svg "half 383x480")
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.svg "half 383x480")
+![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.webp "half 383x480")
+![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.webp "half 383x480")
 
 
 #### Request balance to admin flow
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.svg "half 383x480")
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.svg "half 383x480")
+![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.webp "half 383x480")
+![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.webp "half 383x480")
 
 ### Next steps
 1. Introduce a brief, task-oriented onboarding.
@@ -241,9 +233,20 @@ Based on these insights, we identified several improvements before moving into t
 
 ### Projected impact
  
-1. Reducing digital gap and distrust: Current interfaces are not designed for older users; Senda, in contrast, offers an experience tailored to their needs, building trust.
-2. Increasing initiative in online processes: By removing confusion and simplifying steps, users become less afraid of making mistakes and are more willing to engage with technology.
-3. Promoting well-being and inclusion: We enable access to a wide range of activities and experiences for a key user group.
+<ol class="case-impact">
+  <li class="case-impact__card">
+    <h4 class="case-impact__title">Reducing digital gap and distrust</h4>
+    <p class="case-impact__text">Current interfaces are not designed for older users; Senda, in contrast, offers an experience tailored to their needs, building trust.</p>
+  </li>
+  <li class="case-impact__card">
+    <h4 class="case-impact__title">Increasing initiative in online processes</h4>
+    <p class="case-impact__text">By removing confusion and simplifying steps, users become less afraid of making mistakes and are more willing to engage with technology.</p>
+  </li>
+  <li class="case-impact__card">
+    <h4 class="case-impact__title">Promoting well-being and inclusion</h4>
+    <p class="case-impact__text">We enable access to a wide range of activities and experiences for a key user group.</p>
+  </li>
+</ol>
 
 <div class="case-note" role="note">
   <p class="case-note__text case-note__label">Note:</p>
@@ -252,6 +255,24 @@ Based on these insights, we identified several improvements before moving into t
 
 
 ### Takeaways
-1. Tool choice and test structure impact data quality.
-2. Copywriting directly shapes user understanding and flow.
-3. Confirmation screens build confidence and reduce errors.
+
+<ol class="case-accordion case-accordion--numbered">
+  <li class="case-accordion__item">
+    <details class="case-accordion__details">
+      <summary class="case-accordion__summary">Tool choice and test structure impact data quality</summary>
+      <p class="case-accordion__text">The choice of Maze, and the way tasks and questions were structured, had a direct impact on the usability test results. The extra interface layer introduced additional cognitive load, making it harder to isolate issues in the product itself. In hindsight, a moderated in-person usability test would have provided clearer behavioural insights and a more natural testing environment.</p>
+    </details>
+  </li>
+  <li class="case-accordion__item">
+    <details class="case-accordion__details">
+      <summary class="case-accordion__summary">Copywriting directly shapes user understanding and flow</summary>
+      <p class="case-accordion__text">Microcopy played a key role in how users interpreted actions and navigated the interface. Even small wording choices influenced comprehension and decision-making, with unclear or technical language often leading to confusion during key tasks. Clear, concise copy proved essential to reduce friction, especially for less digitally experienced users.</p>
+    </details>
+  </li>
+  <li class="case-accordion__item">
+    <details class="case-accordion__details">
+      <summary class="case-accordion__summary">Confirmation screens build confidence and reduce errors</summary>
+      <p class="case-accordion__text">Confirmation states were crucial in reinforcing user confidence throughout the experience. By clearly signalling that an action had been completed, they reduced uncertainty and prevented unnecessary repetition or hesitation. This was especially important for users with lower digital confidence, making flows feel more reliable and predictable.</p>
+    </details>
+  </li>
+</ol>

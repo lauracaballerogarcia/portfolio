@@ -76,6 +76,9 @@
  * Case-carousel........Carousel of case study images.
  * Case-quote...........Quote.
  * Case-note............Side note.
+ * Case-accordion.......List of items that open to show their text.
+ * Case-impact..........Numbered cards (projected impact).
+ * Case-callout.........Highlighted statement with an emoji.
  * Related-work.........Other case studies at the end of the page.
  * Back-to-top..........Sticky button back to the top of the page.
  *
@@ -178,6 +181,9 @@
 @import './components/case/case-carousel.css';
 @import './components/case/case-quote.css';
 @import './components/case/case-note.css';
+@import './components/case/case-accordion.css';
+@import './components/case/case-impact.css';
+@import './components/case/case-callout.css';
 @import './components/case/related-work.css';
 @import './components/case/back-to-top.css';
 

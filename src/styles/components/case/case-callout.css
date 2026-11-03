@@ -1,0 +1,57 @@
+/*------------------------------------*\
+  #CASE-CALLOUT
+\*------------------------------------*/
+
+/**
+ * Highlighted statement of the case study (the project goal), with an
+ * emoji before the text. Written as HTML in the Markdown.
+ *
+ * 1. Same outline as `.case-note`, without its thicker left edge.
+ * 2. Decorative: the markup hides it from screen readers.
+ * 3. The emoji keeps its width, so long text wraps beside it.
+ * 4. More room around the text from 769px; on mobile it keeps the
+ *    width for the words.
+ */
+
+.case-callout {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+  padding: var(--spacing-6) var(--spacing-6);
+  border: 1px solid var(--color-outline-primary); /* [1] */
+  border-radius: var(--radius-2);
+  margin-bottom: var(--spacing-paragraph);
+}
+
+.case-callout__icon { /* [2] */
+  flex-shrink: 0; /* [3] */
+  width: var(--size-icon-l);
+  height: var(--size-icon-l);
+  background-repeat: no-repeat; /* [5] */
+  background-position: center;
+  background-size: contain;
+}
+
+.case-callout--goal .case-callout__icon {
+  background-image: url('../../../assets/icons/case-callout-goal.svg');
+}
+
+.case-callout__text {
+  margin: 0;
+  font-size: var(--font-size-m);
+  line-height: 1.4;
+  color: var(--color-text-tertiary);
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+@media (min-width: 769px) {
+  .case-callout {
+    gap: var(--spacing-6); /* [4] */
+    padding: var(--spacing-6) var(--spacing-6);
+  }
+}

@@ -41,8 +41,12 @@
   --color-neutral-100: #EBEBEB;
   --color-neutral-200: #DEDEDE;
   --color-neutral-300: #D1D1D1;
+  --color-neutral-400: #C8C8C8;
+  --color-neutral-500: #929292;
   --color-neutral-600: #737373;
+  --color-neutral-650: #636363;
   --color-neutral-700: #535353;
+  --color-neutral-800: #373737;
   --color-neutral-950: #121212;
 
   /* Color — hues */
@@ -60,6 +64,7 @@
   --spacing-8:  2rem;      /* 32px */
   --spacing-10: 2.5rem;    /* 40px */
   --spacing-12: 3rem;      /* 48px */
+  --spacing-14: 3.5rem;    /* 56px */
   --spacing-16: 4rem;      /* 64px */
   --spacing-24: 6rem;      /* 96px */
   --spacing-32: 8rem;      /* 128px */
@@ -113,16 +118,17 @@
   /* Color — background */
   --color-background-primary:     var(--color-neutral-50);
   --color-background-secondary:   var(--color-neutral-100);
+  --color-background-tertiary:    var(--color-neutral-0);
   --color-background-placeholder: var(--color-neutral-200);  /* media while loading */
   --color-background-inverse:     var(--color-neutral-950);
 
   /* Color — outline */
-  --color-outline-primary: var(--color-neutral-200);
+  --color-outline-primary: var(--color-neutral-300);
 
   /* Color — text */
   --color-text-primary:   var(--color-neutral-950);
   --color-text-secondary: var(--color-neutral-700);
-  --color-text-tertiary:  var(--color-neutral-600);
+  --color-text-tertiary:  var(--color-neutral-650);
   --color-text-inverse:   var(--color-neutral-0);
 
   /* Color — components */

@@ -714,27 +714,42 @@
     },
     "bloq/bloq-00-thumbnail.webp": {
       "action": "optimized",
-      "bytesIn": 53586,
-      "bytesOut": 40092,
-      "height": 641,
-      "outputHash": "804d763323dc10569f04697db6381b816345b72e6d5e31ce79574319f76ea92f",
-      "reason": "base 1024px q78, 2 variants (480, 800), max mean error 1.28",
-      "settingsHash": "b5b54d8424d12a84a6dea222f0b9590e2a13a15604b8537f92cfdbb1a8861217",
-      "source": "media-src/bloq/bloq-00-thumbnail.webp",
-      "sourceHash": "26cbace73b8a9c8f332d0a6b3828f578f6e8123d72fe36f7fdbc64e6aaf75bab",
+      "bytesIn": 552506,
+      "bytesOut": 84018,
+      "height": 1800,
+      "outputHash": "731eac8bfd80456f21e3ffa5f61366c86cbb7c518357a14bb04b20238d4be088",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.72",
+      "settingsHash": "73afc416355ed3dd141a31f68f24895d64f5c59f272d7aab8ae3c8e54b2b0f56",
+      "source": "media-src/bloq/bloq-00-thumbnail.png",
+      "sourceHash": "30f633c2ed2a81950fe4d88d5127a571c8ec770926b770e43f637b46d98e7535",
       "variants": {
         "480": {
-          "bytes": 7026,
+          "bytes": 3816,
           "file": "bloq/bloq-00-thumbnail-480w.webp",
-          "hash": "eaaf03d03f91d3e44aae92b55dd7b0fe305324e0783a3d98583cab6026875101"
+          "hash": "4148e7dc1a3b543c96353be65f6f44dde4474607be1de2c126c5b5eda702ed94"
         },
         "800": {
-          "bytes": 13134,
+          "bytes": 7004,
           "file": "bloq/bloq-00-thumbnail-800w.webp",
-          "hash": "572776e7f64a56460abda5826e52083747e18a48e07c3e44520de2bd565dc28d"
+          "hash": "ad249e7c0bbb890440624013a7cd9130eae5845cf59151da189d89adb4fd1c3d"
+        },
+        "1024": {
+          "bytes": 9240,
+          "file": "bloq/bloq-00-thumbnail-1024w.webp",
+          "hash": "2b60f844365489320ba1442738730eb2e029ab99e3cbbc7900529824918fc1b9"
+        },
+        "1440": {
+          "bytes": 13614,
+          "file": "bloq/bloq-00-thumbnail-1440w.webp",
+          "hash": "379c329473aefe81ce26669743d5678cc8ba9b3b87cf302d92d312e970ec9c52"
+        },
+        "1920": {
+          "bytes": 18880,
+          "file": "bloq/bloq-00-thumbnail-1920w.webp",
+          "hash": "616c8be00061ff8acf657ee95128e9191a947ba36df0d63fd3454db4c9315372"
         }
       },
-      "width": 1024
+      "width": 2880
     },
     "parc-central/parc-central-00-thumbnail.webp": {
       "action": "optimized",
@@ -1731,6 +1746,16 @@
       },
       "width": 2880
     },
+    "senda/senda-favicon.svg": {
+      "action": "copied",
+      "bytesIn": 40973,
+      "bytesOut": 40973,
+      "outputHash": "8c7882f44a11c26b2016af8940de7dd54b4812d56e06a6168e8ea2939a9f07f5",
+      "reason": "embeds raster image (data:image/), excluded from SVGO",
+      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
+      "source": "media-src/senda/senda-favicon.svg",
+      "sourceHash": "8c7882f44a11c26b2016af8940de7dd54b4812d56e06a6168e8ea2939a9f07f5"
+    },
     "xana/blink-favicon.svg": {
       "action": "copied",
       "bytesIn": 30205,
@@ -1740,45 +1765,6 @@
       "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
       "source": "media-src/xana/blink-favicon.svg",
       "sourceHash": "af03718461731d0f6771f884c75dbd59419bce3b4f750b7d6362b36ff16d01f0"
-    },
-    "xana/xana-00-thumbnail-1.webp": {
-      "action": "optimized",
-      "bytesIn": 1474833,
-      "bytesOut": 89454,
-      "height": 1800,
-      "outputHash": "967a13a4f48237bf1f8bd13d7dd92da35cf602033f7681114cdb0fa474ec2b56",
-      "reason": "base 2880px q80, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.76",
-      "settingsHash": "7c39a40cc694ff0032338a638287c9612f308d23bb2c001691212a72ac04fdbe",
-      "source": "media-src/xana/xana-00-thumbnail-1.jpg",
-      "sourceHash": "7f446ceda3b555864562a34b27f632eb527945ced180887169f651e59731b857",
-      "variants": {
-        "480": {
-          "bytes": 2690,
-          "file": "xana/xana-00-thumbnail-1-480w.webp",
-          "hash": "5ebf0754fd406e358cc61d506f5640fbd5b87ae97295b18a731768ea993aac40"
-        },
-        "800": {
-          "bytes": 5306,
-          "file": "xana/xana-00-thumbnail-1-800w.webp",
-          "hash": "bb8111282b5f2fb025035228400d3ec83888a454516064df38b79c4da24a053d"
-        },
-        "1024": {
-          "bytes": 7524,
-          "file": "xana/xana-00-thumbnail-1-1024w.webp",
-          "hash": "b3412496a853003869534cb275e47eb44b4ac460615aee585ddcec2666046491"
-        },
-        "1440": {
-          "bytes": 13232,
-          "file": "xana/xana-00-thumbnail-1-1440w.webp",
-          "hash": "b2e07b18625ce23a128f94b0ecffa2b737191dd44d2d33aacedebd2ea490f2d0"
-        },
-        "1920": {
-          "bytes": 20586,
-          "file": "xana/xana-00-thumbnail-1-1920w.webp",
-          "hash": "d6ae8cac317024d72a360d594776a5ad48714922e1ec4a749b373a0035dc785a"
-        }
-      },
-      "width": 2880
     },
     "xana/xana-00-thumbnail.webp": {
       "action": "optimized",
@@ -2211,39 +2197,39 @@
     },
     "xana/xana-04-outcome-4.webp": {
       "action": "optimized",
-      "bytesIn": 1551706,
-      "bytesOut": 178768,
+      "bytesIn": 1551122,
+      "bytesOut": 178844,
       "height": 1800,
-      "outputHash": "3457a172da776c94b3991aad20a2c8f9b38009901b10fb6299960a877561226c",
-      "reason": "base 2880px q80, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.87",
+      "outputHash": "6ebd86906df7cf37b5943f4bab156da7e0736c2939e77c6bce42d3a54d57b6c8",
+      "reason": "base 2880px q80, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.88",
       "settingsHash": "aa7a33e4de7f6d6706a8c25138f3bd8f168d0a2b44e7051284e7b4c2b35c86fa",
       "source": "media-src/xana/xana-04-outcome-4.png",
-      "sourceHash": "c6e6a6eda2917decfdf27e745b59abedd5fb9a698e8e81a801c98dd1d41f76fa",
+      "sourceHash": "5de3a24dff253684ba7124f7b8e8bbbabec968cb15ae22cde2afa2623c763e8d",
       "variants": {
         "480": {
-          "bytes": 4890,
+          "bytes": 4884,
           "file": "xana/xana-04-outcome-4-480w.webp",
-          "hash": "75d41759945223e356a9571de377ac7b928fd9befa1162916acba95fcdb26114"
+          "hash": "9812e33efdb96d2905d286c0b302d045517bbeb112e88600344d4fcf693aaaf9"
         },
         "800": {
-          "bytes": 10758,
+          "bytes": 10792,
           "file": "xana/xana-04-outcome-4-800w.webp",
-          "hash": "6dd59b95dfdc653ec7653851a73cae615ed5152effd8da0fff8fb62d26d8028f"
+          "hash": "ac8d99831e47332acc5d507074637446de0eb7738532db8793c5d50e0f8cff11"
         },
         "1024": {
           "bytes": 15940,
           "file": "xana/xana-04-outcome-4-1024w.webp",
-          "hash": "a6bce2ca9b34d7b19ac17b19d00f59f8535db41d1e7d8f4727139135640229cc"
+          "hash": "fd1d8ded998d4b269fa6616091b5682428ba61d8bcf98326a6214a658186229a"
         },
         "1440": {
-          "bytes": 26132,
+          "bytes": 26146,
           "file": "xana/xana-04-outcome-4-1440w.webp",
-          "hash": "310f414882c4c8dbecf3c55f49557172ed948131b37bc3670913d23f67f4099d"
+          "hash": "9b0bb6ddabe16b5d4c6e44585212ee628ae07362e2d35961b5832dd0f7639d5f"
         },
         "1920": {
-          "bytes": 40626,
+          "bytes": 40580,
           "file": "xana/xana-04-outcome-4-1920w.webp",
-          "hash": "71c18f11a908a856c92325de6676e34717923435492612060f78ef8af912e152"
+          "hash": "4511c3af8f6a2f223f4bd0b6319c6037b41eac1839736fc9dfa3193f872a615c"
         }
       },
       "width": 2880

@@ -66,17 +66,24 @@ renderer.strong = function ({ tokens }) {
 // for media with text that needs to be read: ![alt](path "full expand").
 // `carousel` puts the figure in a horizontal carousel together with the
 // images around it that also carry it: ![alt](path "carousel").
+// Everything after the first `|` is the visible caption, with inline
+// Markdown: ![alt](path "full expand | Heatmaps from the *Maze* test.").
+// Without `|`, the figure has no caption.
 const FLAGS = ['expand', 'carousel'];
 
 function parseImageTitle(title) {
-  const parts    = (title ?? '').trim().split(/\s+/).filter(Boolean);
+  const raw      = title ?? '';
+  const pipe     = raw.indexOf('|');
+  const flags    = pipe === -1 ? raw : raw.slice(0, pipe);
+  const caption  = pipe === -1 ? '' : raw.slice(pipe + 1).trim();
+  const parts    = flags.trim().split(/\s+/).filter(Boolean);
   const size     = parts.find(p => /^\d+x\d+$/.test(p));
   const poster   = parts.find(p => p.startsWith('poster='))?.slice('poster='.length);
   const expand   = parts.includes('expand');
   const carousel = parts.includes('carousel');
   const mod      = parts.find(p => p !== size && !FLAGS.includes(p) && !p.startsWith('poster=')) ?? 'default';
   const [width, height] = size ? size.split('x') : [];
-  return { mod, poster, carousel, expand: expand ? ' data-expand="true"' : '', dims: size ? ` width="${width}" height="${height}"` : '' };
+  return { mod, poster, carousel, caption, expand: expand ? ' data-expand="true"' : '', dims: size ? ` width="${width}" height="${height}"` : '' };
 }
 
 // sizes of the case study figures: how wide each layout shows them, so the
@@ -95,7 +102,9 @@ const sizesFor = (mod, carousel) => (carousel ? FIGURE_SIZES.carousel
   : ['half', 'duo', 'portrait'].includes(mod) ? FIGURE_SIZES.half : FIGURE_SIZES.full);
 
 renderer.image = ({ href, title, text }) => {
-  const { mod, dims, poster, expand, carousel } = parseImageTitle(title);
+  const { mod, dims, poster, expand, carousel, caption } = parseImageTitle(title);
+  const figcaption = caption ? `
+        <figcaption class="case-figure__caption">${caseMarked.parseInline(caption)}</figcaption>` : '';
 
   // Looping video with no playback bar. Nothing downloads, not even the
   // poster (it goes in data-poster), until initLoopVideos() (case.js) brings
@@ -109,7 +118,7 @@ renderer.image = ({ href, title, text }) => {
           <video class="case-figure__player" muted loop playsinline preload="none"${dims}${poster ? ` data-poster="${poster}"` : ''} aria-label="${text}">
             <source src="${href}#t=0.001" type="${type}">
           </video>
-        </div>
+        </div>${figcaption}
       </figure>
     `;
   }
@@ -131,7 +140,7 @@ renderer.image = ({ href, title, text }) => {
           alt="${text}"${size}
           loading="lazy"
           decoding="async">
-      </picture>
+      </picture>${figcaption}
     </figure>
   `;
 };

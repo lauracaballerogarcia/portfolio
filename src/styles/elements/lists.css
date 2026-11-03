@@ -5,6 +5,13 @@
 /**
  * Lists have no markers by default: components that need them add
  * them back.
+ *
+ * 1. Tabular figures (Geist `tnum`): every digit has the same width, so
+ *    numbers line up from one item to the next (1, 2… 10; 01, 02, 03).
+ *    Markers, counters and text inside the items inherit it.
  */
 
-ul, ol { list-style: none; }
+ul, ol {
+  list-style: none;
+  font-variant-numeric: tabular-nums; /* [1] */
+}

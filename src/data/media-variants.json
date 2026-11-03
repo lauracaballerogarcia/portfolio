@@ -216,12 +216,15 @@
     ]
   },
   "/media/bloq/bloq-00-thumbnail.webp": {
-    "height": 641,
-    "width": 1024,
+    "height": 1800,
+    "width": 2880,
     "widths": [
       480,
       800,
-      1024
+      1024,
+      1440,
+      1920,
+      2880
     ]
   },
   "/media/parc-central/parc-central-00-thumbnail.webp": {
@@ -508,18 +511,6 @@
   },
   "/media/senda/senda-07-outcome-final-ui-visual-identity.webp": {
     "height": 1780,
-    "width": 2880,
-    "widths": [
-      480,
-      800,
-      1024,
-      1440,
-      1920,
-      2880
-    ]
-  },
-  "/media/xana/xana-00-thumbnail-1.webp": {
-    "height": 1800,
     "width": 2880,
     "widths": [
       480,

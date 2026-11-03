@@ -11,23 +11,29 @@
  * 1. Clips the image to the rounded corners.
  * 2. Crops the image instead of distorting it.
  * 3. "Enlarge" button (`.icon-button`), always visible, bottom right.
- *    It opens `.case-lightbox`.
+ *    It opens `.case-lightbox`. It shares the grid cell with the image,
+ *    so a caption below does not move it. In videos, case-lightbox.js
+ *    puts it inside `.case-figure__video`, so it stays absolute there.
  * 4. Looping video with no playback bar. The background shows while
  *    the video and its poster are not loaded.
  * 5. Play/pause button (`.icon-button`), bottom left. The icon shows
  *    the available action: pause while playing.
  * 6. From 769px, half, duo and portrait figures take one column, so
  *    two of them share a row.
+ * 7. Optional caption, below the image or video. It comes from the text
+ *    after `|` in the Markdown title.
  */
 
 .case-figure {
   grid-column: 1 / -1;
+  display: grid;
   margin: 0;
   position: relative;
 }
 
 .case-figure__frame {
   display: block;
+  grid-area: 1 / 1;
   overflow: hidden; /* [1] */
   border-radius: var(--radius-card-s);
 }
@@ -43,9 +49,17 @@
 }
 
 .case-figure__expand {
+  grid-area: 1 / 1; /* [3] */
+  align-self: end;
+  justify-self: end;
+  margin: var(--spacing-4);
+}
+
+.case-figure__video .case-figure__expand {
   position: absolute; /* [3] */
   bottom: var(--spacing-4);
   right: var(--spacing-4);
+  margin: 0;
 }
 
 .case-figure__expand::before {
@@ -77,6 +91,13 @@
 
 .case-figure__toggle[data-state="paused"]::before {
   mask-image: url('../../../assets/icons/play-fill.svg');
+}
+
+.case-figure__caption {
+  margin-top: var(--spacing-2); /* [7] */
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+  color: var(--color-text-tertiary);
 }
 
 
