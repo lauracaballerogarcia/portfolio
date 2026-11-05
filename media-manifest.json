@@ -1063,6 +1063,42 @@
       },
       "width": 2880
     },
+    "parc-central/parc-central-02-identity.mp4": {
+      "action": "optimized",
+      "bytesIn": 3460146,
+      "bytesOut": 526987,
+      "height": 900,
+      "kind": "video",
+      "outputHash": "d731e382752d0880ee49f025cbf9109890e59023d414bf4b5f629c9a2deccd34",
+      "poster": {
+        "bytes": 2398,
+        "file": "parc-central/parc-central-02-identity-poster.webp",
+        "hash": "fa2491fb2ea0e814ed6c3bbae632ffdea7607396afa7233293752833c91916a1"
+      },
+      "reason": "H.264 crf 26 slow, 1440×900, 25 fps, from h264, poster at 0s, ffmpeg 9.0.2",
+      "settingsHash": "3eac96af5fc8f4bed28ede0f791d541c63b8f8c977954fde424b9dda8ea02ff6",
+      "source": "media-src/parc-central/parc-central-02-identity.mp4",
+      "sourceHash": "a089f6f30239f086d88aa14e8c3be740b82e8313f19159d931001c1923e68974",
+      "width": 1440
+    },
+    "parc-central/parc-central-03-posters.mp4": {
+      "action": "optimized",
+      "bytesIn": 5224976,
+      "bytesOut": 586228,
+      "height": 800,
+      "kind": "video",
+      "outputHash": "dd1c6199cf6aa1c83de75ef357bd9ea81f7814ba04d78bf89d0fb3403a3a2cc3",
+      "poster": {
+        "bytes": 2110,
+        "file": "parc-central/parc-central-03-posters-poster.webp",
+        "hash": "fd08072894d4b756b8de33beca3380eb5f6edac16f850781ed45cb4e8b5d8862"
+      },
+      "reason": "H.264 crf 26 slow, 1440×800, 25 fps, from h264, poster at 0s, ffmpeg 9.0.2",
+      "settingsHash": "3eac96af5fc8f4bed28ede0f791d541c63b8f8c977954fde424b9dda8ea02ff6",
+      "source": "media-src/parc-central/parc-central-03-posters.mp4",
+      "sourceHash": "225f1f3b8c11df0e94174066e27ec3e14454b679af92c46e0dd15af9a7ce2464",
+      "width": 1440
+    },
     "parc-central/parc-central-04-posters-identity-mockup-1.webp": {
       "action": "optimized",
       "bytesIn": 8756379,
@@ -1102,6 +1138,24 @@
       },
       "width": 2880
     },
+    "parc-central/parc-central-05-flyer.mp4": {
+      "action": "optimized",
+      "bytesIn": 3634752,
+      "bytesOut": 713358,
+      "height": 900,
+      "kind": "video",
+      "outputHash": "b592d41a044df3a607ba9c12e8d1b2a2f16b938b49693ac1551c4e06b5ab1e82",
+      "poster": {
+        "bytes": 14444,
+        "file": "parc-central/parc-central-05-flyer-poster.webp",
+        "hash": "002ef977125fd17fc0caec98dd669b3d5d086e36eac181512ac418630fe6ba7d"
+      },
+      "reason": "H.264 crf 26 slow, 1440×900, 25 fps, from h264, poster at 0s, ffmpeg 9.0.2",
+      "settingsHash": "3eac96af5fc8f4bed28ede0f791d541c63b8f8c977954fde424b9dda8ea02ff6",
+      "source": "media-src/parc-central/parc-central-05-flyer.mp4",
+      "sourceHash": "1e9831ecfc49672072440b9c9f8dd34d0b730e38630fb5318c5dbcbfbe8470c5",
+      "width": 1440
+    },
     "parc-central/parc-central-07-packaging.webp": {
       "action": "optimized",
       "bytesIn": 4401034,
@@ -1140,6 +1194,24 @@
         }
       },
       "width": 2160
+    },
+    "parc-central/parc-central-09-web.mp4": {
+      "action": "optimized",
+      "bytesIn": 2018711,
+      "bytesOut": 305415,
+      "height": 900,
+      "kind": "video",
+      "outputHash": "820db48d9fdd0695bc52908b35a541cdae0810599ae8d5ff24751245aa5d402e",
+      "poster": {
+        "bytes": 15074,
+        "file": "parc-central/parc-central-09-web-poster.webp",
+        "hash": "53943f1b02eaf5a59fd345e04c5288241bd064dd6a5b648f6e3f33fd92e30e14"
+      },
+      "reason": "H.264 crf 26 slow, 1440×900, 25 fps, from h264, poster at 0s, ffmpeg 9.0.2",
+      "settingsHash": "3eac96af5fc8f4bed28ede0f791d541c63b8f8c977954fde424b9dda8ea02ff6",
+      "source": "media-src/parc-central/parc-central-09-web.mp4",
+      "sourceHash": "b79996466f3d6892d86ff4b5c97f14878f9fcfdd8594450406243cd90b178a60",
+      "width": 1440
     },
     "parc-central/parc-central-10-signage-1.webp": {
       "action": "optimized",
@@ -1253,6 +1325,24 @@
       },
       "width": 2880
     },
+    "parc-central/parc-central-14-insta-stories.mp4": {
+      "action": "optimized",
+      "bytesIn": 13649826,
+      "bytesOut": 1287840,
+      "height": 900,
+      "kind": "video",
+      "outputHash": "eefe7918177f99731d2242637b44fb58944dccb69641afcedf8c23bf1b7f9775",
+      "poster": {
+        "bytes": 33704,
+        "file": "parc-central/parc-central-14-insta-stories-poster.webp",
+        "hash": "af14d7100b8fc0ef15bee33e0cee2fb08f2bfde0000df12fa67c9ce622b059e8"
+      },
+      "reason": "H.264 crf 26 slow, 1440×900, 25 fps, from h264, poster at 0s, ffmpeg 9.0.2",
+      "settingsHash": "3eac96af5fc8f4bed28ede0f791d541c63b8f8c977954fde424b9dda8ea02ff6",
+      "source": "media-src/parc-central/parc-central-14-insta-stories.mp4",
+      "sourceHash": "1be8bfb313e40bc6bef53c126ba28ec5473949a1e30a2ec16ed99c4b4bc3312d",
+      "width": 1440
+    },
     "parc-central/parc-central-15-posters-identity-mockup-2.webp": {
       "action": "optimized",
       "bytesIn": 9059027,
@@ -1286,6 +1376,24 @@
         }
       },
       "width": 1920
+    },
+    "parc-central/parc-central-16-insta-posts.mp4": {
+      "action": "optimized",
+      "bytesIn": 4887775,
+      "bytesOut": 473742,
+      "height": 1618,
+      "kind": "video",
+      "outputHash": "3bd3fa420ac32e0a16ab97639e904ed75f4abd2d0d0518489694208f5e74b785",
+      "poster": {
+        "bytes": 30280,
+        "file": "parc-central/parc-central-16-insta-posts-poster.webp",
+        "hash": "627361b2bf230adc09853f72cee3cf6c8418b39ff3d219f870238a82d0d8ba68"
+      },
+      "reason": "H.264 crf 26 slow, 1042×1618, 25 fps, from h264, poster at 0s, ffmpeg 9.0.2",
+      "settingsHash": "3eac96af5fc8f4bed28ede0f791d541c63b8f8c977954fde424b9dda8ea02ff6",
+      "source": "media-src/parc-central/parc-central-16-insta-posts.mp4",
+      "sourceHash": "2a36dc96dd81569a8032322766d26f5aee78594a8c0945dc853dcef56ce9be36",
+      "width": 1042
     },
     "parc-central/parc-central-17-postcards.webp": {
       "action": "optimized",
@@ -1639,6 +1747,19 @@
       },
       "width": 1120
     },
+    "senda/senda-04-problem-notes.mp4": {
+      "action": "optimized",
+      "bytesIn": 1259898,
+      "bytesOut": 75182,
+      "height": 1440,
+      "kind": "video",
+      "outputHash": "31063efcf8515ac73566833e6e2fb98730069328e1a89807e62cd608faf5e2fa",
+      "reason": "H.264 crf 26 slow, 1120×1440, 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
+      "source": "media-src/senda/senda-04-problem-notes.mp4",
+      "sourceHash": "f0e514e3e7ce79e772519d07985b14d154dc94b7084781facc10047cba1c7f0c",
+      "width": 1120
+    },
     "senda/senda-04-problem-strategic-shift.webp": {
       "action": "optimized",
       "bytesIn": 129202,
@@ -1744,6 +1865,19 @@
           "hash": "ee07619e5b7b47ecfb1eae723534c03cb01c65c6fbc18c9bfcaf459d556fe7c6"
         }
       },
+      "width": 1120
+    },
+    "senda/senda-04-problem-wallet.mp4": {
+      "action": "optimized",
+      "bytesIn": 687466,
+      "bytesOut": 50277,
+      "height": 1440,
+      "kind": "video",
+      "outputHash": "db7ccb25618e98878b83f5c06b4800c3a5da17f38cb1f30d0317a2087e5e4888",
+      "reason": "H.264 crf 26 slow, 1120×1440, 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
+      "source": "media-src/senda/senda-04-problem-wallet.mp4",
+      "sourceHash": "a0316189670440bb262e4e03a039df87acb691601289c851caa499c5998e7acb",
       "width": 1120
     },
     "senda/senda-05-solution-key-features.webp": {
@@ -2155,6 +2289,37 @@
       },
       "width": 2240
     },
+    "senda/senda-07-outcome-flow-request-balance.mp4": {
+      "action": "optimized",
+      "bytesIn": 8642273,
+      "bytesOut": 942289,
+      "height": 1852,
+      "kind": "video",
+      "outputHash": "b3857c9b35bde62d88f41c7829b5d8f5dafb0c43a7e6e1da6eb5f4b55280be84",
+      "reason": "H.264 crf 26 slow, 1440×1852 (resized from 2240px), 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
+      "source": "media-src/senda/senda-07-outcome-flow-request-balance.mp4",
+      "sourceHash": "f62eb3e903e276f002c6cb37924908b01a368dc4de4517a66a96e6c040c95526",
+      "width": 1440
+    },
+    "senda/senda-07-outcome-flow-top-up-1.mp4": {
+      "action": "optimized",
+      "bytesIn": 3895587,
+      "bytesOut": 264906,
+      "height": 1852,
+      "kind": "video",
+      "outputHash": "8915d5c71ac0a4ce2f97a60418e926eda6c5dd95a64c398962063aaa7803001a",
+      "poster": {
+        "bytes": 32258,
+        "file": "senda/senda-07-outcome-flow-top-up-1-poster.webp",
+        "hash": "de24638b5ddddccfb629404ceaf4f973f67d6a0e7e978df92e2b5478536f6f1c"
+      },
+      "reason": "H.264 crf 26 slow, 1440×1852 (resized from 2240px), 25 fps, from h264, poster at 0s, ffmpeg 9.0.2",
+      "settingsHash": "3eac96af5fc8f4bed28ede0f791d541c63b8f8c977954fde424b9dda8ea02ff6",
+      "source": "media-src/senda/senda-07-outcome-flow-top-up-1.mp4",
+      "sourceHash": "2bf6c8de80b58ce323a9897deb24414241c941022cd44e77eb6684967d5ac873",
+      "width": 1440
+    },
     "senda/senda-07-outcome-flow-top-up-poster.webp": {
       "action": "optimized",
       "bytesIn": 401852,
@@ -2193,6 +2358,19 @@
         }
       },
       "width": 2240
+    },
+    "senda/senda-07-outcome-flow-top-up.mp4": {
+      "action": "optimized",
+      "bytesIn": 3870407,
+      "bytesOut": 234368,
+      "height": 1852,
+      "kind": "video",
+      "outputHash": "b7d9c95a18da7202f9aea2b06de220f2232c28baec830430df48a60c9f0e5dde",
+      "reason": "H.264 crf 26 slow, 1440×1852 (resized from 2240px), 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
+      "source": "media-src/senda/senda-07-outcome-flow-top-up.mp4",
+      "sourceHash": "801568b7a38bdf26638402306afd70dc06f212f755415fcec0fa210b62fac84f",
+      "width": 1440
     },
     "senda/senda-07-outcome-statement.webp": {
       "action": "optimized",
@@ -2271,6 +2449,19 @@
         }
       },
       "width": 2880
+    },
+    "senda/senda-07-outcome-wallets.mp4": {
+      "action": "optimized",
+      "bytesIn": 5231645,
+      "bytesOut": 130428,
+      "height": 960,
+      "kind": "video",
+      "outputHash": "5f2af3a6f3d818611102c214b9710bf9046df65b39f29065c1c018f66e85a9b4",
+      "reason": "H.264 crf 26 slow, 1440×960 (resized from 2880px), 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
+      "source": "media-src/senda/senda-07-outcome-wallets.mp4",
+      "sourceHash": "55745e24ee64d8b39f872f2f8f4b0fa5d1ead3fe39717e21ce0d906ad8169c87",
+      "width": 1440
     },
     "senda/senda-favicon.svg": {
       "action": "copied",

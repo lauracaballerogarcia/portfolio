@@ -34,6 +34,18 @@
     "maxDifferentPixels": 0.001,
     "maxMeanError": 0.5
   },
+  "video": {
+    "crf": 26,
+    "preset": "slow",
+    "maxWidth": 1440,
+    "maxFps": 30,
+    "poster": true,
+    "posterTime": 0
+  },
+  "limits": {
+    "warnBytes": 8388608,
+    "maxBytes": 26214400
+  },
   "content": [
     "src/data/projects.json",
     "src/data/about.json",

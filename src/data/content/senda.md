@@ -218,16 +218,11 @@ Based on these insights, we identified several improvements before moving into t
 ![](/media/senda/senda-07-outcome-statement.webp "half")
 ![Physical top-up flow: from the home screen, José Miguel opens the nearest Senda points, picks Kiosko Blasco on the map and taps Top up balance. The wallet animates while he holds the phone near the machine, and a confirmation shows a 20 € top-up.](/media/senda/senda-07-outcome-flow-top-up-1.mp4 "half 2240x2880 poster=/media/senda/senda-07-outcome-flow-top-up-poster.webp")
 
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-card-terminal.webp "full 1440x932")
-
-![](/media/senda/senda-07-outcome-statement.webp "half")
-![Physical top-up flow: from the home screen, José Miguel opens the nearest Senda points, picks Kiosko Blasco on the map and taps Top up balance. The wallet animates while he holds the phone near the machine, and a confirmation shows a 20 € top-up.](/media/senda/senda-07-outcome-flow-top-up-1.mp4 "half 2240x2880 poster=/media/senda/senda-07-outcome-flow-top-up-poster.webp")
-
 ![A hand holding a phone with the Senda wallet ready to pay (“Hold Near Reader”) next to a card terminal held by a shop assistant.](/media/senda/senda-07-outcome-card-terminal.webp "full | Paying in person with the Senda wallet.")
 
 #### Request balance to admin flow
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-flow-request-balance.mp4 "half 383x480 poster=/media/senda/senda-07-outcome-flow-request-balance-poster.webp")
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-components.webp "half 383x480")
+![Request balance flow: from the home screen, Mari Carmen picks 20 €, adds a predefined message, reviews the summary addressed to her granddaughter Laura and sends the request. The banknotes fly away and a tick confirms that the request has been sent.](/media/senda/senda-07-outcome-flow-request-balance.mp4 "half 2240x2880 poster=/media/senda/senda-07-outcome-flow-request-balance-poster.webp")
+![](/media/senda/senda-07-outcome-components.webp "half | Predefined messages avoid typing; the summary ticket confirms every detail before sending.")
 
 ### Next steps
 1. Introduce a brief, task-oriented onboarding.

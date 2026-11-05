@@ -109,13 +109,18 @@ renderer.image = ({ href, title, text }) => {
   // Looping video with no playback bar. Nothing downloads, not even the
   // poster (it goes in data-poster), until initLoopVideos() (case.js) brings
   // it near the viewport. The #t=0.001 fragment makes Safari/iOS paint the
-  // first frame when only the metadata loads (reduced motion).
+  // first frame when only the metadata loads (reduced motion). The size of
+  // the box comes from the WxH in the title or, for videos published by the
+  // media pipeline, from media-variants.json. An empty alt
+  // (![](video.mp4 "…")) marks it as decorative: aria-hidden.
   if (/\.(mp4|webm)$/i.test(href)) {
     const type = href.toLowerCase().endsWith('.webm') ? 'video/webm' : 'video/mp4';
+    const known = mediaVariants[href];
+    const box = dims || (known ? ` width="${known.width}" height="${known.height}"` : '');
     return `
        <figure class="case-figure case-figure--${mod} case-figure--video"${expand}>
         <div class="case-figure__video">
-          <video class="case-figure__player" muted loop playsinline preload="none"${dims}${poster ? ` data-poster="${poster}"` : ''} aria-label="${text}">
+          <video class="case-figure__player" muted loop playsinline preload="none"${box}${poster ? ` data-poster="${poster}"` : ''}${text ? ` aria-label="${text}"` : ' aria-hidden="true"'}>
             <source src="${href}#t=0.001" type="${type}">
           </video>
         </div>${figcaption}

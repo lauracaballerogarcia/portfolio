@@ -323,6 +323,14 @@
       2880
     ]
   },
+  "/media/parc-central/parc-central-02-identity.mp4": {
+    "height": 900,
+    "width": 1440
+  },
+  "/media/parc-central/parc-central-03-posters.mp4": {
+    "height": 800,
+    "width": 1440
+  },
   "/media/parc-central/parc-central-04-posters-identity-mockup-1.webp": {
     "height": 1800,
     "width": 2880,
@@ -335,6 +343,10 @@
       2880
     ]
   },
+  "/media/parc-central/parc-central-05-flyer.mp4": {
+    "height": 900,
+    "width": 1440
+  },
   "/media/parc-central/parc-central-07-packaging.webp": {
     "height": 2880,
     "width": 2160,
@@ -346,6 +358,10 @@
       1920,
       2160
     ]
+  },
+  "/media/parc-central/parc-central-09-web.mp4": {
+    "height": 900,
+    "width": 1440
   },
   "/media/parc-central/parc-central-10-signage-1.webp": {
     "height": 1800,
@@ -382,6 +398,10 @@
       2880
     ]
   },
+  "/media/parc-central/parc-central-14-insta-stories.mp4": {
+    "height": 900,
+    "width": 1440
+  },
   "/media/parc-central/parc-central-15-posters-identity-mockup-2.webp": {
     "height": 2880,
     "width": 1920,
@@ -392,6 +412,10 @@
       1440,
       1920
     ]
+  },
+  "/media/parc-central/parc-central-16-insta-posts.mp4": {
+    "height": 1618,
+    "width": 1042
   },
   "/media/parc-central/parc-central-17-postcards.webp": {
     "height": 1080,
@@ -487,6 +511,10 @@
       1120
     ]
   },
+  "/media/senda/senda-04-problem-notes.mp4": {
+    "height": 1440,
+    "width": 1120
+  },
   "/media/senda/senda-04-problem-strategic-shift.webp": {
     "height": 1620,
     "width": 2880,
@@ -520,6 +548,10 @@
       1024,
       1120
     ]
+  },
+  "/media/senda/senda-04-problem-wallet.mp4": {
+    "height": 1440,
+    "width": 1120
   },
   "/media/senda/senda-05-solution-key-features.webp": {
     "height": 1620,
@@ -649,6 +681,14 @@
       2240
     ]
   },
+  "/media/senda/senda-07-outcome-flow-request-balance.mp4": {
+    "height": 1852,
+    "width": 1440
+  },
+  "/media/senda/senda-07-outcome-flow-top-up-1.mp4": {
+    "height": 1852,
+    "width": 1440
+  },
   "/media/senda/senda-07-outcome-flow-top-up-poster.webp": {
     "height": 2880,
     "width": 2240,
@@ -660,6 +700,10 @@
       1920,
       2240
     ]
+  },
+  "/media/senda/senda-07-outcome-flow-top-up.mp4": {
+    "height": 1852,
+    "width": 1440
   },
   "/media/senda/senda-07-outcome-statement.webp": {
     "height": 2880,
@@ -684,6 +728,10 @@
       1920,
       2880
     ]
+  },
+  "/media/senda/senda-07-outcome-wallets.mp4": {
+    "height": 960,
+    "width": 1440
   },
   "/media/xana/xana-00-thumbnail.webp": {
     "height": 1800,

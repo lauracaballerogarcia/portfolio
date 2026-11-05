@@ -22,20 +22,37 @@
  *   .svg   optimised with SVGO (conservative settings) unless it embeds raster
  *          images (data:image/…), which are copied untouched. The optimised file
  *          is published only if structure and a pixel comparison match the source.
- *   other  (mp4, archived sources) are left in media-src and never published.
+ *   .mp4 .mov .m4v .webm  video sources. Published as MP4 (H.264, yuv420p, no
+ *          audio, faststart) with ffmpeg, which must be installed on the machine
+ *          that runs `npm run media` (not on the one that runs the check). Width
+ *          capped at video.maxWidth, frame rate at video.maxFps, quality set by
+ *          video.crf. The source is never enlarged.
+ *            name.mp4          the video
+ *            name-poster.webp  its first frame (or the one at video.posterTime),
+ *                              unless media-src holds a name-poster image of
+ *                              its own, which is then processed as any image
+ *          Without ffmpeg, video sources are skipped with a warning.
+ *   other  (archived sources) are left in media-src and never published.
+ *
+ * The check also weighs every file in public/media: a warning above
+ * limits.warnBytes, an error above limits.maxBytes (Cloudflare Pages refuses
+ * files over 25 MiB).
  *
  * Files that live directly in public/media and are not in the manifest are
- * manual files (MP4, posters, GIF, JPG). The script never overwrites or removes
- * them. It never writes into media-src.
+ * manual files (GIF, JPG, MP4 added by hand). The script never overwrites or
+ * removes them. It never writes into media-src.
  *
  * Options
  *   --check        read-only verification, exit code 1 on errors
  *   --root <dir>   project root (default: current directory)
  */
 import { createHash } from 'node:crypto';
+import { execFile } from 'node:child_process';
 import fs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
+import { promisify } from 'node:util';
 import sharp from 'sharp';
 import { optimize, VERSION as SVGO_VERSION } from 'svgo';
 
@@ -51,6 +68,8 @@ const PUBLIC_DIR = path.dirname(OUT_DIR); // /media/… is served from public/me
 const MANIFEST_PATH = path.join(ROOT, config.manifest);
 const RUNTIME_MAP_PATH = config.runtimeMap ? path.join(ROOT, config.runtimeMap) : null;
 const RASTER_EXT = ['.webp', '.jpg', '.jpeg', '.png'];
+const VIDEO_EXT = ['.mp4', '.mov', '.m4v', '.webm'];
+const exec = promisify(execFile);
 
 const TOOLS = { sharp: sharp.versions.sharp, libwebp: sharp.versions.webp, librsvg: sharp.versions.rsvg, svgo: SVGO_VERSION };
 
@@ -87,6 +106,7 @@ function sortKeys(v) {
   return v;
 }
 const kb = (n) => `${(n / 1024).toFixed(1)} KB`;
+const mb = (n) => `${(n / 1024 / 1024).toFixed(1)} MB`;
 const rel = (p) => path.relative(ROOT, p).split(path.sep).join('/');
 
 function assertInside(dir, target) {
@@ -143,16 +163,38 @@ function settingsFor(srcRel) {
   if (ext === '.svg') {
     return { kind: 'svg', svgo: SVGO_CONFIG, compare: config.svg, metric: 'premultiplied-rgba', minSaving: config.minSaving, tools: { sharp: TOOLS.sharp, librsvg: TOOLS.librsvg, svgo: TOOLS.svgo } };
   }
+  if (VIDEO_EXT.includes(ext) && config.video) {
+    // No ffmpeg version here: the check runs where ffmpeg may be missing
+    // (Cloudflare), and the hash must be the same on both machines.
+    const v = config.video;
+    const w = config.webp;
+    return {
+      kind: 'video',
+      crf: v.crf, preset: v.preset, maxWidth: v.maxWidth, maxFps: v.maxFps,
+      poster: v.poster && !hasOwnPoster(srcRel) ? { time: v.posterTime ?? 0, quality: w.qualityByProject?.[project] ?? w.quality, effort: w.effort } : false,
+      tools: { sharp: TOOLS.sharp, libwebp: TOOLS.libwebp },
+    };
+  }
   return null;
 }
 
-// Public path of the base output: rasters always become .webp
+// Public path of the base output: rasters always become .webp, videos .mp4
 function baseOutRel(srcRel, s) {
   const r = path.relative(SRC_DIR, path.join(ROOT, srcRel)).split(path.sep).join('/');
-  return s.kind === 'raster' ? r.replace(/\.[a-z0-9]+$/i, '.webp') : r;
+  if (s.kind === 'raster') return r.replace(/\.[a-z0-9]+$/i, '.webp');
+  if (s.kind === 'video') return r.replace(/\.[a-z0-9]+$/i, '.mp4');
+  return r;
 }
 
 const variantRel = (baseRel, width) => baseRel.replace(/\.webp$/i, `-${width}w.webp`);
+const posterRel = (videoRel) => videoRel.replace(/\.mp4$/i, '-poster.webp');
+
+// Every extra file an entry owns besides its base: raster variants and the
+// video poster, as { file, hash }
+const extrasOf = (e) => [...Object.values(e?.variants ?? {}), ...(e?.poster ? [e.poster] : [])];
+
+// A video has its own poster when media-src holds a name-poster image next to it
+const hasOwnPoster = (srcRel) => RASTER_EXT.some((x) => existsSync(path.join(ROOT, srcRel.replace(/\.[a-z0-9]+$/i, `-poster${x}`))));
 
 // Size after EXIF orientation (orientations 5–8 swap width and height)
 async function orientedSize(buf) {
@@ -314,15 +356,81 @@ async function processSvg(srcBuf, s) {
   return { buffer: outBuf, action: 'optimized', reason: `SVGO ${TOOLS.svgo}, saving ${(saving * 100).toFixed(1)}%, render mean ${mean.toFixed(3)}, differing ${(differing * 100).toFixed(3)}%` };
 }
 
+/* ---------- video ---------- */
+
+let FFMPEG; // version string, null when ffmpeg is not installed
+async function ffmpegVersion() {
+  if (FFMPEG !== undefined) return FFMPEG;
+  try {
+    const { stdout } = await exec('ffmpeg', ['-version']);
+    FFMPEG = stdout.split('\n')[0].match(/ffmpeg version (\S+)/)?.[1] ?? 'unknown';
+  } catch {
+    FFMPEG = null;
+  }
+  return FFMPEG;
+}
+
+async function probe(file) {
+  const { stdout } = await exec('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height,codec_name,r_frame_rate:stream_side_data=rotation', '-of', 'json', file]);
+  const st = JSON.parse(stdout).streams?.[0];
+  if (!st) throw new Error(`${rel(file)} has no video stream`);
+  const [n, d] = st.r_frame_rate.split('/').map(Number);
+  const rotated = Math.abs(st.side_data_list?.[0]?.rotation ?? 0) % 180 === 90;
+  return { width: rotated ? st.height : st.width, height: rotated ? st.width : st.height, codec: st.codec_name, fps: d ? n / d : n };
+}
+
+// H.264 MP4 that plays everywhere: even dimensions, yuv420p, no audio and the
+// index at the start (faststart), so playback begins before the download ends.
+// Returns { buffer, width, height, poster?, reason }
+async function processVideo(src, s) {
+  const info = await probe(src);
+  const tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'media-'));
+  try {
+    const out = path.join(tmp, 'out.mp4');
+    const width = Math.min(info.width, s.maxWidth);
+    const filters = [`scale=${width}:-2:flags=lanczos`, 'format=yuv420p'];
+    await exec('ffmpeg', [
+      '-v', 'error', '-y', '-i', src,
+      '-vf', filters.join(','), '-fpsmax', String(s.maxFps),
+      '-c:v', 'libx264', '-preset', s.preset, '-crf', String(s.crf),
+      '-an', '-movflags', '+faststart', '-map_metadata', '-1', out,
+    ], { maxBuffer: 1024 * 1024 * 64 });
+    const buffer = await fs.readFile(out);
+    const result = await probe(out);
+
+    let poster;
+    if (s.poster) {
+      const png = path.join(tmp, 'poster.png');
+      await exec('ffmpeg', ['-v', 'error', '-y', '-ss', String(s.poster.time), '-i', out, '-frames:v', '1', png]);
+      const posterBuf = await sharp(await fs.readFile(png)).webp({ quality: s.poster.quality, effort: s.poster.effort }).toBuffer();
+      poster = { buffer: posterBuf };
+    }
+
+    const resized = width < info.width;
+    const reason = [
+      `H.264 crf ${s.crf} ${s.preset}, ${result.width}×${result.height}${resized ? ` (resized from ${info.width}px)` : ''}`,
+      info.fps > s.maxFps ? `${Math.round(info.fps)} → ${s.maxFps} fps` : `${Math.round(info.fps)} fps`,
+      `from ${info.codec}`,
+      poster ? `poster at ${s.poster.time}s` : null,
+      `ffmpeg ${await ffmpegVersion()}`,
+    ].filter(Boolean).join(', ');
+    return { buffer, width: result.width, height: result.height, poster, reason };
+  } finally {
+    await fs.rm(tmp, { recursive: true, force: true });
+  }
+}
+
 /* ---------- runtime map ---------- */
 
 // Compact map for the site (srcset): public path of each raster base →
-// its size and every available width, smallest first.
+// its size and every available width, smallest first. Videos only carry
+// their size (the case renderer reserves their box with it).
 function runtimeMap(files) {
   const prefix = config.publicPrefix.replace(/\/$/, '');
   const map = {};
   for (const [outRel, e] of Object.entries(files)) {
     if (!e.width) continue; // SVG
+    if (e.kind === 'video') { map[`${prefix}/${outRel}`] = { height: e.height, width: e.width }; continue; }
     const widths = [...Object.keys(e.variants ?? {}).map(Number), e.width].sort((a, b) => a - b);
     map[`${prefix}/${outRel}`] = { height: e.height, width: e.width, widths };
   }
@@ -392,9 +500,9 @@ async function check() {
     const out = path.join(OUT_DIR, outRel), src = path.join(ROOT, e.source);
     if (!existsSync(out)) errors.push(`manifest: output ${rel(out)} is missing (run npm run media)`);
     else if (sha256(await fs.readFile(out)) !== e.outputHash) errors.push(`manifest: ${rel(out)} was modified by hand (generated file)`);
-    for (const v of Object.values(e.variants ?? {})) {
+    for (const v of extrasOf(e)) {
       const vf = path.join(OUT_DIR, v.file);
-      if (!existsSync(vf)) errors.push(`manifest: variant ${rel(vf)} is missing (run npm run media)`);
+      if (!existsSync(vf)) errors.push(`manifest: ${rel(vf)} is missing (run npm run media)`);
       else if (sha256(await fs.readFile(vf)) !== v.hash) errors.push(`manifest: ${rel(vf)} was modified by hand (generated file)`);
     }
     if (!existsSync(src)) errors.push(`manifest: source ${e.source} was removed (run npm run media to clean up)`);
@@ -420,10 +528,18 @@ async function check() {
   }
 
   // 5. Files in public/media that nobody references
-  const generated = new Set(Object.entries(manifest.files).flatMap(([r, e]) => [r, ...Object.values(e.variants ?? {}).map((v) => v.file)]));
+  const generated = new Set(Object.entries(manifest.files).flatMap(([r, e]) => [r, ...extrasOf(e).map((v) => v.file)]));
   for (const out of await walk(OUT_DIR)) {
     const r = path.relative(OUT_DIR, out).split(path.sep).join('/');
     if (!referenced.has(r)) warnings.push(`unreferenced: ${rel(out)}${generated.has(r) ? ' (generated)' : ' (manual)'}`);
+  }
+
+  // 6. Weight of every published file (Cloudflare Pages refuses files over 25 MiB)
+  const { warnBytes = Infinity, maxBytes = Infinity } = config.limits ?? {};
+  for (const out of await walk(OUT_DIR)) {
+    const { size } = await fs.stat(out);
+    if (size > maxBytes) errors.push(`too heavy: ${rel(out)} is ${mb(size)} (limit ${mb(maxBytes)})`);
+    else if (size > warnBytes) warnings.push(`heavy: ${rel(out)} is ${mb(size)} (over ${mb(warnBytes)})`);
   }
 
   warnings.forEach((w) => console.log(`warn  ${w}`));
@@ -491,7 +607,10 @@ async function run() {
     const srcRel = rel(src);
     const s = settingsFor(srcRel);
     if (!s) { console.log(`skip      ${srcRel} (not published: kept as source only)`); stats.skipped++; continue; }
-    liveSources.add(srcRel);
+    liveSources.add(srcRel); // also a video skipped below: its outputs stay
+    if (s.kind === 'video' && !(await ffmpegVersion())) {
+      console.log(`skip      ${srcRel} (ffmpeg not found: install it to publish videos)`); stats.skipped++; continue;
+    }
 
     const outRel = baseOutRel(srcRel, s);
     const out = path.join(OUT_DIR, outRel);
@@ -502,23 +621,25 @@ async function run() {
     const settingsHash = sha256(stableJson(s));
     const prev = files[outRel];
 
-    // Every output this source will write: the base and, for rasters, its variants
+    // Every output this source will write: the base and, for rasters, its
+    // variants; for videos, the poster
     const planned = [outRel];
     if (s.kind === 'raster') planned.push(...(await plannedWidths(srcBuf, s)).variants.map((w) => variantRel(outRel, w)));
+    if (s.kind === 'video' && s.poster) planned.push(posterRel(outRel));
 
     for (const r of planned) {
       if (ownedBy[r]) { conflicts.push(`${ownedBy[r]} and ${srcRel} both produce ${config.outputDir}/${r} (rename one of them)`); continue; }
       ownedBy[r] = srcRel;
       const file = path.join(OUT_DIR, r);
       if (!existsSync(file)) continue;
-      const known = r === outRel ? prev?.outputHash : Object.values(prev?.variants ?? {}).find((v) => v.file === r)?.hash;
+      const known = r === outRel ? prev?.outputHash : extrasOf(prev).find((v) => v.file === r)?.hash;
       const hash = sha256(await fs.readFile(file));
       if (!prev || (known === undefined && prev.source !== srcRel)) conflicts.push(`${rel(file)} exists but was not generated by this script (manual file)`);
       else if (known !== undefined && known !== hash) conflicts.push(`${rel(file)} was modified by hand`);
     }
 
     const allOutputsIntact = prev && existsSync(out) && sha256(await fs.readFile(out)) === prev.outputHash
-      && (await Promise.all(Object.values(prev.variants ?? {}).map(async (v) => existsSync(path.join(OUT_DIR, v.file)) && sha256(await fs.readFile(path.join(OUT_DIR, v.file))) === v.hash))).every(Boolean);
+      && (await Promise.all(extrasOf(prev).map(async (v) => existsSync(path.join(OUT_DIR, v.file)) && sha256(await fs.readFile(path.join(OUT_DIR, v.file))) === v.hash))).every(Boolean);
     if (allOutputsIntact && prev.source === srcRel && prev.sourceHash === sourceHash && prev.settingsHash === settingsHash) {
       stats.unchanged++; stats.bytesIn += prev.bytesIn; stats.bytesOut += prev.bytesOut;
       continue;
@@ -559,6 +680,24 @@ async function run() {
           variants, width: base.width,
         };
         console.log(`${result.action.padEnd(10)}${srcRel}  ${kb(srcBuf.length)} → ${kb(base.buffer.length)} (+${kb(bytesOut - base.buffer.length)} in variants)  (${result.reason})`);
+      } else if (s.kind === 'video') {
+        const result = await processVideo(path.join(ROOT, srcRel), s);
+        await writeAtomic(out, result.buffer);
+        let poster;
+        if (result.poster) {
+          const pRel = posterRel(outRel);
+          await writeAtomic(path.join(OUT_DIR, pRel), result.poster.buffer);
+          poster = { bytes: result.poster.buffer.length, file: pRel, hash: sha256(result.poster.buffer) };
+        }
+        // A poster from a previous run that is no longer generated
+        if (prev?.poster && prev.poster.file !== poster?.file) await removeGenerated(prev.poster.file, prev.poster.hash);
+        entry = {
+          action: 'optimized', bytesIn: srcBuf.length, bytesOut: result.buffer.length + (poster?.bytes ?? 0), height: result.height,
+          kind: 'video', outputHash: sha256(result.buffer), ...(poster ? { poster } : {}), reason: result.reason,
+          settingsHash, source: srcRel, sourceHash, width: result.width,
+        };
+        const heavier = result.buffer.length > srcBuf.length ? '  ⚠ heavier than the source: lower video.crf or export it lighter' : '';
+        console.log(`optimized ${srcRel}  ${mb(srcBuf.length)} → ${mb(result.buffer.length)}${poster ? ` (+${kb(poster.bytes)} poster)` : ''}  (${result.reason})${heavier}`);
       } else {
         const result = await processSvg(srcBuf, s);
         await writeAtomic(out, result.buffer);
@@ -580,11 +719,11 @@ async function run() {
   for (const [outRel, e] of Object.entries(files)) {
     if (liveSources.has(e.source) && existsSync(path.join(ROOT, e.source)) && baseOutRel(e.source, settingsFor(e.source)) === outRel) continue;
     const baseGone = await removeGenerated(outRel, e.outputHash);
-    for (const v of Object.values(e.variants ?? {})) await removeGenerated(v.file, v.hash);
+    for (const v of extrasOf(e)) await removeGenerated(v.file, v.hash);
     if (!baseGone) continue;
     delete files[outRel];
     stats.removed++;
-    console.log(`removed   ${config.outputDir}/${outRel}${e.variants ? ' and its variants' : ''} (source ${e.source} no longer exists)`);
+    console.log(`removed   ${config.outputDir}/${outRel}${e.variants ? ' and its variants' : e.poster ? ' and its poster' : ''} (source ${e.source} no longer exists)`);
   }
 
   const changed = (await saveManifest(files)) || wrote;
