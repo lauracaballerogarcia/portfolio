@@ -2282,16 +2282,6 @@
       "source": "media-src/senda/senda-favicon.svg",
       "sourceHash": "8c7882f44a11c26b2016af8940de7dd54b4812d56e06a6168e8ea2939a9f07f5"
     },
-    "xana/blink-favicon.svg": {
-      "action": "copied",
-      "bytesIn": 30205,
-      "bytesOut": 30205,
-      "outputHash": "af03718461731d0f6771f884c75dbd59419bce3b4f750b7d6362b36ff16d01f0",
-      "reason": "embeds raster image (data:image/), excluded from SVGO",
-      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
-      "source": "media-src/xana/blink-favicon.svg",
-      "sourceHash": "af03718461731d0f6771f884c75dbd59419bce3b4f750b7d6362b36ff16d01f0"
-    },
     "xana/xana-00-thumbnail.webp": {
       "action": "optimized",
       "bytesIn": 9330996,
@@ -2837,6 +2827,16 @@
         }
       },
       "width": 2160
+    },
+    "xana/xana-favicon.svg": {
+      "action": "copied",
+      "bytesIn": 30205,
+      "bytesOut": 30205,
+      "outputHash": "af03718461731d0f6771f884c75dbd59419bce3b4f750b7d6362b36ff16d01f0",
+      "reason": "embeds raster image (data:image/), excluded from SVGO",
+      "settingsHash": "18440d168af03df9969ae20565b82418d574ce1a6b63fda61494eec0f1df14f5",
+      "source": "media-src/xana/xana-favicon.svg",
+      "sourceHash": "af03718461731d0f6771f884c75dbd59419bce3b4f750b7d6362b36ff16d01f0"
     }
   }
 }
