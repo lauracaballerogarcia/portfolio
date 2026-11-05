@@ -36,6 +36,7 @@ However, before moving into solution design, we needed to validate this assumpti
 ### Understanding where digital processes break down
 
 To address this, we needed a deep understanding of older adults' fears, the barriers they face with technology, and how they experience the digital divide. This involved collecting qualitative data through **in-person interviews** with older adults, which allowed us to gather first-hand insights into their behaviours, motivations, and pain points.
+
 ![Three quotes from interviews with older adults. Mari Carmen, 74: “I prefer to call to make a reservation. If I have to do it online, I call my daughter because I’m not sure how.” Araceli, 73: “I always buy at the ticket office, I don’t know about mobile… I’d like to know how to manage it better and not have to move around so much.” Miguel, 72: “With so many people scamming you these days, I’m scared and I prefer not to take the risk.”](/media/senda/senda-03-research-quotes.webp "full 1024x496 expand")
 
 ### Insights
@@ -118,9 +119,8 @@ This led us to reframe the original hypothesis into the real problem to solve:
 
 From this reframed problem, we devised guided solutions, simplified steps, and a more empathetic tone.
 
-![Main user, the senior: low digital confidence, fear of scams, needs reassurance and clarity.](/media/senda/senda-04-problem-wallet.mp4 "half 383x480 poster=/media/senda/senda-04-problem-wallet-poster.webp")
-![Secondary user, the administrator: higher digital literacy, needs control and oversight, wants security and transparency.](/media/senda/senda-04-problem-notes.mp4 "half 383x480 poster=/media/senda/senda-04-problem-notes-poster.webp")
-<!-- ![Secondary user, the administrator: higher digital literacy, needs control and oversight, wants security and transparency.](/media/senda/senda-04-problem-top-up-screen.webp "half 383x480") -->
+![](/media/senda/senda-04-problem-wallet.mp4 "half 1120x1440 poster=/media/senda/senda-04-problem-wallet-poster.webp")
+![](/media/senda/senda-04-problem-notes.mp4 "half 1120x1440 poster=/media/senda/senda-04-problem-notes-poster.webp")
 
 
 
@@ -153,7 +153,6 @@ We defined two user roles: the Senior, who uses the app to make payments, and th
 The next step was mapping the happy path for senior users making a payment. We started with the wallet top-up, as it represented users' first interaction with the payment experience and the stage where friction or uncertainty was most likely to occur. It was essential that this initial flow clearly communicated security and built users' confidence from the outset.
 
 ![Happy-path flow for topping up the wallet. A user with no balance chooses how to top up: at a physical location, with an introduction, a top-up animation and an updated balance; or by requesting money from an admin, choosing an amount, optionally adding a message, confirming and waiting for approval, followed by a notification.](/media/senda/senda-05-solution-sitemap.webp "full 1600x800 expand")
-
 
 
 <p class="case-section__eyebrow">Testing</p>
@@ -197,7 +196,7 @@ Based on these insights, we identified several improvements before moving into t
 
 #### Final MVP User Flow
 
-![Final MVP flow for requesting balance through the app: from the home screen, the user picks an amount, adds an optional message, confirms the request and sees that it has been sent. A branch shows cancelling, with a dialog to confirm or go back.](/media/senda/senda-06-testing-final-flow-1.webp "full 1981x1470 expand | Final MVP flow for requesting balance through the app: from the home screen, the user picks an amount, adds an optional message, confirms the request and sees that it has been sent. A branch shows cancelling, with a dialog to confirm or go back")
+![Final MVP flow for requesting balance through the app: from the home screen, the user picks an amount, adds an optional message, confirms the request and sees that it has been sent. A branch shows cancelling, with a dialog to confirm or go back.](/media/senda/senda-06-testing-final-flow-1.webp "full 1981x1470 expand | Final MVP flow for requesting balance, including the cancellation branch.")
 
 
 <p class="case-section__eyebrow">Outcome</p>
@@ -211,15 +210,20 @@ Based on these insights, we identified several improvements before moving into t
 
 ![Senda’s visual identity: Antonia and Onest typefaces, a dark green, light green and light blue palette, the app icon, a wallet illustration, a map route to a bank and the request summary screen on a phone.](/media/senda/senda-07-outcome-final-ui-visual-identity.webp "full 2048x1269")
 
-![Animated home screen where the user switches their wallet between green, dark green and blue.](/media/senda/senda-07-outcome-wallets.mp4 "full 1440x932 poster=/media/senda/senda-07-outcome-wallets-poster.webp")
+![Animated home screen where the user switches their wallet between green, dark green and blue.](/media/senda/senda-07-outcome-wallets.mp4 "full 2880x1920 poster=/media/senda/senda-07-outcome-wallets-poster.webp | Each user can choose the colour of their wallet.")
 
 ### Final prototype
 
 #### Request top-up with cash flow
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-statement.webp "half 383x480")
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-flow-top-up-1.mp4 "half 383x480 poster=/media/senda/senda-07-outcome-flow-top-up-poster.webp")
+![](/media/senda/senda-07-outcome-statement.webp "half")
+![Physical top-up flow: from the home screen, José Miguel opens the nearest Senda points, picks Kiosko Blasco on the map and taps Top up balance. The wallet animates while he holds the phone near the machine, and a confirmation shows a 20 € top-up.](/media/senda/senda-07-outcome-flow-top-up-1.mp4 "half 2240x2880 poster=/media/senda/senda-07-outcome-flow-top-up-poster.webp")
 
 ![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-card-terminal.webp "full 1440x932")
+
+![](/media/senda/senda-07-outcome-statement.webp "half")
+![Physical top-up flow: from the home screen, José Miguel opens the nearest Senda points, picks Kiosko Blasco on the map and taps Top up balance. The wallet animates while he holds the phone near the machine, and a confirmation shows a 20 € top-up.](/media/senda/senda-07-outcome-flow-top-up-1.mp4 "half 2240x2880 poster=/media/senda/senda-07-outcome-flow-top-up-poster.webp")
+
+![A hand holding a phone with the Senda wallet ready to pay (“Hold Near Reader”) next to a card terminal held by a shop assistant.](/media/senda/senda-07-outcome-card-terminal.webp "full | Paying in person with the Senda wallet.")
 
 #### Request balance to admin flow
 ![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-flow-request-balance.mp4 "half 383x480 poster=/media/senda/senda-07-outcome-flow-request-balance-poster.webp")
