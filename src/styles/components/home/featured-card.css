@@ -3,16 +3,16 @@
 \*------------------------------------*/
 
 /**
- * Featured project card on the home page. Mobile first: one column.
- *
  * 1. Block, so the focus ring surrounds the whole card.
  * 2. The fixed ratio reserves the space before the image loads.
  * 3. Desktop: the lead card is as wide as 9 columns and centred, so it
  *    starts and ends in the middle of a column (12 − 9 is odd). It still
  *    takes the whole row; the width of 9 columns with their 8 gaps is
  *    75% of the row minus a quarter of a gap.
- * 4. On mobile the lead card is portrait (9:16), the 16:9 of tablet and
- *    desktop turned around.
+ * 4. On mobile the lead card is portrait (3:4); from 769px it takes the
+ *    16:10 of the other cards.
+ * 5. Only cards with a link (with a case study) react, to the mouse or
+ *    the keyboard.
  */
 
 .featured-card {
@@ -44,7 +44,7 @@
 }
 
 .featured-card__link:is(:hover, :focus-visible) .featured-card__figure {
-  border-radius: var(--radius-card-s); /* [3] */
+  border-radius: var(--radius-card-s); /* [5] */
 }
 
 .featured-card__link:is(:hover, :focus-visible) .featured-card__image {
@@ -70,8 +70,7 @@
 \*------------------------------------*/
 
 /**
- * 1. Tablet: equal pairs (6 + 6). The first card takes the whole row
- *    and is taller.
+ * 1. Tablet: equal pairs (6 + 6). The first card takes the whole row.
  * 2. Desktop: after the first card, pairs that alternate 7 + 5 and
  *    5 + 7. The cycle repeats every 4 cards (7, 5, 5, 7): the 7s are
  *    positions 4n+2 and 4n+5, the rest take 5. As 7 + 5 = 12,

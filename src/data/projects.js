@@ -89,14 +89,14 @@ function parseImageTitle(title) {
 // sizes of the case study figures: how wide each layout shows them, so the
 // browser picks the right width from srcset. Derived from the case grid
 // (case.css): the content takes 7 of 12 columns from 1025px (880px at most),
-// and below that the full width minus the side padding. Approximate on
-// purpose: the browser rounds up to the next available width.
+// and below that the full width minus the page margin (24px per side).
+// Approximate on purpose: the browser rounds up to the next available width.
 const FIGURE_SIZES = {
-  full: '(min-width: 1568px) 880px, (min-width: 1025px) calc(58.33vw - 35px), calc(100vw - 96px)',
-  half: '(min-width: 1568px) 430px, (min-width: 1025px) calc(29.17vw - 28px), (min-width: 769px) calc(50vw - 58px), calc(100vw - 96px)',
+  full: '(min-width: 1568px) 880px, (min-width: 1025px) calc(58.33vw - 35px), calc(100vw - 48px)',
+  half: '(min-width: 1568px) 432px, (min-width: 1025px) calc(29.17vw - 28px), (min-width: 769px) calc(50vw - 32px), calc(100vw - 48px)',
   // Carousel items: two and a quarter per row from 769px, one and a
   // quarter below (case-carousel.css)
-  carousel: '(min-width: 1568px) 380px, (min-width: 1025px) calc(25.9vw - 20px), (min-width: 769px) calc(44vw - 40px), calc(80vw - 32px)',
+  carousel: '(min-width: 1568px) 380px, (min-width: 1025px) calc(25.9vw - 20px), (min-width: 769px) calc(44.44vw - 39px), calc(80vw - 54px)',
 };
 const sizesFor = (mod, carousel) => (carousel ? FIGURE_SIZES.carousel
   : ['half', 'duo', 'portrait'].includes(mod) ? FIGURE_SIZES.half : FIGURE_SIZES.full);

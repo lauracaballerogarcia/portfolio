@@ -15,11 +15,12 @@ import '../components/site-footer/site-footer.js';
 // sizes of the featured cards: how wide each one is shown, so the browser
 // picks the right width from srcset. Derived from the 12-column grid
 // (featured-card.css) inside .container (1520px at most): the lead card
-// takes the whole row; from 1025px the others alternate 7 and 5 columns
-// (positions 4n+2 and 4n+5 take 7); from 769px they take 6; below that,
-// the whole row. Approximate on purpose: the browser rounds up.
+// takes 9 centred columns from 1025px and the whole row below that; from
+// 1025px the others alternate 7 and 5 columns (positions 4n+2 and 4n+5
+// take 7); from 769px they take 6; below that, the whole row.
+// Approximate on purpose: the browser rounds up.
 const CARD_SIZES = {
-  lead:  '(min-width: 1568px) 1520px, calc(100vw - 48px)',
+  lead:  '(min-width: 1568px) 1136px, (min-width: 1025px) calc(75vw - 40px), calc(100vw - 48px)',
   seven: '(min-width: 1568px) 880px, (min-width: 1025px) calc(58.33vw - 35px), (min-width: 769px) calc(50vw - 32px), calc(100vw - 48px)',
   five:  '(min-width: 1568px) 624px, (min-width: 1025px) calc(41.67vw - 30px), (min-width: 769px) calc(50vw - 32px), calc(100vw - 48px)',
 };
