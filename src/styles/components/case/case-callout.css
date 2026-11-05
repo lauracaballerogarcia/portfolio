@@ -3,45 +3,84 @@
 \*------------------------------------*/
 
 /**
- * Highlighted statement of the case study (the project goal), with an
- * emoji before the text. Written as HTML in the Markdown.
+ * Highlighted statement of the case study (the brief, the goal): an
+ * icon, a label and a short text. Written as HTML in the Markdown.
  *
- * 1. Same outline as `.case-note`, without its thicker left edge.
- * 2. Decorative: the markup hides it from screen readers.
- * 3. The emoji keeps its width, so long text wraps beside it.
- * 4. More room around the text from 769px; on mobile it keeps the
- *    width for the words.
+ *   .case-callout--brief    grey background, serif italic text.
+ *   .case-callout--goal     white background, sans text.
+ *
+ * 1. Two columns: the icon, and the label with the text below it, so
+ *    both share the same left edge.
+ * 2. The icon sits on the label's line: half the difference between the
+ *    label's line height and the icon size.
+ * 3. Full-color SVG as a background (not a mask), so it keeps its own
+ *    colors. Each variant sets its file.
+ * 4. The label is written in sentence case in the Markdown; the
+ *    uppercase is only visual, so screen readers do not spell it out.
  */
 
 .case-callout {
   grid-column: 1 / -1;
-  display: flex;
-  align-items: flex-start;
-  gap: var(--spacing-4);
-  padding: var(--spacing-6) var(--spacing-6);
-  border: 1px solid var(--color-outline-primary); /* [1] */
+  display: grid;
+  grid-template-columns: auto 1fr; /* [1] */
+  column-gap: var(--spacing-6);
+  row-gap: var(--spacing-2);
+  margin: 0 0 var(--spacing-media-block);
+  padding: var(--spacing-5) var(--spacing-6);
   border-radius: var(--radius-2);
-  margin-bottom: var(--spacing-paragraph);
 }
 
-.case-callout__icon { /* [2] */
-  flex-shrink: 0; /* [3] */
-  width: var(--size-icon-l);
-  height: var(--size-icon-l);
-  background-repeat: no-repeat; /* [5] */
+.case-callout__icon {
+  grid-row: 1 / span 2;
+  width: var(--size-icon-m);
+  height: var(--size-icon-m);
+  margin-top: calc((var(--font-size-s) * 1.5 - var(--size-icon-l)) / 2); /* [2] */
+  background-repeat: no-repeat; /* [3] */
   background-position: center;
   background-size: contain;
 }
 
-.case-callout--goal .case-callout__icon {
-  background-image: url('../../../assets/icons/case-callout-goal.svg');
+.case-callout__label {
+  margin: 0;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+  text-transform: uppercase; /* [4] */
+  color: var(--color-text-tertiary);
 }
 
 .case-callout__text {
+  grid-column: 2;
   margin: 0;
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-s);
   line-height: 1.4;
-  color: var(--color-text-tertiary);
+  color: var(--color-text-primary);
+}
+
+
+/*------------------------------------*\
+  #VARIANTS
+\*------------------------------------*/
+
+.case-callout--brief {
+  background-color: var(--color-background-secondary);
+}
+
+.case-callout--brief .case-callout__icon {
+  background-image: url('../../../assets/icons/case-callout-brief.svg');
+}
+
+.case-callout--brief .case-callout__text {
+  font-family: var(--font-family-serif);
+  font-style: italic;
+}
+
+.case-callout--goal {
+  background-color: var(--color-neutral-0);
+}
+
+.case-callout--goal .case-callout__icon {
+  background-image: url('../../../assets/icons/case-callout-goal.svg');
 }
 
 
@@ -51,7 +90,6 @@
 
 @media (min-width: 769px) {
   .case-callout {
-    gap: var(--spacing-6); /* [4] */
-    padding: var(--spacing-6) var(--spacing-6);
+    padding: var(--spacing-6) var(--spacing-8);
   }
 }

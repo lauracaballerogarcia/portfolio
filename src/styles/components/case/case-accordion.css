@@ -70,6 +70,7 @@
   content: counter(accordion) / "";
   flex: 0 0 var(--spacing-8);
   font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
   line-height: 1;
 }
 
@@ -94,9 +95,9 @@
   margin: 0;
   padding: 0 var(--case-accordion-padding-inline) var(--case-accordion-padding-block)
     calc(var(--case-accordion-padding-inline) + var(--case-accordion-indent)); /* [2] */
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-s);
   line-height: 1.4;
-  color: var(--color-text-tertiary);
+  color: var(--color-text-secondary);
 }
 
 

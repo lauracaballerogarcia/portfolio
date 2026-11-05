@@ -5,14 +5,16 @@
 <!-- **Scope of work** -->
 ![Project timeline from September to January: UX research (initial hypothesis, desk research, proto-persona, benchmark, interviews), definition (validated hypothesis, problem statement, personas, user journey, concept, strategy), ideation (epics, user stories, flows, sitemap, wireframes, prototyping, usability testing) and UI design (branding, high-fidelity UI, design system, moderated testing).](/media/senda/senda-02-context-scope-of-work.webp "full 1024x480 expand")
 
-**The brief**
 
-> How might we help people aged 70+ access leisure activities more easily through a digital platform?
-
-**Goal**
+<div class="case-callout case-callout--brief">
+  <span class="case-callout__icon" aria-hidden="true"></span>
+  <p class="case-callout__label">The brief</p>
+  <p class="case-callout__text">How might we help people aged 70+ access leisure activities more easily through a digital platform?</p>
+</div>
 
 <div class="case-callout case-callout--goal">
   <span class="case-callout__icon" aria-hidden="true"></span>
+  <p class="case-callout__label">The goal</p>
   <p class="case-callout__text">Help older adults participate more independently in leisure activities while creating value for institutions and the wider community.</p>
 </div>
 
@@ -116,6 +118,9 @@ This led us to reframe the original hypothesis into the real problem to solve:
 
 From this reframed problem, we devised guided solutions, simplified steps, and a more empathetic tone.
 
+![Main user, the senior: low digital confidence, fear of scams, needs reassurance and clarity.](/media/senda/senda-04-problem-wallet.mp4 "half 383x480 poster=/media/senda/senda-04-problem-wallet-poster.webp")
+![Secondary user, the administrator: higher digital literacy, needs control and oversight, wants security and transparency.](/media/senda/senda-04-problem-notes.mp4 "half 383x480 poster=/media/senda/senda-04-problem-notes-poster.webp")
+<!-- ![Secondary user, the administrator: higher digital literacy, needs control and oversight, wants security and transparency.](/media/senda/senda-04-problem-top-up-screen.webp "half 383x480") -->
 
 
 
@@ -206,18 +211,19 @@ Based on these insights, we identified several improvements before moving into t
 
 ![Senda’s visual identity: Antonia and Onest typefaces, a dark green, light green and light blue palette, the app icon, a wallet illustration, a map route to a bank and the request summary screen on a phone.](/media/senda/senda-07-outcome-final-ui-visual-identity.webp "full 2048x1269")
 
-![Animated home screen where the user switches their wallet between green, dark green and blue.](/media/senda/senda-outcome-final-ui-wallets.mp4 "full 1440x932")
+![Animated home screen where the user switches their wallet between green, dark green and blue.](/media/senda/senda-07-outcome-wallets.mp4 "full 1440x932 poster=/media/senda/senda-07-outcome-wallets-poster.webp")
 
 ### Final prototype
 
 #### Request top-up with cash flow
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.webp "half 383x480")
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.webp "half 383x480")
+![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-statement.webp "half 383x480")
+![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-flow-top-up-1.mp4 "half 383x480 poster=/media/senda/senda-07-outcome-flow-top-up-poster.webp")
 
+![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-card-terminal.webp "full 1440x932")
 
 #### Request balance to admin flow
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.webp "half 383x480")
-![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-outcome-prototype-flow-request-top-up.webp "half 383x480")
+![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-flow-request-balance.mp4 "half 383x480 poster=/media/senda/senda-07-outcome-flow-request-balance-poster.webp")
+![Senda splash screen: a hand holding a coin, with the line “Your money. Your peace of mind. Your pace.”](/media/senda/senda-07-outcome-components.webp "half 383x480")
 
 ### Next steps
 1. Introduce a brief, task-oriented onboarding.

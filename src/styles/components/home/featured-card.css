@@ -7,8 +7,12 @@
  *
  * 1. Block, so the focus ring surrounds the whole card.
  * 2. The fixed ratio reserves the space before the image loads.
- * 3. Only cards with a link (with a case study) react, to the mouse or
- *    the keyboard.
+ * 3. Desktop: the lead card is as wide as 9 columns and centred, so it
+ *    starts and ends in the middle of a column (12 − 9 is odd). It still
+ *    takes the whole row; the width of 9 columns with their 8 gaps is
+ *    75% of the row minus a quarter of a gap.
+ * 4. On mobile the lead card is portrait (9:16), the 16:9 of tablet and
+ *    desktop turned around.
  */
 
 .featured-card {
@@ -26,6 +30,10 @@
   width: 100%;
   aspect-ratio: 16 / 10; /* [2] */
   background-color: var(--color-background-placeholder);
+}
+
+.featured-card--lead .featured-card__figure {
+  aspect-ratio: 3 / 4; /* [4] */
 }
 
 .featured-card__image {
@@ -81,8 +89,7 @@
   }
 
   .featured-card--lead .featured-card__figure {
-    aspect-ratio: auto;
-    height: 41.5rem;
+    aspect-ratio: 16 / 10;
   }
 }
 
@@ -94,5 +101,10 @@
   .featured-card:nth-child(4n+2),
   .featured-card:nth-child(4n+5) {
     grid-column: span 7;
+  }
+
+  .featured-card--lead {
+    justify-self: center; /* [3] */
+    width: calc(75% - var(--spacing-grid-column) / 4);
   }
 }

@@ -41,39 +41,39 @@
     },
     "blink/blink-00-thumbnail.webp": {
       "action": "optimized",
-      "bytesIn": 2471552,
-      "bytesOut": 164810,
-      "height": 1800,
-      "outputHash": "369e15310fe5f270eaa179ce0b7f511ef4d34836ef2d94780cb6cc580654e2bd",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.05",
+      "bytesIn": 13265009,
+      "bytesOut": 2046038,
+      "height": 1920,
+      "outputHash": "2414b88c369de6952833ac845e2aa7684985abb509a5862312e09a9f5efe50fe",
+      "reason": "base 2880px q90, 5 variants (480, 800, 1024, 1440, 1920), max mean error 3.53, 1 at q90",
       "settingsHash": "73afc416355ed3dd141a31f68f24895d64f5c59f272d7aab8ae3c8e54b2b0f56",
       "source": "media-src/blink/blink-00-thumbnail.png",
-      "sourceHash": "690e9fde118b4a9b56304a346558e78abe7dd0e6c605600e1156397be5e0d474",
+      "sourceHash": "9d69b370fc53d61336e7f6cb44e2a661c260a034e7fb12aaffdbfe57cad80131",
       "variants": {
         "480": {
-          "bytes": 7360,
+          "bytes": 11692,
           "file": "blink/blink-00-thumbnail-480w.webp",
-          "hash": "230c674f330b2be366129526ea38cd8a6206c20f36a578f1ac18dc6aa0dcc56d"
+          "hash": "7dc7731eca4542d7cfe5782ddff5da28e7e6f96439b19d652def412ad811ad81"
         },
         "800": {
-          "bytes": 13580,
+          "bytes": 28866,
           "file": "blink/blink-00-thumbnail-800w.webp",
-          "hash": "a809df2ab639d271b87eabc68f16e1376e0a22b8d18af233522572e50fcb1c94"
+          "hash": "06f649b0e4e8b57877ed110574cb867c322e439e4b78f586e1d8ed87a930e0dd"
         },
         "1024": {
-          "bytes": 18082,
+          "bytes": 45828,
           "file": "blink/blink-00-thumbnail-1024w.webp",
-          "hash": "2355f4d68a1b62824e08e8ec99d09a7e98eb9db318fa0275aba91be412c5f8d6"
+          "hash": "86092d45ae0d36525128de6d1cae69555c3a3b89d41cbaf66aab57becd497795"
         },
         "1440": {
-          "bytes": 26806,
+          "bytes": 102600,
           "file": "blink/blink-00-thumbnail-1440w.webp",
-          "hash": "621f678e3f0e9d35f4dd56c66533f8a5dbde42e62a6fde52ac03aee1df53a2e5"
+          "hash": "9d7a7d75af6aa1ed28ff0fd046d7d373dd2d6be6a5c47270cb50cb28e75c34f1"
         },
         "1920": {
-          "bytes": 36852,
+          "bytes": 208490,
           "file": "blink/blink-00-thumbnail-1920w.webp",
-          "hash": "b4caadc808a396c2e3d78362b570a4a61c20af87903e434f96784a9347c28030"
+          "hash": "50dc16b431cfef0e46a547e1bd8f1797da190d3530a48b0b7a4efeb88d5ad991"
         }
       },
       "width": 2880
@@ -470,81 +470,81 @@
     },
     "blink/blink-05-interactive-app.webp": {
       "action": "optimized",
-      "bytesIn": 832488,
-      "bytesOut": 358522,
-      "height": 2880,
-      "outputHash": "de36c9a9b1d7576f5439a430751dbea56032a285e105594e0ca9d69a7f30a174",
-      "reason": "base 2160px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.66",
+      "bytesIn": 833438,
+      "bytesOut": 348222,
+      "height": 2986,
+      "outputHash": "0fbf10d2885ee169916c10a86a1502e9b4421243192e3336c9acbf5226a1fc76",
+      "reason": "base 2240px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.68",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/blink/blink-05-interactive-app.png",
-      "sourceHash": "d5b2dd1786ec17f202f9fe3d9e510a7ce29a4287d7275ff7cb9ae879b782ecd5",
+      "sourceHash": "2a9c25742a2bcd49e7640338d353664b9edbddc3bdd49591013e872871a5e09b",
       "variants": {
         "480": {
-          "bytes": 15778,
+          "bytes": 14802,
           "file": "blink/blink-05-interactive-app-480w.webp",
-          "hash": "583983c7566157e1caf39b804438ee62d1a98996a29ffaba677bb19931f63ff7"
+          "hash": "fbd4def2ee1014be3a9310b4aad34585cd7c7ce081fa83a5de256829aa35bbb2"
         },
         "800": {
-          "bytes": 31636,
+          "bytes": 30478,
           "file": "blink/blink-05-interactive-app-800w.webp",
-          "hash": "9c6d5c0965c7e8cd9f3daef3beb1b6929b5b178fff7ed23a6d7fa977b453a45a"
+          "hash": "33db090fef7ee57a798143ca456a68fb591a909e565f44409ddc00d2dec58324"
         },
         "1024": {
-          "bytes": 43522,
+          "bytes": 41980,
           "file": "blink/blink-05-interactive-app-1024w.webp",
-          "hash": "1cb020fcc0474ca349cba722de3e07e5670e343eb0eb5b05bb2d80cfeac3b8ff"
+          "hash": "ca69b7d79f7258dc2e0df74099367cc767f0c5c696e01fa3f1eba4a1546c6906"
         },
         "1440": {
-          "bytes": 65946,
+          "bytes": 63744,
           "file": "blink/blink-05-interactive-app-1440w.webp",
-          "hash": "b2a47a7268a47e21a529b4ffd9d1e34355cca3ca1fdf433080d9e9a0676730c5"
+          "hash": "670faae34c480a944cc68295f4e11555344fe821e0a1cb4f640f3e1d97b5e51d"
         },
         "1920": {
-          "bytes": 93462,
+          "bytes": 90250,
           "file": "blink/blink-05-interactive-app-1920w.webp",
-          "hash": "87f7716282e7da31957f9f2dd3cb858133b69db58e2285b438960560f864e879"
+          "hash": "127ae9169d4c8a2238c38c049af7adcc209803eb303e6f14b70d80df93d780cb"
         }
       },
-      "width": 2160
+      "width": 2240
     },
     "blink/blink-05-interactive-screen.webp": {
       "action": "optimized",
-      "bytesIn": 2299012,
-      "bytesOut": 887872,
-      "height": 2880,
-      "outputHash": "0fe7d5dae835e6efa50f98cd33e82658cadfddf16f8f7472aacda009c8c63c89",
-      "reason": "base 2160px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.76",
+      "bytesIn": 2382116,
+      "bytesOut": 914424,
+      "height": 2986,
+      "outputHash": "10c8ece935a5ad61386cfa4a4a898cdf602536caa776fde1d8ddce0a735bf635",
+      "reason": "base 2240px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.79",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/blink/blink-05-interactive-screen.png",
-      "sourceHash": "506642372a54348f8ac708444a38a8d8dcd89e6c96aa4a733c97099eec486b3d",
+      "sourceHash": "d486e25feab57ddceffafa94fe09d8bfb4f888f3a3a7577a3d461bd27fdb835d",
       "variants": {
         "480": {
-          "bytes": 39670,
+          "bytes": 39974,
           "file": "blink/blink-05-interactive-screen-480w.webp",
-          "hash": "90df50ddaac8bf3190a92fa67e6f3ca58917fafea7136f81ece2655538884f92"
+          "hash": "087ee816eed8c178d813b1d8ca83e046549d6499637ff6b2c60e3d08a16588b6"
         },
         "800": {
-          "bytes": 81598,
+          "bytes": 82380,
           "file": "blink/blink-05-interactive-screen-800w.webp",
-          "hash": "83f4ee977c78c3016923f2071093bf241b5a40daed90acef86202b0b5b936792"
+          "hash": "7c17c5d04b1f1aaa5e54583afc31b1eed94c6c7f6275266dc75d30dd0bcfce02"
         },
         "1024": {
-          "bytes": 113700,
+          "bytes": 114632,
           "file": "blink/blink-05-interactive-screen-1024w.webp",
-          "hash": "eadd3eda272157d80f2fa8e36c1a037748a7522691bee650515cf1ba9f1b1b83"
+          "hash": "25d5b0d439b5a04663d61cadbc4c72c4eb384761464d3ce631d57bcbb8432dcd"
         },
         "1440": {
-          "bytes": 166148,
+          "bytes": 170290,
           "file": "blink/blink-05-interactive-screen-1440w.webp",
-          "hash": "7119c8e56248d25f76d6019ee03c93c1c63c96e1fd6515933e53ae976d8e48b1"
+          "hash": "32210eae869ab29b1676596a53fd554904799a0e8c08d201fe0dcd725d09fff7"
         },
         "1920": {
-          "bytes": 226676,
+          "bytes": 231226,
           "file": "blink/blink-05-interactive-screen-1920w.webp",
-          "hash": "021d7fef912a46286cbbd77e9583b141a04c068f279c5bbbf34251991e8033aa"
+          "hash": "89ffb99a8ab9abbc41e3e09dade6ba752ec060f4b7e9b39df7a6cfa0d2a4cce3"
         }
       },
-      "width": 2160
+      "width": 2240
     },
     "blink/blink-05-interactive.webp": {
       "action": "optimized",
@@ -712,41 +712,236 @@
       "source": "media-src/blink/blink-favicon.svg",
       "sourceHash": "274f0fd160989426a5679df2fdc2fbdfda0f522dd97351856adb44c0f01777a0"
     },
-    "bloq/bloq-00-thumbnail.webp": {
+    "bloq/bloq-00-thumbnail-2.webp": {
       "action": "optimized",
-      "bytesIn": 552506,
-      "bytesOut": 84018,
-      "height": 1800,
-      "outputHash": "731eac8bfd80456f21e3ffa5f61366c86cbb7c518357a14bb04b20238d4be088",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.72",
-      "settingsHash": "73afc416355ed3dd141a31f68f24895d64f5c59f272d7aab8ae3c8e54b2b0f56",
-      "source": "media-src/bloq/bloq-00-thumbnail.png",
-      "sourceHash": "30f633c2ed2a81950fe4d88d5127a571c8ec770926b770e43f637b46d98e7535",
+      "bytesIn": 5216296,
+      "bytesOut": 311724,
+      "height": 1920,
+      "outputHash": "3198ddbfa4eee91dbe390e60647f5cd7781179aade825dec1433bfc1656e0896",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.44",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/bloq/bloq-00-thumbnail-2.png",
+      "sourceHash": "70647c7ed3a0a47179fe9ecad43055d6ba151424aad6c820f985e6064db07f7b",
       "variants": {
         "480": {
-          "bytes": 3816,
-          "file": "bloq/bloq-00-thumbnail-480w.webp",
-          "hash": "4148e7dc1a3b543c96353be65f6f44dde4474607be1de2c126c5b5eda702ed94"
+          "bytes": 7484,
+          "file": "bloq/bloq-00-thumbnail-2-480w.webp",
+          "hash": "8644a05cc3a96a74abeb31f341247516ac92c1221e576a22eab9b1ab079c7b1c"
         },
         "800": {
-          "bytes": 7004,
-          "file": "bloq/bloq-00-thumbnail-800w.webp",
-          "hash": "ad249e7c0bbb890440624013a7cd9130eae5845cf59151da189d89adb4fd1c3d"
+          "bytes": 15640,
+          "file": "bloq/bloq-00-thumbnail-2-800w.webp",
+          "hash": "b74538f655ce83b92b90b9fb935bda1e161e3dc3e3fed0a93ca12ead669c2ea2"
         },
         "1024": {
-          "bytes": 9240,
-          "file": "bloq/bloq-00-thumbnail-1024w.webp",
-          "hash": "2b60f844365489320ba1442738730eb2e029ab99e3cbbc7900529824918fc1b9"
+          "bytes": 23908,
+          "file": "bloq/bloq-00-thumbnail-2-1024w.webp",
+          "hash": "b2935bcbacb0cb720dbcafe987f2957e7ea55b726492ae7f81953cb106fa51be"
         },
         "1440": {
-          "bytes": 13614,
-          "file": "bloq/bloq-00-thumbnail-1440w.webp",
-          "hash": "379c329473aefe81ce26669743d5678cc8ba9b3b87cf302d92d312e970ec9c52"
+          "bytes": 44772,
+          "file": "bloq/bloq-00-thumbnail-2-1440w.webp",
+          "hash": "efa93283a47bc3ef3087aa8dc3dba94365dd83c35bb22e1c55ec3a0ff88bbbae"
         },
         "1920": {
-          "bytes": 18880,
+          "bytes": 74384,
+          "file": "bloq/bloq-00-thumbnail-2-1920w.webp",
+          "hash": "603b4ff945dca5d539cc7e4bc1cea2a5f9a4552a8f7d74c9f241411b02540f62"
+        }
+      },
+      "width": 2880
+    },
+    "bloq/bloq-00-thumbnail-3.webp": {
+      "action": "optimized",
+      "bytesIn": 7193981,
+      "bytesOut": 557852,
+      "height": 1920,
+      "outputHash": "d44e41cd96afc55bc2074e0326836705ab8fa1c1d184f0be84343a10c3f5cf07",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.02",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/bloq/bloq-00-thumbnail-3.png",
+      "sourceHash": "220402255e7ba838bcfc09bae25bee5d5e73585dfe3af36c63918bef3a7afd37",
+      "variants": {
+        "480": {
+          "bytes": 10866,
+          "file": "bloq/bloq-00-thumbnail-3-480w.webp",
+          "hash": "5179e8a2be1faab450a7f61ac2752f377589184f378d9d684b5bad5858f9e7cc"
+        },
+        "800": {
+          "bytes": 21866,
+          "file": "bloq/bloq-00-thumbnail-3-800w.webp",
+          "hash": "d7de88454e8bbae0e6e0d294c751b95bd5703b8c8f6efb6063a9b374649b3e5f"
+        },
+        "1024": {
+          "bytes": 34356,
+          "file": "bloq/bloq-00-thumbnail-3-1024w.webp",
+          "hash": "06fd5495b23a97fcc9ff87cb1b8dc4ae4161046d5419fa30bd7fa58f26b3fb0b"
+        },
+        "1440": {
+          "bytes": 71722,
+          "file": "bloq/bloq-00-thumbnail-3-1440w.webp",
+          "hash": "6059be9e9aaa4466335e3f93070dd57ae788507edf328eb5b54d87fe9d31f77c"
+        },
+        "1920": {
+          "bytes": 134882,
+          "file": "bloq/bloq-00-thumbnail-3-1920w.webp",
+          "hash": "3a07e2a868767c4181efa8d17d15416e64e323d6acb906d5575354e2f94c8f78"
+        }
+      },
+      "width": 2880
+    },
+    "bloq/bloq-00-thumbnail-4.webp": {
+      "action": "optimized",
+      "bytesIn": 7834457,
+      "bytesOut": 573098,
+      "height": 1920,
+      "outputHash": "743a00657f55e2f4119268829fe884056c6882dc62e90645a3acd1d54ce736b2",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.97",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/bloq/bloq-00-thumbnail-4.png",
+      "sourceHash": "b159247256a36d6ef65632102e9a446adb8b8c932435f8a0e6c37a9f841ed410",
+      "variants": {
+        "480": {
+          "bytes": 10440,
+          "file": "bloq/bloq-00-thumbnail-4-480w.webp",
+          "hash": "c131e1035531449b44a9a9c4c274b78e9b5604f4aa62a8ce453e6b2a8e7b450a"
+        },
+        "800": {
+          "bytes": 24742,
+          "file": "bloq/bloq-00-thumbnail-4-800w.webp",
+          "hash": "05796054b9edcb5d1c046782ea8fc175550b657eb2f935f9169af6808aa87f22"
+        },
+        "1024": {
+          "bytes": 36968,
+          "file": "bloq/bloq-00-thumbnail-4-1024w.webp",
+          "hash": "d15989f73415cc43124d0d565c4530f6e5a27bb90d9880d4410bdcaeb129d886"
+        },
+        "1440": {
+          "bytes": 63886,
+          "file": "bloq/bloq-00-thumbnail-4-1440w.webp",
+          "hash": "e9fd3614e3dfd9fe80a04e400547f4ca096e3bc2ea58e1c44af46dd20352991f"
+        },
+        "1920": {
+          "bytes": 112718,
+          "file": "bloq/bloq-00-thumbnail-4-1920w.webp",
+          "hash": "f7bf3973976d0a092bc1d75492e9e4b0c0c70627b5af3b22ee082b03f64a804f"
+        }
+      },
+      "width": 2880
+    },
+    "bloq/bloq-00-thumbnail.webp": {
+      "action": "optimized",
+      "bytesIn": 585547,
+      "bytesOut": 84364,
+      "height": 1920,
+      "outputHash": "cebcfe822f6387666f6dea40875dd179ab773b777a527b6e21641136114e9565",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.67",
+      "settingsHash": "73afc416355ed3dd141a31f68f24895d64f5c59f272d7aab8ae3c8e54b2b0f56",
+      "source": "media-src/bloq/bloq-00-thumbnail.png",
+      "sourceHash": "4c49c364261577cb73ddab3014c603baa814e91185ab7b5f3bae68352e38986f",
+      "variants": {
+        "480": {
+          "bytes": 3860,
+          "file": "bloq/bloq-00-thumbnail-480w.webp",
+          "hash": "058a507337c3ed361b34b426c84e7b01fbd6e07f5eefa08533229bb0cea46a0a"
+        },
+        "800": {
+          "bytes": 7054,
+          "file": "bloq/bloq-00-thumbnail-800w.webp",
+          "hash": "11c68ee2f5ef3e9067be1aa6a367adf7dd45c2f45dacc619bd5072e44ea26800"
+        },
+        "1024": {
+          "bytes": 9186,
+          "file": "bloq/bloq-00-thumbnail-1024w.webp",
+          "hash": "9faf6930b748fd338f37c585936f7ce9589ede2ff94f2f7bf6673b5250926f06"
+        },
+        "1440": {
+          "bytes": 13616,
+          "file": "bloq/bloq-00-thumbnail-1440w.webp",
+          "hash": "9e4719912b4989594a4f9841b65c178880e0bd7859f6208425d9435833eed771"
+        },
+        "1920": {
+          "bytes": 19342,
           "file": "bloq/bloq-00-thumbnail-1920w.webp",
-          "hash": "616c8be00061ff8acf657ee95128e9191a947ba36df0d63fd3454db4c9315372"
+          "hash": "b927ccca25c727b5415dcc607d5e46de9907218f3a8e4f8794d2553ab30cb8d8"
+        }
+      },
+      "width": 2880
+    },
+    "halo/halo-00-thumbnail-1.webp": {
+      "action": "optimized",
+      "bytesIn": 6328700,
+      "bytesOut": 270786,
+      "height": 1920,
+      "outputHash": "184a82f8667067144fa493e0b7121faadc33fc71c4d67c2992cc8c7cb3b831f7",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.44",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/halo/halo-00-thumbnail-1.png",
+      "sourceHash": "e01e79b427373ffa2bf3ee161bda986aa45af3de166c35e0f2d6c1a1ba921209",
+      "variants": {
+        "480": {
+          "bytes": 10196,
+          "file": "halo/halo-00-thumbnail-1-480w.webp",
+          "hash": "171acc1f94ed501a86b41716e9fe5559ad367e02d0d8985c80b06bca3410634f"
+        },
+        "800": {
+          "bytes": 19342,
+          "file": "halo/halo-00-thumbnail-1-800w.webp",
+          "hash": "564bb85084c6a129305b6577dfc5384d8f3fbab99f32938210cf239b8c5582ee"
+        },
+        "1024": {
+          "bytes": 26324,
+          "file": "halo/halo-00-thumbnail-1-1024w.webp",
+          "hash": "3bfc3b2fcb74d29ba1635c6ea8a742e77f05563323a524ba8c9097734632bbbe"
+        },
+        "1440": {
+          "bytes": 40582,
+          "file": "halo/halo-00-thumbnail-1-1440w.webp",
+          "hash": "7c19a28900dc74454e31ca3017a1555fc789a006ddbf1f1a960e742a1fc12112"
+        },
+        "1920": {
+          "bytes": 57608,
+          "file": "halo/halo-00-thumbnail-1-1920w.webp",
+          "hash": "9d683f1a32006ffe90d5a1d783ea8dd6d89d96a19356a7a31fa45f9ec63542af"
+        }
+      },
+      "width": 2880
+    },
+    "halo/halo-00-thumbnail.webp": {
+      "action": "optimized",
+      "bytesIn": 121247,
+      "bytesOut": 63120,
+      "height": 1920,
+      "outputHash": "89d6c516a2a09551e4bda5892cd42c80b8842c68323187bf29003d9b39dc7bb5",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.50",
+      "settingsHash": "73afc416355ed3dd141a31f68f24895d64f5c59f272d7aab8ae3c8e54b2b0f56",
+      "source": "media-src/halo/halo-00-thumbnail.png",
+      "sourceHash": "e06fc87e140476e7d0d53f9dadb1d6a0a90bc48e0ebaaa6a84973cb500e37567",
+      "variants": {
+        "480": {
+          "bytes": 2826,
+          "file": "halo/halo-00-thumbnail-480w.webp",
+          "hash": "78d1e909a69560699715411297305ed205acfe4e850cad3c72ccddee5cd3f684"
+        },
+        "800": {
+          "bytes": 4964,
+          "file": "halo/halo-00-thumbnail-800w.webp",
+          "hash": "1bf89e27ef4fced17625d8a0ec04810309e710c66a713d3101a46f4b1b23844c"
+        },
+        "1024": {
+          "bytes": 6618,
+          "file": "halo/halo-00-thumbnail-1024w.webp",
+          "hash": "6eb0d31318f6a9717e634b4b58203a3a5cca6664e10a7cb6019ecebbcc768100"
+        },
+        "1440": {
+          "bytes": 9978,
+          "file": "halo/halo-00-thumbnail-1440w.webp",
+          "hash": "691afb47c59a3bc1c11b8b285d625fcc73118aeb43709af385df5588aaf9dc32"
+        },
+        "1920": {
+          "bytes": 14104,
+          "file": "halo/halo-00-thumbnail-1920w.webp",
+          "hash": "53f4542b9f99e7523d200de609346c35c269bb1ae282520200d746fe403dd64d"
         }
       },
       "width": 2880
@@ -1182,117 +1377,117 @@
     },
     "senda/senda-00-thumbnail.webp": {
       "action": "optimized",
-      "bytesIn": 4343415,
-      "bytesOut": 485300,
-      "height": 1800,
-      "outputHash": "e086d4501b2206da0162452c61e14d65e7cbefcf21204103fc87660494afbe3c",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.24",
-      "settingsHash": "ec95feccbfa3c25f1d8c3ca31b8d548a5d408b24d1ef585929deac8f6a5c15b9",
-      "source": "media-src/senda/senda-00-thumbnail.jpg",
-      "sourceHash": "00a40c2a1972fee037f03522699cc8d3d25021cd577025bfbe21602b02df69f8",
+      "bytesIn": 600151,
+      "bytesOut": 102880,
+      "height": 1620,
+      "outputHash": "4b1f54eeae14c1267d3de80c70dc1e37eb5d87a582cf9068bb83f60a5190c7d3",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.05",
+      "settingsHash": "73afc416355ed3dd141a31f68f24895d64f5c59f272d7aab8ae3c8e54b2b0f56",
+      "source": "media-src/senda/senda-00-thumbnail.png",
+      "sourceHash": "b53cd3bec57fadb382f0f7fd668572cb1fdf00f4f1f82a13cbab7127b758f6b1",
       "variants": {
         "480": {
-          "bytes": 14272,
+          "bytes": 4464,
           "file": "senda/senda-00-thumbnail-480w.webp",
-          "hash": "e8989800d469fdc8cd7994b82f826966f259fa0a3904594ad9de40d0516dda31"
+          "hash": "0a3e96e90a1c0342de4bba2a38798c3b3693a8400a86fd21af60bb419d4552fe"
         },
         "800": {
-          "bytes": 31032,
+          "bytes": 8150,
           "file": "senda/senda-00-thumbnail-800w.webp",
-          "hash": "87023f3c2a7975b82d096fce9ea0fa61cd3eb747f8bb89b389ed60d9fdac6760"
+          "hash": "eb2593a5dd9f162f883627e674de9c4c68b90eee650cd2bc40ae9c3fc5fe9536"
         },
         "1024": {
-          "bytes": 44696,
+          "bytes": 10904,
           "file": "senda/senda-00-thumbnail-1024w.webp",
-          "hash": "c02f841cdf5c2bf491b0e1e8ac9f70d47f5a2b74687cd73a2a81e9c598ef6501"
+          "hash": "bd6bb32e5ce1862aeb4c9f5b2232be2a6d66e2aae08c8e8b4662911c1529f561"
         },
         "1440": {
-          "bytes": 76216,
+          "bytes": 16530,
           "file": "senda/senda-00-thumbnail-1440w.webp",
-          "hash": "d3cf074271719baa7d761b25d107395bf03d2ebabe81f4926f87acc8ba3cd7a0"
+          "hash": "be327d110ea6c175a51b19cefad7eedc98af8c2881e4dc32e13ee8aaa4d3c3f0"
         },
         "1920": {
-          "bytes": 114442,
+          "bytes": 23694,
           "file": "senda/senda-00-thumbnail-1920w.webp",
-          "hash": "7770f1c4bef6864a95f9d054597ecda149f9d6cfff5e62a4c8bab633f5f77974"
+          "hash": "0d5d153976e44bf69c048ddc57a7918588aa67c6f048b2b658c663fec78ecd6d"
         }
       },
       "width": 2880
     },
     "senda/senda-01-hero-mobile.webp": {
       "action": "optimized",
-      "bytesIn": 4784444,
-      "bytesOut": 746774,
+      "bytesIn": 953142,
+      "bytesOut": 183934,
       "height": 2880,
-      "outputHash": "5b51ea4848319040b3dd98461efd214451cd36cc51e35ee17494c803704abfac",
-      "reason": "base 2160px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.09",
-      "settingsHash": "826395398f2cff96a34da45d63f68f7627ddb4f9e0ce99e7f0ad46398089e11b",
-      "source": "media-src/senda/senda-01-hero-mobile.jpg",
-      "sourceHash": "97a0b13e99a4f8f3949383044003251b6a1ce19010657b2682409af11ec8ebc0",
+      "outputHash": "dd1e6ef6d4e850b06658f171cd0a7ca7aa308faf3e859aac23e889da2b98ecce",
+      "reason": "base 2160px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.95",
+      "settingsHash": "1f707a34af3426ccfa654a812190e0b1866f8d2b88256acd8ad7193487ff289f",
+      "source": "media-src/senda/senda-01-hero-mobile.png",
+      "sourceHash": "a0d9a2d40f766adfc7d24dbada6ce54ef4cda318db69b1eca860f07f7f6ea4e1",
       "variants": {
         "480": {
-          "bytes": 28242,
+          "bytes": 8854,
           "file": "senda/senda-01-hero-mobile-480w.webp",
-          "hash": "a152f16c965097621b00ea17963d5165ca70e3e207fc4159c1c5e16841ae0b9c"
+          "hash": "96955c005a3c0d4478702ec0cb290446b81aa3f6d788be9e7c04d9bb7aca46f1"
         },
         "800": {
-          "bytes": 58136,
+          "bytes": 16492,
           "file": "senda/senda-01-hero-mobile-800w.webp",
-          "hash": "0da1bb1c75141174b45a8bd5995ddd2a015885ece50db67a3c6f57cbf84108c7"
+          "hash": "67868d0ca68da35d90c8b92745ed490b77421fd3e7523b11b2e74d631459a95a"
         },
         "1024": {
-          "bytes": 81980,
+          "bytes": 22310,
           "file": "senda/senda-01-hero-mobile-1024w.webp",
-          "hash": "b8674036048af887f2ae2bc8b7aff08739a234cb0155e1be88e2ec8f4321e366"
+          "hash": "bbdc02a2908b14de20d091b4abf1780a1b384a580c36982b1edb74a06c3a16a4"
         },
         "1440": {
-          "bytes": 132474,
+          "bytes": 33834,
           "file": "senda/senda-01-hero-mobile-1440w.webp",
-          "hash": "0a260b7d6a8db261e38a9cccc3e6630b44c7341436f46e936a9ee9c625f1b486"
+          "hash": "a9061a5ea05eae00e454281588a74c1358988be45cc0e57fbfe2995baa72a8be"
         },
         "1920": {
-          "bytes": 199924,
+          "bytes": 47420,
           "file": "senda/senda-01-hero-mobile-1920w.webp",
-          "hash": "c2b9e7ebc5dad20ddbe2afa953f894f2328ecee4a7a5f4cef4932dc857807a36"
+          "hash": "8ab5ed94c4d8f65f67983f9dc76dcdb280db7d22b8a276348730460ae3e0961b"
         }
       },
       "width": 2160
     },
     "senda/senda-01-hero.webp": {
       "action": "optimized",
-      "bytesIn": 4343415,
-      "bytesOut": 485300,
+      "bytesIn": 7604788,
+      "bytesOut": 484142,
       "height": 1800,
-      "outputHash": "e086d4501b2206da0162452c61e14d65e7cbefcf21204103fc87660494afbe3c",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.24",
-      "settingsHash": "5a223f6fb8a2af0c510ccc7452da4a289d54d3f2a7454d5e93effa0230de9a40",
-      "source": "media-src/senda/senda-01-hero.jpg",
-      "sourceHash": "00a40c2a1972fee037f03522699cc8d3d25021cd577025bfbe21602b02df69f8",
+      "outputHash": "b839d068969bc3ef6408cf19a0fe562bb496f9e22a956e7e3f1d3c1fa2d1068b",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 2.23",
+      "settingsHash": "03a04bf62f872a9283b417416cd7a36ccaf25ab84bc9e631b5595396e8ca5657",
+      "source": "media-src/senda/senda-01-hero.png",
+      "sourceHash": "d08dabd1e22be1585c2aa34421f3b9a6e13083e6a9b9495696d862f7fceb981f",
       "variants": {
         "480": {
-          "bytes": 14272,
+          "bytes": 14608,
           "file": "senda/senda-01-hero-480w.webp",
-          "hash": "e8989800d469fdc8cd7994b82f826966f259fa0a3904594ad9de40d0516dda31"
+          "hash": "d3c92bca9a454c453e8f953b5aef16339a57e36683b4d38b870d96893111e578"
         },
         "800": {
-          "bytes": 31032,
+          "bytes": 31598,
           "file": "senda/senda-01-hero-800w.webp",
-          "hash": "87023f3c2a7975b82d096fce9ea0fa61cd3eb747f8bb89b389ed60d9fdac6760"
+          "hash": "576a6d14b591a4a63f8ac8d104f15f9c7878afed777c85840b4a336790c71779"
         },
         "1024": {
-          "bytes": 44696,
+          "bytes": 44600,
           "file": "senda/senda-01-hero-1024w.webp",
-          "hash": "c02f841cdf5c2bf491b0e1e8ac9f70d47f5a2b74687cd73a2a81e9c598ef6501"
+          "hash": "c03d7e32b88f66e3df8ce284098489a909833329851cae64e8a9b2737075d6b5"
         },
         "1440": {
-          "bytes": 76216,
+          "bytes": 76048,
           "file": "senda/senda-01-hero-1440w.webp",
-          "hash": "d3cf074271719baa7d761b25d107395bf03d2ebabe81f4926f87acc8ba3cd7a0"
+          "hash": "03b231be2ae95ff5928d9a594ce3a0e2cdf6a3094960ccae852eba3e5e0560ae"
         },
         "1920": {
-          "bytes": 114442,
+          "bytes": 113516,
           "file": "senda/senda-01-hero-1920w.webp",
-          "hash": "7770f1c4bef6864a95f9d054597ecda149f9d6cfff5e62a4c8bab633f5f77974"
+          "hash": "4ce2a1f8bf47afa08159033883f03698e4ff24a9c01db06daecf28b60ddc38e2"
         }
       },
       "width": 2880
@@ -1415,6 +1610,35 @@
       },
       "width": 2880
     },
+    "senda/senda-04-problem-notes-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 33423,
+      "bytesOut": 11724,
+      "height": 1440,
+      "outputHash": "19281014dbd96a8079f691cc329b912006770d7db603711b727385b8cda00dbd",
+      "reason": "base 1120px q78, 3 variants (480, 800, 1024), max mean error 0.37",
+      "settingsHash": "bbbe6934d4abc7e5fc39a185ec27852d9f55a3842ddb78210aedbc707a349418",
+      "source": "media-src/senda/senda-04-problem-notes-poster.jpg",
+      "sourceHash": "0c813b028fc7c4f4794d8b6372bd7c066d514e90cdd9c546840cef02215e1e3d",
+      "variants": {
+        "480": {
+          "bytes": 1156,
+          "file": "senda/senda-04-problem-notes-poster-480w.webp",
+          "hash": "04aeb14d51400ef0c375b89288fed927b3b7807c74dac99066504fe3a114c11a"
+        },
+        "800": {
+          "bytes": 2492,
+          "file": "senda/senda-04-problem-notes-poster-800w.webp",
+          "hash": "60bfff17263b60492281402185bd0d802a02d8e939dacaf09297c5a179a4c4ed"
+        },
+        "1024": {
+          "bytes": 3738,
+          "file": "senda/senda-04-problem-notes-poster-1024w.webp",
+          "hash": "490cb76aff2256152776f746af628d5e9903be7c978a47dcebbd91a31c3c3441"
+        }
+      },
+      "width": 1120
+    },
     "senda/senda-04-problem-strategic-shift.webp": {
       "action": "optimized",
       "bytesIn": 129202,
@@ -1453,6 +1677,74 @@
         }
       },
       "width": 2880
+    },
+    "senda/senda-04-problem-top-up-screen.webp": {
+      "action": "optimized",
+      "bytesIn": 818527,
+      "bytesOut": 276670,
+      "height": 2880,
+      "outputHash": "16df7efb815bde7e4d0b2f2695367b91199379556458ee278d97e19b84f5fe90",
+      "reason": "base 2240px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.01",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-04-problem-top-up-screen.png",
+      "sourceHash": "a1d2188105eb1ab5f67ca09263f6a3424827ed3c85f8d1a050c063e2b6d5db0c",
+      "variants": {
+        "480": {
+          "bytes": 9938,
+          "file": "senda/senda-04-problem-top-up-screen-480w.webp",
+          "hash": "7df9fe76e3a6c91e4202722bc5aef5d0ebf6c28c22b4e9d669aef87842c8cb09"
+        },
+        "800": {
+          "bytes": 22626,
+          "file": "senda/senda-04-problem-top-up-screen-800w.webp",
+          "hash": "9f4a7c4273a60d5db0e09d1e8faaa1f64cf866f3170694179c9f9ac2ca4f5f5b"
+        },
+        "1024": {
+          "bytes": 33020,
+          "file": "senda/senda-04-problem-top-up-screen-1024w.webp",
+          "hash": "774adbee2723c52e59d1a68f26565f000df899036782fb377519f99bb8eeeec5"
+        },
+        "1440": {
+          "bytes": 51532,
+          "file": "senda/senda-04-problem-top-up-screen-1440w.webp",
+          "hash": "67bbe0c358943d55b3a0c4222f56706d127cdeb48da76dcd53a206dfa916dcb9"
+        },
+        "1920": {
+          "bytes": 72110,
+          "file": "senda/senda-04-problem-top-up-screen-1920w.webp",
+          "hash": "942b01c3934d2d7ce7f05130cde8eed2e8bccb0af44a2b893618b0b4a3fc0798"
+        }
+      },
+      "width": 2240
+    },
+    "senda/senda-04-problem-wallet-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 41942,
+      "bytesOut": 22998,
+      "height": 1440,
+      "outputHash": "1ec26e13682c6ff7e18b291e0b4b6c7d191053e60cbf6cdb290c2b09becf11f2",
+      "reason": "base 1120px q78, 3 variants (480, 800, 1024), max mean error 0.25",
+      "settingsHash": "bbbe6934d4abc7e5fc39a185ec27852d9f55a3842ddb78210aedbc707a349418",
+      "source": "media-src/senda/senda-04-problem-wallet-poster.jpg",
+      "sourceHash": "da13fecdd0b652c3980c7feb32831df18df38c844c0dd9249ffca2e8e3d7a538",
+      "variants": {
+        "480": {
+          "bytes": 2574,
+          "file": "senda/senda-04-problem-wallet-poster-480w.webp",
+          "hash": "64b9fa32d5f4e687827c7e2061c7aa1b234e424494f1c2973e5f7c1ca9c7047d"
+        },
+        "800": {
+          "bytes": 5040,
+          "file": "senda/senda-04-problem-wallet-poster-800w.webp",
+          "hash": "67f5bbf6073556262c33a2d88e30747d08b539e472e88425928a5ac4e1d8f279"
+        },
+        "1024": {
+          "bytes": 7110,
+          "file": "senda/senda-04-problem-wallet-poster-1024w.webp",
+          "hash": "ee07619e5b7b47ecfb1eae723534c03cb01c65c6fbc18c9bfcaf459d556fe7c6"
+        }
+      },
+      "width": 1120
     },
     "senda/senda-05-solution-key-features.webp": {
       "action": "optimized",
@@ -1668,6 +1960,84 @@
       },
       "width": 2880
     },
+    "senda/senda-07-outcome-card-terminal.webp": {
+      "action": "optimized",
+      "bytesIn": 6466090,
+      "bytesOut": 358794,
+      "height": 1620,
+      "outputHash": "bfdcb83b8ac183ff99473a2d24497b32f650b45b67c65fa52df5599df3041563",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.71",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-07-outcome-card-terminal.png",
+      "sourceHash": "b5b7ba9d17036df9195afe4e6be3f9ba9a139decfdfd89a0612932c114087448",
+      "variants": {
+        "480": {
+          "bytes": 11674,
+          "file": "senda/senda-07-outcome-card-terminal-480w.webp",
+          "hash": "a5f42e9ccb4d82f1bb0f2faa74f64c7c760bba80566ac14d78a00c0c0cb1e88d"
+        },
+        "800": {
+          "bytes": 22050,
+          "file": "senda/senda-07-outcome-card-terminal-800w.webp",
+          "hash": "dfd386baefcebc44fed0826b7fa04fc9692588f405465b3b6ef62616318498ca"
+        },
+        "1024": {
+          "bytes": 30560,
+          "file": "senda/senda-07-outcome-card-terminal-1024w.webp",
+          "hash": "71da8748b634f6c03fe96027c66f16cb4fabf9bb33ff99e336feb8d2ec93adf6"
+        },
+        "1440": {
+          "bytes": 47660,
+          "file": "senda/senda-07-outcome-card-terminal-1440w.webp",
+          "hash": "e5a0e0a5ac960a45c936d3c66868df6084d84f81348aae0cde5a81d173be7784"
+        },
+        "1920": {
+          "bytes": 75562,
+          "file": "senda/senda-07-outcome-card-terminal-1920w.webp",
+          "hash": "beed36dbfda47a03683de2db9038f5206fc5f44dc84d1b16b33ab74b883cfa33"
+        }
+      },
+      "width": 2880
+    },
+    "senda/senda-07-outcome-components.webp": {
+      "action": "optimized",
+      "bytesIn": 291022,
+      "bytesOut": 244586,
+      "height": 2880,
+      "outputHash": "5237494785cb7fc5e1be4d41512420819bf508b9849fa475f1be95e1c8187154",
+      "reason": "base 2240px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.89",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-07-outcome-components.png",
+      "sourceHash": "49d2d2fb6a3e3fdf7e28360abbafeee9529de7d4b125f068609744919ea687ec",
+      "variants": {
+        "480": {
+          "bytes": 10730,
+          "file": "senda/senda-07-outcome-components-480w.webp",
+          "hash": "dae3ddbd2c65226231d7248d981763314a96641025ae9fd15a4ff47ecc471845"
+        },
+        "800": {
+          "bytes": 22100,
+          "file": "senda/senda-07-outcome-components-800w.webp",
+          "hash": "72f1b23219430c3456c9d65e2b5395d4c08a426b62bf5f860a666fc1696a745e"
+        },
+        "1024": {
+          "bytes": 29896,
+          "file": "senda/senda-07-outcome-components-1024w.webp",
+          "hash": "9ab716b28e43e76a9185cb76c3bbdc043c7d99e02203c6765051b1689d92bd0a"
+        },
+        "1440": {
+          "bytes": 45052,
+          "file": "senda/senda-07-outcome-components-1440w.webp",
+          "hash": "1f7123f2113af3c1155e4d28bd33c60e228763ed4eb4d31053e36ecb2dee23e6"
+        },
+        "1920": {
+          "bytes": 62352,
+          "file": "senda/senda-07-outcome-components-1920w.webp",
+          "hash": "a070e5f3e1348c4d6b09f89a29735735ec7ebda53fbe62ba94188b542ef8c3a0"
+        }
+      },
+      "width": 2240
+    },
     "senda/senda-07-outcome-final-ui-physical-top-up.webp": {
       "action": "optimized",
       "bytesIn": 4020940,
@@ -1709,39 +2079,195 @@
     },
     "senda/senda-07-outcome-final-ui-visual-identity.webp": {
       "action": "optimized",
-      "bytesIn": 2820578,
-      "bytesOut": 358482,
-      "height": 1780,
-      "outputHash": "327dc6f3a86ff46a59ede45d19a82280676410d9abd7616ccb4f58c3f7840adf",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.69",
+      "bytesIn": 2326815,
+      "bytesOut": 363900,
+      "height": 1810,
+      "outputHash": "11e9f0d4ee542b1d2d031aeeb23132131787f29bb5e1e4552a65131556b7776e",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.68",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/senda/senda-07-outcome-final-ui-visual-identity.png",
-      "sourceHash": "6149fe22a54a38b3aff584729e19a7ea07f3ed1a264b7e1be4d5c8ac69439e3b",
+      "sourceHash": "cb92edcb01725badc4f92323bbfd258f6e4f2b7951c747dacafda8fb3beb5651",
       "variants": {
         "480": {
-          "bytes": 15068,
+          "bytes": 14366,
           "file": "senda/senda-07-outcome-final-ui-visual-identity-480w.webp",
-          "hash": "a9d50424f96ed7139f3f728fbe245be83d182a0d1c1ce42265284b4c43740d64"
+          "hash": "4ede085e5584a8a743fa1451e7b84f6197e6d1322a695bf4f8d8d372e267d625"
         },
         "800": {
-          "bytes": 27048,
+          "bytes": 26748,
           "file": "senda/senda-07-outcome-final-ui-visual-identity-800w.webp",
-          "hash": "6a2a784d2fff57038d05b6102ddabcc45f5836bfe9f71a2f7f24570c96476b3e"
+          "hash": "07b8eda3662234a8a3571ec10aad1869dbd095e1e38063df3e0df24cf36ea1df"
         },
         "1024": {
-          "bytes": 36064,
+          "bytes": 36414,
           "file": "senda/senda-07-outcome-final-ui-visual-identity-1024w.webp",
-          "hash": "02680a5fdc42ad4dc9a3dcf2208720458610ddd777c441f165fcaadf33531847"
+          "hash": "7899627d7dfdaf5bdf466b6419cb387dd9558a58f6d99a1a8865c44ac7b7afe0"
         },
         "1440": {
-          "bytes": 55722,
+          "bytes": 57138,
           "file": "senda/senda-07-outcome-final-ui-visual-identity-1440w.webp",
-          "hash": "bed3294aa3ec35a47f481e4034bcf14236326df4b0f02330b37d7e588e1e7e7f"
+          "hash": "44495c437eef3f4d5e2b1622f78a82deb29d8349c3c84563a792190c368717ca"
         },
         "1920": {
-          "bytes": 85450,
+          "bytes": 86652,
           "file": "senda/senda-07-outcome-final-ui-visual-identity-1920w.webp",
-          "hash": "dc1def5a7e0b3deba86630b331e44a70b9482d85538fe132436a25ab98828d98"
+          "hash": "cc2f9ecab5382252577d52b33d9df02b32e6b3cbefc6849f13c850fecf64d6f7"
+        }
+      },
+      "width": 2880
+    },
+    "senda/senda-07-outcome-flow-request-balance-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 6055542,
+      "bytesOut": 862038,
+      "height": 2880,
+      "outputHash": "5d2a43792e83941efcb536eb93eb91895a526987963ac0cda6242f532fe7ddaf",
+      "reason": "base 2240px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.67",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-07-outcome-flow-request-balance-poster.png",
+      "sourceHash": "8170db15ca6f6461cef166df72104f915e8823c5827703bb4cc4e17cc092d365",
+      "variants": {
+        "480": {
+          "bytes": 11340,
+          "file": "senda/senda-07-outcome-flow-request-balance-poster-480w.webp",
+          "hash": "462801d9e92a809c8cb192a7a4de24cdd8b82a875e4952bf78e5f63478ad5cb2"
+        },
+        "800": {
+          "bytes": 24836,
+          "file": "senda/senda-07-outcome-flow-request-balance-poster-800w.webp",
+          "hash": "707f6196f9378fbb386e621943d05aaecc5fe161ce3b8caa986675c0df834ae3"
+        },
+        "1024": {
+          "bytes": 46344,
+          "file": "senda/senda-07-outcome-flow-request-balance-poster-1024w.webp",
+          "hash": "e592e8cca8d0f8645590a6594fc1d24e79a2361556df6bf1153bd8c16fc73543"
+        },
+        "1440": {
+          "bytes": 127702,
+          "file": "senda/senda-07-outcome-flow-request-balance-poster-1440w.webp",
+          "hash": "eda7ab7ae76aa99bc06dffa2fd67c5360e6a860985637b0e666a5216129747fb"
+        },
+        "1920": {
+          "bytes": 262104,
+          "file": "senda/senda-07-outcome-flow-request-balance-poster-1920w.webp",
+          "hash": "e89a6675acbc5cdf75f90029943b3b69346c94c98d8143c7476a13d423a3135d"
+        }
+      },
+      "width": 2240
+    },
+    "senda/senda-07-outcome-flow-top-up-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 401852,
+      "bytesOut": 179212,
+      "height": 2880,
+      "outputHash": "9fd5bdfadc085e8ca9d35a0d0dd4dec46f14da5460cb3faffc93e841e077d0c1",
+      "reason": "base 2240px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.50",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-07-outcome-flow-top-up-poster.png",
+      "sourceHash": "d30e37d5f7464756f71f81a506ba278c2e83fb82892095b75267aa29d5b425b8",
+      "variants": {
+        "480": {
+          "bytes": 7672,
+          "file": "senda/senda-07-outcome-flow-top-up-poster-480w.webp",
+          "hash": "c173e45c7fadd5fcb341fd1bfbaf2f81da613c5ea57e8961f48507eecb2676cb"
+        },
+        "800": {
+          "bytes": 16658,
+          "file": "senda/senda-07-outcome-flow-top-up-poster-800w.webp",
+          "hash": "48d2d5d24855c3df35a074327a54b96d8614fadd80a30389e8c01a9962ced1af"
+        },
+        "1024": {
+          "bytes": 22184,
+          "file": "senda/senda-07-outcome-flow-top-up-poster-1024w.webp",
+          "hash": "9d08e774d1172ced59e863125fcc72200d22499ceaa9cf32a158d9e6f9d0a689"
+        },
+        "1440": {
+          "bytes": 33068,
+          "file": "senda/senda-07-outcome-flow-top-up-poster-1440w.webp",
+          "hash": "95a0dd8e219e3eccce8db81c0d1eefdb836e76490a80892b80135a1eeab33744"
+        },
+        "1920": {
+          "bytes": 46234,
+          "file": "senda/senda-07-outcome-flow-top-up-poster-1920w.webp",
+          "hash": "b9f5f618cf39b8494b23bc1ab4a466744b2c223a691bd31e24b9a5d66bbd3311"
+        }
+      },
+      "width": 2240
+    },
+    "senda/senda-07-outcome-statement.webp": {
+      "action": "optimized",
+      "bytesIn": 65704,
+      "bytesOut": 97220,
+      "height": 2880,
+      "outputHash": "1b97de0f2f145af251ecfd8fde0711b24ec3c756e18b699a8c9fe2728737d85f",
+      "reason": "base 2240px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.44",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-07-outcome-statement.png",
+      "sourceHash": "5d1eaa31759449fb4b47d3cac2db38bbd7f181f7124bafa9dc68dbb5a237a6e4",
+      "variants": {
+        "480": {
+          "bytes": 4892,
+          "file": "senda/senda-07-outcome-statement-480w.webp",
+          "hash": "6983a005d3f1b2f0903a5c5dcfb4489a24b83076164bfad993dc2b18bbab18bf"
+        },
+        "800": {
+          "bytes": 8964,
+          "file": "senda/senda-07-outcome-statement-800w.webp",
+          "hash": "6266759dab06d8499e94d62d8dd3ef587eb035c188a17b9b652694f19cf039fa"
+        },
+        "1024": {
+          "bytes": 11644,
+          "file": "senda/senda-07-outcome-statement-1024w.webp",
+          "hash": "765c635302f0dece829048954174a15833fefec0c270e237f2aaa5818902c308"
+        },
+        "1440": {
+          "bytes": 17222,
+          "file": "senda/senda-07-outcome-statement-1440w.webp",
+          "hash": "d22583a1e90b34ec3e066cc1a02b42a090996e72c3a22ee6e776d8e3917b422a"
+        },
+        "1920": {
+          "bytes": 24516,
+          "file": "senda/senda-07-outcome-statement-1920w.webp",
+          "hash": "ef7764ec4888232f9a937808d0707a3decdd36679b3672498b93042c21373cb7"
+        }
+      },
+      "width": 2240
+    },
+    "senda/senda-07-outcome-wallets-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 420913,
+      "bytesOut": 201092,
+      "height": 1920,
+      "outputHash": "29b4422e13d8fd256f9a3ea33fde73dc2b4b0f660c2b9d72c7acc658cb14c5a7",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.88",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/senda/senda-07-outcome-wallets-poster.png",
+      "sourceHash": "c9d70add307417107a36f9b37eaa6c3d7a2ff19f6cd341ccdeed1d719de5d7d6",
+      "variants": {
+        "480": {
+          "bytes": 7104,
+          "file": "senda/senda-07-outcome-wallets-poster-480w.webp",
+          "hash": "e03882ea23b3121e6c96e3fc89c3c774ee13cc2b7b08733d9667b8725ce44e42"
+        },
+        "800": {
+          "bytes": 15114,
+          "file": "senda/senda-07-outcome-wallets-poster-800w.webp",
+          "hash": "84b6f8e6350c7ff9e0f54c149d761174474ec208d2fc481da7614edceaff52b3"
+        },
+        "1024": {
+          "bytes": 21154,
+          "file": "senda/senda-07-outcome-wallets-poster-1024w.webp",
+          "hash": "7de575be586f0ebe0dd94754fd9a025c43370030d432b37d973cc73a568f2d25"
+        },
+        "1440": {
+          "bytes": 33324,
+          "file": "senda/senda-07-outcome-wallets-poster-1440w.webp",
+          "hash": "e0c3258b17b77540434e6e4f04bcb3fa5a1d1c7dd1d489b2aed302e2bfe586e6"
+        },
+        "1920": {
+          "bytes": 48028,
+          "file": "senda/senda-07-outcome-wallets-poster-1920w.webp",
+          "hash": "7f9bc5f06e274d6d076649faf4cf93b1e630b50134aaa313478c9a64efc29211"
         }
       },
       "width": 2880

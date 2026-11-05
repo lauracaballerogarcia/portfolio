@@ -12,7 +12,7 @@
     ]
   },
   "/media/blink/blink-00-thumbnail.webp": {
-    "height": 1800,
+    "height": 1920,
     "width": 2880,
     "widths": [
       480,
@@ -144,27 +144,27 @@
     ]
   },
   "/media/blink/blink-05-interactive-app.webp": {
-    "height": 2880,
-    "width": 2160,
+    "height": 2986,
+    "width": 2240,
     "widths": [
       480,
       800,
       1024,
       1440,
       1920,
-      2160
+      2240
     ]
   },
   "/media/blink/blink-05-interactive-screen.webp": {
-    "height": 2880,
-    "width": 2160,
+    "height": 2986,
+    "width": 2240,
     "widths": [
       480,
       800,
       1024,
       1440,
       1920,
-      2160
+      2240
     ]
   },
   "/media/blink/blink-05-interactive.webp": {
@@ -215,8 +215,68 @@
       2880
     ]
   },
+  "/media/bloq/bloq-00-thumbnail-2.webp": {
+    "height": 1920,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/bloq/bloq-00-thumbnail-3.webp": {
+    "height": 1920,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/bloq/bloq-00-thumbnail-4.webp": {
+    "height": 1920,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
   "/media/bloq/bloq-00-thumbnail.webp": {
-    "height": 1800,
+    "height": 1920,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/halo/halo-00-thumbnail-1.webp": {
+    "height": 1920,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/halo/halo-00-thumbnail.webp": {
+    "height": 1920,
     "width": 2880,
     "widths": [
       480,
@@ -358,7 +418,7 @@
     ]
   },
   "/media/senda/senda-00-thumbnail.webp": {
-    "height": 1800,
+    "height": 1620,
     "width": 2880,
     "widths": [
       480,
@@ -417,6 +477,16 @@
       2880
     ]
   },
+  "/media/senda/senda-04-problem-notes-poster.webp": {
+    "height": 1440,
+    "width": 1120,
+    "widths": [
+      480,
+      800,
+      1024,
+      1120
+    ]
+  },
   "/media/senda/senda-04-problem-strategic-shift.webp": {
     "height": 1620,
     "width": 2880,
@@ -427,6 +497,28 @@
       1440,
       1920,
       2880
+    ]
+  },
+  "/media/senda/senda-04-problem-top-up-screen.webp": {
+    "height": 2880,
+    "width": 2240,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2240
+    ]
+  },
+  "/media/senda/senda-04-problem-wallet-poster.webp": {
+    "height": 1440,
+    "width": 1120,
+    "widths": [
+      480,
+      800,
+      1024,
+      1120
     ]
   },
   "/media/senda/senda-05-solution-key-features.webp": {
@@ -497,6 +589,30 @@
       2880
     ]
   },
+  "/media/senda/senda-07-outcome-card-terminal.webp": {
+    "height": 1620,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-07-outcome-components.webp": {
+    "height": 2880,
+    "width": 2240,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2240
+    ]
+  },
   "/media/senda/senda-07-outcome-final-ui-physical-top-up.webp": {
     "height": 1620,
     "width": 2880,
@@ -510,7 +626,55 @@
     ]
   },
   "/media/senda/senda-07-outcome-final-ui-visual-identity.webp": {
-    "height": 1780,
+    "height": 1810,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/senda/senda-07-outcome-flow-request-balance-poster.webp": {
+    "height": 2880,
+    "width": 2240,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2240
+    ]
+  },
+  "/media/senda/senda-07-outcome-flow-top-up-poster.webp": {
+    "height": 2880,
+    "width": 2240,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2240
+    ]
+  },
+  "/media/senda/senda-07-outcome-statement.webp": {
+    "height": 2880,
+    "width": 2240,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2240
+    ]
+  },
+  "/media/senda/senda-07-outcome-wallets-poster.webp": {
+    "height": 1920,
     "width": 2880,
     "widths": [
       480,
