@@ -25,7 +25,7 @@
   /* backdrop-filter: blur(8px);
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%); */
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-m);
 }
 
 .site-nav__inner {

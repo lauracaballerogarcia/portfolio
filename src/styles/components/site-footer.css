@@ -53,7 +53,29 @@
 
 .site-footer__links {
   display: flex;
-  gap: var(--spacing-4);
+  gap: var(--spacing-2); /* [3] */
+}
+
+.site-footer__link--social { /* [3] */
+  display: inline-flex;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-2);
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  text-decoration: none;
+  transition:
+    color var(--duration-base) var(--easing-out),
+    background-color var(--duration-base) var(--easing-out);
+}
+
+.site-footer__link--social:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-background-secondary);
+}
+
+.site-footer__link--social:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
 }
 
 .site-footer__up {
