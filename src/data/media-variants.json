@@ -59,6 +59,18 @@
       2880
     ]
   },
+  "/media/blink/blink-02-concept-poster.webp": {
+    "height": 1080,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
   "/media/blink/blink-02-concept-posters.webp": {
     "height": 1620,
     "width": 2880,
@@ -83,17 +95,9 @@
       2880
     ]
   },
-  "/media/blink/blink-02-concept.webp": {
-    "height": 1080,
-    "width": 2880,
-    "widths": [
-      480,
-      800,
-      1024,
-      1440,
-      1920,
-      2880
-    ]
+  "/media/blink/blink-02-concept.mp4": {
+    "height": 560,
+    "width": 1440
   },
   "/media/blink/blink-03-web-01.webp": {
     "height": 1800,
@@ -107,6 +111,10 @@
       2880
     ]
   },
+  "/media/blink/blink-03-web-02.mp4": {
+    "height": 1000,
+    "width": 1440
+  },
   "/media/blink/blink-03-web-02.webp": {
     "height": 2000,
     "width": 2880,
@@ -119,6 +127,22 @@
       2880
     ]
   },
+  "/media/blink/blink-03-web-03-poster.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-03-web-03.mp4": {
+    "height": 900,
+    "width": 1440
+  },
   "/media/blink/blink-03-web-03.webp": {
     "height": 1800,
     "width": 2880,
@@ -130,6 +154,10 @@
       1920,
       2880
     ]
+  },
+  "/media/blink/blink-04-app.mp4": {
+    "height": 1080,
+    "width": 1440
   },
   "/media/blink/blink-04-app.webp": {
     "height": 2160,
@@ -202,6 +230,22 @@
       1920,
       2880
     ]
+  },
+  "/media/blink/blink-07-closing-thanks-poster.webp": {
+    "height": 1080,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/blink/blink-07-closing-thanks.mp4": {
+    "height": 540,
+    "width": 1440
   },
   "/media/blink/blink-07-closing-thanks.webp": {
     "height": 1080,

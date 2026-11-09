@@ -195,41 +195,80 @@
       },
       "width": 2880
     },
+    "blink/blink-02-concept-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 693455,
+      "bytesOut": 134342,
+      "height": 1080,
+      "outputHash": "92f179fde733d29ba0b353181303626d35802f5676c4382e1e7e7772a79668f8",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.65",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/blink/blink-02-concept-poster.png",
+      "sourceHash": "5d94f5af815e55e7d0bbf3443e35f02734435a34758a8a102d81144356076fef",
+      "variants": {
+        "480": {
+          "bytes": 4158,
+          "file": "blink/blink-02-concept-poster-480w.webp",
+          "hash": "0f06b9b1aed66ff0972d315915095112efdfd7d39431741d057f27e427886695"
+        },
+        "800": {
+          "bytes": 8400,
+          "file": "blink/blink-02-concept-poster-800w.webp",
+          "hash": "99560dee26095a1b8f39794c086424473dd00b5d43652face5e07d0a6ebeff96"
+        },
+        "1024": {
+          "bytes": 11386,
+          "file": "blink/blink-02-concept-poster-1024w.webp",
+          "hash": "b0d076a3baded268adbe7bfb3c2f50ea816ea7e83cd733db658bf7698ac81e8b"
+        },
+        "1440": {
+          "bytes": 18734,
+          "file": "blink/blink-02-concept-poster-1440w.webp",
+          "hash": "258a6a04cba4f3e0b3a89c7f7fe282999d087d1614c72d06540ebe1501b3d94f"
+        },
+        "1920": {
+          "bytes": 27986,
+          "file": "blink/blink-02-concept-poster-1920w.webp",
+          "hash": "9ac9337aac36f8320b830ee11c48f8490a1152a4bf48645aac8c1ef7bbad9475"
+        }
+      },
+      "width": 2880
+    },
     "blink/blink-02-concept-posters.webp": {
       "action": "optimized",
-      "bytesIn": 2882655,
-      "bytesOut": 698322,
+      "bytesIn": 2872872,
+      "bytesOut": 697716,
       "height": 1620,
-      "outputHash": "8b24cd86815c9b43fb509a621319be18b76010abbbb6c58b5b83a58b51ab520c",
+      "outputHash": "9bf9dd92775bdf072bac665673a5b7f80c237cb3d999e5c249b1d9f601d990e6",
       "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.62",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/blink/blink-02-concept-posters.png",
-      "sourceHash": "6859d64e6e420f03a68443169affe3e80d80255d0da16950cda95413d457ef4e",
+      "sourceHash": "35af0cc39923e9470f28e6fd0aff49a9419273890859fec798f8dff6e56269ba",
       "variants": {
         "480": {
-          "bytes": 14066,
+          "bytes": 14036,
           "file": "blink/blink-02-concept-posters-480w.webp",
-          "hash": "c99eca165aaf4aa54a289fce53eca1e347a2c45179b9af541e5782c38f5b9b94"
+          "hash": "066ed1e8a4c636890ea152e3beb97be94dfea753a001c4364b5b5840752bb295"
         },
         "800": {
-          "bytes": 34324,
+          "bytes": 34454,
           "file": "blink/blink-02-concept-posters-800w.webp",
-          "hash": "c47426eeba84d39b44394639ea09efcf8b96bad381d5bb07236465d8274a0236"
+          "hash": "fc7c030677d2a95b4fa69a331d42b3264a5d3c606a98ed00608798971762c55a"
         },
         "1024": {
-          "bytes": 52804,
+          "bytes": 52764,
           "file": "blink/blink-02-concept-posters-1024w.webp",
-          "hash": "7f2e22980022f5c999a0d5ce149b38b1ef8b8e33483ac4dfb2036ab40e1f81a2"
+          "hash": "43c08aa27e06c174c2d6f6582a1bdc2aae4cee28f34a71dc2c6cd9419dab1379"
         },
         "1440": {
-          "bytes": 94590,
+          "bytes": 94842,
           "file": "blink/blink-02-concept-posters-1440w.webp",
-          "hash": "e2deb8078ff03648e11368a5a69ee96b2cd27a873ac81af89d4c132898aecc4a"
+          "hash": "4e98bb861da71421732ac3bf33dd1a0809e130db70fad7b333114862fbf8cc84"
         },
         "1920": {
-          "bytes": 161874,
+          "bytes": 161494,
           "file": "blink/blink-02-concept-posters-1920w.webp",
-          "hash": "3f281fb0380e2681179d751a09d5e5d1df62481ee6c77d00256b21e78c1ce281"
+          "hash": "c544857acc26883aefc429b7f8fbd4e8bb372689784fbf6a644652d5530eb91b"
         }
       },
       "width": 2880
@@ -273,83 +312,75 @@
       },
       "width": 2880
     },
-    "blink/blink-02-concept.webp": {
+    "blink/blink-02-concept.mp4": {
       "action": "optimized",
-      "bytesIn": 693455,
-      "bytesOut": 134342,
-      "height": 1080,
-      "outputHash": "92f179fde733d29ba0b353181303626d35802f5676c4382e1e7e7772a79668f8",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.65",
+      "bytesIn": 776822,
+      "bytesOut": 60525,
+      "height": 560,
+      "kind": "video",
+      "outputHash": "2c1f35348d4596d9c7b5c3008dcf12288a6afc4dacdd154f6e0e3e2a6ab2d03f",
+      "reason": "H.264 crf 26 slow, 1440×560, 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
+      "source": "media-src/blink/blink-02-concept.mp4",
+      "sourceHash": "d31e5bd8dfda4e02b90583f262a611166a265d44d818391d736eeca31177c7bd",
+      "width": 1440
+    },
+    "blink/blink-03-web-01.webp": {
+      "action": "optimized",
+      "bytesIn": 1293177,
+      "bytesOut": 308570,
+      "height": 1800,
+      "outputHash": "4680d8ba6bf99e5bdad2ea588f7505ddd4f15ee2475e2aaeaa54b20624631f59",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.41",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
-      "source": "media-src/blink/blink-02-concept.png",
-      "sourceHash": "5d94f5af815e55e7d0bbf3443e35f02734435a34758a8a102d81144356076fef",
+      "source": "media-src/blink/blink-03-web-01.png",
+      "sourceHash": "8855fad663484deac2aa9f40b2815b72c4f410cf71f09fa9cc1be9e7b08851b9",
       "variants": {
         "480": {
-          "bytes": 4158,
-          "file": "blink/blink-02-concept-480w.webp",
-          "hash": "0f06b9b1aed66ff0972d315915095112efdfd7d39431741d057f27e427886695"
+          "bytes": 9828,
+          "file": "blink/blink-03-web-01-480w.webp",
+          "hash": "4930a88f440f7525704fa7ae005094461b16aeeb9a09a8f4ba3f146de4d1613f"
         },
         "800": {
-          "bytes": 8400,
-          "file": "blink/blink-02-concept-800w.webp",
-          "hash": "99560dee26095a1b8f39794c086424473dd00b5d43652face5e07d0a6ebeff96"
+          "bytes": 20342,
+          "file": "blink/blink-03-web-01-800w.webp",
+          "hash": "7312b7c94941808f23fc9314b05a8b36df1cc2b5834e56d029dfc1e12efccf92"
         },
         "1024": {
-          "bytes": 11386,
-          "file": "blink/blink-02-concept-1024w.webp",
-          "hash": "b0d076a3baded268adbe7bfb3c2f50ea816ea7e83cd733db658bf7698ac81e8b"
+          "bytes": 28994,
+          "file": "blink/blink-03-web-01-1024w.webp",
+          "hash": "714e806bc85340a2b113e93278e3691f87a75697b384b122b2fb5ad7fb5924f9"
         },
         "1440": {
-          "bytes": 18734,
-          "file": "blink/blink-02-concept-1440w.webp",
-          "hash": "258a6a04cba4f3e0b3a89c7f7fe282999d087d1614c72d06540ebe1501b3d94f"
+          "bytes": 47216,
+          "file": "blink/blink-03-web-01-1440w.webp",
+          "hash": "200e684ebd82749733eed31eaf171ba5084813c953630fd642bbb434b44cc098"
         },
         "1920": {
-          "bytes": 27986,
-          "file": "blink/blink-02-concept-1920w.webp",
-          "hash": "9ac9337aac36f8320b830ee11c48f8490a1152a4bf48645aac8c1ef7bbad9475"
+          "bytes": 72592,
+          "file": "blink/blink-03-web-01-1920w.webp",
+          "hash": "0710ee78473e73b1700f85b1bed4d2ead1a66ce771b4e0b5353e726bd965907d"
         }
       },
       "width": 2880
     },
-    "blink/blink-03-web-01.webp": {
+    "blink/blink-03-web-02.mp4": {
       "action": "optimized",
-      "bytesIn": 1282116,
-      "bytesOut": 292760,
-      "height": 1800,
-      "outputHash": "6e8d2df9c3ac258cd6056f03a6d9fab20540b5ac6b15c8e330ed0217f102bb2c",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.37",
-      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
-      "source": "media-src/blink/blink-03-web-01.png",
-      "sourceHash": "1e22c242d0b17e2b78ba24b1a4a09ef620a6623b4f71073e08816c326e014385",
-      "variants": {
-        "480": {
-          "bytes": 9600,
-          "file": "blink/blink-03-web-01-480w.webp",
-          "hash": "e61c783877d0ba071b4d9702393e5d2b554355a779821328501dc6974dcff668"
-        },
-        "800": {
-          "bytes": 19860,
-          "file": "blink/blink-03-web-01-800w.webp",
-          "hash": "d89c0962ba7188ca0597400d5f03417fd8a01ba75d0a19e90e70c74b4921792a"
-        },
-        "1024": {
-          "bytes": 28360,
-          "file": "blink/blink-03-web-01-1024w.webp",
-          "hash": "4e80ce4766093483f4334f62cd3b963429abd9cbc2aab1fa5f2cdbe8003a5064"
-        },
-        "1440": {
-          "bytes": 45814,
-          "file": "blink/blink-03-web-01-1440w.webp",
-          "hash": "53cba13fe368f86f1115d5979ec3c1a10bb94f99f23636e03192e956893675c9"
-        },
-        "1920": {
-          "bytes": 69444,
-          "file": "blink/blink-03-web-01-1920w.webp",
-          "hash": "92c207e216baf274a794c3b2dd74c8a6b6aee84f54ce58b45fcd1058b4ac7128"
-        }
+      "bytesIn": 15789119,
+      "bytesOut": 1491748,
+      "height": 1000,
+      "kind": "video",
+      "outputHash": "afa180cf446dec76341f80b756ae2335c87c6755c9a4a6c3ed80e4647b5d21ce",
+      "poster": {
+        "bytes": 4444,
+        "file": "blink/blink-03-web-02-poster.webp",
+        "hash": "138492d425e65c607966d20b293cdcff729a118c9e19da77df3056e81d3fbba6"
       },
-      "width": 2880
+      "reason": "H.264 crf 26 slow, 1440×1000, 25 fps, from h264, poster at 0s, ffmpeg 9.0.2",
+      "settingsHash": "3eac96af5fc8f4bed28ede0f791d541c63b8f8c977954fde424b9dda8ea02ff6",
+      "source": "media-src/blink/blink-03-web-02.mp4",
+      "sourceHash": "4e8fe58f145d7246c9664c3411b63985059d41ec4c60f7e33523325fb8a9eb7d",
+      "width": 1440
     },
     "blink/blink-03-web-02.webp": {
       "action": "optimized",
@@ -390,6 +421,58 @@
       },
       "width": 2880
     },
+    "blink/blink-03-web-03-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 1742973,
+      "bytesOut": 324940,
+      "height": 1800,
+      "outputHash": "e8df1f7b5c59cf1b107358d8033039b7413fdb1323a54e6e6a173de782a1225b",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.40",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/blink/blink-03-web-03-poster.png",
+      "sourceHash": "3a8f957cb8e77a86989eea173175d3d483eb88baa62d211927e7986289fb1667",
+      "variants": {
+        "480": {
+          "bytes": 10628,
+          "file": "blink/blink-03-web-03-poster-480w.webp",
+          "hash": "859e7b0d8474d18cac1b3de5244b404f088c36945f78d206ff2a2b270f3a9abb"
+        },
+        "800": {
+          "bytes": 21344,
+          "file": "blink/blink-03-web-03-poster-800w.webp",
+          "hash": "af7833b42fde69de4ff5ab65f80c8c1106576baa3a75bc8a8e6ff18d3f3bbe16"
+        },
+        "1024": {
+          "bytes": 30472,
+          "file": "blink/blink-03-web-03-poster-1024w.webp",
+          "hash": "76d022c7bf8c877fd468c9a3446359e91aa10f160e8d55d8542c367937151bc6"
+        },
+        "1440": {
+          "bytes": 48672,
+          "file": "blink/blink-03-web-03-poster-1440w.webp",
+          "hash": "5ea3fa6f97950cf85875c4d69b63b88b852bd0befb51c07f5c8e2af91c1d9538"
+        },
+        "1920": {
+          "bytes": 72734,
+          "file": "blink/blink-03-web-03-poster-1920w.webp",
+          "hash": "cebd5692f21c8ed9056231fb1620dd4ec2a167e389cec7d0286274fc3b3f22e9"
+        }
+      },
+      "width": 2880
+    },
+    "blink/blink-03-web-03.mp4": {
+      "action": "optimized",
+      "bytesIn": 25460581,
+      "bytesOut": 597595,
+      "height": 900,
+      "kind": "video",
+      "outputHash": "e179de92ce7736ff74c4f2d295942624a7c58221d256d0bdcc325347d9b527dd",
+      "reason": "H.264 crf 26 slow, 1440×900 (resized from 2880px), 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
+      "source": "media-src/blink/blink-03-web-03.mp4",
+      "sourceHash": "4c569e5181d20af2db618eeaabcec5d679a7677fbdf535b4fb467e1c945849ca",
+      "width": 1440
+    },
     "blink/blink-03-web-03.webp": {
       "action": "optimized",
       "bytesIn": 1794311,
@@ -428,6 +511,24 @@
         }
       },
       "width": 2880
+    },
+    "blink/blink-04-app.mp4": {
+      "action": "optimized",
+      "bytesIn": 68468141,
+      "bytesOut": 1394580,
+      "height": 1080,
+      "kind": "video",
+      "outputHash": "cd6339ed70aab21437108626ac00705509572a194e17cc2bc6e123fe51772e18",
+      "poster": {
+        "bytes": 52278,
+        "file": "blink/blink-04-app-poster.webp",
+        "hash": "782903bb2777296991b623281362bb6c8717a051ce6b02ad7fc38b195955a50e"
+      },
+      "reason": "H.264 crf 26 slow, 1440×1080 (resized from 2880px), 25 fps, from h264, poster at 0s, ffmpeg 9.0.2",
+      "settingsHash": "3eac96af5fc8f4bed28ede0f791d541c63b8f8c977954fde424b9dda8ea02ff6",
+      "source": "media-src/blink/blink-04-app.mp4",
+      "sourceHash": "1fb184bb9f7d00dad2075ff8945fbba6fddc08d42305aa2200702d67fc489737",
+      "width": 1440
     },
     "blink/blink-04-app.webp": {
       "action": "optimized",
@@ -662,6 +763,58 @@
         }
       },
       "width": 2880
+    },
+    "blink/blink-07-closing-thanks-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 676462,
+      "bytesOut": 158146,
+      "height": 1080,
+      "outputHash": "7539504ab14221fea73975edcc2a5e8e342e659c4c88d419ac2637fd236b734a",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 0.42",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/blink/blink-07-closing-thanks-poster.png",
+      "sourceHash": "5fe90681441a20a1007a974f742306acf7db3f4def69143613ee84ff94d774f3",
+      "variants": {
+        "480": {
+          "bytes": 2676,
+          "file": "blink/blink-07-closing-thanks-poster-480w.webp",
+          "hash": "843ea096439ce014ea5479429af0e83bea8033526e86be76959b431ef515f66f"
+        },
+        "800": {
+          "bytes": 7580,
+          "file": "blink/blink-07-closing-thanks-poster-800w.webp",
+          "hash": "df7769d161e32b986e949bf81dc2a753d391a2fb589aa0395bf00754705ab00f"
+        },
+        "1024": {
+          "bytes": 12080,
+          "file": "blink/blink-07-closing-thanks-poster-1024w.webp",
+          "hash": "a16017ccb9a8b62665edbcc9c7135c14c7d923cf31002cb4035dfc2a608f1ad8"
+        },
+        "1440": {
+          "bytes": 22834,
+          "file": "blink/blink-07-closing-thanks-poster-1440w.webp",
+          "hash": "bd3f480c8d241bd10dc4d910e21f4f991a6190886f11d914fe87a0e251f4b087"
+        },
+        "1920": {
+          "bytes": 37846,
+          "file": "blink/blink-07-closing-thanks-poster-1920w.webp",
+          "hash": "cdc45e04c4763456991679a53bb0b1bd009890ab88c320b41aab19ace73719b8"
+        }
+      },
+      "width": 2880
+    },
+    "blink/blink-07-closing-thanks.mp4": {
+      "action": "optimized",
+      "bytesIn": 1451187,
+      "bytesOut": 65064,
+      "height": 540,
+      "kind": "video",
+      "outputHash": "e369ccf6d6efafd76c37a6e617398ff95b6224002ccb1ee9fe9193e9e4aca472",
+      "reason": "H.264 crf 26 slow, 1440×540 (resized from 2880px), 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
+      "source": "media-src/blink/blink-07-closing-thanks.mp4",
+      "sourceHash": "dac63ee882aa6ba9aa89672a3aa3e0d4502c66bb21fd09a4fbc9560ddc249429",
+      "width": 1440
     },
     "blink/blink-07-closing-thanks.webp": {
       "action": "optimized",

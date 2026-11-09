@@ -5,7 +5,7 @@ The street is the starting point. It is where movement happens without a script:
 
 Blink's graphic language borrows that behaviour. Elements overlap instead of sitting neatly side by side. Noisy textures roughen the surfaces. Flashes of light cut through the compositions, and vibrant colours keep them charged. The result is layered and unpredictable — a city in constant flux, and a fitting register for a festival dedicated to motion.
 
-![Overlapping street photographs in pink and black, with the line “Every street leads to movement. Which way do you go?”](/media/blink/blink-02-concept.webp "full")
+![Overlapping street photographs in pink and black, with the line “Every street leads to movement. Which way do you go?”](/media/blink/blink-02-concept.mp4 "full")
 
 ![The festival slogan on a pink band: “The motion of the streets is ready to be seen.”](/media/blink/blink-02-concept-slogan.webp "full")
 
@@ -26,7 +26,9 @@ The experience also extends the visual identity into the site's structure. An ex
 
 ![Website screens: ticket passes for students and professionals, the Matadero Madrid locations page and a full-width Blink homepage.](/media/blink/blink-03-web-01.webp "full expand")
 
-![Website screens: an animated menu listing speakers, tickets, locations and FAQs, the day-by-day programme and the speakers page.](/media/blink/blink-03-web-03.webp "full expand")
+![Website screens: ticket passes for students and professionals, the Matadero Madrid locations page and a full-width Blink homepage.](/media/blink/blink-03-web-02.mp4 "full expand")
+
+![Website screens: an animated menu listing speakers, tickets, locations and FAQs, the day-by-day programme and the speakers page.](/media/blink/blink-03-web-03.mp4 "full expand poster=/media/blink/blink-03-web-03.webp")
 
 
 
@@ -41,7 +43,7 @@ Networking is built around personal profiles and QR code exchange. Each attendee
 
 Together, these features make the app both a practical festival companion and a tool for maintaining connections beyond individual talks and encounters.
 
-![Three app screens: the daily programme, a live-streamed talk by Liza Enebeis and a networking profile with a QR code to share contact details.](/media/blink/blink-04-app.webp "full expand")
+![Three app screens: the daily programme, a live-streamed talk by Liza Enebeis and a networking profile with a QR code to share contact details.](/media/blink/blink-04-app.mp4 "full expand poster=/media/blink/blink-04-app.webp")
 
 
 
@@ -75,4 +77,4 @@ Merchandising takes Blink off the screen and back into the physical world where 
 ## Every touchpoint answers to the street.
 From the first digital encounter to the connections made in person, Blink brings its central idea of movement to every part of the festival experience. Visual identity, digital interfaces and physical applications work together to express a world that never stands still — one that keeps unfolding, moment after moment, in the blink of an eye.
 
-![](/media/blink/blink-07-closing-thanks.webp "full")
+![](/media/blink/blink-07-closing-thanks.mp4 "full poster=/media/blink/blink-07-closing-thanks-poster.webp")
