@@ -985,6 +985,84 @@
       },
       "width": 2880
     },
+    "parc-central/parc-central-01-hero-1.webp": {
+      "action": "optimized",
+      "bytesIn": 9206046,
+      "bytesOut": 2498492,
+      "height": 1800,
+      "outputHash": "fb28848091038288fa94de712a66269abb00fb2ef9f65c21a40a00de3c764bd3",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 5.30, 1 at q90, 4 kept at q78 (q90 too close to the next larger width)",
+      "settingsHash": "bbbe6934d4abc7e5fc39a185ec27852d9f55a3842ddb78210aedbc707a349418",
+      "source": "media-src/parc-central/parc-central-01-hero-1.jpg",
+      "sourceHash": "af0300d48c12a07fffb7be32c4301e96534c04c63b5e5d8defebb5454ce8cbab",
+      "variants": {
+        "480": {
+          "bytes": 67866,
+          "file": "parc-central/parc-central-01-hero-1-480w.webp",
+          "hash": "9b7eac55b01a27ee1be985993b4a0d04819aeaa8d35f4e0586173cc6aea31d98"
+        },
+        "800": {
+          "bytes": 120056,
+          "file": "parc-central/parc-central-01-hero-1-800w.webp",
+          "hash": "16653a45c2376f8773ed980f04c609a5043de554e9e4d71fc3319a8ccce9c584"
+        },
+        "1024": {
+          "bytes": 195574,
+          "file": "parc-central/parc-central-01-hero-1-1024w.webp",
+          "hash": "d05b13af46884ece7542f418b5225076f1300642c5bd138e5b3e0f61851b9f5d"
+        },
+        "1440": {
+          "bytes": 363046,
+          "file": "parc-central/parc-central-01-hero-1-1440w.webp",
+          "hash": "5b70907cb36447301194f94503a0f7530dbd3ae3165db7167f7324f1ad0d8532"
+        },
+        "1920": {
+          "bytes": 586406,
+          "file": "parc-central/parc-central-01-hero-1-1920w.webp",
+          "hash": "639df6aeac2194e1a74d0f1cf6899385d92b5148beaa08f7ab5b364289c155b8"
+        }
+      },
+      "width": 2880
+    },
+    "parc-central/parc-central-01-hero-2.webp": {
+      "action": "optimized",
+      "bytesIn": 12158173,
+      "bytesOut": 5640550,
+      "height": 1800,
+      "outputHash": "6096572322a64580a91d41db24dfa99f93c659689f0b646c0fe65f75c49621b0",
+      "reason": "base 2880px q90, 5 variants (480, 800, 1024, 1440, 1920), max mean error 7.35, 6 at q90",
+      "settingsHash": "bbbe6934d4abc7e5fc39a185ec27852d9f55a3842ddb78210aedbc707a349418",
+      "source": "media-src/parc-central/parc-central-01-hero-2.jpg",
+      "sourceHash": "c5f67c610fcdbe7086dc8e8152b9d806d385cd8d89ad9c94e0bd18d5f9085d7d",
+      "variants": {
+        "480": {
+          "bytes": 94482,
+          "file": "parc-central/parc-central-01-hero-2-480w.webp",
+          "hash": "c77eb7af2a866f751c1d0e8b555adb02233e6386b21ce1334a4a706fb6c7aa2f"
+        },
+        "800": {
+          "bytes": 265282,
+          "file": "parc-central/parc-central-01-hero-2-800w.webp",
+          "hash": "ee26bea120d50d5328bef54f94fdc87528ce10ff8166267ff742146af6454825"
+        },
+        "1024": {
+          "bytes": 430088,
+          "file": "parc-central/parc-central-01-hero-2-1024w.webp",
+          "hash": "41a87e396ebf5098e3848ae818171497c567517c3bc7f1b29611f3b86d74e11f"
+        },
+        "1440": {
+          "bytes": 818694,
+          "file": "parc-central/parc-central-01-hero-2-1440w.webp",
+          "hash": "480c55b3caa77524d1c6636e61b22f8a6299c98db89f17541b634cb55965974d"
+        },
+        "1920": {
+          "bytes": 1364580,
+          "file": "parc-central/parc-central-01-hero-2-1920w.webp",
+          "hash": "0d9bb8cf961c3a2dc083b8c6927c949f7f7c6844fced48ab42948065ae09e106"
+        }
+      },
+      "width": 2880
+    },
     "parc-central/parc-central-01-hero-mobile.webp": {
       "action": "optimized",
       "bytesIn": 11954526,
@@ -1026,39 +1104,39 @@
     },
     "parc-central/parc-central-01-hero.webp": {
       "action": "optimized",
-      "bytesIn": 9579478,
-      "bytesOut": 1761788,
+      "bytesIn": 7830217,
+      "bytesOut": 1672930,
       "height": 1800,
-      "outputHash": "2c4649557005381ceab7c7f85d05a4a2722ba0d50d9be6b15c2a60a2aef9eb55",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 4.05, 1 at q90, 1 kept at q78 (q90 too close to the next larger width)",
-      "settingsHash": "03a04bf62f872a9283b417416cd7a36ccaf25ab84bc9e631b5595396e8ca5657",
-      "source": "media-src/parc-central/parc-central-01-hero.png",
-      "sourceHash": "fa45f6422615ca5fc382e11e1406e0494767223cec33c35b372ff2cceffa0047",
+      "outputHash": "3b6b86929d906207df0d2b9c4799050affa0b5a6d1f29b6702533c6c21bad177",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 3.15",
+      "settingsHash": "5a223f6fb8a2af0c510ccc7452da4a289d54d3f2a7454d5e93effa0230de9a40",
+      "source": "media-src/parc-central/parc-central-01-hero.jpg",
+      "sourceHash": "faed18566828f81559af184ee91384b15598f4fee1bf38374ad3c95c9465835a",
       "variants": {
         "480": {
-          "bytes": 77570,
+          "bytes": 21722,
           "file": "parc-central/parc-central-01-hero-480w.webp",
-          "hash": "a6f072accd6eb87a9b3ef211c9bf631ce23fd73c67ed87c65ca1a34f8ffcce93"
+          "hash": "0398402dfcb75a62974870b72d14044def01416addc99f16396b98b6331fd5c2"
         },
         "800": {
-          "bytes": 118006,
+          "bytes": 59226,
           "file": "parc-central/parc-central-01-hero-800w.webp",
-          "hash": "a80ec9bfa86e49a148a750457bf87b1e3c0229d85a218e786d7157b0605ece99"
+          "hash": "648f7cca03ed369351fecf5d8d9c41a466ce2e484eadfec455a98e98c27c1cae"
         },
         "1024": {
-          "bytes": 161440,
+          "bytes": 99280,
           "file": "parc-central/parc-central-01-hero-1024w.webp",
-          "hash": "9d7ee8b6e51cdf55c8f6c35a82882ac26be9593cb539950193423c6c311ec85f"
+          "hash": "550116399437744f5f0a81b766ec177cf9572221a4311a28c01591b5956387eb"
         },
         "1440": {
-          "bytes": 252580,
+          "bytes": 212274,
           "file": "parc-central/parc-central-01-hero-1440w.webp",
-          "hash": "2073617c36222fbe3ccae11f6aec3e288adb90b3aabfcd8c00a1cb6c0aab5f19"
+          "hash": "7aa15a4c604a27860b97385f22db691f78cd3836c33ac6b01ba3925ad1b57d86"
         },
         "1920": {
-          "bytes": 382944,
+          "bytes": 390692,
           "file": "parc-central/parc-central-01-hero-1920w.webp",
-          "hash": "132faf714bd935cbf2a3f99ba56b927e757a38f05e986cb340c53a04a57f0f71"
+          "hash": "35e088113382d59232400c882b1697a1434921948f75efa3f13941463de8c3f3"
         }
       },
       "width": 2880
@@ -1156,6 +1234,45 @@
       "sourceHash": "1e9831ecfc49672072440b9c9f8dd34d0b730e38630fb5318c5dbcbfbe8470c5",
       "width": 1440
     },
+    "parc-central/parc-central-06-posters-events-mockup.webp": {
+      "action": "optimized",
+      "bytesIn": 2813680,
+      "bytesOut": 636280,
+      "height": 1632,
+      "outputHash": "73500b4934222e2c5c7092fb2d8488bc612aab41b833632bb65742065be6efdf",
+      "reason": "base 2612px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 1.97",
+      "settingsHash": "61843067b6a0d04fd7ceb4e10b87962156d9187dfebb88591972b0a8ed42527d",
+      "source": "media-src/parc-central/parc-central-06-posters-events-mockup.jpeg",
+      "sourceHash": "068e07e76fd501be5c89cecd12b0f5d5300d04726fc64356e5db77fca8d34340",
+      "variants": {
+        "480": {
+          "bytes": 17304,
+          "file": "parc-central/parc-central-06-posters-events-mockup-480w.webp",
+          "hash": "8e0640283477d3d7da8591c973a173bdec9a6673ea64dd21080343370624f14d"
+        },
+        "800": {
+          "bytes": 40782,
+          "file": "parc-central/parc-central-06-posters-events-mockup-800w.webp",
+          "hash": "548c35890fd675876a2307ef6bb6c2bbe193453957ce7848151edd0a87eaee04"
+        },
+        "1024": {
+          "bytes": 62282,
+          "file": "parc-central/parc-central-06-posters-events-mockup-1024w.webp",
+          "hash": "5594fcf6146f1d0cd48d7106ad45e17561c5ba9f389162445ca860caef658bdf"
+        },
+        "1440": {
+          "bytes": 103224,
+          "file": "parc-central/parc-central-06-posters-events-mockup-1440w.webp",
+          "hash": "e80057361415ded65d8bbe37b6e3a4d6c193f0b164eb0a02c668e9fc79d7e0c6"
+        },
+        "1920": {
+          "bytes": 157782,
+          "file": "parc-central/parc-central-06-posters-events-mockup-1920w.webp",
+          "hash": "14bd4a42894b43b513ebfd2c28a429ef7564e3e648e621cb57ef5c7e5149af9e"
+        }
+      },
+      "width": 2612
+    },
     "parc-central/parc-central-07-packaging.webp": {
       "action": "optimized",
       "bytesIn": 4401034,
@@ -1194,6 +1311,48 @@
         }
       },
       "width": 2160
+    },
+    "parc-central/parc-central-08-wallet-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 968033,
+      "bytesOut": 93698,
+      "height": 1440,
+      "outputHash": "381d790994192f22a7a16bb86660c6f643b004ba31f423fa1e2cbc15d202adbd",
+      "reason": "base 1080px q78, 3 variants (480, 800, 1024), max mean error 0.75",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-08-wallet-poster.png",
+      "sourceHash": "93c9b7628d8505ebfcf978b0708e8b3979d77c9bfdd958ad06b97f84c1655b8e",
+      "variants": {
+        "480": {
+          "bytes": 12192,
+          "file": "parc-central/parc-central-08-wallet-poster-480w.webp",
+          "hash": "099db84f054b9c4c8d77f70cc8be2b456d0053bdf87a69be3b8687c18167a6ed"
+        },
+        "800": {
+          "bytes": 21870,
+          "file": "parc-central/parc-central-08-wallet-poster-800w.webp",
+          "hash": "4fbbe976b6f2f245e44c1e077461ef11f39b292acee234abaaee9d1a4e8384af"
+        },
+        "1024": {
+          "bytes": 29008,
+          "file": "parc-central/parc-central-08-wallet-poster-1024w.webp",
+          "hash": "4c597154923244bf9a86eb0ed97a1164991e3278d2d9e6cb4405ef437c9d8c8c"
+        }
+      },
+      "width": 1080
+    },
+    "parc-central/parc-central-08-wallet.mp4": {
+      "action": "optimized",
+      "bytesIn": 1737570,
+      "bytesOut": 142767,
+      "height": 1440,
+      "kind": "video",
+      "outputHash": "595764c4ee4d22c16ff0f8622b6b5af150ec0593ad50e0d31dd8493470d8ebc4",
+      "reason": "H.264 crf 26 slow, 1080×1440, 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
+      "source": "media-src/parc-central/parc-central-08-wallet.mp4",
+      "sourceHash": "f727435025befb2130ec40276a50dc32d9a5bcc5ce16d9904e32b1921a6ee867",
+      "width": 1080
     },
     "parc-central/parc-central-09-web.mp4": {
       "action": "optimized",
@@ -1254,37 +1413,84 @@
     },
     "parc-central/parc-central-11-signage-2.webp": {
       "action": "optimized",
-      "bytesIn": 11465620,
-      "bytesOut": 1985636,
+      "bytesIn": 12725943,
+      "bytesOut": 2731350,
       "height": 2880,
-      "outputHash": "9a6e803915321c25a5220151eb5dca9a3bc0bd539fd47797e5aa80a28642ffe9",
-      "reason": "base 1920px q78, 4 variants (480, 800, 1024, 1440), max mean error 2.92",
+      "outputHash": "98b6d52b18c4738e54b2980905f04e08cdaa0db3575c382193942e19b866a85c",
+      "reason": "base 2160px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 3.09",
       "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
       "source": "media-src/parc-central/parc-central-11-signage-2.png",
-      "sourceHash": "0700be1122a9a063d4e52eb6258ff83267a1cce004b8c6c1caed8f6ac54e451f",
+      "sourceHash": "bc52ec5f0fcad304713a41faf6406b6717040285d42872dbf3e030f7490eac90",
       "variants": {
         "480": {
-          "bytes": 53838,
+          "bytes": 46922,
           "file": "parc-central/parc-central-11-signage-2-480w.webp",
-          "hash": "d7cdf0acd500a699a1fa7eec1a5308281e17561f2b03da4329fc470f9bd66a6b"
+          "hash": "1e151416053ab6d8a66c162588580073e846b47d1820afa69a624f88a09263c9"
         },
         "800": {
-          "bytes": 167220,
+          "bytes": 145812,
           "file": "parc-central/parc-central-11-signage-2-800w.webp",
-          "hash": "174af45daedeab2ad133da88cf13c5814f25e5545e80e35fc3bade855d6a6a4f"
+          "hash": "85ba253b82481d88b99cb4f24442eaa4e72c120c88d968cbe442a43625b81369"
         },
         "1024": {
-          "bytes": 282278,
+          "bytes": 247740,
           "file": "parc-central/parc-central-11-signage-2-1024w.webp",
-          "hash": "4a2c67a81c1f097d89bd86f46d6a515944ec7a2671ebfefa4e1e7df0d33ae522"
+          "hash": "59a64a1363c2cd3ac0cc2d8c7ab8af512109a6fdcc042d83482d4582bf4b215e"
         },
         "1440": {
-          "bytes": 545772,
+          "bytes": 484738,
           "file": "parc-central/parc-central-11-signage-2-1440w.webp",
-          "hash": "a03f6ed2265dad89b611234bed456374158e0cf8120753b2fc5745369d8b9e35"
+          "hash": "536e46af9dd0cf51c6ff7c49772bb503d2557df308db2ead93b57721bd7dbfa0"
+        },
+        "1920": {
+          "bytes": 803296,
+          "file": "parc-central/parc-central-11-signage-2-1920w.webp",
+          "hash": "7c5a8ba447d73bf9c7f0592a34e1e708c7702f7c75f8a8ed2574b325c2abcf5e"
         }
       },
-      "width": 1920
+      "width": 2160
+    },
+    "parc-central/parc-central-12-signage-legend-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 3129214,
+      "bytesOut": 515236,
+      "height": 1440,
+      "outputHash": "6959134e8d8b49ca683a4e615db820f23e321d31ebcd2a0b33c1f26b08e027fa",
+      "reason": "base 1080px q78, 3 variants (480, 800, 1024), max mean error 3.58",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-12-signage-legend-poster.png",
+      "sourceHash": "3e354d6187c4dd2cb71ff12c567545adeb2169edb846b5c2c9b720ec7fdc3b89",
+      "variants": {
+        "480": {
+          "bytes": 52772,
+          "file": "parc-central/parc-central-12-signage-legend-poster-480w.webp",
+          "hash": "0ec66afdf6eef6dc17efa00b0c0d914bf0390a87c44ef8605e941c6a53039f93"
+        },
+        "800": {
+          "bytes": 115002,
+          "file": "parc-central/parc-central-12-signage-legend-poster-800w.webp",
+          "hash": "1becc73149bf3a2a8e30f3263ad58497eae76ae6867b58588d405f42bc6e0ba9"
+        },
+        "1024": {
+          "bytes": 165186,
+          "file": "parc-central/parc-central-12-signage-legend-poster-1024w.webp",
+          "hash": "954e3036212fbcea7c3421e51976aa3f7f16fbacbeec7c90179c8d7594b9b50a"
+        }
+      },
+      "width": 1080
+    },
+    "parc-central/parc-central-12-signage-legend.mp4": {
+      "action": "optimized",
+      "bytesIn": 4044314,
+      "bytesOut": 1261358,
+      "height": 1440,
+      "kind": "video",
+      "outputHash": "33ef9a5a6d5243a86e6f02858d2ad8501ca490cd12749e0ab293701dc59f7edd",
+      "reason": "H.264 crf 26 slow, 1080×1440, 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
+      "source": "media-src/parc-central/parc-central-12-signage-legend.mp4",
+      "sourceHash": "d2232ee639197996b26f7ee2391783b1f998b076ffc940cfbc12c1145d43d061",
+      "width": 1080
     },
     "parc-central/parc-central-13-fabric-banners.webp": {
       "action": "optimized",
@@ -1377,23 +1583,42 @@
       },
       "width": 1920
     },
+    "parc-central/parc-central-16-insta-posts-poster.webp": {
+      "action": "optimized",
+      "bytesIn": 176894,
+      "bytesOut": 61632,
+      "height": 1440,
+      "outputHash": "f02780a56620705cabb38485201b8ff0996157286b153695f9d77d68eacce7ec",
+      "reason": "base 960px q78, 2 variants (480, 800), max mean error 0.80",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-16-insta-posts-poster.png",
+      "sourceHash": "abfcdcd0bcec927e809154bc172a5a361aadd315649cfb4e99778125e029327b",
+      "variants": {
+        "480": {
+          "bytes": 12412,
+          "file": "parc-central/parc-central-16-insta-posts-poster-480w.webp",
+          "hash": "76db9b06433f074ccc1e2ed5042d7acecaa1f0bc62d38d91b61f4139d2da6f3c"
+        },
+        "800": {
+          "bytes": 22052,
+          "file": "parc-central/parc-central-16-insta-posts-poster-800w.webp",
+          "hash": "00ec273a19e67e41c634a99f2fc54e9a93bc5407a689aeae4649341d401a3a5f"
+        }
+      },
+      "width": 960
+    },
     "parc-central/parc-central-16-insta-posts.mp4": {
       "action": "optimized",
-      "bytesIn": 4887775,
-      "bytesOut": 473742,
-      "height": 1618,
+      "bytesIn": 11587540,
+      "bytesOut": 415097,
+      "height": 1440,
       "kind": "video",
-      "outputHash": "3bd3fa420ac32e0a16ab97639e904ed75f4abd2d0d0518489694208f5e74b785",
-      "poster": {
-        "bytes": 30280,
-        "file": "parc-central/parc-central-16-insta-posts-poster.webp",
-        "hash": "627361b2bf230adc09853f72cee3cf6c8418b39ff3d219f870238a82d0d8ba68"
-      },
-      "reason": "H.264 crf 26 slow, 1042×1618, 25 fps, from h264, poster at 0s, ffmpeg 9.0.2",
-      "settingsHash": "3eac96af5fc8f4bed28ede0f791d541c63b8f8c977954fde424b9dda8ea02ff6",
+      "outputHash": "0c2a193c391863d883dc2692d1496bf60b2dfa1da128ffe2a790c15169a0e88d",
+      "reason": "H.264 crf 26 slow, 960×1440, 25 fps, from h264, ffmpeg 9.0.2",
+      "settingsHash": "24f02540d4301c86a6827725c7434a64c0df78f0489ea4bf5c16a206d7af3958",
       "source": "media-src/parc-central/parc-central-16-insta-posts.mp4",
-      "sourceHash": "2a36dc96dd81569a8032322766d26f5aee78594a8c0945dc853dcef56ce9be36",
-      "width": 1042
+      "sourceHash": "f8d1780c2f39dc3dfbdab35710850e46d7d848f4303e22840c6483fdc0b8a542",
+      "width": 960
     },
     "parc-central/parc-central-17-postcards.webp": {
       "action": "optimized",

@@ -299,6 +299,30 @@
       2880
     ]
   },
+  "/media/parc-central/parc-central-01-hero-1.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
+  "/media/parc-central/parc-central-01-hero-2.webp": {
+    "height": 1800,
+    "width": 2880,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2880
+    ]
+  },
   "/media/parc-central/parc-central-01-hero-mobile.webp": {
     "height": 2880,
     "width": 2160,
@@ -347,6 +371,18 @@
     "height": 900,
     "width": 1440
   },
+  "/media/parc-central/parc-central-06-posters-events-mockup.webp": {
+    "height": 1632,
+    "width": 2612,
+    "widths": [
+      480,
+      800,
+      1024,
+      1440,
+      1920,
+      2612
+    ]
+  },
   "/media/parc-central/parc-central-07-packaging.webp": {
     "height": 2880,
     "width": 2160,
@@ -358,6 +394,20 @@
       1920,
       2160
     ]
+  },
+  "/media/parc-central/parc-central-08-wallet-poster.webp": {
+    "height": 1440,
+    "width": 1080,
+    "widths": [
+      480,
+      800,
+      1024,
+      1080
+    ]
+  },
+  "/media/parc-central/parc-central-08-wallet.mp4": {
+    "height": 1440,
+    "width": 1080
   },
   "/media/parc-central/parc-central-09-web.mp4": {
     "height": 900,
@@ -377,14 +427,29 @@
   },
   "/media/parc-central/parc-central-11-signage-2.webp": {
     "height": 2880,
-    "width": 1920,
+    "width": 2160,
     "widths": [
       480,
       800,
       1024,
       1440,
-      1920
+      1920,
+      2160
     ]
+  },
+  "/media/parc-central/parc-central-12-signage-legend-poster.webp": {
+    "height": 1440,
+    "width": 1080,
+    "widths": [
+      480,
+      800,
+      1024,
+      1080
+    ]
+  },
+  "/media/parc-central/parc-central-12-signage-legend.mp4": {
+    "height": 1440,
+    "width": 1080
   },
   "/media/parc-central/parc-central-13-fabric-banners.webp": {
     "height": 1800,
@@ -413,9 +478,18 @@
       1920
     ]
   },
+  "/media/parc-central/parc-central-16-insta-posts-poster.webp": {
+    "height": 1440,
+    "width": 960,
+    "widths": [
+      480,
+      800,
+      960
+    ]
+  },
   "/media/parc-central/parc-central-16-insta-posts.mp4": {
-    "height": 1618,
-    "width": 1042
+    "height": 1440,
+    "width": 960
   },
   "/media/parc-central/parc-central-17-postcards.webp": {
     "height": 1080,
