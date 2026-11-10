@@ -55,3 +55,4 @@ if (path.startsWith('/project/')) {
   main.classList.add('container');
   initHome();
 }
+

@@ -3,96 +3,237 @@
 \*------------------------------------*/
 
 /**
- * Copyright, contact, hosting and social links. The markup comes from
- * site-footer.js.
+ * Notes, copyright and contact card. The markup comes from
+ * site-footer.js. It sits behind `main` and is revealed while scrolling,
+ * like the case hero (`main` covers it: see page.css).
  *
- * 1. Minimum 24px touch target without changing the layout: the
- *    padding of an inline element does not change the line height.
- * 2. Arrow icon before the "Up" link.
+ * 1. Sticky goes on the custom element: it is the child of `body`, so
+ *    it can stay pinned to the bottom of the viewport behind `main`.
+ *    The inner `<footer>` would only move inside its own box. The
+ *    negative z-index puts it behind main without giving main a
+ *    stacking context, so the header and the cursor preview keep
+ *    their own z-index.
+ * 2. Notes: columns 1 to 4. Card: columns 6 to 12, as in the design.
+ * 3. Copyright at the bottom of the notes column.
+ * 4. The chips inherit this size (`font: inherit`), also the button.
+ * 5. Contact and social chips behave like `.site-nav__link`: secondary
+ *    text that turns primary on hover, with a darker background and
+ *    the same transition. The background stays visible at rest, as in
+ *    the design, so the chips read as buttons over the card.
+ * 6. Icons come from the SVG files, so their colour is set in the
+ *    exported SVG, not by `currentColor`.
+ * 7. Too tall to fit in the viewport (one column, or a short window):
+ *    its top would stay hidden behind `main`, so it falls back to the
+ *    normal flow.
+ * 8. The copy and check icons use the SVG as a mask, so they take the
+ *    colour of a token instead of the colour of the exported file.
+ * 9. Copied state: green background, and text and icon turn primary.
+ *    Secondary text on this green is below 4.5:1; primary gives 10:1.
  */
 
+site-footer {
+  display: block;
+  position: sticky; /* [1] */
+  bottom: 0;
+  z-index: -1;
+}
+
 .site-footer {
-  width: 100%;
-  display: flex;
-  justify-self: end;
-  align-self: flex-end;
-  font-size: var(--font-size-m);
-  padding: var(--spacing-6) 0;
+  background-color: var(--color-background-tertiary);
+  padding-block: var(--spacing-24) var(--spacing-12);
 }
 
 .site-footer__inner {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: var(--spacing-2);
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--spacing-grid-column);
+  row-gap: var(--spacing-12);
 }
 
-.site-footer__info {
+
+/* ── Notes ── */
+
+.site-footer__notes {
+  grid-column: 1 / span 4; /* [2] */
   display: flex;
-  flex-flow: row wrap;
-  gap: var(--spacing-4);
+  flex-direction: column;
+  gap: var(--spacing-10);
+  padding-block-start: var(--spacing-8);
 }
 
-.site-footer__copy,
-.site-footer__note {
-  display: inline-block;
+.site-footer__note-title {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-4);
+}
+
+.site-footer__note-text {
+  font-size: var(--font-size-xs);
+  line-height: 1.45;
+  color: var(--color-text-secondary);
 }
 
 .site-footer__link {
-  padding-block: var(--spacing-1); /* [1] */
+  text-decoration-line: underline;
+  text-underline-offset: 0.2em;
 }
 
-.site-footer__nav {
+.site-footer__copyright {
+  margin-top: auto; /* [3] */
+  font-size: var(--font-size-s);
+}
+
+.site-footer__copyright span {
+  margin-inline: var(--spacing-3);
+}
+
+
+/* ── Card ── */
+
+.site-footer__card {
+  grid-column: 6 / -1; /* [2] */
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  gap: var(--spacing-6);
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-16);
+  min-height: 28rem;
+  padding: var(--spacing-8);
+  border-radius: var(--radius-card-s);
+  background-color: var(--color-background-secondary);
+}
+
+.site-footer__cta {
+  max-width: 24ch;
+  font-size: var(--font-size-xl);
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--spacing-8) var(--spacing-16);
+  font-size: var(--font-size-s); /* [4] */
+}
+
+.site-footer__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.site-footer__label {
+  color: var(--color-text-secondary);
 }
 
 .site-footer__links {
   display: flex;
-  gap: var(--spacing-2); /* [3] */
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
 }
 
-.site-footer__link--social { /* [3] */
-  display: inline-flex;
+
+/* ── Chips ── */
+
+.site-footer__chip {
+  display: inline-flex; /* [5] */
+  align-items: center;
+  gap: var(--spacing-3);
   padding: var(--spacing-2) var(--spacing-3);
-  border-radius: var(--radius-2);
+  border: none;
+  border-radius: var(--radius-button-primary);
+  font: inherit; /* [4] */
   color: var(--color-text-secondary);
-  background-color: transparent;
+  background-color: var(--color-background-tertiary);
   text-decoration: none;
+  cursor: pointer;
   transition:
     color var(--duration-base) var(--easing-out),
     background-color var(--duration-base) var(--easing-out);
 }
 
-.site-footer__link--social:hover {
+.site-footer__chip:hover {
   color: var(--color-text-primary);
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-button-primary-background-hover);
 }
 
-.site-footer__link--social:focus-visible {
+.site-footer__chip:focus-visible {
   outline: 2px solid var(--color-text-primary);
   outline-offset: 2px;
 }
 
-.site-footer__up {
-  font-size: var(--font-size-xl);
-  display: inline-flex;
+.site-footer__copy::after {
+  content: "";
+  display: block;
+  width: var(--size-icon-s);
+  height: var(--size-icon-s);
+  background-color: var(--color-text-secondary); /* [8] */
+  mask-image: url("../../assets/icons/copy.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
-.site-footer__up::before {
-  content: ""; /* [2] */
-  display: inline-block;
+.site-footer__copy[data-state="copied"] {
+  color: var(--color-text-primary); /* [9] */
+  background-color: var(--color-background-success);
+}
+
+.site-footer__copy[data-state="copied"]::after {
+  background-color: var(--color-text-primary); /* [9] */
+  mask-image: url("../../assets/icons/check.svg");
+}
+
+
+/* ── Up ── */
+
+.site-footer__up {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-left: auto;
+  font-size: var(--font-size-xl);
+}
+
+.site-footer__up::after {
+  content: "";
+  display: block;
   width: var(--size-icon-l);
   height: var(--size-icon-l);
-  align-self: center;
-  margin-right: var(--spacing-2);
-  color: var(--color-text-primary);
-
-  background-image: url("../../assets/icons/arrow-elbow-left-up.svg");
+  background-image: url("../../assets/icons/arrow-elbow-right-up.svg"); /* [6] */
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/*------------------------------------*\
+  #RESPONSIVE
+\*------------------------------------*/
+
+/* Notes and card stacked in one column */
+@media (max-width: 768px) {
+  .site-footer {
+    padding-block: var(--spacing-16) var(--spacing-8);
+  }
+
+  .site-footer__notes,
+  .site-footer__card {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer__notes {
+    padding-block-start: 0;
+  }
+
+  .site-footer__card {
+    min-height: auto;
+  }
+}
+
+/* No reveal when the footer does not fit in the viewport */
+@media (max-width: 768px), (max-height: 44rem) {
+  site-footer {
+    position: relative; /* [7] */
+  }
 }

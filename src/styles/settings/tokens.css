@@ -50,6 +50,10 @@
   --color-neutral-950: #121212;
 
   /* Color — hues */
+  --color-green-500: #33D78E;
+
+
+  /* Color — hues */
   --color-green-100: #DDFEA6;
   --color-blue-50:   #E7F8FF;
   --color-blue-100:  #D1F1FE;
@@ -121,6 +125,7 @@
   --color-background-tertiary:    var(--color-neutral-0);
   --color-background-placeholder: var(--color-neutral-200);  /* media while loading */
   --color-background-inverse:     var(--color-neutral-950);
+  --color-background-success:     var(--color-green-500);
 
   /* Color — outline */
   --color-outline-primary: var(--color-neutral-300);

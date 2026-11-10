@@ -375,8 +375,10 @@ function initBackToTop() {
     const scrolledPast = desktop.matches
       ? window.scrollY > window.innerHeight
       : index.getBoundingClientRect().bottom < 0;
-    const atEnd = [...document.querySelectorAll('.related-work:not([hidden]), site-footer')]
-      .some(el => el.getBoundingClientRect().top < window.innerHeight);
+    // The footer is pinned behind main, so the end of main marks when it shows
+    const relatedWork = document.querySelector('.related-work:not([hidden])');
+    const atEnd = (relatedWork?.getBoundingClientRect().top ?? Infinity) < window.innerHeight
+      || document.querySelector('main').getBoundingClientRect().bottom < window.innerHeight;
     button.dataset.visible = String(scrolledPast && !atEnd);
   };
   const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };

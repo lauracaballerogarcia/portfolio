@@ -10,6 +10,14 @@
  *    fixed header.
  * 3. Smaller base size on small screens: every rem-based token
  *    scales with it (87.5% = 14px with the default 16px).
+ * 4. `body` becomes the stacking context of the page. The footer sits
+ *    behind the content (z-index: -1); without it, the footer would go
+ *    below the box of `body`, which would then take its clicks.
+ * 5. Main covers the footer, which is revealed behind it at the end of
+ *    the page (same role as `.case__layout` over the case hero).
+ *    `.container` limits the width of main, so the border image paints
+ *    its background out to both edges of the viewport (outset), without
+ *    widening the page or clipping its content.
  */
 
 html, body {
@@ -24,6 +32,10 @@ html, body {
   line-height: 1.2;
 }
 
+body {
+  isolation: isolate; /* [4] */
+}
+
 #top {
   scroll-margin-top: var(--size-header-height); /* [2] */
 }
@@ -34,6 +46,9 @@ main {
   align-self: center;
   flex: 1; /* [1] */
   width: 100%;
+  border-image-source: linear-gradient(var(--color-background-primary), var(--color-background-primary)); /* [5] */
+  border-image-slice: 0 fill;
+  border-image-outset: 0 100vmax;
 }
 
 @media (max-width: 768px) {
