@@ -18,6 +18,11 @@
  *    `.container` limits the width of main, so the border image paints
  *    its background out to both edges of the viewport (outset), without
  *    widening the page or clipping its content.
+ * 6. Shadow that main casts on the footer as it slides over it. A
+ *    pseudo-element under the bottom edge, painted out to both edges of
+ *    the viewport like the background in [5]. `position: relative`
+ *    with no z-index gives it a place to sit without creating a
+ *    stacking context.
  */
 
 html, body {
@@ -50,6 +55,8 @@ main {
   border-image-slice: 0 fill;
   border-image-outset: 0 100vmax;
 }
+
+
 
 @media (max-width: 768px) {
   html {

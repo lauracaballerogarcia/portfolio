@@ -3,93 +3,186 @@
 \*------------------------------------*/
 
 /**
- * Fixed site header: logo, main links and, on small screens, a menu
- * button. The markup comes from site-nav.js.
+ * Site header: logo, navigation bar and local time. The markup comes
+ * from site-nav.js.
  *
- * 1. Above the page content.
- * 2. Hidden on wide screens: the links are always visible.
- * 3. Reserves the width of the medium weight, so the active link does
- *    not push the others.
- * 4. Active link: primary color, no background, medium weight (also on
- *    hover).
+ * 1. The header scrolls away with the page; only the bar stays fixed.
+ *    Above the page content.
+ * 2. The bar is fixed and centred, on top of the content.
+ * 3. Its own stacking context: the indicators (z-index 0) paint below
+ *    every label (z-index 1), so the indicator never covers a label
+ *    while it slides past it.
+ * 4. White indicator of the current page, under the label. Only the
+ *    current link shows it.
+ * 5. Hover only lightens the background; the current link keeps white.
+ * 6. Arrow after "Let's talk", coloured with the text (`currentColor`).
+ * 7. Medium screens: no clock. Small screens: no logo either, and the
+ *    bar keeps the centre (Feed links to the home page). On phones the
+ *    links lose some side padding so the bar fits in one line.
  */
 
 .site-nav {
-  position: fixed;
+  position: absolute; /* [1] */
   top: 0;
   left: 0;
   width: 100%;
   height: var(--size-header-height);
-  z-index: 999; /* [1] */
-  background-color: var(--color-background-primary);
-  /* backdrop-filter: blur(8px);
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%); */
-  font-size: var(--font-size-m);
+  z-index: 999;
+  font-size: var(--font-size-s);
 }
 
 .site-nav__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: var(--size-header-height);
+  height: 100%;
 }
 
-.site-nav__toggle {
-  display: none; /* [2] */
+.site-nav__logo,
+.site-nav__time {
+  color: var(--color-text-secondary);
+}
+
+.site-nav__time {
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* ── Bar ── */
+
+.site-nav__bar {
+  position: fixed; /* [2] */
+  top: var(--spacing-4);
+  left: 50%;
+  translate: -50% 0;
+  isolation: isolate; /* [3] */
+  padding: var(--spacing-1);
+  border-radius: var(--radius-nav);
+  background-color: var(--color-nav-background);
 }
 
 .site-nav__list {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2);
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  gap: var(--spacing-1);
+  white-space: nowrap;
 }
 
-/* Default: secondary, no background, regular weight */
+
+/* ── Links ── */
+
 .site-nav__link {
+  position: relative;
   display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  padding: var(--spacing-2) var(--spacing-3);
-  border-radius: var(--radius-2);
-  font-weight: var(--font-weight-regular);
-  color: var(--color-text-secondary);
-  background-color: transparent;
-  text-decoration: none;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-button-primary);
+  color: var(--color-nav-link-text-default);
   transition:
     color var(--duration-base) var(--easing-out),
     background-color var(--duration-base) var(--easing-out);
 }
 
-.site-nav__link::after {
-  content: attr(data-label); /* [3] */
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-  font-weight: var(--font-weight-medium);
-  pointer-events: none;
-  user-select: none;
+.site-nav__link:hover:not([aria-current="page"]) { /* [5] */
+  background-color: var(--color-nav-link-background-hover);
 }
 
-/* Hover: primary, with background, regular weight */
-.site-nav__link:hover {
-  color: var(--color-text-primary);
-  background-color: var(--color-background-secondary);
+.site-nav__link[aria-current="page"] {
+  color: var(--color-nav-link-text-active);
 }
 
-.site-nav__link[aria-current="page"],
-.site-nav__link[aria-current="page"]:hover {
-  color: var(--color-text-primary); /* [4] */
-  background-color: transparent;
-  font-weight: var(--font-weight-medium);
+.site-nav__label {
+  position: relative; /* [3] */
+  z-index: 1;
 }
 
-.site-nav__link:focus-visible {
+.site-nav__indicator {
+  position: absolute; /* [4] */
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background-color: var(--color-nav-link-background-active);
+  opacity: 0;
+}
+
+.site-nav__link[aria-current="page"] .site-nav__indicator {
+  opacity: 1;
+}
+
+.site-nav__link:focus-visible,
+.site-nav__cta:focus-visible {
   outline: 2px solid var(--color-text-primary);
   outline-offset: 2px;
+}
+
+
+/* ── Let's talk ── */
+
+.site-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-button-primary);
+  color: var(--color-button-cta-text-default);
+  background-color: var(--color-button-cta-background-default);
+  transition: background-color var(--duration-base) var(--easing-out);
+}
+
+.site-nav__cta:hover {
+  background-color: var(--color-button-cta-background-hover); /* [5] */
+}
+
+.site-nav__cta::after {
+  content: "";
+  display: block;
+  width: var(--size-icon-s);
+  height: var(--size-icon-s);
+  background-color: currentColor; /* [6] */
+  mask-image: url("../../assets/icons/arrow-right.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+
+/*------------------------------------*\
+  #PAGE-TRANSITION
+\*------------------------------------*/
+
+/**
+ * When the page changes, the white indicator slides from the old
+ * current link to the new one (cross-document view transition).
+ *
+ * 1. Only for people who don't ask for reduced motion. Browsers
+ *    without support change page with no animation.
+ * 2. Nothing else animates: the rest of the page changes at once.
+ * 3. The indicator of the current link is the shared element between
+ *    the two pages.
+ * 4. The labels travel in the transition too, above the indicator, so
+ *    it slides under the text and not over it.
+ */
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto; /* [1] */
+  }
+}
+
+:root {
+  view-transition-name: none; /* [2] */
+}
+
+.site-nav__link[aria-current="page"] .site-nav__indicator {
+  view-transition-name: nav-indicator; /* [3] */
+}
+
+.site-nav__item:nth-child(1) .site-nav__label { view-transition-name: nav-label-1; } /* [4] */
+.site-nav__item:nth-child(2) .site-nav__label { view-transition-name: nav-label-2; }
+.site-nav__item:nth-child(3) .site-nav__label { view-transition-name: nav-label-3; }
+
+::view-transition-group(*) {
+  animation-duration: var(--duration-slow);
+  animation-timing-function: var(--easing-out);
 }
 
 
@@ -97,64 +190,22 @@
   #RESPONSIVE
 \*------------------------------------*/
 
-/**
- * Small screens: the links move into a drop-down menu that the button
- * opens (`.is-open`, set by site-nav.js).
- */
-
-@media (max-width: 640px) {
-  .site-nav__toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: var(--size-button-icon);
-    height: var(--size-button-icon);
-    border: none;
-    background: none;
-    color: inherit;
-    cursor: pointer;
-  }
-
-  /* Three bars: the span and its two pseudo-elements */
-  .site-nav__toggle-icon,
-  .site-nav__toggle-icon::before,
-  .site-nav__toggle-icon::after {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: currentColor;
-    transition: transform var(--duration-base) var(--easing-out);
-    position: relative;
-  }
-
-  .site-nav__toggle-icon::before,
-  .site-nav__toggle-icon::after {
-    content: '';
-    position: absolute;
-  }
-
-  .site-nav__toggle-icon::before { top: -6px; }
-  .site-nav__toggle-icon::after  { top:  6px; }
-
-  .site-nav__menu {
+/* [7] */
+@media (max-width: 1024px) {
+  .site-nav__time {
     display: none;
-    position: absolute;
-    top: var(--size-header-height);
-    left: 0;
-    right: 0;
-    background-color: var(--color-background-primary);
-    border-bottom: 1px solid var(--color-outline-primary);
-    padding: var(--spacing-4) var(--spacing-6);
   }
+}
 
-  .site-nav__menu.is-open {
-    display: block;
+@media (max-width: 768px) {
+  .site-nav__logo {
+    display: none;
   }
+}
 
-  .site-nav__list {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-4);
+@media (max-width: 480px) {
+  .site-nav__link,
+  .site-nav__cta {
+    padding-inline: var(--spacing-3);
   }
 }

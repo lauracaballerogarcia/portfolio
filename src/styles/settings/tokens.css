@@ -50,6 +50,7 @@
   --color-neutral-950: #121212;
 
   /* Color — hues */
+  --color-green-400: #5CDFA5;
   --color-green-500: #33D78E;
 
 
@@ -78,6 +79,7 @@
   /* Radius — n × 4px */
   --radius-1:    0.25rem;  /* 4px */
   --radius-2:    0.5rem;   /* 8px */
+  --radius-3:    0.75rem;  /* 12px */
   --radius-4:    1rem;     /* 16px */
   --radius-8:    2rem;     /* 32px */
   --radius-full: 9999px;
@@ -105,7 +107,7 @@
   --size-icon-m: 1.5rem;           /* 24px */
   --size-icon-l: 2rem;             /* 32px */
   --size-button-icon: 2.25rem;     /* 36px — round icon-only buttons */
-  --size-header-height: 4rem;      /* 64px */
+  --size-header-height: 5rem;      /* 80px */
   --size-content-max: 95rem;       /* 1440px — content width, gutters excluded */
 
   /* Motion */
@@ -130,6 +132,9 @@
   /* Color — outline */
   --color-outline-primary: var(--color-neutral-300);
 
+  /* Color — shadow */
+  --color-shadow-reveal: color-mix(in srgb, var(--color-neutral-950) 12%, transparent); /* main over the footer */
+
   /* Color — text */
   --color-text-primary:   var(--color-neutral-950);
   --color-text-secondary: var(--color-neutral-700);
@@ -137,6 +142,17 @@
   --color-text-inverse:   var(--color-neutral-0);
 
   /* Color — components */
+  --color-nav-background:              var(--color-neutral-200);
+  --color-nav-link-text-default:       var(--color-neutral-700);
+  --color-nav-link-text-active:        var(--color-neutral-950);
+  --color-nav-link-background-hover:   var(--color-neutral-100);
+  --color-nav-link-background-active:  var(--color-neutral-0);
+
+  --color-button-cta-background-default: var(--color-green-500);
+  --color-button-cta-background-hover:   var(--color-green-400);
+  --color-button-cta-text-default:       var(--color-neutral-950);
+
+
   --color-button-primary-background-default: var(--color-neutral-200);
   --color-button-primary-background-hover:   var(--color-neutral-300);
   --color-button-primary-background-active:  var(--color-neutral-950);
@@ -153,6 +169,7 @@
 
 
 
+
   --color-tag-background: var(--color-neutral-200);
 
   /* Spacing — layout */
@@ -165,6 +182,7 @@
   --spacing-media-block:      var(--spacing-8);
 
   /* Radius — components */
+  --radius-nav:            var(--radius-3);     /* bar: link radius + bar padding */
   --radius-card-l:         var(--radius-8);     /* large cards: half grid width or wider */
   --radius-card-s:         var(--radius-2);     /* small cards: a third of the grid or narrower */
   --radius-chip:           var(--radius-full);
