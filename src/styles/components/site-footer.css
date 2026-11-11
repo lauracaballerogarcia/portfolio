@@ -236,6 +236,15 @@ site-footer {
     grid-column: 1 / -1;
   }
 
+  .site-footer__notes,
+  .site-footer__contact {
+    margin-bottom: var(--spacing-16); /* [12] */
+  }
+
+  .site-footer__contact {
+    gap: var(--spacing-8);
+  }
+
   .site-footer__cta {
     font-size: var(--font-size-xl);
   }
