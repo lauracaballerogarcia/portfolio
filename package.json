@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
+    "version": "0.1.0",
   "description": "Digital Product Design portfolio — technology, people and environment",
-  "author": "Laura Caballero",
+  "author": "Laura Caballero García",
   "license": "ISC",
   "browserslist": [
     "> 0.2%",
