@@ -5,8 +5,9 @@
 /**
  * Case study page layout: sticky hero, sidebar and content grid.
  *
- * 1. The hero stays fixed behind the content while scrolling, just
- *    below the fixed header.
+ * 1. The hero starts at the top of the page and stays fixed behind the
+ *    content while scrolling. Case studies only show the floating
+ *    navigation bar, so the bar sits over the image.
  * 2. `<picture>` (and its desktop or mobile source) fills the hero.
  * 3. Full-width background that covers the sticky hero. The grid is
  *    limited to `--size-content-max` and centred on wide screens.
@@ -25,10 +26,10 @@
 .case__hero {
   width: 100vw;
   /* aspect-ratio: 16 / 9; */
-  height: calc(80vh - var(--size-header-height));
+  height: 80vh;
   overflow: hidden;
   position: sticky; /* [1] */
-  top: var(--size-header-height);
+  top: 0;
   left: 0;
   z-index: 0;
 }

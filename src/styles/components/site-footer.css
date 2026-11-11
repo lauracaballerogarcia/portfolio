@@ -3,9 +3,10 @@
 \*------------------------------------*/
 
 /**
- * Notes, copyright and contact card. The markup comes from
- * site-footer.js. It sits behind `main` and is revealed while scrolling,
- * like the case hero (`main` covers it: see page.css).
+ * Notes, contact and social links, copyright and back to top. The
+ * markup comes from site-footer.js. It sits behind `main` and is
+ * revealed while scrolling, like the case hero (`main` covers it: see
+ * page.css).
  *
  * 1. Sticky goes on the custom element: it is the child of `body`, so
  *    it can stay pinned to the bottom of the viewport behind `main`.
@@ -13,22 +14,25 @@
  *    negative z-index puts it behind main without giving main a
  *    stacking context, so the header and the cursor preview keep
  *    their own z-index.
- * 2. Notes: columns 1 to 4. Card: columns 6 to 12, as in the design.
- * 3. Copyright at the bottom of the notes column.
- * 4. The chips inherit this size (`font: inherit`), also the button.
- * 5. Contact and social chips behave like `.site-nav__link`: secondary
- *    text that turns primary on hover, with a darker background and
- *    the same transition. The background stays visible at rest, as in
- *    the design, so the chips read as buttons over the card.
- * 6. Icons come from the SVG files, so their colour is set in the
- *    exported SVG, not by `currentColor`.
- * 7. Too tall to fit in the viewport (one column, or a short window):
- *    its top would stay hidden behind `main`, so it falls back to the
- *    normal flow.
- * 8. The copy and check icons use the SVG as a mask, so they take the
+ * 2. Same width as `.container`: limited to `--size-content-max` and
+ *    centred on wide screens. The background fills the viewport.
+ * 3. Two rows: notes and contact on top, copyright and back to top at
+ *    the bottom. Left column: columns 1 to 4. Right column: columns 6
+ *    to 12, aligned with the second card of the home grid.
+ * 4. Space between the contact links and the bottom row.
+ * 5. The chips inherit this size (`font: inherit`), also the button.
+ * 6. Contact and social chips: white over the footer, darker on hover,
+ *    with the same transition as the nav links.
+ * 7. The copy and check icons use the SVG as a mask, so they take the
  *    colour of a token instead of the colour of the exported file.
- * 9. Copied state: green background, and text and icon turn primary.
- *    Secondary text on this green is below 4.5:1; primary gives 10:1.
+ * 8. Copied state: green background, text and icon in primary.
+ * 9. The arrow comes from the SVG file, so its colour is set in the
+ *    exported SVG, not by `currentColor`.
+ * 10. Too tall to fit in the viewport (one column, or a short window):
+ *     its top would stay hidden behind `main`, so it falls back to the
+ *     normal flow.
+ * 11. Copyright, "Thanks for visiting!" and "Up" share one baseline,
+ *     even with different font sizes.
  */
 
 site-footer {
@@ -39,26 +43,29 @@ site-footer {
 }
 
 .site-footer {
-  background-color: var(--color-background-tertiary);
-  padding-block: var(--spacing-24) var(--spacing-12);
+  background-color: var(--color-background-secondary);
+  padding-block: var(--spacing-12) var(--spacing-container-inline);
 }
 
 .site-footer__inner {
+  max-width: calc(var(--size-content-max) + 2 * var(--spacing-container-inline)); /* [2] */
+  margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr); /* [3] */
   column-gap: var(--spacing-grid-column);
-  row-gap: var(--spacing-12);
+  row-gap: var(--spacing-24); /* [4] */
+  align-items: last baseline; /* [11] */
 }
 
 
 /* ── Notes ── */
 
 .site-footer__notes {
-  grid-column: 1 / span 4; /* [2] */
+  grid-column: 1 / span 4; /* [3] */
+  align-self: start;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-10);
-  padding-block-start: var(--spacing-8);
+  gap: var(--spacing-8);
 }
 
 .site-footer__note-title {
@@ -79,41 +86,31 @@ site-footer {
   text-underline-offset: 0.2em;
 }
 
-.site-footer__copyright {
-  margin-top: auto; /* [3] */
-  font-size: var(--font-size-s);
-}
 
-.site-footer__copyright span {
-  margin-inline: var(--spacing-3);
-}
+/* ── Contact ── */
 
-
-/* ── Card ── */
-
-.site-footer__card {
-  grid-column: 6 / -1; /* [2] */
+.site-footer__contact {
+  grid-column: 6 / -1; /* [3] */
+  align-self: start;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: var(--spacing-16);
-  min-height: 28rem;
-  padding: var(--spacing-8);
-  border-radius: var(--radius-card-s);
-  background-color: var(--color-background-secondary);
+}
+
+.site-footer__contact:focus {
+  outline: none;
 }
 
 .site-footer__cta {
   max-width: 24ch;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
 }
 
-.site-footer__bottom {
+.site-footer__groups {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
   gap: var(--spacing-8) var(--spacing-16);
-  font-size: var(--font-size-s); /* [4] */
+  font-size: var(--font-size-s); /* [5] */
 }
 
 .site-footer__group {
@@ -136,13 +133,13 @@ site-footer {
 /* ── Chips ── */
 
 .site-footer__chip {
-  display: inline-flex; /* [5] */
+  display: inline-flex; /* [6] */
   align-items: center;
   gap: var(--spacing-3);
   padding: var(--spacing-2) var(--spacing-3);
   border: none;
   border-radius: var(--radius-button-primary);
-  font: inherit; /* [4] */
+  font: inherit; /* [5] */
   color: var(--color-text-primary);
   background-color: var(--color-background-tertiary);
   text-decoration: none;
@@ -153,7 +150,6 @@ site-footer {
 }
 
 .site-footer__chip:hover {
-  color: var(--color-text-primary);
   background-color: var(--color-button-primary-background-hover);
 }
 
@@ -167,7 +163,7 @@ site-footer {
   display: block;
   width: var(--size-icon-s);
   height: var(--size-icon-s);
-  background-color: var(--color-text-primary); /* [8] */
+  background-color: var(--color-text-primary); /* [7] */
   mask-image: url("../../assets/icons/copy.svg");
   mask-size: contain;
   mask-repeat: no-repeat;
@@ -175,23 +171,39 @@ site-footer {
 }
 
 .site-footer__copy[data-state="copied"] {
-  color: var(--color-text-primary); /* [9] */
+  color: var(--color-text-primary); /* [8] */
   background-color: var(--color-background-success);
 }
 
 .site-footer__copy[data-state="copied"]::after {
-  background-color: var(--color-text-primary); /* [9] */
   mask-image: url("../../assets/icons/check.svg");
 }
 
 
-/* ── Up ── */
+/* ── Bottom row ── */
+
+.site-footer__copyright {
+  grid-column: 1 / span 4; /* [3] */
+  font-size: var(--font-size-s);
+}
+
+.site-footer__copyright span {
+  margin-inline: var(--spacing-3);
+}
+
+.site-footer__end {
+  grid-column: 6 / -1; /* [3] */
+  display: flex;
+  align-items: baseline; /* [11] */
+  justify-content: space-between;
+  gap: var(--spacing-8);
+  font-size: var(--font-size-s);
+}
 
 .site-footer__up {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-2);
-  margin-left: auto;
   font-size: var(--font-size-xl);
 }
 
@@ -200,7 +212,7 @@ site-footer {
   display: block;
   width: var(--size-icon-l);
   height: var(--size-icon-l);
-  background-image: url("../../assets/icons/arrow-elbow-right-up.svg"); /* [6] */
+  background-image: url("../../assets/icons/arrow-elbow-right-up.svg"); /* [9] */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -211,29 +223,27 @@ site-footer {
   #RESPONSIVE
 \*------------------------------------*/
 
-/* Notes and card stacked in one column */
+/* One column: notes, contact, copyright, back to top */
 @media (max-width: 768px) {
-  .site-footer {
-    padding-block: var(--spacing-16) var(--spacing-8);
+  .site-footer__inner {
+    row-gap: var(--spacing-12);
   }
 
   .site-footer__notes,
-  .site-footer__card {
+  .site-footer__contact,
+  .site-footer__copyright,
+  .site-footer__end {
     grid-column: 1 / -1;
   }
 
-  .site-footer__notes {
-    padding-block-start: 0;
-  }
-
-  .site-footer__card {
-    min-height: auto;
+  .site-footer__cta {
+    font-size: var(--font-size-xl);
   }
 }
 
 /* No reveal when the footer does not fit in the viewport */
 @media (max-width: 768px), (max-height: 44rem) {
   site-footer {
-    position: relative; /* [7] */
+    position: relative; /* [10] */
   }
 }

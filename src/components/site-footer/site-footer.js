@@ -1,7 +1,7 @@
 /**
  * site-footer.js — Site footer
- * Notes, copyright and contact card. Copies the email address to the
- * clipboard and announces it to screen readers.
+ * Notes, contact and social links, copyright and back to top. Copies
+ * the email address to the clipboard and announces it to screen readers.
  */
 
 const EMAIL = 'lauracaballer19@gmail.com';
@@ -34,16 +34,12 @@ class SiteFooter extends HTMLElement {
                 to help reduce its environmental impact. I'm continuously exploring ways to create a more sustainable web without compromising the visual experience.
               </p>
             </section>
-
-            <p class="site-footer__copyright">
-              Copyright® ${year} <span aria-hidden="true">|</span> All rights reserved
-            </p>
           </div>
 
-          <div class="site-footer__card">
+          <div class="site-footer__contact" id="contact" tabindex="-1">
             <p class="site-footer__cta">If you'd like to talk about a project, don't hesitate to get in touch.</p>
 
-            <div class="site-footer__bottom">
+            <div class="site-footer__groups">
               <div class="site-footer__group">
                 <p class="site-footer__label">Contact</p>
                 <button type="button" class="site-footer__chip site-footer__copy">
@@ -60,9 +56,16 @@ class SiteFooter extends HTMLElement {
                   <li><a class="site-footer__chip" href="https://github.com/lauracaballerogarcia/portfolio-web" rel="noopener noreferrer" target="_blank">GitHub</a></li>
                 </ul>
               </nav>
-
-              <a class="site-footer__up" href="#top">Up<span class="visually-hidden"> (back to top)</span></a>
             </div>
+          </div>
+
+          <p class="site-footer__copyright">
+            Copyright® ${year} <span aria-hidden="true">|</span> All rights reserved
+          </p>
+
+          <div class="site-footer__end">
+            <p>Thanks for visiting!</p>
+            <a class="site-footer__up" href="#top">Up<span class="visually-hidden"> (back to top)</span></a>
           </div>
 
         </div>

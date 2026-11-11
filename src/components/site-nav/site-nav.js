@@ -2,7 +2,7 @@
  * site-nav.js — Site header
  * Logo, main navigation bar and local time. Marks the current page,
  * sends "Let's talk" to the footer contact card and keeps the clock
- * up to date.
+ * up to date. Case studies only show the navigation bar.
  */
 
 const NAV_ITEMS = [
@@ -12,6 +12,9 @@ const NAV_ITEMS = [
 ];
 
 const TIME_ZONE = 'Europe/Madrid';
+
+// Case studies live under /project/<slug>/ (see main.js)
+const isCaseStudy = () => window.location.pathname.startsWith('/project/');
 
 class SiteNav extends HTMLElement {
   connectedCallback() {
@@ -26,6 +29,8 @@ class SiteNav extends HTMLElement {
   }
 
   render() {
+    const showDetails = !isCaseStudy();
+
     const items = NAV_ITEMS.map(({ label, href }) => `
       <li class="site-nav__item">
         <a class="site-nav__link" href="${href}">
@@ -38,9 +43,11 @@ class SiteNav extends HTMLElement {
     this.innerHTML = `
       <header class="site-nav">
         <div class="container-full site-nav__inner">
-          <a href="/" class="site-nav__logo">
-            Laura Caballero García – Digital Product Designer
-          </a>
+          ${showDetails ? `
+            <a href="/" class="site-nav__logo">
+              Laura Caballero García – Digital Product Designer
+            </a>
+          ` : ''}
 
           <nav class="site-nav__bar" aria-label="Main">
             <ul class="site-nav__list" role="list">
@@ -51,11 +58,13 @@ class SiteNav extends HTMLElement {
             </ul>
           </nav>
 
-          <p class="site-nav__time">
-            <span class="visually-hidden">Local time in Spain: </span>
-            <time class="site-nav__time-value"></time>
-            <span aria-hidden="true">ES</span>
-          </p>
+          ${showDetails ? `
+            <p class="site-nav__time">
+              <span class="visually-hidden">Local time in Spain: </span>
+              <time class="site-nav__time-value"></time>
+              <span aria-hidden="true">ES</span>
+            </p>
+          ` : ''}
         </div>
       </header>
     `;
@@ -87,7 +96,9 @@ class SiteNav extends HTMLElement {
 
   // Local time in Spain, updated at the start of every minute
   _startClock() {
-    const time   = this.querySelector('.site-nav__time-value');
+    const time = this.querySelector('.site-nav__time-value');
+    if (!time) return; // no clock on case studies
+
     const format = new Intl.DateTimeFormat('en-GB', {
       hour: '2-digit',
       minute: '2-digit',
