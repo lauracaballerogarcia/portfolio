@@ -1099,41 +1099,80 @@
       },
       "width": 2880
     },
-    "parc-central/parc-central-00-thumbnail.webp": {
+    "parc-central/parc-central-00-thumbnail-1.webp": {
       "action": "optimized",
-      "bytesIn": 9579478,
-      "bytesOut": 1761788,
+      "bytesIn": 9806404,
+      "bytesOut": 1827066,
       "height": 1800,
-      "outputHash": "2c4649557005381ceab7c7f85d05a4a2722ba0d50d9be6b15c2a60a2aef9eb55",
-      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 4.05, 1 at q90, 1 kept at q78 (q90 too close to the next larger width)",
-      "settingsHash": "73afc416355ed3dd141a31f68f24895d64f5c59f272d7aab8ae3c8e54b2b0f56",
-      "source": "media-src/parc-central/parc-central-00-thumbnail.png",
-      "sourceHash": "fa45f6422615ca5fc382e11e1406e0494767223cec33c35b372ff2cceffa0047",
+      "outputHash": "e566f5dc2dac72702fab9c2eda1f400a839fef57f459e33146806f0d6549f169",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 4.71, 1 at q90, 2 kept at q78 (q90 too close to the next larger width)",
+      "settingsHash": "a37733c9e4d5c502d38a0a10a0f8193d19a76d7575fb5a67551f9c25ebae5ee2",
+      "source": "media-src/parc-central/parc-central-00-thumbnail-1.png",
+      "sourceHash": "2d192523164e62e22cba09fbbcd5cd2a5108b7578b047264489b54fb3d5bb630",
       "variants": {
         "480": {
-          "bytes": 77570,
-          "file": "parc-central/parc-central-00-thumbnail-480w.webp",
-          "hash": "a6f072accd6eb87a9b3ef211c9bf631ce23fd73c67ed87c65ca1a34f8ffcce93"
+          "bytes": 75048,
+          "file": "parc-central/parc-central-00-thumbnail-1-480w.webp",
+          "hash": "7ce10cfceaeef28a98f464be8dad3454405e3e4f231ebd36e15d2483e475d0a3"
         },
         "800": {
-          "bytes": 118006,
-          "file": "parc-central/parc-central-00-thumbnail-800w.webp",
-          "hash": "a80ec9bfa86e49a148a750457bf87b1e3c0229d85a218e786d7157b0605ece99"
+          "bytes": 127810,
+          "file": "parc-central/parc-central-00-thumbnail-1-800w.webp",
+          "hash": "56e07fd35033db5f5eed1ec904f03f779a962b946528cecfd69f56c9a0e1541e"
         },
         "1024": {
-          "bytes": 161440,
-          "file": "parc-central/parc-central-00-thumbnail-1024w.webp",
-          "hash": "9d7ee8b6e51cdf55c8f6c35a82882ac26be9593cb539950193423c6c311ec85f"
+          "bytes": 182714,
+          "file": "parc-central/parc-central-00-thumbnail-1-1024w.webp",
+          "hash": "671c0c3e6e35191ca968490e9569842d94b134dd5dd7fc17e80863a8b168a487"
         },
         "1440": {
-          "bytes": 252580,
-          "file": "parc-central/parc-central-00-thumbnail-1440w.webp",
-          "hash": "2073617c36222fbe3ccae11f6aec3e288adb90b3aabfcd8c00a1cb6c0aab5f19"
+          "bytes": 286844,
+          "file": "parc-central/parc-central-00-thumbnail-1-1440w.webp",
+          "hash": "1afe5ff77ba22ee060bc34c82c8cd9c19fe7802e2f094442d34041431837a43d"
         },
         "1920": {
-          "bytes": 382944,
+          "bytes": 398754,
+          "file": "parc-central/parc-central-00-thumbnail-1-1920w.webp",
+          "hash": "c53afd1ece39c5a056f936cb394e3e5c043cb9de4de19c7424e2e06b51f3b20e"
+        }
+      },
+      "width": 2880
+    },
+    "parc-central/parc-central-00-thumbnail.webp": {
+      "action": "optimized",
+      "bytesIn": 9777372,
+      "bytesOut": 1802300,
+      "height": 1800,
+      "outputHash": "ccedfdec50a5830cd197577a164cb9bbf5035e93dd898f36265d75c9e5d8cd33",
+      "reason": "base 2880px q78, 5 variants (480, 800, 1024, 1440, 1920), max mean error 4.70, 1 at q90, 2 kept at q78 (q90 too close to the next larger width)",
+      "settingsHash": "73afc416355ed3dd141a31f68f24895d64f5c59f272d7aab8ae3c8e54b2b0f56",
+      "source": "media-src/parc-central/parc-central-00-thumbnail.png",
+      "sourceHash": "b008587149b53f3867c3cfa5f07b89bfbd18029748cacee32f800560ab32d227",
+      "variants": {
+        "480": {
+          "bytes": 74776,
+          "file": "parc-central/parc-central-00-thumbnail-480w.webp",
+          "hash": "550ff5b6da1c458d0b32e772d581bc798fe011a218d28f670f9c60fc5dd06aa9"
+        },
+        "800": {
+          "bytes": 125786,
+          "file": "parc-central/parc-central-00-thumbnail-800w.webp",
+          "hash": "1d794543caf737de3a1f25a34986d597f234dc27954054506cacc4361a99b10f"
+        },
+        "1024": {
+          "bytes": 181410,
+          "file": "parc-central/parc-central-00-thumbnail-1024w.webp",
+          "hash": "d466326a43843082fc0c962a2698070b397f7529da909eaa84a7f757be367143"
+        },
+        "1440": {
+          "bytes": 279584,
+          "file": "parc-central/parc-central-00-thumbnail-1440w.webp",
+          "hash": "801ba6636a625b39960655bd258a3a7e3db9cd3a9af4ef877354b1d8fccaf3d3"
+        },
+        "1920": {
+          "bytes": 394764,
           "file": "parc-central/parc-central-00-thumbnail-1920w.webp",
-          "hash": "132faf714bd935cbf2a3f99ba56b927e757a38f05e986cb340c53a04a57f0f71"
+          "hash": "17e9f0de24420c64e4fb25dd3329b0bcb0e325c4dd1d0110801927f45fa75609"
         }
       },
       "width": 2880
