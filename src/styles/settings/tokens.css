@@ -152,7 +152,6 @@
   --color-button-cta-background-hover:   var(--color-green-400);
   --color-button-cta-text-default:       var(--color-neutral-950);
 
-
   --color-button-primary-background-default: var(--color-neutral-200);
   --color-button-primary-background-hover:   var(--color-neutral-300);
   --color-button-primary-background-active:  var(--color-neutral-950);
@@ -166,6 +165,8 @@
   --color-icon-button-secondary-background-default: var(--color-neutral-0);
   --color-icon-button-secondary-background-hover:   var(--color-neutral-100);
   --color-icon-button-secondary-text-default:       var(--color-neutral-950);
+
+    --color-view-toggle-background-active: var(--color-neutral-200);
 
 
 

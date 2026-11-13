@@ -7,6 +7,9 @@
  * the active view.
  *
  * 1. Icon as a mask, so it takes the text color (`currentColor`).
+ * 2. Active view: darker background than the hover (neutral-200 vs
+ *    neutral-100) and primary icon, so the state does not rely on
+ *    color alone.
  */
 
 .view-toggle {
@@ -31,6 +34,7 @@
 
 .view-toggle[aria-pressed="true"] {
   color: var(--color-text-primary);
+  background-color: var(--color-view-toggle-background-active);
 }
 
 .view-toggle::before {

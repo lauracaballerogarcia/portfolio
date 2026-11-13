@@ -10,7 +10,7 @@
  * 2. `:any-link` limits the hover to rows that are links.
  * 3. Without a link there is no hover or focus to reveal the claim,
  *    so it is always visible. The same on touch screens.
-  * 4. The last row of the list has no line: the list ends there.
+ * 4. The last row of the list has no line: the list ends there.
  */
 
 .archive-row {
