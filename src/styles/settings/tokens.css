@@ -166,10 +166,7 @@
   --color-icon-button-secondary-background-hover:   var(--color-neutral-100);
   --color-icon-button-secondary-text-default:       var(--color-neutral-950);
 
-    --color-view-toggle-background-active: var(--color-neutral-200);
-
-
-
+  --color-view-toggle-background-active: var(--color-neutral-200);
 
   --color-tag-background: var(--color-neutral-200);
 

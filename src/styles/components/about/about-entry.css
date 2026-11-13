@@ -30,5 +30,5 @@
   color: var(--color-text-tertiary);
   font-size: var(--font-size-s);
   line-height: 1.4;
-  visibility: collapse;
+  display: none;
 }
