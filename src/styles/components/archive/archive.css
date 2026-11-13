@@ -35,7 +35,7 @@
 .archive__views {
   display: flex;
   align-items: center;
-  gap: var(--spacing-3);
+  gap: var(--spacing-2);
 }
 
 .archive__empty {
@@ -53,6 +53,7 @@
   grid-template-columns: repeat(3, 1fr);
   column-gap: var(--spacing-grid-column);
   row-gap: var(--spacing-16);
+  padding-bottom: var(--spacing-16); /* [4] */
 }
 
 
