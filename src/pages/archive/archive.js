@@ -5,13 +5,13 @@
  * the hero image that follows the cursor in the list view.
  */
 
-import { fetchProjects, getUniqueTags, hasCaseStudy, getThumbnail, responsiveAttrs, srcsetFor } from '../../data/projects.js';
+import { fetchProjects, getUniqueTags, tagKey, hasCaseStudy, getThumbnail, responsiveAttrs, srcsetFor } from '../../data/projects.js';
 
 const DEFAULT_VIEW = 'list';
 
 const state = {
   projects: [],
-  activeTags: new Set(), // empty = All
+  activeTags: new Set(), // tag keys (see tagKey); empty = All
   view: DEFAULT_VIEW,
 };
 
@@ -22,7 +22,7 @@ const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
 function getVisibleProjects() {
   if (state.activeTags.size === 0) return state.projects;
   return state.projects.filter(p =>
-    p.tags.some(tag => state.activeTags.has(tag))
+    p.tags.some(tag => state.activeTags.has(tagKey(tag)))
   );
 }
 
@@ -34,8 +34,8 @@ function renderFilters(tags) {
 
   container.innerHTML = [
     `<button type="button" class="button-primary archive__filter archive__filter--all" data-tag="all" aria-pressed="true">All</button>`,
-    ...tags.map(tag =>
-      `<button type="button" class="button-primary archive__filter" data-tag="${tag}" aria-pressed="false">${tag}</button>`
+    ...tags.map(({ key, label }) =>
+      `<button type="button" class="button-primary archive__filter" data-tag="${key}" aria-pressed="false">${label}</button>`
     ),
   ].join('');
 

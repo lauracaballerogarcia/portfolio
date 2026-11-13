@@ -300,9 +300,21 @@ export async function fetchProjectContent(slug) {
   return caseMarked.parse(md);
 }
 
+// Comparison key for a tag: "Visual Identity" and "visual identity " are the same tag
+export function tagKey(tag) {
+  return tag.trim().toLocaleLowerCase();
+}
+
+// One entry per tag, whatever its case. The label keeps the first spelling found.
 export function getUniqueTags(projects) {
-  const all = projects.flatMap(p => p.tags);
-  return [...new Set(all)].sort();
+  const tags = new Map();
+
+  projects.flatMap(p => p.tags ?? []).forEach(tag => {
+    const key = tagKey(tag);
+    if (!tags.has(key)) tags.set(key, { key, label: tag.trim() });
+  });
+
+  return [...tags.values()].sort((a, b) => a.label.localeCompare(b.label));
 }
 
 export function hasCaseStudy(slug) {

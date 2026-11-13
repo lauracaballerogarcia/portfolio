@@ -5,7 +5,7 @@
  * study Markdown, and fills the DOM.
  */
 
-import { fetchProjects, fetchProjectContent, hasCaseStudy, getThumbnail, HERO_MOBILE_MEDIA, srcsetFor, responsiveAttrs } from '../../data/projects.js';
+import { fetchProjects, fetchProjectContent, hasCaseStudy, tagKey, getThumbnail, HERO_MOBILE_MEDIA, srcsetFor, responsiveAttrs } from '../../data/projects.js';
 import { initCaseLightbox } from './case-lightbox.js';
 
 
@@ -182,13 +182,13 @@ const RELATED_LIMIT = 3;
 const RELATED_SIZES = '(min-width: 1024px) and (hover: hover) calc(22.22vw - 23px), (min-width: 475px) 320px, calc(75vw - 36px)';
 
 function getRelatedProjects(current, projects, limit = RELATED_LIMIT) {
-  const currentTags = new Set(current.tags ?? []);
+  const currentTags = new Set((current.tags ?? []).map(tagKey));
 
   return projects
     .filter((p) => p.slug !== current.slug && hasCaseStudy(p.slug))
     .map((p) => ({
       project: p,
-      shared: (p.tags ?? []).filter((tag) => currentTags.has(tag)).length,
+      shared: (p.tags ?? []).filter((tag) => currentTags.has(tagKey(tag))).length,
       year: parseInt(p.year, 10) || 0,
       tiebreak: Math.random(),
     }))
