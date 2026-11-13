@@ -68,7 +68,7 @@
     "featured": true,
     "type": "work",
     "timeline": "Sep 2024 – Jan 2025",
-    "roles": ["", ""],
+    "roles": ["Graphic Design", "Motion Design"],
     "tools": ["Adobe Suite", "Figma"],
     "team": ["Laura Caballero García", "Mariana Birdici","Andrea Donderis Delcamp", "Carola Hinojosa Torres","Beatriz Ortiz Monet", "Laura Palau"],
     "client": "University project"
@@ -99,7 +99,7 @@
     "title": "Blink",
     "claim": "A motion festival shaped by the movement of the street.",
     "summary": "Blink is a motion design festival inspired by the restless energy of urban life and the speed at which the world unfolds in the blink of an eye. Through overlapping elements, noisy textures, flashes of light and vibrant colours, its visual identity captures the constant movement of the streets across digital and physical touchpoints.",
-    "tags": ["Art direction", "Visual identity", "UI"],
+    "tags": ["Art direction", "Visual Identity", "UI"],
     "year": "2024",
     "hero": "/media/blink/blink-01-hero.webp",
     "heroMobile": "/media/blink/blink-01-hero-mobile.webp",
